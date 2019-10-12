@@ -1,0 +1,2012 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ?xml-stylesheet type="text/xsl" href="..\xsl\assertions.xsl"?-->
+<!-- 
+  Basic Security Profile Test Assertion Document (TAD)
+
+
+	Copyright (c) 2004 by The Web Services-Interoperability Organization (WS-I) and 
+	Certain of its Members. All Rights Reserved.
+	
+	Notice
+	The material contained herein is not a license, either expressly or impliedly, to any 
+	intellectual property owned or controlled by any of the authors or developers of this 
+	material or WS-I. The material contained herein is provided on an "AS IS" basis and to 
+	the maximum extent permitted by applicable law, this material is provided AS IS AND WITH 
+	ALL FAULTS, and the authors and developers of this material and WS-I hereby disclaim all 
+	other warranties and conditions, either express, implied or statutory, including, but not 
+	limited to, any (if any) implied warranties, duties or conditions of  merchantability, 
+	of fitness for a particular purpose, of accuracy or completeness of responses, of results, 
+	of workmanlike effort, of lack of viruses, and of lack of negligence. ALSO, THERE IS NO 
+	WARRANTY OR CONDITION OF TITLE, QUIET ENJOYMENT, QUIET POSSESSION, CORRESPONDENCE TO 
+	DESCRIPTION OR NON-INFRINGEMENT WITH REGARD TO THIS MATERIAL.
+	
+	IN NO EVENT WILL ANY AUTHOR OR DEVELOPER OF THIS MATERIAL OR WS-I BE LIABLE TO ANY OTHER 
+	PARTY FOR THE COST OF PROCURING SUBSTITUTE GOODS OR SERVICES, LOST PROFITS, LOSS OF USE, 
+	LOSS OF DATA, OR ANY INCIDENTAL, CONSEQUENTIAL, DIRECT, INDIRECT, OR SPECIAL DAMAGES 
+	WHETHER UNDER CONTRACT, TORT, WARRANTY, OR OTHERWISE, ARISING IN ANY WAY OUT OF THIS OR 
+	ANY OTHER AGREEMENT RELATING TO THIS MATERIAL, WHETHER OR NOT SUCH PARTY HAD ADVANCE 
+	NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.
+	
+	WS-I License Information
+	Use of this WS-I Material is governed by the WS-I Test License and other licenses.  Information on these 
+	licenses are contained in the README.txt and ReleaseNotes.txt files.  By downloading this file, you agree 
+	to the terms of these licenses.
+	
+	How To Provide Feedback
+	The Web Services-Interoperability Organization (WS-I) would like to receive input, 
+	suggestions and other feedback ("Feedback") on this work from a wide variety of 
+	industry participants to improve its quality over time. 
+	
+	By sending email, or otherwise communicating with WS-I, you (on behalf of yourself if 
+	you are an individual, and your company if you are providing Feedback on behalf of the 
+	company) will be deemed to have granted to WS-I, the members of WS-I, and other parties 
+	that have access to your Feedback, a non-exclusive, non-transferable, worldwide, perpetual, 
+	irrevocable, royalty-free license to use, disclose, copy, license, modify, sublicense or 
+	otherwise distribute and exploit in any manner whatsoever the Feedback you provide regarding 
+	the work. You acknowledge that you have no expectation of confidentiality with respect to 
+	any Feedback you provide. You represent and warrant that you have rights to provide this 
+	Feedback, and if you are providing Feedback on behalf of a company, you represent and warrant 
+	that you have the rights to provide Feedback on behalf of your company. You also acknowledge 
+	that WS-I is not required to review, discuss, use, consider or in any way incorporate your 
+	Feedback into future versions of its work. If WS-I does incorporate some or all of your 
+	Feedback in a future version of the work, it may, but is not obligated to include your name 
+	(or, if you are identified as acting on behalf of your company, the name of your company) on 
+	a list of contributors to the work. If the foregoing is not acceptable to you and any company 
+	on whose behalf you are acting, please do not provide any Feedback.
+	
+	WS-I members should direct feedback on this document to wsi_testing@lists.ws-i.org; 
+        non-members should direct feedback to wsi-tools@ws-i.org.  
+-->
+<profileAssertions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.ws-i.org/testing/2004/07/assertions/" name="Basic Security Profile [1.0] Test Assertions" version="1.0.0.3" date="2004-10-12" status="WGD">
+	<description>
+        This document contains the test assertions for the 
+        WS-I SOAP Message Security Profile definition. These test assertions are 
+        used by the analyzer testing tool to determine if 
+        a Web service is conformant to the Basic Security Profile.
+
+	This document uses a number of namespace prefixes throughout; their associated URIs are listed below. 
+	Note that the choice of any namespace prefix is arbitrary and not semantically significant.
+
+	soap - "http://schemas.xmlsoap.org/soap/envelope/" 
+	dsig - "http://www.w3.org/2000/09/xmldsig#" 
+	xenc - "http://www.w3.org/2001/04/xmlenc#" 
+	wsse - "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" 
+	wsu - "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" 
+
+    </description>
+	<profileList>
+		<profile id="BSP1" name="Basic Security Profile" version="1.0" revision="WGD 12May04" location="http://www.ws-i.org/Profiles/BasicSecurityProfile-1.0-2004-05-12.html"/>
+	</profileList>
+	<editors>
+		<person affiliation="Microsoft Corporation" href="edjohns@microsoft.com">Ed Johns</person>
+		<person affiliation="Microsoft Corporation" href="govindr@microsoft.com">Govind Ramanathan</person>
+	</editors>
+	<contributorText>	       
+	    Keith Stobie (Microsoft Corporation), 
+	    Martin Gudgin (Microsoft Corporation),
+	    David Lauzon (IBM),
+	    Narendra Patil (Optimyz)   
+	</contributorText>
+	<!--  ================ ARTIFACT: secureEnvelope ==================   -->
+	<artifact type="secureEnvelope">
+		<specificationReferenceList>
+			<specification name="Web Services Security: SOAP Message Security" location="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf"/>
+			<specification name="Web Services Security: X.509 Token Profile" location="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf"/>
+			<specification name="Web Services Security: Username Token Profile" location="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf"/>
+			<specification name="XML-Signature Syntax and Processing" location="http://www.w3.org/TR/xmldsig-core/"/>
+			<specification name="XML Encryption Syntax and Processing" location="http://www.w3.org/TR/xmlenc-core/"/>
+		</specificationReferenceList>
+		<description>The Basic Security Profile requires support for SOAP 1.1 and HTTP 1.0 or 1.1.</description>
+		<!-- 60xx Misc. Assertions -->
+		<!-- 62XX SecurityToken & SecurityTokenReference assertions -->
+		<!-- 63XX ds:KeyInfo assertions -->
+		<!-- 64XX Signature assertions. -->
+		<!-- 65XX EncryptedData & EncryptedKey assertions. -->
+		<!-- Unimplemented Restrictions -->
+		<!-- ================================================================================================================ 
+		Misc. assertions 
+	      ================================================================================================================ -->
+		<testAssertion id="BSP6001" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a wsse:BinarySecurityToken meant for SOAP message security.</context>
+			<assertionDescription>Each wsse:BinarySecurityToken element should contain the EncodingType attribute.</assertionDescription>
+			<failureMessage>
+		One or more wsse:BinarySecurity tokens are present in the message but have no EncodingType attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:BinarySecurityToken element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3029</reference>
+				<reference profileID="BSP1" role="collateral">R3030</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3029 Any wsse:BinarySecurityToken in a SECURE_ENVELOPE MUST have an EncodingType attribute." -->
+		</testAssertion>
+		<testAssertion id="BSP6002" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains wsse:BinarySecurityToken element meant for SOAP message security.</context>
+			<assertionDescription>Each wsse:BinarySecurityToken element should have the ValueType attribute.</assertionDescription>
+			<failureMessage>
+                One or more wsse:BinarySecurityToken elements in the message do not have a ValueType attribute.
+            </failureMessage>
+			<failureDetailDescription>
+                The wsse:BinarySecurityToken element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3031</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3031 Any wsse:BinarySecurityToken element in a SECURE_ENVELOPE MUST have a ValueType attribute -->
+		</testAssertion>
+		<testAssertion id="BSP6003" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference element which is meant for SOAP message security with wsse:KeyIdentifier child element.</context>
+			<assertionDescription>The wsse:KeyIdentifier MUST have a ValueType attribute specified.</assertionDescription>
+			<failureMessage>
+		One or more wsse:KeyIdentifier elements present in the message do not contain a ValueType attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:KeyIdentifier elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3054</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3054 Any wsse:KeyIdentifier element in a SECURE_ENVELOPE MUST have a ValueType attribute. -->
+		</testAssertion>
+		<testAssertion id="BSP6004" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference which is meant for SOAP message security.</context>
+			<assertionDescription>The wsse:SecurityTokenReference element should not have ds:KeyName as its child element.</assertionDescription>
+			<failureMessage>ds:KeyName is used to refer to one or more Security Tokens.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element at fault.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3027</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R3027 A wsse:SecurityTokenReference element in a SECURE_ENVELOPE MUST NOT use a Key Name to reference a Security Token. -->
+		</testAssertion>
+		<testAssertion id="BSP6005" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a wsse:UsernameToken meant for SOAP message security with wsse:Password child element.</context>
+			<assertionDescription>Every wsse:Password element MUST have the type attribute specified.</assertionDescription>
+			<failureMessage>One or more wsse:UsernameToken/wsse:Password elements are present in the message without their Type
+		attributes.</failureMessage>
+			<failureDetailDescription>The wsse:Password element(s) in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R4201</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R4201 When a wsse:UsernameToken/wsse:Password element is present in a SECURE_ENVELOPE its Type attribute MUST be explicitly present. -->
+		</testAssertion>
+		<testAssertion id="BSP6006" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope,  where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsu:Timestamp", returns at least one element.</context>
+			<assertionDescription>
+		The XPath expression "count(./wsu:Created)", applied to each node returned by the XPath expression 
+		"/soap:Envelope/soap:Header/wsse:Security/wsu:Timestamp" must return 1.
+	    </assertionDescription>
+			<failureMessage>
+		One or more wsu:Timestamp elements have either a) no wsu:Created child elements or b) more than one wsu:Created child elements.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsu:Timestamp elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6014</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3203</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3203 Any wsu:Timestamp element in a wsse:Security header in a SECURE_ENVELOPE have exactly one wsu:Created element child. -->
+		</testAssertion>
+		<testAssertion id="BSP6007" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a wsse:BinarySecurityToken meant for SOAP message security.</context>
+			<assertionDescription>The EncodingType attribute on each wsse:BinarySecurityToken element MUST have a value of	 "http://www.docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd#Base64Binary"</assertionDescription>
+			<failureMessage>
+		One or more wsse:BinarySecurity tokens are present in the message where the EncodingType attribute has a value other than 
+		"http://www.docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd#Base64Binary".
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:BinarySecurityToken element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3030</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R3030 An Encoding Type attribute on a wsse:BinarySecurityToken element in a SECURE_ENVELOPE MUST have a value of
+		 "http://www.docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd#Base64Binary" -->
+		</testAssertion>
+		<testAssertion id="BSP6011" entryType="anySecureEnvelope" type="recommended" enabled="true">
+			<context>For any secure envelope, that contains a wsse:BinarySecurityToken meant for SOAP message security with the ValueType attribute set to "http://www.docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509PKIPathv1\" or "http://www.docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#PKCS7\".</context>
+			<assertionDescription>The ValueType attribute should not be set to "http://www.docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#PKCS7\".</assertionDescription>
+			<failureMessage>
+		One or more X.509 certificates are representing certificate path information using wsse:PKCS7 certificate type.
+		Certificate path information should be represented using the wsse:X509PKIPathv1 format.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:BinarySecurityToken in question
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5202</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R5202 When certificate path information is provided, a SENDER SHOULD provide the X509PKIPathv1 token type. -->
+		</testAssertion>
+		<testAssertion id="BSP6012" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsu:Timestamp[wsu:Created or wsu:Expires]" returns at least one element.</context>
+			<assertionDescription>The values of the nodes returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsu:Timestamp[wsu:Created or wsu:Expires]", do not include leap seconds.</assertionDescription>
+			<failureMessage>One or more wsse:Created or wsse:Expires elements have values specifying leap seconds.</failureMessage>
+			<failureDetailDescription>The wsu:Timestamp elements in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3213</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- R3213 A wsu:Timestamp within a SECURE_ENVELOPE MUST NOT include wsse:Created or wsse:Expires values that specify leap seconds.-->
+		</testAssertion>
+		<testAssertion id="BSP6013" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsu:Timestamp" returns at least one element.</context>
+			<assertionDescription>The nodes returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsu:Timestamp", contain time instants in UTC format as specified by the XML Schema type.</assertionDescription>
+			<failureMessage>One or more wsu:Timestamp elements does not contain time instants in UTC format.</failureMessage>
+			<failureDetailDescription>The wsu:Timestamp element(s) in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3217</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- R3217 A wsu:Timestamp within a SECURE_ENVELOPE MUST contain time instants only in UTC format as specified by the XML Schema type (dateTime). -->
+		</testAssertion>
+		<testAssertion id="BSP6014" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security//wsu:Timestamp" returns at least one element.</context>
+			<assertionDescription>Each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security//wsu:Timestamp", must have the wsse:Security element as its parent.</assertionDescription>
+			<failureMessage>
+		One or more wsu:Timestamp elements which are descendants of the wsse:Security element, do not have the wsse:Security element
+		as their parent.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsu:Timestamp elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3218</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- R3218 The wsu:Timestamp within a SECURE_ENVELOPE when present as a descendant of a wsse:Security element MUST be a child of that 
+                 element.-->
+		</testAssertion>
+		<testAssertion id="BSP6015" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>	
+		For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsu:Timestamp" returns at least one element.
+            </context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security[count(wsu:Timestamp) &gt; 1]" returns no elements.</assertionDescription>
+			<failureMessage>
+		More than one wsu:Timestamp elements occur as children of a wsse:Security node.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:Security node in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6014</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3219</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- R3219 The wsu:Timestamp element within a SECURE_ENVELOPE when present as a child of a wsse:Security element MUST NOT appear more 
+                 than once within that wsse:Security element.  (page 37)  -->
+		</testAssertion>
+		<testAssertion id="BSP6016" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure message, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsu:Timestamp" returns at least one element.</context>
+			<assertionDescription>The wsu:Timestamp element must contain the wsu:Created child elements at most once.</assertionDescription>
+			<failureMessage>More than one wsu:Created or wsu:Expires element appears within a wsu:Timestamp element.</failureMessage>
+			<failureDetailDescription>The wsu:Timestamp element in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6014</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3220</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- R3220 The wsu:Created and wsu:Expires elements within a SECURE_ENVELOPE MUST appear at most once within a wsu:Timestamp element. -->
+		</testAssertion>
+		<testAssertion id="BSP6017" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsu:Timestamp" returns at least one element.</context>
+			<assertionDescription>The wsu:Timestamp must contain wsu:Expires child element at most once.</assertionDescription>
+			<failureMessage>More than one wsu:Expires element appears within a wsu:Timestamp element.</failureMessage>
+			<failureDetailDescription>
+		The wsu:Timestamp element in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6014</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3220</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- R3220 The wsu:Created and wsu:Expires elements within a SECURE_ENVELOPE MUST appear at most once within a wsu:Timestamp element.-->
+		</testAssertion>
+		<testAssertion id="BSP6018" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>
+		For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:security/wsu:Timestamp[wsu:Created and wsu:Expires]" returns
+		at least one element.
+            </context>
+			<assertionDescription>For each node returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsse:security/wsu:Timestamp[wsu:Created and wsu:Expires]", the
+		wsu:Created element appears immediately before the wsu:Expires element.</assertionDescription>
+			<failureMessage>
+		wsu:Created and wsu:Expires occur in an improper order within a wsu:Timestamp element.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsu:Timestamp element in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6016</testAssertionID>
+				<testAssertionID>BSP6017</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3221</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- R3221 If wsu:Created and wsu:Expires elements both appear within a SECURE_ENVELOPE they MUST appear in the order: wsu:Created 
+                 then wsu:Expires.-->
+		</testAssertion>
+		<testAssertion id="BSP6019" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure evelope where the XPath expression "//*[@wsu:Id]" return more than one element.</context>
+			<assertionDescription>No two elements returned by the XPath expresstion "//*[@wsu:Id]" have the same values for the wsu:Id attribute.</assertionDescription>
+			<failureMessage>Two wsu:Id attributes within a SECURE_ENVELOPE have the same value.</failureMessage>
+			<failureDetailDescription>
+		The elements containing the attributes in question
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3204</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- R3204 Two wsu:Id attributes within any SECURE_ENVELOPE MUST NOT have the same value. -->
+		</testAssertion>
+		<testAssertion id="BSP6020" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security[@not(actor)]" returns at most one element.</assertionDescription>
+			<failureMessage>
+		More than one security header block exists in the SECURE_ENVELOPE with the actor
+		attribute omitted.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:Security elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3206</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- R3206 Within a SECURE_ENVELOPE there MUST be at most one wsse:Security header block with the actor attribute omitted.-->
+		</testAssertion>
+		<testAssertion id="BSP6021" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope.</context>
+			<assertionDescription>No two elements returned by the XPath expresstion "./soap:Envelope/soap:Header/wsse:Security[@actor]" have the same values
+		for the actor attribute.</assertionDescription>
+			<failureMessage>
+		Two or more wsse:Security elements are present in the SECURE_ENVELOPE with the same value for the actor attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:Security elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3210</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3210 Within a SECURE_ENVELOPE there MUST be at most one wsse:Security header block with the same actor attribute value.-->
+		</testAssertion>
+		<testAssertion id="BSP6022" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope.</context>
+			<assertionDescription>The HTTP message containing the secure envelope does not contain a SOAPAction header</assertionDescription>
+			<failureMessage>
+		A secure envelope was transmitted in an HTTP message with a SOAPAction header.
+            </failureMessage>
+			<failureDetailDescription>
+		The SOAPAction header in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">C2010</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!-- C2010 A SECURE_ENVELOPE SHOULD NOT be transmitted in an HTTP message containing a SOAPAction header -->
+		</testAssertion>
+		<!-- ================================================================================================================ 
+		SecurityToken & SecurityTokenReference assertions 
+	      ================================================================================================================ -->
+		<testAssertion id="BSP6200" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference which is meant for SOAP message security.</context>
+			<assertionDescription>The wsse:SecurityTokenReference must have exactly one child element.</assertionDescription>
+			<failureMessage>
+		One or more wsse:SecurityTokenReference elements in the message have either no child elements or else
+		more than one child elements.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:SecurityTokenReference elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3061</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3061 A wsse:SecurityTokenReference element in a SECURE_ENVELOPE have exactly one child element -->
+		</testAssertion>
+		<testAssertion id="BSP6201" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference which is meant for SOAP message security with wsse:Reference child element.</context>
+			<assertionDescription>The wsse:Reference element should have a ValueType attribute.</assertionDescription>
+			<failureMessage>
+		One or more wsse:SecurityTokenReference/wsse:Reference elements does not have a ValueType attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:SecurityTokenReference/wsse:Reference element in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3059</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3059 A wsse:SecurityTokenReference/wsse:Reference element in a SECURE_ENVELOPE MUST have a ValueType attribute. -->
+		</testAssertion>
+		<testAssertion id="BSP6202" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference element which is meant for SOAP message security with wsse:Reference child element.</context>
+			<assertionDescription>The wsse:Reference element MUST have the URI attribute.</assertionDescription>
+			<failureMessage>
+		One or more wsse:SecurityTokenReference/wsse:Reference elements does not have a URI attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:SecurityTokenReference/wsse:Reference element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3062</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3062 A wsse:SecurityTokenReference/wsse:Reference element in a SECURE_ENVELOPEMUST have a URI attribute -->
+		</testAssertion>
+		<testAssertion id="BSP6203" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference element which is meant for SOAP message security wth wsse:Embedded child element.</context>
+			<assertionDescription>The wsse:Embedded element should not have wsse:SecurityTokenReference as its child element.</assertionDescription>
+			<failureMessage>
+		One or more wsse:Embedded elements contains a wsse:SecurityToken reference child element.
+            </failureMessage>
+			<failureDetailDescription>
+		The wsse:Embedded element(s) in question
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3055</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R3055 A wsse:Embedded element in a SECURE_ENVELOPE MUST NOT contain a wsse:SecurityTokenReference child element. -->
+		</testAssertion>
+		<!--
+	 <testAssertion id="BSPXXX" entryType="anySecureEnvelope" type="required" enabled="true">
+            <context>
+            </context>
+            <assertionDescription>
+	    </assertionDescription>
+            <failureMessage>
+            </failureMessage>
+            <failureDetailDescription>
+            </failureDetailDescription>
+            <additionalEntryTypeList>
+                <messageInput>none</messageInput>
+                <wsdlInput>none</wsdlInput>
+            </additionalEntryTypeList>
+            <prereqList/>
+            <referenceList>
+                <reference profileID="BSP1"></reference>                
+             </referenceList>
+            <comments></comments>
+	    <additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+	    ** R4214 When a UsernameToken is referenced within a SECURE_ENVELOPE using a wsse:SecurityTokenReference and the ValueType attribute is 
+                 used, its value MUST be "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#UsernameToken". (page 41) **
+        </testAssertion>
+
+
+	 <testAssertion id="BSPXXX" entryType="anySecureEnvelope" type="required" enabled="true">
+            <context>
+            </context>
+            <assertionDescription>
+	    </assertionDescription>
+            <failureMessage>
+            </failureMessage>
+            <failureDetailDescription>
+            </failureDetailDescription>
+            <additionalEntryTypeList>
+                <messageInput>none</messageInput>
+                <wsdlInput>none</wsdlInput>
+            </additionalEntryTypeList>
+            <prereqList/>
+            <referenceList>
+                <reference profileID="BSP1"></reference>                
+             </referenceList>
+            <comments></comments>
+	    <additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+	    **  R4215 When a wsse:SecurityTokenReference element is used within a SECURE_ENVELOPE to refer to a wsse:UsernameToken, a KeyIdentifier 
+                 reference MUST NOT be used.  (page 41) ** 
+        </testAssertion>
+
+
+	 <testAssertion id="BSPXXX" entryType="anySecureEnvelope" type="required" enabled="true">
+            <context>
+            </context>
+            <assertionDescription>
+	    </assertionDescription>
+            <failureMessage>
+            </failureMessage>
+            <failureDetailDescription>
+            </failureDetailDescription>
+            <additionalEntryTypeList>
+                <messageInput>none</messageInput>
+                <wsdlInput>none</wsdlInput>
+            </additionalEntryTypeList>
+            <prereqList/>
+            <referenceList>
+                <reference profileID="BSP1"></reference>                
+             </referenceList>
+            <comments></comments>
+	    <additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+	    **  C4210 A wsse:UsernameToken in a SECURE_ENVELOPE which contains a wsse:Nonce element SHOULD be referenced by a ds:Reference in a 
+                 ds:SignedInfo element in order to prevent replay. (page 41) 
+                 Because we cannot verify R3001 we cannot strictly verify this.  We can verify that the token is referenced by a 
+		 location shorthand reference, but not in the general case.  ** 
+        </testAssertion>
+
+
+	 <testAssertion id="BSPXXX" entryType="anySecureEnvelope" type="required" enabled="true">
+            <context>
+            </context>
+            <assertionDescription>
+	    </assertionDescription>
+            <failureMessage>
+            </failureMessage>
+            <failureDetailDescription>
+            </failureDetailDescription>
+            <additionalEntryTypeList>
+                <messageInput>none</messageInput>
+                <wsdlInput>none</wsdlInput>
+            </additionalEntryTypeList>
+            <prereqList/>
+            <referenceList>
+                <reference profileID="BSP1"></reference>                
+             </referenceList>
+            <comments></comments>
+	    <additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+	    **  C4211 A wsse:UsernameToken in a SECURE_ENVELOPE which contains a wsu:Created element SHOULD be referenced by a ds:Reference in a 
+                 ds:SignedInfo element in order to prevent replay. (page 41) ** 
+        </testAssertion>
+
+
+	 <testAssertion id="BSPXXX" entryType="anySecureEnvelope" type="required" enabled="true">
+            <context>
+            </context>
+            <assertionDescription>
+	    </assertionDescription>
+            <failureMessage>
+            </failureMessage>
+            <failureDetailDescription>
+            </failureDetailDescription>
+            <additionalEntryTypeList>
+                <messageInput>none</messageInput>
+                <wsdlInput>none</wsdlInput>
+            </additionalEntryTypeList>
+            <prereqList/>
+            <referenceList>
+                <reference profileID="BSP1"></reference>                
+             </referenceList>
+            <comments></comments>
+	    <additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+	    **  R5206 When the wsse:KeyIdentifier element is used within a SECURE_ENVELOPE to specify a reference to an X.509 certificate, the 
+                 wsse:KeyIdentifier element MUST have ValueType attribute with the value 
+                 http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#X509SubjectKeyIdentifier and its contents 
+                 MUST be the value of the certificate's X.509 SubjectKeyIdentifier extension. (page 42) ** 
+        </testAssertion>
+
+
+	 <testAssertion id="BSPXXX" entryType="anySecureEnvelope" type="required" enabled="true">
+            <context>
+            </context>
+            <assertionDescription>
+	    </assertionDescription>
+            <failureMessage>
+            </failureMessage>
+            <failureDetailDescription>
+            </failureDetailDescription>
+            <additionalEntryTypeList>
+                <messageInput>none</messageInput>
+                <wsdlInput>none</wsdlInput>
+            </additionalEntryTypeList>
+            <prereqList/>
+            <referenceList>
+                <reference profileID="BSP1"></reference>                
+             </referenceList>
+            <comments></comments>
+	    <additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+	    **  R5207 Within a SECURE_ENVELOPE, a wsse:SecurityTokenReference element MUST be used to specify all references to X.509 token types 
+                 in signature or encryption elements. ** 
+        </testAssertion>
+-->
+		<!-- ================================================================================================================ 
+		ds:KeyInfo Assertions 
+	     ================================================================================================================ -->
+		<testAssertion id="BSP6301" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a ds:KeyInfo which is meant for SOAP message security.</context>
+			<assertionDescription>The ds:KeyInfo element does not contain xenc:AgreementMethod child element.</assertionDescription>
+			<failureMessage>One or more ds:KeyInfo elements has an xenc:AgreementMethod child element.</failureMessage>
+			<failureDetailDescription>The ds:KeyInfo elements in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5605</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R5605 Any ds:KeyInfo elements in a SECURE_ENVELOPE MUST NOT have any xenc:AgreementMethod child elements. --></testAssertion>
+		<testAssertion id="BSP6302" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a ds:KeyInfo which is meant for SOAP message security.</context>
+			<assertionDescription>The ds:KeyInfo must each have exactly one child element.</assertionDescription>
+			<failureMessage>One or more ds:KeyInfo elements in the message have either no child elements, or more than one child elements.</failureMessage>
+			<failureDetailDescription>The ds:KeyInfo element(s) in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5402</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5402 A ds:KeyInfo element in a SECURE_ENVELOPE MUST have exactly one child element. -->
+		</testAssertion>
+		<testAssertion id="BSP6303" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a ds:KeyInfo which is meant for SOAP message security.</context>
+			<assertionDescription>Each ds:KeyInfo must either have wsse:SecurityTokenReference or ds:MgmtData as one of its child element.</assertionDescription>
+			<failureMessage>One or more ds:KeyInfo elements in the message have child elements other than wsse:SecurityTokenReference or ds:MgmtData</failureMessage>
+			<failureDetailDescription>The ds:KeyInfo element(s) in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6302</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R5409</reference>
+				<reference profileID="BSP1">R5605</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5409 The child element of a ds:KeyInfo element in a SECURE_ENVELOPE MUST be either wsse:SecurityTokenReference or ds:MgmtData -->
+		</testAssertion>
+		<!-- ================================================================================================================ 
+		ds:Signature assertions 
+              ================================================================================================================ -->
+		<testAssertion id="BSP6401" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:KeyInfo" 
+                returns at lease one element.</context>
+			<assertionDescription>Any element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:KeyInfo" 
+		must have wsse:SecurityTokenReference as its child element.</assertionDescription>
+			<failureMessage>
+		One or more ds:Signature elements in the Security Header of the message contain ds:KeyIfo elements that do not use  wsse:SecurityTokenReference to
+		refer to the relevant Security Token.
+            </failureMessage>
+			<failureDetailDescription>
+		The ds:Signature element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6302</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3052</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3052 If a ds:Signature element within a wsse:Security header in a SECURE_ENVELOPE contains a ds:KeyInfo then a wsse:SecurityTokenReference element 
+                 MUST be used to refer to the security token used for the signature. -->
+		</testAssertion>
+		<testAssertion id="BSP6402" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature" returns one or more elements.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature[//ds:Manifest]" will not return any elements.</assertionDescription>
+			<failureMessage>One or more ds:Signature elements in the message contains a ds:Manifest element.</failureMessage>
+			<failureDetailDescription>
+		The ds:Signature element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5403</reference>
+			</referenceList>
+			<comments></comments>
+			<!-- R5403 A ds:Signature element in a SECURE_ENVELOPE MUST NOT contain a ds:Manifest element. -->
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+		</testAssertion>
+		<testAssertion id="BSP6403" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:DigestMethod/@Algorithm", 
+		returns one or more attributes.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature[ds:SignedInfo/ds:Reference/ds:DigestMethod/@Algorithm!=\"http://www.w3.org/2000/09/xmldsig#sha1\"]" 
+		must not return any elements.</assertionDescription>
+			<failureMessage>One or more ds:Signature elements contains a ds:DigestMethod/@Algorithm element with a value other than
+		"http://www.w3.org/2000/09/xmldsig#sha1"</failureMessage>
+			<failureDetailDescription>
+		The ds:Signature element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5420</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5420 Any ds:DigestMethod/@Algorithm element in a SECURE_ENVELOPE MUST have the value "http://www.w3.org/2000/09/xmldsig#sha1" -->
+		</testAssertion>
+		<testAssertion id="BSP6405" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference", 
+		returns one or more elements.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference[not(ds:Transforms)]" 
+		does not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more ds:Reference elements in the message does not have a ds:Transforms child element.
+            </failureMessage>
+			<failureDetailDescription>
+		The ds:Reference element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5410</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5410 Any ds:Reference element in a SECURE_ENVELOPE MUST have a ds:Transforms child element.  -->
+		</testAssertion>
+		<testAssertion id="BSP6406" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:Transforms", returns one or more elements.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:Transforms[not(ds:Transform)]" 
+		does not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more ds:Transforms elements in the message does not have any ds:Transform child elements.
+            </failureMessage>
+			<failureDetailDescription>
+		The ds:Transforms element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6405</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R5411</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5411 Any ds:Transforms element in a SECURE_ENVELOPE MUST have at least one ds:Transform child element.  -->
+		</testAssertion>
+		<testAssertion id="BSP6407" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:CanonicalizationMethod/@Algorithm", returns one or more elements.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:CanonicalizationMethod[@Algorithm != \"http://www.w3.org/2001/10/xml-exc-c14n#\"]" 
+		does not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more ds:CanonicalizationMethod/@Algorithm attributes in the message have values other than "http://www.w3.org/2001/10/xml-exc-c14n#".
+            </failureMessage>
+			<failureDetailDescription>
+		The ds:CanonicalizationMethod element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5404</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5404 Any ds:CanonicalizationMethod/@Algorithm attribute in a SECURE_ENVELOPE MUST have a value of "http://www.w3.org/2001/10/xml-exc-c14n#" 
+	         indicating that is uses Exclusive C14N without comments for canonicalization. -->
+		</testAssertion>
+		<testAssertion id="BSP6408" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression 
+		"/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:CanonicalizationMethod[@Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"]", returns one or more elements.</context>
+			<assertionDescription>The elements returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:CanonicalizationMethod[@Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"]"
+		must have a c14N:InclusiveNamespace child element with a @PrefixList attribute.</assertionDescription>
+			<failureMessage>
+		One or more ds:CanonicalizationMethod elements with @Algorithm attributes whose value is "http://www.w3.org/2001/10/xml-exc-c14n#"
+		do not have c14N:InclusiveNamespace child elements, or else the c14N:InclusiveNamespace elements do not have a
+		@PrefixList attribute.
+	    </failureMessage>
+			<failureDetailDescription>
+		The ds:Canonicalization elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6407</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R5406</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5406 Any ds:CanonicalizationMethod element that has an @Algorithm attribute whose value is "http://www.w3.org/2001/10/xml-exc-c14n#" 
+ 	         MUST have a c14N:InclusiveNamespace child element with an @PrefixList attribute. -->
+		</testAssertion>
+		<testAssertion id="BSP6409" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression 
+		"/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:Transforms/ds:Transform/@Algorithm ", returns one or more elements.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:Transforms/ds:Transform/[not(@Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\" 
+ 		or @Algorithm=\"http://www.w3.org/2002/06/xmldsig-filter2#\" 
+		or @Algorithm=\"http://www.docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd#STR-Transform\"
+                or @Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\")]"
+		does not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more ds:Transform/@Algorithm attributes have values that are not one of "http://www.w3.org/2001/10/xml-exc-c14n#" 
+             	or "http://www.w3.org/2002/06/xmldsig-filter2" or "http://www.docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd#STR-Transform" 
+		or "http://www.w3.org/2000/09/xmldsig#enveloped-signature"
+            </failureMessage>
+			<failureDetailDescription>
+		The ds:Transform elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5423</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R5423 Any ds:Transform/@Algorithm attribute in a SECURE_ENVELOPE MUST have a value of "http://www.w3.org/2001/10/xml-exc-c14n#" 
+                 or "http://www.w3.org/2002/06/xmldsig-filter2" or "http://www.docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd#STR-Transform"
+		 or "http://www.w3.org/2000/09/xmldsig#enveloped-signature" -->
+		</testAssertion>
+		<testAssertion id="BSP6410" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope,where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:SignatureMethod" returns at least one element.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:SignatureMethod[ds:HMACOutputLength]"
+		must not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more ds:Signature/ds:SignedInfo/ds:SignatureMethod elements contains a ds:HMACOutputLength element.
+            </failureMessage>
+			<failureDetailDescription>
+		The ds:SignatureMethod element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5401</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5401 The ds:HMACOutputLength element MUST not appear in a signature in a SECURE_ENVELOPE. -->
+		</testAssertion>
+		<testAssertion id="BSP6411" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression
+		"/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:Transforms/ds:Transform[@Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"]" returns at least
+		one element.</context>
+			<assertionDescription>Any element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:Transforms/ds:Transform[@Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"]"
+		must have a c14NInclusiveNamespace child element with a @Prefix attribute.</assertionDescription>
+			<failureMessage>
+		A ds:Transform element with an @Algorithm attribute whose value is "http://www.w3.org/2001/10/xml-exc-c14n#" either does not
+		have a c14N:InclusiveNamespace child element, or the c14N:InclusiveNamespace child element does not have a @PrefixList attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The ds:signature element containing the elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5407</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5407 Any ds:Transform element that has an @Algorithm attribute whose value is "http://www.w3.org/2001/10/xml-exc-c14n#" MUST have a c14N:InclusiveNamespace child element with an @PrefixList attribute. -->
+		</testAssertion>
+		<testAssertion id="BSP6420" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression 
+		"/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:Transforms/ds:Transform[@Algorithm=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#STR-Transform\"]"
+		returns one or more elements.</context>
+			<assertionDescription>The XPath expression "./wsse:TransformationParameters/dsig:CanonicalizationMethod" applied successively to the elements returned by the XPath expression
+		"/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:Transforms/ds:Transform[@Algorithm=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#STR-Transform\"]"
+		 must return at least one element in each case.</assertionDescription>
+			<failureMessage>A signature in the SECURE_ENVELOPE, using the SecurityTokenReference transform, does not have the dsig:CanonicalizationMethod element
+		present and wrapped in a wsse:TransformationParameters element.</failureMessage>
+			<failureDetailDescription>
+		The signature element in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3065</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3065 When a SECURE_ENVELOPE uses the SecurityTokenReference Dereferencing Transform, the dsig:CanonicalizationMethod element MUST be present and wrapped in a wsse:TransformationParameters element. -->
+		</testAssertion>
+		<!--	 
+        <testAssertion id="BSP6421" entryType="anySecureEnvelope" type="required" enabled="true">
+            <context>
+		For any secure envelope.
+            </context>
+            <assertionDescription>
+		The XPath expression "/soap:Envelope/soap:Header/wsse:Security//dsig:Signature/dsig:SignedInfo/dsig:Reference/dsig:Transforms/dsig:Transform[@Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"]" 
+		should not return any elements.
+	    </assertionDescription>
+            <failureMessage>
+		One or more signatures in the SECURE_ENVELOPE are Enveloped Signatures.
+            </failureMessage>
+            <failureDetailDescription>
+            </failureDetailDescription>
+		The signature elements in question
+            <additionalEntryTypeList>
+                <messageInput>none</messageInput>
+                <wsdlInput>none</wsdlInput>
+            </additionalEntryTypeList>
+            <prereqList/>
+            <referenceList>
+                <reference profileID="BSP1">R3104</reference>                
+             </referenceList>
+            <comments></comments>
+	    <additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+	    *** R3102 XML Signatures in SECURE_ENVELOPE SHOULD NOT be Enveloping Signatures as defined by the XML Signature Specification.  (page 43) ***
+        </testAssertion>
+
+
+
+
+	 <testAssertion id="BSPXXX" entryType="anySecureEnvelope" type="required" enabled="true">
+            <context>
+            </context>
+            <assertionDescription>
+	    </assertionDescription>
+            <failureMessage>
+            </failureMessage>
+            <failureDetailDescription>
+            </failureDetailDescription>
+            <additionalEntryTypeList>
+                <messageInput>none</messageInput>
+                <wsdlInput>none</wsdlInput>
+            </additionalEntryTypeList>
+            <prereqList/>
+            <referenceList>
+                <reference profileID="BSP1"></reference>                
+             </referenceList>
+            <comments></comments>
+	    <additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+        </testAssertion>
+-->
+		<!-- ================================================================================================================ 
+		xenc:EncryptedData & xenc:EncryptedKey assertions 
+              ================================================================================================================ -->
+		<testAssertion id="BSP6501" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a xenc:EncryptedData which is meant for SOAP message security.</context>
+			<assertionDescription>Each xenc:EncryptedData must have xenc:EncryptionMethod as one of its child elements.</assertionDescription>
+			<failureMessage>
+		One or more xenc:EncryptedData elements are present without xenc:EncryptionMethod children.
+            </failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedData element(s) in question
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5601</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R5601 When an xenc:EncryptedData element appears in a SECURE_ENVELOPE it MUST have an xenc:EncryptionMethod child element. -->
+		</testAssertion>
+		<testAssertion id="BSP6502" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey", returns at least one element.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey[@Recipient]" must not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more  xenc:EncryptedKey elements has a Recipient attribute.
+	    </failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedKey element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5602</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R5602 When an xenc:EncryptedKey appears in a SECURE_ENVELOPE, a Recipient attribute MUST NOT be present. -->
+		</testAssertion>
+		<testAssertion id="BSP6503" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey" returns at least one element.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey[not(xenc:EncryptionMethod)]" does not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more xenc:EncryptedKey elements are present without xenc:EncryptionMethod children.
+            </failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedKey element(s) in question
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5603</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5603 When an xenc:EncryptedKey element appears in a SECURE_ENVELOPE it MUST have an xenc:EncryptionMethod child element. -->
+		</testAssertion>
+		<testAssertion id="BSP6505" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, that contains a xenc:EncryptedData which is meant for SOAP message security and has a xenc:EncryptionMethod/@Algorithm as its child element.</context>
+			<assertionDescription>The xenc:EncryptionMethod/@Algorithm attribute should contain as its value one of the following URIs. "http://www.w3.org/2001/04/xmlenc#tripledes-cbc\" "http://www.w3.org/2001/04/xmlenc#aes128-cbc\"
+"http://www.w3.org/2001/04/xmlenc#aes256-cbc\".</assertionDescription>
+			<failureMessage>One or more xenc:EncryptedData/xenc:EncryptionMethod/@Algorithm attributes have values that are not
+		one of "http://www.w3.org/2001/04/xmlenc#tripledes-cbc", "http://www.w3.org/2001/04/xmlenc#aes128-cbc" or "http://www.w3.org/2001/04/xmlenc#aes256-cbc"</failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedData element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6501</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R5620</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R5620 Any xenc:EncryptedData/xenc:EncryptionMethod/@Algorithm attribute in a SECURE_ENVELOPE MUST have a value of 
+                 "http://www.w3.org/2001/04/xmlenc#tripledes-cbc", "http://www.w3.org/2001/04/xmlenc#aes128-cbc" or "http://www.w3.org/2001/04/xmlenc#aes256-cbc" -->
+		</testAssertion>
+		<testAssertion id="BSP6506" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey/xenc:EncryptionMethod/@Algorithm" 
+		returns at least one element.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey[xenc:EncryptionMethod/not(@Algorithm=\"http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p\" or 
+		@Algorithm=\"http://www.w3.org/2001/04/xmlenc#kw-tripledes\" or @Algorithm=\"http://www.w3.org/2001/04/xmlenc#kw-aes128\" or 
+		@Algorithm=\"http://www.w3.org/2001/04/xmlenc#kw-aes256\")]
+		does not return any values.</assertionDescription>
+			<failureMessage>
+		One or more xenc:EncryptedKey/xenc:EncryptionMethod/@Algorithm attributes have values that are not
+		one of "http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p", "http://www.w3.org/2001/04/xmlenc#kw-tripledes", "http://www.w3.org/2001/04/xmlenc#kw-aes128" or 
+                "http://www.w3.org/2001/04/xmlenc#kw-aes256"
+            </failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedKey element(s) in question
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6503</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R5621</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5621 Any xenc:EncryptedKey/xenc:EncryptionMethod/@Algorithm attribute in a SECURE_ENVELOPE MUST have a value of 
+                 "http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p", "http://www.w3.org/2001/04/xmlenc#kw-tripledes", "http://www.w3.org/2001/04/xmlenc#kw-aes128" or 
+                 "http://www.w3.org/2001/04/xmlenc#kw-aes256" -->
+		</testAssertion>
+		<testAssertion id="BSP6507" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expresson "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey" returns at least one element.</context>
+			<assertionDescription>The XPath expresson "/soap:Envelope/soap:Header/wsse:Security/EncryptedKey[@Type]" must not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more xenc:EncryptedKey elements in the message contains a Type attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedKey element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3209</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3209 xenc:EncryptedKey elements in a SECURE_ENVELOPE MUST NOT specify a Type attribute. -->
+		</testAssertion>
+		<testAssertion id="BSP6508" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expresson "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey", returns at least one element.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey[not(xenc:ReferenceList)]" must not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more xenc:EncryptedKey elements are present in the message without xenc:ReferenceList child elements.
+            </failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedKey element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3216</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3216 Any xenc:EncryptedKey element MUST contain a xenc:ReferenceList child element. -->
+		</testAssertion>
+		<testAssertion id="BSP6511" entryType="anySecureEnvelope" type="required" enabled="true">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/[xenc:EncryptedData or xenc:EncryptedKey]/ds:KeyInfo" 
+		returns at least one element.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/[xenc:EncryptedData or xenc:EncryptedKey]/ds:KeyInfo[not(wsse:SecurityTokenReference)]" 
+		returns no elements.</assertionDescription>
+			<failureMessage>
+		One or more xenc:EncryptedData elements in the security header contain ds:Keyinfo without wsse:SecurityTokenReference children.
+            </failureMessage>
+			<failureDetailDescription>
+		The ds:Keyinfo element(s) in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList>
+				<testAssertionID>BSP6302</testAssertionID>
+				<testAssertionID>BSP6303</testAssertionID>
+			</prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3053</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R3053 If an xenc:EncryptedData or xenc:EncryptedKey element within a wsse:Security header in a SECURE_ENVELOPE contains a ds:KeyInfo 
+                 then a wsse:SecurityTokenReference element MUST be used to refer to the relevant Security Token. -->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6512">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey" 
+                returns	one or more elements.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey[@MimeType]" does not return any values.</assertionDescription>
+			<failureMessage>
+		One or more xenc:EncryptedKey elements have a MimeType attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedKey elements in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5622</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R5622 xenc:EncryptedKey elements in a SECURE_ENVELOPE MUST NOT specify a MimeType attribute. -->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6513">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey" 
+		returns	one or more elements.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey[@Encoding]" must not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more xenc:EncryptedKey elements have an Encoding attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedKey elements in question
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5623</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!--R5623 xenc:EncryptedKey elements in a SECURE_ENVELOPE MUST NOT specify a Encoding attribute. -->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6514">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey" 
+		returns one or more elements.</context>
+			<assertionDescription>The XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey[not(@Id)]" must not return any elements.</assertionDescription>
+			<failureMessage>
+		One or more xenc:EncryptedKey elements do not have an Id attribute.
+            </failureMessage>
+			<failureDetailDescription>
+		The xenc:EncryptedKey elements in question.
+			</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5624</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="yes"/>
+			<!-- R5624 xenc:EncryptedKey elements in a SECURE_ENVELOPE MUST have an Id attribute. -->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6515">
+			<context>For any secure envelope, that contains a xenc:EncryptedData or xenc:EncryptedKey which is meant for SOAP message security.</context>
+			<assertionDescription>The soap:Envelope, soap:Header and soap:Body elements are present in the secure envelope.</assertionDescription>
+			<failureMessage>
+		 A secure envelope containing encryption is not a valid SOAP envelope.
+            </failureMessage>
+			<failureDetailDescription>
+		The secure envelope in question.
+            </failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5607</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R5607 When encryption is used, the SECURE_ENVELOPE MUST still be a valid SOAP envelope. Specifically, the Envelope, Header, or Body elements MUST NOT be encrypted. -->
+		</testAssertion>
+		<!--
+
+	 <testAssertion id="BSPXXX" entryType="anySecureEnvelope" type="required" enabled="true">
+            <context>
+            </context>
+            <assertionDescription>
+	    </assertionDescription>
+            <failureMessage>
+            </failureMessage>
+            <failureDetailDescription>
+            </failureDetailDescription>
+            <additionalEntryTypeList>
+                <messageInput>none</messageInput>
+                <wsdlInput>none</wsdlInput>
+            </additionalEntryTypeList>
+            <prereqList/>
+            <referenceList>
+                <reference profileID="BSP1"></reference>                
+             </referenceList>
+            <comments></comments>
+	    <additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+        </testAssertion>
+-->
+		<!-- ================================================================================================================ 
+		Untestable assertions 
+              ================================================================================================================ -->
+		<testAssertion id="BSP6997" entryType="anySecureEnvelope" type="notTestable" enabled="false">
+			<context>
+		For a message obtained by reversing the SOAP Messsage Security
+                of any secure message.
+            </context>
+			<assertionDescription>
+		Not testable.
+	    </assertionDescription>
+			<failureMessage>
+		Not testable.
+            </failureMessage>
+			<failureDetailDescription>
+			</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5800</reference>
+				<reference profileID="BSP1">R5801</reference>
+				<reference profileID="BSP1">R5802</reference>
+				<reference profileID="BSP1">R5803</reference>
+				<reference profileID="BSP1">R5804</reference>
+				<reference profileID="BSP1">R5805</reference>
+				<reference profileID="BSP1">R5806</reference>
+				<reference profileID="BSP1">R5807</reference>
+				<reference profileID="BSP1">R5808</reference>
+				<reference profileID="BSP1">R5809</reference>
+				<reference profileID="BSP1">R5810</reference>
+				<reference profileID="BSP1">R5811</reference>
+				<reference profileID="BSP1">R5812</reference>
+				<reference profileID="BSP1">R5813</reference>
+			</referenceList>
+			<comments>These restrictions are intended to clarify BP1.0 and BP1.1 statements that might be
+		      unclear when SOAP Message Security is applied in compliance with the Basic Security Profile.
+   	    </comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="no"/>
+		</testAssertion>
+		<testAssertion id="BSP6998" entryType="anySecureEnvelope" type="notTestable" enabled="false">
+			<context>
+		These assertions provide guidance for protecting attachements when they are 
+	        used with SOAP Messages
+            </context>
+			<assertionDescription>
+		Not testable.
+	    </assertionDescription>
+			<failureMessage>
+		Not testable.
+            </failureMessage>
+			<failureDetailDescription>
+			</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R6000</reference>
+				<reference profileID="BSP1">R6001</reference>
+				<reference profileID="BSP1">R6002</reference>
+				<reference profileID="BSP1">R6100</reference>
+				<reference profileID="BSP1">R6101</reference>
+				<reference profileID="BSP1">R6103</reference>
+				<reference profileID="BSP1">R6200</reference>
+				<reference profileID="BSP1">R6201</reference>
+				<reference profileID="BSP1">R6202</reference>
+				<reference profileID="BSP1">R6203</reference>
+				<reference profileID="BSP1">R6204</reference>
+				<reference profileID="BSP1">R6205</reference>
+				<reference profileID="BSP1">R6206</reference>
+				<reference profileID="BSP1">R6207</reference>
+			</referenceList>
+			<comments>
+			</comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="no"/>
+			<!-- Notes
+	     -->
+		</testAssertion>
+		<testAssertion id="BSP6999" entryType="anySecureEnvelope" type="notTestable" enabled="false">
+			<context>
+		Not testable.
+	    </context>
+			<assertionDescription>
+		Not testable.
+	    </assertionDescription>
+			<failureMessage>Not testable.</failureMessage>
+			<failureDetailDescription>Not testable.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R2001</reference>
+				<reference profileID="BSP1">R2002</reference>
+				<reference profileID="BSP1">R3021</reference>
+				<reference profileID="BSP1">R3022</reference>
+				<reference profileID="BSP1">R3023</reference>
+				<reference profileID="BSP1">R3024</reference>
+				<reference profileID="BSP1">R3025</reference>
+				<reference profileID="BSP1">R3026</reference>
+				<reference profileID="BSP1">R3212</reference>
+				<reference profileID="BSP1">C4210</reference>
+				<reference profileID="BSP1">C4211</reference>
+				<reference profileID="BSP1">R4212</reference>
+				<reference profileID="BSP1">R4213</reference>
+				<reference profileID="BSP1">R4214</reference>
+				<reference profileID="BSP1">R4215</reference>
+				<reference profileID="BSP1">R5201</reference>
+				<reference profileID="BSP1">R5203</reference>
+				<reference profileID="BSP1">R5206</reference>
+				<reference profileID="BSP1">R5207</reference>
+				<reference profileID="BSP1">C5440</reference>
+				<reference profileID="BSP1">C5441</reference>
+				<reference profileID="BSP1">R5606</reference>
+				<reference profileID="BSP1">C5630</reference>
+				<reference profileID="BSP1">R5701</reference>
+				<reference profileID="BSP1">R5702</reference>
+				<reference profileID="BSP1">R5703</reference>
+				<reference profileID="BSP1">R5704</reference>
+				<reference profileID="BSP1">E0001</reference>
+				<reference profileID="BSP1">R3207</reference>
+				<reference profileID="BSP1">R4213</reference>
+			</referenceList>
+			<comments>
+                All of these profile requirements are NOT testable.  
+                Some of these test assertions represent capabilities which can not be validated.
+	    </comments>
+			<additionalInfo status="new" ownerSignOff="Ed Johns" editorSignOff="" testCasesCompleted="no"/>
+		</testAssertion><testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6600">
+			<context>For any secure envelope, that contains wsse:SecurityTokenReference which is meant for SOAP message security.</context>
+			<assertionDescription>For each token referenced by the wsse:SecurityTokenReference get the referenced token and check if it is in the additional token profile.</assertionDescription>
+			<failureMessage></failureMessage>
+			<failureDetailDescription></failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">E0002</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--E0002 - Security Tokens - Security tokens may be specified in additional security token profiles.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6601">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference" returns one or more elements.</context>
+			<assertionDescription>All the elements in the secure envelope that has a ID attribute and which is referred from the ds:Reference element use the shorthand XPointer format.</assertionDescription>
+			<failureMessage>A element in the secure envelope that has a ID attribute is referred from ds:Reference element without using the shorthand XPointer format.</failureMessage>
+			<failureDetailDescription>The ds:Reference element which is not using the shorthand XPointer format.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3001</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3001 When referring to an element in a SECURE_ENVELOPE that carries an attribute of type ID from ds:Reference a shorthand XPointer MUST be used  to refer to that element.-->
+		</testAssertion><testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6602">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference/ds:Transforms/ds:Transform[@Algorithm=''http://www.w3.org/2002/06/xmldsig-filter2"]" returns one or more elements.</context>
+			<assertionDescription>The ds:Reference element use the XPath filter 2.0 transform (http://www.w3.org/2002/06/xmldsig-filter2) to refer to the elements in the message that does not have an ID attribute.</assertionDescription>
+			<failureMessage>The ds:Reference element does not use the XPath filter 2.0 transform (http://www.w3.org/2002/06/xmldsig-filter2) to refer to the elements in the message that does not have an ID attribute.</failureMessage>
+			<failureDetailDescription>The ds:Reference element which is not using the XPath Filter 2.0 transform.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3002</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3002 When referring to an element in a SECURE_ENVELOPE that does NOT carry an attribute of type ID from ds:Reference the XPath Filter 2.0 transform (http://www.w3.org/2002/06/xmldsig-filter2) MUST be used to refer to that element.-->
+		</testAssertion><testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6603">
+			<context>For any secure envelope, that contains a wsse:BinarySecurityToken which is meant for SOAP message security.</context>
+			<assertionDescription>For each wsse:BinarySecurityToken element the ValueType attribute has a value specified within the token profile.</assertionDescription>
+			<failureMessage>The message contains at least one wsse:BinarySecurityToken element which has a ValueType attribute whose value is outside the defined token profile.</failureMessage>
+			<failureDetailDescription>The wsse:BinarySecurityToken element whose ValueType attribute specified a value which is not specified by the Token profile.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3032</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3032 A ValueType attribute on a wsse:BinarySecurityToken element in a SECURE_ENVELOPE MUST have a value specified within the appropriate token profile.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6604">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference which is meant for SOAP Message security and which has a direct reference to a Security Token.</context>
+			<assertionDescription>Each wsse:SecurityTokenReference if it contains a direct reference to another wsse:SecurityTokenReference element, then the referenced wsse:SecurityTokenReference should have a wsse:Embedded child element.</assertionDescription>
+			<failureMessage>A direct reference from a wsse:SecurityTokenReference refers to a wsse:SecurityTokenReference element that does not have a wsse:Embedded element as the child node or the embedded security token is not of the expected type.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element that contains the invalid reference.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3056</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3056 A wsse:SecurityTokenReference element in a SECURE_ENVELOPE MUST NOT contain a direct reference to another wsse:SecurityTokenReference element that does not have a wsse:Embedded child element.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6605">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference which is meant for SOAP message security contains a child element wsse:Reference with attribute ValueType.</context>
+			<assertionDescription>The ValueType attribute should match the value of the ValueType attribute, if any, on the referenced token.</assertionDescription>
+			<failureMessage>A direct reference from a wsse:SecurityTokenReference to a security token have mismatched ValueType attributes.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element that contains the invalid reference.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3058</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3058 The value of a ValueType attribute on any wsse:SecurityTokenReference/wsse:Reference element in a SECURE_ENVELOPE MUST match the value of the ValueType attribute, if any, on the referenced token.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6606">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference which is meant for SOAP message security and which contains wsse:Embedded child element.</context>
+			<assertionDescription>The wsse:Embedded element contains one child element which is a Security Token from the support token profile.</assertionDescription>
+			<failureMessage>The wsse:Embedded element has more than one child element or specifies a Security Token that is not supported.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element that contains the invalid wsse:Embedded child element.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3060</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3060 A wsse:Embedded element in a SECURE_ENVELOPE MUST contain a single child element for a security token from an appropriate token profile.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6607">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference which is meant for SOAP message security and wsse:KeyIdentifier child element.</context>
+			<assertionDescription>For each wsse:SecurityTokenReference the child element wsse:KeyIdentifier/@ValueType attribute value is specified within the appropriate token profile.</assertionDescription>
+			<failureMessage>The wsse:KeyIdentifier element has the ValueType attribute set to a value which is inappropriate for the token profile.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element that contains the invalid wsse:KeyIdentifier child element.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3063</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3063 A ValueType attribute on a wsse:KeyIdentifier element in a SECURE_ENVELOPE MUST have a value specified within the appropriate token profile.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6608">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference which is meant for SOAP message security with a child element wsse:Reference.</context>
+			<assertionDescription>For each wsse:SecurityTokenReference the wsse:Reference child element should not reference the node with name wsse:Embedded.</assertionDescription>
+			<failureMessage>The wsse:Reference element refers to the wsse:Embedded element instead of the Security Token embedded inside the element.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element that contains the invalid wsse:Reference child element.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3064</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3064 When wsse:SecurityTokenReference element in a SECURE_ENVELOPE contains a direct reference to an security token contained within an wsse:Embedded element, the reference MUST be to the contained token not to the wsse:Embedded element.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6609">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath "/soap:Envelope/soap:Header/wsse:Security/ds:Signature" the XPath expression "./wsse:Object" should not return any element.</assertionDescription>
+			<failureMessage>The wsse:Signature element includes a Enveloping Signature.</failureMessage>
+			<failureDetailDescription>The wsse:Signature element that contains the Enveloping Signature.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3102</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3102 XML Signatures in a SECURE_ENVELOPE MUST NOT be Enveloping Signatures as defined by the XML Signature specification.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6610">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignedInfo/ds:Reference" the element should refers to a object outside the ds:Signature element.</assertionDescription>
+			<failureMessage>The wsse:Signature element does not use Detached Signature format.</failureMessage>
+			<failureDetailDescription>The wsse:Signature element that contains the non-Detached Signature.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3103</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3103 XML Signatures in a SECURE_ENVELOPE MUST be Detached Signatures as defined by the XML Signature specification.-->
+		</testAssertion>
+		<testAssertion  entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6611">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:ReferenceList" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:ReferenceList" all the xenc:DataReference child elements should be referring to xenc:EncryptedData element that is encrypted with the same key.</assertionDescription>
+			<failureMessage>The xenc:ReferenceList contains xenc:DataReference elements that is referring to xenc:EncryptedData elements all of which are not encrypted with the same key.</failureMessage>
+			<failureDetailDescription>The xenc:ReferenceList element in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3205</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3205 For each encryption step that produces an xenc:ReferenceList a SECURE_ENVELOPE MUST contain a seperate wsse:Security/xenc:ReferenceList element for each key used in that encryption step.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6612">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsse:EncryptedData" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsse:EncryptedData" the xenc:EncryptedKey element that contains the encryption key preceeds the wsse:EncryptedData element in the header.</assertionDescription>
+			<failureMessage>The xenc:EncryptedData element preceeds the xenc:EncryptedKey element which contains its encryption key.</failureMessage>
+			<failureDetailDescription>The xenc:EncryptedData element in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3208</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3208 xenc:EncryptedKey elements in the wsse:Security header in a SECURE_ENVELOPE MUST precede any xenc:EncryptedData elements in that header encrypted using the key in the xenc:EncryptedKey element.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6613">
+			<context>For any secure envelope, with a xenc:EncryptedData element which is meant for SOAP message security and the xenc:EncryptedData has a child element ds:KeyInfo/wsse:SecurityTokenReference/wsse:Reference.</context>
+			<assertionDescription>The ds:KeyInfo/wsse:SecurityTokenReference/wsse:Reference element should not reference another ds:KeyInfo element.</assertionDescription>
+			<failureMessage>The xenc:EncryptedData element contains a ds:KeyInfo element that points to another ds:KeyInfo element.</failureMessage>
+			<failureDetailDescription>The xenc:EncryptedData element in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R3211</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3211 An xenc:EncryptedData/ds:KeyInfo/wsse:SecurityTokenReference element in a SECURE_ENVELOPE MUST NOT reference another ds:KeyInfo element.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6614">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey" the XPath expression "./xenc:ReferenceList/xenc:DataReference" return one or more elements.</assertionDescription>
+			<failureMessage>The xenc:EncryptedKey element either does not contain a xenc:ReferenceList element or the child element xence:ReferenceList does not contain xenc:EncryptedData child element.</failureMessage>
+			<failureDetailDescription>The xenc:EncryptedKey element in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1" role="partial-target">R3214</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3214 An xenc:ReferenceList element in a SECURE_ENVELOPE which is a child of xenc:EncryptedKey MUST contain a xenc:DataReference for each xenc:EncryptedData element that was encrypted in the encryption step with the key corresponding to the xenc:EncryptedKey.
+This is a partial-target as we cannot reliable tell that all the message parts that were encrypted using this key are listed in the DataReference section.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6615">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security//xenc:ReferenceList" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security//xenc:ReferenceList" must have a xenc:DataReference child element that refers to a xenc:EncryptedData element.</assertionDescription>
+			<failureMessage>The xenc:ReferenceList element does not contain xenc:DataReference as the child element.</failureMessage>
+			<failureDetailDescription>The xenc:EncryptedKey element at fault.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1" role="partial-target">R3215</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3215 Any xenc:ReferenceList in a SECURE_ENVELOPE MUST contain an xenc:DataReference element for each xenc:EncryptedData element encrypted under a single key as part of the corresponding encryption step. This is a Partial-target, as in case of a Asymmetric keys we cannot reliable tell that xenc:EncryotedData being referred from "/soap:Envelope/soap:Header/wsse:Security/xenc:EncruptedKey/xenc:ReferenceList" is encrypted with this key unless we decrypt the element.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6616">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference which is meant for SOAP message security and has wsse:Reference child element.</context>
+			<assertionDescription>If the URI attribute of the wsse:Reference element uses a shorthand XPointer format, then the Security token it refers to is contained within the message.</assertionDescription>
+			<failureMessage>The wsse:SecurityTokenReference uses a shorthand XPointer to a security token that is not contained within the message.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R5204</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R5204 When a wsse:SecurityTokenReference element in a SECURE_ENVELOPE uses a Direct Reference to a Security Token contained within that message, it MUST use a shorthand XPointer reference to the element containing the Security Token.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6617">
+			<context>For any secure envelope, that contains a wsse:BinarySecurityToken meant for SOAP message security.</context>
+			<assertionDescription>For each wsse:BinarySecurityToken the element preceeds a wsse:SecurityTokenReference element that refers to it.</assertionDescription>
+			<failureMessage>The wsse:BinarySecurityToken element does not preceed its reference in a wsse:SecurityToken Reference.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element in question.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R5205</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R5205 When a wsse:BinarySecurityToken element is included in a SECURE_ENVELOPE it MUST precede the first wsse:SecurityTokenReference element that references it.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6618">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature//ds:Transform/c14n:InclusiveNamespaces[@PrefixList]" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature//ds:Transform/c14n:InclusiveNamespaces[@PrefixList]" the attribute value includes prefix of all 
+in-scope namespaces for the element being signed that are not visibly utilized, per Exclusive XML Canonicalization Version 1.0.</assertionDescription>
+			<failureMessage>The "/soap:Envelope/soap:Header/wsse:Security/ds:Signature//ds:Transform/c14n:InclusiveNamespaces[@PrefixList]" does not include all the not visibly utilized namespace prefixes.</failureMessage>
+			<failureDetailDescription>The ds:Transform element at fault.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5405</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R5405 Any ds:Transform/c14n:InclusiveNamespaces/@PrefixList attribute MUST contain the prefix of all in-scope namespaces for the element being signed that are not visibly utilized, per Exclusive XML Canonicalization Version 1.0.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6619">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security//ds:Transform/c14n:InclusiveNamespaces[@PrefixList]" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security//ds:Transform/c14n:InclusiveNamespaces[@PrefixList]" the attribute value should include "#default" if the default namespace is in-scope for the element being signed but is not visibly utilized, per Exclusive XML Canonicalization Version 1.0.</assertionDescription>
+			<failureMessage>The "/soap:Envelope/soap:Header/wsse:Security//ds:Transform/c14n:InclusiveNamespaces[@PrefixList]" does not include #default even though a defaul namespace is being used in the element being signed but is not visibly utilized.</failureMessage>
+			<failureDetailDescription>The ds:Transform element at fault.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5408</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R5408 Any ds:Transform/c14n:InclusiveNamespaces/@PrefixList attribute MUST contain the string "#default" if a default namespace is in-scope for the element being signed but is not visibly utilized, per Exclusive XML Canonicalization Version 1.0.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6620">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignatureMethod[@Algorithm]" return one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignatureMethod[@Algorithm]" the Attribute value is set to "http://www.w3.org/2000/09/xmldsig#hmac-sha1" if the Security Token used is Symmetric.</assertionDescription>
+			<failureMessage>The ds:Signature element has the Algorithm attribute value of its child element wsse:SignatureMethod set to something other than "http://www.w3.org/2000/09/xmldsig#hmac-sha1" when the underlying security token used for signing is a Symmetric Token.</failureMessage>
+			<failureDetailDescription>The ds:Signature element at fault.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R5421</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R5421 Any ds:SignatureMethod/@Algorithm element in a SECURE_ENVELOPE that is part of a signature based on a symmetric key MUST have the value "http://www.w3.org/2000/09/xmldsig#hmac-sha1".-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6621">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignatureMethod[@Algorithm]" return one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/ds:Signature/ds:SignatureMethod[@Algorithm]" the Attribute value is set to "http://www.w3.org/2000/09/xmldsig#rsa-sha1" if the Security Token used is Asymmetric.</assertionDescription>
+			<failureMessage>The wsse:Signature element has the Algorithm attribute value of its child element wsse:SignatureMethod set to something other than "http://www.w3.org/2000/09/xmldsig#rsa-sha1" when the underlying security token used for signing is a Asymmetric token.</failureMessage>
+			<failureDetailDescription>The ds:Signature element at fault.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R5422</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R5422 Any ds:SignatureMethod/@Algorithm element in a SECURE_ENVELOPE that is part of a signature based on an asymmetric key MUST have the value "http://www.w3.org/2000/09/xmldsig#rsa-sha1".-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6622">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference meant for SOAP message security and has wsse:Reference[@URI] child element.</context>
+			<assertionDescription>For each wsse:Reference[@URI] if the value points to a Security Token which is not contained in the message then verify that the Security Token can be referred to using Direct References.</assertionDescription>
+			<failureMessage>The wsse:SecurityTokenReference element refers to a Security Token that is not present in the message and also that token cannot be referred to using a direct reference.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element at fault.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3024</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3024 When a wsse:SecurityTokenReference element in a SECURE_ENVELOPE references a Security Token not contained within that message, and that security Token can be referred to using a Direct Reference, it MUST be referred to using a Direct Reference.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6623">
+			<context>For any secure envelope, that contains a wsse:SecurityTokenReference meant for SOAP message security and has wsse:Embedded child element.</context>
+			<assertionDescription>The format of the contained security token in wsse:Embedded element MUST be the same as if the security token was a child of a wsse:Security element.</assertionDescription>
+			<failureMessage>The wsse:SecurityTokenReference element refers to a Security Token inside its child element wsse:Embedded whose format is different than what would be expected if the Security token was specified as a child element of wsse:Security.</failureMessage>
+			<failureDetailDescription>The wsse:SecurityTokenReference element at fault.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList><testAssertionID>BSP6600</testAssertionID></prereqList>
+			<referenceList>
+				<reference profileID="BSP1">R3025</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R3025 When a wsse:Embedded element in a SECURE_ENVELOPE is used to specify a security token inline within a wsse:SecurityTokenReference element, the format of the contained security token MUST be the same as if the security token was a child of a wsse:Security element-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6624">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsse:Nonce" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expression "/soap:Envelope/soap:Header/wsse:Security/wsse:Nonce" the value of the element must be unique among all the messages seen.</assertionDescription>
+			<failureMessage>The wsse:Nonce value is not unique among messages.</failureMessage>
+			<failureDetailDescription>The wsse:Nonce element whose value is not unique.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1" role="partial-target">R4213</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R4213 Each SECURE_ENVELOPE including a wsse:Nonce element MUST use a nonce value which is different from all previous nonce values used by that SENDER. NOTE: Can only test message log messages, not all previous nonce values used by that SENDER.-->
+		</testAssertion>
+		<testAssertion entryType="anySecureEnvelope" type="required" enabled="true" id="BSP6625">
+			<context>For any secure envelope, where the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:ReferenceList/xenc:DataReference" and/or the XPath expression "/soap:Envelope/soap:Header/wsse:Security/xenc:EncryptedKey/xenc:ReferenceList/xenc:DataReference" returns one or more elements.</context>
+			<assertionDescription>For each element returned by the XPath expressions the element being referenced should be a xenc:EncryptedData.</assertionDescription>
+			<failureMessage>The xenc:DataReference elment refers to an element whose element name is not xenc:EncryptedData.</failureMessage>
+			<failureDetailDescription>The xenc:DataReference that contains the incorrect reference.</failureDetailDescription>
+			<additionalEntryTypeList>
+				<messageInput>none</messageInput>
+				<wsdlInput>none</wsdlInput>
+			</additionalEntryTypeList>
+			<prereqList/>
+			<referenceList>
+				<reference profileID="BSP1">R5606</reference>
+			</referenceList>
+			<comments></comments>
+			<additionalInfo status="new" ownerSignOff="" editorSignOff="" testCasesCompleted="no"/>
+			<!--R5606 Within a SECURE_ENVELOPE an encrypted element or element content MUST be replaced by a corresponding xenc:EncryptedData.-->
+		</testAssertion>
+	</artifact>
+	<!-- Although not required for the Basic Profile definition, the Profile   
+         Definition document may also contain a <link> element.  The 
+         purpose of this element is  to reference another Profile Definition 
+         document.
+
+    <wsi-common:link namespace=http://www.ws-i.org/2002/10/test/profile/   location="http://www.ws-i.org/profiles/AnotherProfile.xml"/>
+    -->
+</profileAssertions>
