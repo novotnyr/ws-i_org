@@ -1,0 +1,1831 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Basic Profile - Version 1.0 (Final)</title>
+		<style type="text/css">		       body { color: black; background: white; font-family: sans-serif; margin: 16pt 24pt; }		       dt { font-style: italic; padding-top: 0.5em; }		       .refinement { margin: 18pt 0em; }		     h4 { font-weight: normal; font-style: italic; font-size: 0.8em; margin-bottom: 0; }			.statement { font-style: italic; margin: 0.5em 5.5em; text-indent: -4em; }			.statement-id { background-color: #ffa; font-style: normal; padding: 0em 0.3em; }			.statement-type { background-color: #ccf; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }			.statement-origin { background-color: #fcc; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }			.rationale { margin: 0.5em 0em;  }			.explanation { margin: 0.5em 0em; }			.explanation p, .rationale p { margin: 0.25em 0; }			.practice { background-color: green; }			.example { background-color: #eee; margin: 0.5em 2em; padding: 0.5em; }			.example-banner { margin: 0; }			.example pre { margin: 0; }			.correct, .incorrect { font-family: sans-serif; font-weight: bold; font-size: 0.9em; margin: 0; }			.correct { color: #090; }			.incorrect { color: #900; }			.specification { padding: 0.5em; background-color: #ffa; margin: 0.5em 2em; }			.ednote { margin: 1.2em; padding: 1.2em; background-color: #fee; }			.note { background-color: #fcc; margin-left: 1.5em; }			.toc { margin-left: 2em; }			.subtoc { margin-left: 3em; }			.subsubtoc { margin-left: 4em; }			@media print {  				a.offsite:after {    					content: " &lt;" attr(href) "&gt; ";    					font-size: 85%;    					font-weight: lighter;  				}			} 			.chg { background-color: orange; text-decoration: underline; }			.add { background-color: green; text-decoration: underline; }			.del { background-color: red; text-decoration: line-through; }		</style>
+	</head>
+	<body>
+		<div class="head">
+			<p>
+				<a href="http://www.ws-i.org/">
+					<img src="http://www.ws-i.org/images/WS-I-logo.gif" height="88" width="107" border="0" alt="WS-I"/>
+				</a>
+			</p>
+			<h1>Basic Profile Version 1.0</h1>
+			<h2>Final Material</h2>
+			<h2>Date: 2004/04/16 19:06:16 </h2>
+			<dl>
+				<dt>This version:</dt>
+				<dd>
+					<a href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html">http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html							</a>
+				</dd>
+				<dt>Latest version:</dt>
+				<dd>
+					<a href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">http://www.ws-i.org/Profiles/BasicProfile-1.0.html							</a>
+				</dd>
+				<dt>Errata for this Version:</dt>
+				<dd>
+					<a href="http://www.ws-i.org/Profiles/BasicProfile-1.0-errata.html">http://www.ws-i.org/Profiles/BasicProfile-1.0-errata.html</a>
+				</dd>
+				<dt>Editors:</dt>
+				<dd>Keith Ballinger, Microsoft</dd>
+				<dd>David Ehnebuske, IBM</dd>
+				<dd>Martin Gudgin, Microsoft</dd>
+				<dd>Mark Nottingham, BEA Systems</dd>
+				<dd>Prasad Yendluri, webMethods</dd>
+				<dt>Administrative contact:</dt>
+				<dd>
+					<a href="mailto:secretary@ws-i.org">secretary@ws-i.org</a>
+				</dd>
+			</dl>
+			<p class="copyright" id="copyright"> Copyright &#169;  2002-2004 by			<a href="http://www.ws-i.org/">The Web Services-Interoperability			Organization</a> (<abbr title="Web Services Interoperability&#xA;			Organization">WS-I</abbr>) and Certain of its Members. All Rights			Reserved.</p>
+		</div>
+		<hr/>
+		<h2 id="abstract">Abstract</h2>
+		<p>This document defines the WS-I Basic Profile 1.0, consisting of a set of non-proprietary Web services specifications, 		along with clarifications and amendments to those specifications which promote interoperability.</p>
+		<h2 id="status">Status of this Document</h2>
+		<p> This is a final				specification. Please refer to the <a href="http://www.ws-i.org/Profiles/BasicProfile-1.0-errata.html">errata</a>, which may include				normative corrections to it. </p>
+		<h2 id="license">Notice</h2>
+		<p>The material contained herein is not a license, either expressly or impliedly, to any intellectual property owned or controlled by any of the authors or developers of this material or WS-I. The material contained herein is provided on an "AS IS" basis and to the maximum extent permitted by applicable law, this material is provided AS IS AND WITH ALL FAULTS, and the authors and developers of this material and WS-I hereby disclaim all other warranties and conditions, either express, implied or statutory, including, but not limited to, any (if any) implied warranties, duties or conditions of merchantability, of fitness for a particular purpose, of accuracy or completeness of responses, of results, of workmanlike effort, of lack of viruses, and of lack of negligence. ALSO, THERE IS NO WARRANTY OR CONDITION OF TITLE, QUIET ENJOYMENT, QUIET POSSESSION, CORRESPONDENCE TO DESCRIPTION OR NON-INFRINGEMENT WITH REGARD TO THIS MATERIAL. </p>
+		<p>IN NO EVENT WILL ANY AUTHOR OR DEVELOPER OF THIS MATERIAL OR WS-I BE LIABLE TO ANY OTHER PARTY FOR THE COST OF PROCURING SUBSTITUTE GOODS OR SERVICES, LOST PROFITS, LOSS OF USE, LOSS OF DATA, OR ANY INCIDENTAL, CONSEQUENTIAL, DIRECT, INDIRECT, OR SPECIAL DAMAGES WHETHER UNDER CONTRACT, TORT, WARRANTY, OR OTHERWISE, ARISING IN ANY WAY OUT OF THIS OR ANY OTHER AGREEMENT RELATING TO THIS MATERIAL, WHETHER OR NOT SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+		<h2 id="feedback">Feedback</h2>
+		<p>If there are areas in this specification that could be					clearer, or if errors or omissions are identified, WS-I					would like to be notified in order to provide the best					possible interoperability guidance.</p>
+		<p>By sending email, or otherwise communicating with			WS-I, you (on behalf of yourself if you are an			individual, and your company if you are providing			Feedback on behalf of the company) will be deemed to			have granted to WS-I, the members of WS-I, and other			parties that have access to your Feedback, a			non-exclusive, non-transferable, worldwide, perpetual,			irrevocable, royalty-free license to use, disclose,			copy, license, modify, sublicense or otherwise			distribute and exploit in any manner whatsoever the			Feedback you provide regarding the work. You acknowledge			that you have no expectation of confidentiality with			respect to any Feedback you provide. You represent and			warrant that you have rights to provide this Feedback,			and if you are providing Feedback on behalf of a			company, you represent and warrant that you have the			rights to provide Feedback on behalf of your company.			You also acknowledge that WS-I is not required to			review, discuss, use, consider or in any way incorporate			your Feedback into future versions of its work. If WS-I			does incorporate some or all of your Feedback in a			future version of the work, it may, but is not obligated			to include your name (or, if you are identified as			acting on behalf of your company, the name of your			company) on a list of contributors to the work. If the			foregoing is not acceptable to you and any company on			whose behalf you are acting, please do not provide any			Feedback.</p>
+		<p>Feedback on this document should be directed to <a href="mailto:wsbasic_comment@ws-i.org">wsbasic_comment@ws-i.org</a>.</p>
+		<hr/>
+		<h2 id="toc">Table of Contents</h2>
+		<p class="toc">1. <a href="#introduction">Introduction</a><br/><span class="subtoc">1.1. <a href="#philosophy">Guiding Principles</a></span><br/><span class="subtoc">1.2. <a href="#conventions">Notational Conventions</a></span><br/>2. <a href="#scope">Scope of the Profile</a><br/>3. <a href="#conformance">Profile Conformance</a><br/><span class="subtoc">3.1. <a href="#artifacts">Conformance of Artifacts</a></span><br/><span class="subtoc">3.2. <a href="#services">Conformance of Services, Consumers and Registries</a></span><br/><span class="subtoc">3.3. <a href="#annotation">Conformance Annotation in Descriptions</a></span><br/><span class="subtoc">3.4. <a href="#msg-annotation">Conformance Annotation in Messages</a></span><br/><span class="subtoc">3.5. <a href="#regdata-annotation">Conformance Annotation in Registry Data</a></span><br/>4. <a href="#messaging">Messaging</a><br/><span class="subtoc">4.1. <a href="#SOAPXML">XML Representation of SOAP Messages</a></span><br/><span class="subsubtoc">4.1.1. <a href="#refinement16430696">SOAP Messages and the Unicode BOM</a></span><br/><span class="subsubtoc">4.1.2. <a href="#refinement16431776">SOAP Fault Syntax</a></span><br/><span class="subsubtoc">4.1.3. <a href="#refinement16436064">SOAP Faults and Namespaces</a></span><br/><span class="subsubtoc">4.1.4. <a href="#refinement16438576">SOAP Fault Extensibility</a></span><br/><span class="subsubtoc">4.1.5. <a href="#refinement16441192">SOAP Fault Language</a></span><br/><span class="subsubtoc">4.1.6. <a href="#refinement16443080">SOAP Custom Fault Codes</a></span><br/><span class="subsubtoc">4.1.7. <a href="#refinement16448072">SOAP encodingStyle Attribute</a></span><br/><span class="subsubtoc">4.1.8. <a href="#refinement16452208">SOAP's use of XML</a></span><br/><span class="subsubtoc">4.1.9. <a href="#refinement16453896">SOAP and XML Declarations</a></span><br/><span class="subsubtoc">4.1.10. <a href="#refinement16454952">SOAP Trailers</a></span><br/><span class="subsubtoc">4.1.11. <a href="#refinement16457984">Acceptable SOAP Character Encodings</a></span><br/><span class="subsubtoc">4.1.12. <a href="#refinement16460896">SOAP mustUnderstand Attribute</a></span><br/><span class="subsubtoc">4.1.13. <a href="#refinement16462544">SOAP Body and Namespaces</a></span><br/><span class="subsubtoc">4.1.14. <a href="#refinement16464424">SOAP Envelope Namespace</a></span><br/><span class="subsubtoc">4.1.15. <a href="#refinement16465616">Use of xsi:type Attributes</a></span><br/><span class="subtoc">4.2. <a href="#SOAPMEM">SOAP Processing Model</a></span><br/><span class="subsubtoc">4.2.1. <a href="#refinement16468312">Mandatory Headers</a></span><br/><span class="subsubtoc">4.2.2. <a href="#refinement16470360">Generating mustUnderstand Faults</a></span><br/><span class="subsubtoc">4.2.3. <a href="#refinement16503544">SOAP Fault Processing</a></span><br/><span class="subtoc">4.3. <a href="#SOAPHTTP">Use of SOAP in HTTP</a></span><br/><span class="subsubtoc">4.3.1. <a href="#refinement16504696">HTTP Versions</a></span><br/><span class="subsubtoc">4.3.2. <a href="#refinement16506696">Identifying SOAP Faults</a></span><br/><span class="subsubtoc">4.3.3. <a href="#refinement16508144">HTTP Methods and Extensions</a></span><br/><span class="subsubtoc">4.3.4. <a href="#refinement16510080">SOAPAction Header Syntax</a></span><br/><span class="subsubtoc">4.3.5. <a href="#refinement16479784">HTTP and TCP Ports</a></span><br/><span class="subsubtoc">4.3.6. <a href="#refinement16481112">HTTP Success Status Codes</a></span><br/><span class="subsubtoc">4.3.7. <a href="#refinement16483424">HTTP Redirect Status Codes</a></span><br/><span class="subsubtoc">4.3.8. <a href="#refinement16485352">HTTP Client Error Status Codes</a></span><br/><span class="subsubtoc">4.3.9. <a href="#refinement16488480">HTTP Server Error Status Codes</a></span><br/><span class="subsubtoc">4.3.10. <a href="#refinement16489648">HTTP Cookies</a></span><br/>5. <a href="#description">Service Description</a><br/><span class="subtoc">5.1. <a href="#WSDLDOCSTRUCT">Document Structure</a></span><br/><span class="subsubtoc">5.1.1. <a href="#refinement16496720">WSDL Schema Definitions</a></span><br/><span class="subsubtoc">5.1.2. <a href="#refinement16498504">WSDL and Schema Import</a></span><br/><span class="subsubtoc">5.1.3. <a href="#refinement16512792">WSDL Import location Attribute Syntax</a></span><br/><span class="subsubtoc">5.1.4. <a href="#refinement16517400">WSDL Import location Attribute Semantics</a></span><br/><span class="subsubtoc">5.1.5. <a href="#refinement16520392">Placement of WSDL import Elements</a></span><br/><span class="subsubtoc">5.1.6. <a href="#refinement16525000">XML Version Requirements</a></span><br/><span class="subsubtoc">5.1.7. <a href="#refinement16526064">WSDL and the Unicode BOM</a></span><br/><span class="subsubtoc">5.1.8. <a href="#refinement16527096">Acceptable WSDL Character Encodings</a></span><br/><span class="subsubtoc">5.1.9. <a href="#refinement16528296">Namespace Coercion</a></span><br/><span class="subsubtoc">5.1.10. <a href="#refinement16530952">WSDL documentation Element</a></span><br/><span class="subsubtoc">5.1.11. <a href="#refinement16535632">WSDL Extensions</a></span><br/><span class="subtoc">5.2. <a href="#WSDLTYPES">Types</a></span><br/><span class="subsubtoc">5.2.1. <a href="#refinement16547792">QName References</a></span><br/><span class="subsubtoc">5.2.2. <a href="#refinement16552904">Schema targetNamespace Syntax</a></span><br/><span class="subsubtoc">5.2.3. <a href="#refinement16556272">soapenc:Array</a></span><br/><span class="subsubtoc">5.2.4. <a href="#refinement16562192">WSDL and Schema Definition Target Namespaces</a></span><br/><span class="subtoc">5.3. <a href="#WSDLMSGS">Messages</a></span><br/><span class="subsubtoc">5.3.1. <a href="#refinement16574232">Bindings and Parts</a></span><br/><span class="subsubtoc">5.3.2. <a href="#refinement16591144">Bindings and Faults</a></span><br/><span class="subsubtoc">5.3.3. <a href="#refinement16598880">Unbound portType Element Contents</a></span><br/><span class="subsubtoc">5.3.4. <a href="#refinement16603776">Declaration of part Elements</a></span><br/><span class="subtoc">5.4. <a href="#WSDLPORTTYPES">Port Types</a></span><br/><span class="subsubtoc">5.4.1. <a href="#refinement16609080">Ordering of part Elements</a></span><br/><span class="subsubtoc">5.4.2. <a href="#refinement16612720">Allowed Operations</a></span><br/><span class="subsubtoc">5.4.3. <a href="#refinement16614152">Distinctive Operations</a></span><br/><span class="subsubtoc">5.4.4. <a href="#refinement16617928">parameterOrder Attribute Construction</a></span><br/><span class="subsubtoc">5.4.5. <a href="#refinement16621984">Exclusivity of type and element Attributes</a></span><br/><span class="subtoc">5.5. <a href="#WSDLBINDINGS">Bindings</a></span><br/><span class="subsubtoc">5.5.1. <a href="#refinement16627160">Use of SOAP Binding</a></span><br/><span class="subtoc">5.6. <a href="#WSDLSOAPBINDING">SOAP Binding</a></span><br/><span class="subsubtoc">5.6.1. <a href="#refinement16630416">Specifying the transport Attribute</a></span><br/><span class="subsubtoc">5.6.2. <a href="#refinement16632832">HTTP Transport</a></span><br/><span class="subsubtoc">5.6.3. <a href="#refinement16635088">Consistency of style Attribute</a></span><br/><span class="subsubtoc">5.6.4. <a href="#refinement16638080">Encodings and the use Attribute</a></span><br/><span class="subsubtoc">5.6.5. <a href="#refinement16641168">Default for use Attribute</a></span><br/><span class="subsubtoc">5.6.6. <a href="#refinement16676496">Multiple Bindings for portType Elements</a></span><br/><span class="subsubtoc">5.6.7. <a href="#refinement16645448">Wire Signatures for Operations</a></span><br/><span class="subsubtoc">5.6.8. <a href="#refinement16646400">Multiple Ports on an Endpoint</a></span><br/><span class="subsubtoc">5.6.9. <a href="#refinement16649056">Child Element for Document-Literal Bindings</a></span><br/><span class="subsubtoc">5.6.10. <a href="#refinement16651160">One-Way Operations</a></span><br/><span class="subsubtoc">5.6.11. <a href="#refinement16654152">Namespaces for soapbind Elements</a></span><br/><span class="subsubtoc">5.6.12. <a href="#refinement16662944">Consistency of portType and binding Elements</a></span><br/><span class="subsubtoc">5.6.13. <a href="#refinement16665448">Describing headerfault Elements</a></span><br/><span class="subsubtoc">5.6.14. <a href="#refinement16668704">Enumeration of Faults</a></span><br/><span class="subsubtoc">5.6.15. <a href="#refinement16673336">Type and Name of SOAP Binding Elements</a></span><br/><span class="subsubtoc">5.6.16. <a href="#refinement16683792">name Attribute on Faults</a></span><br/><span class="subsubtoc">5.6.17. <a href="#refinement16687848">Omission of the use Attribute</a></span><br/><span class="subsubtoc">5.6.18. <a href="#refinement16694328">Consistency of Messages with Descriptions</a></span><br/><span class="subsubtoc">5.6.19. <a href="#refinement16727304">Response Wrappers</a></span><br/><span class="subsubtoc">5.6.20. <a href="#refinement16696288">Namespace for Part Accessors</a></span><br/><span class="subsubtoc">5.6.21. <a href="#refinement16697656">Namespaces for Children of Part Accessors</a></span><br/><span class="subsubtoc">5.6.22. <a href="#refinement16702248">Required Headers</a></span><br/><span class="subsubtoc">5.6.23. <a href="#refinement16706144">Allowing Undescribed Headers</a></span><br/><span class="subsubtoc">5.6.24. <a href="#refinement16708592">Ordering Headers</a></span><br/><span class="subsubtoc">5.6.25. <a href="#refinement16711648">Describing SOAPAction</a></span><br/><span class="subsubtoc">5.6.26. <a href="#refinement16719424">SOAP Binding Extensions</a></span><br/><span class="subtoc">5.7. <a href="#WSDLSCHEMA">Use of XML Schema</a></span><br/>6. <a href="#discovery">Service Publication and Discovery</a><br/><span class="subtoc">6.1. <a href="#UDDIBTS">bindingTemplates</a></span><br/><span class="subtoc">6.2. <a href="#UDDITMS">tModels</a></span><br/>7. <a href="#security">Security</a><br/><span class="subtoc">7.1. <a href="#HTTPSBase">Use of HTTPS</a></span><br/>  Appendix I: <a href="#references">Referenced Specifications</a><br/>  Appendix II: <a href="#points">Extensibility Points</a><br/>  Appendix III: <a href="#acks">Acknowledgements</a><br/></p>
+		<h2><a name="introduction">1. </a>Introduction</h2>
+		<p>This document defines the WS-I Basic Profile 1.0 (hereafter, "Profile"), consisting of a set of non-proprietary Web services 				specifications, along with clarifications to and amplifications of those specifications which promote interoperability.</p>
+		<p>Section 1 introduces the Profile, and relates the philosophy that it takes with regard to interoperability.</p>
+		<p>Section 2, "Scope of the Profile," delimits the areas where the Profile improves interoperability.</p>
+		<p>Section 3, "Profile Conformance," explains what it means to be conformant to the Profile. </p>
+		<p>Each subsequent section addresses a component of the Profile, and consists of two parts; 				an overview detailing the component specifications and their extensibility points, followed by subsections 				that address individual parts of the component specifications. Note that there is no relationship between the section numbers				in this document and those in the referenced specifications.</p>
+		<h3><a name="philosophy">1.1</a> Guiding Principles</h3>
+		<p>The Profile was developed according to a set of principles that, together, 					form the philosophy of the Profile, as it relates to bringing about interoperability. This section					documents these guidelines.</p>
+		<dl>
+			<dt>No guarantee of interoperability</dt>
+			<dd>It is impossible to completely guarantee the interoperability of a particular service. However, the 					Profile does address the most common problems that implementation experience has					revealed to date.</dd>
+			<dt>Application semantics</dt>
+			<dd>Although communication of application semantics can be facilitated by the technologies that 						comprise the Profile, 					assuring the common understanding of those semantics is not addressed by it.</dd>
+			<dt>Testability</dt>
+			<dd>When possible, the Profile makes statements that are testable. However, 						such testability is not required. Preferably, 					testing is achieved in a non-intrusive manner (e.g., examining artifacts "on the wire"). 					</dd>
+			<dt>Strength of requirements</dt>
+			<dd>The Profile makes strong requirements (e.g., MUST, MUST NOT) wherever 					feasible; if there are legitimate cases where such a requirement cannot be met, 					conditional requirements (e.g., SHOULD, SHOULD NOT) are used. Optional and conditional 					requirements introduce ambiguity and mismatches between 					implementations.</dd>
+			<dt>Restriction vs. relaxation</dt>
+			<dd>When amplifying the requirements of referenced specifications, the Profile may 					restrict them, but does not relax them (e.g., change a MUST to a MAY). 					</dd>
+			<dt>Multiple mechanisms</dt>
+			<dd>If a referenced specification allows multiple mechanisms to be used interchangeably, 					the Profile selects those that are well-understood, widely implemented and useful. 					Extraneous or underspecified mechanisms and extensions introduce complexity and 					therefore reduce interoperability.</dd>
+			<dt>Future compatibility</dt>
+			<dd>When possible, the Profile aligns its requirements with in-progress revisions 						to the specifications it references (e.g., SOAP 1.2, WSDL 1.2). This aids implementers 					by enabling a graceful transition, and assures that WS-I does not 'fork' from these efforts. 					When the Profile cannot 					address an issue in a specification it references, this information is communicated to the					appropriate body to assure its consideration.</dd>
+			<dt>Compatibility with deployed services</dt>
+			<dd>Backwards compatibility with deployed Web services is not a 					goal for the Profile, but due consideration is given to it; the Profile does not introduce					a change to the requirements of a referenced specification unless doing so addresses 					specific interoperability issues.</dd>
+			<dt>Focus on interoperability</dt>
+			<dd>Although there are potentially a number of inconsistencies and design flaws 					in the referenced specifications, the Profile only addresses those that affect 					interoperability.</dd>
+			<dt>Conformance targets</dt>
+			<dd>Where possible, the Profile places requirements on artifacts (e.g., WSDL 					descriptions, SOAP messages) rather than the producing or consuming software's behaviors 					or roles. Artifacts are concrete, making them easier to verify and therefore making 					conformance easier to understand and less error-prone.</dd>
+			<dt>Lower-layer interoperability</dt>
+			<dd>The Profile speaks to interoperability at the application layer; it assumes that					 interoperability of lower-layer protocols (e.g., TCP, IP, Ethernet) is adequate and 					 well-understood. Similarly, statements about application-layer substrate protocols 					 (e.g., SSL/TLS, HTTP) are only made when there is an issue affecting Web services 					 specifically; WS-I does not attempt to assure the interoperability of these protocols 					 as a whole. This assures that WS-I's expertise in and focus on Web services 					 standards is used effectively.</dd>
+		</dl>
+		<h3><a name="conventions">1.2</a> Notational Conventions</h3>
+		<p>The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", 					"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted 					as described in RFC2119.</p>
+		<p>Normative statements in the Profile (i.e., those impacting conformance, as outlined in 					"Profile Conformance") are presented in the following manner:</p>
+		<p class="statement"><span class="statement-id">Rnnnn</span>Statement text here.</p>
+		<p>where "nnnn" is replaced by the statement number. Each statement contains exactly 					one requirement level keyword (e.g., "MUST") and one conformance target keyword 					(e.g., "MESSAGE").</p>
+		<p>Some statements clarify the referenced specification(s), but do not place additional 					constraints upon implementations. For convenience, clarifications are annotated in the 					following manner: <span class="statement-type">C</span></p>
+		<p>Some statements are derived from ongoing standardization work on the referenced 					specification(s). For convenience, such forward-derived statements are annotated in the 					following manner: <span class="statement-origin">xxxx</span>, where 					"xxxx" is an identifier for the specification (e.g., "SOAP12" for SOAP Version 1.2, currently 					under development). Note that because such work is not complete, the specification that 					the requirement is derived from may change; this information is included only as a 					convenience to implementers.</p>
+		<p>This specification uses a number of namespace prefixes throughout; their associated 					URIs are listed below. Note that the choice of any namespace prefix is arbitrary and not 					semantically significant.</p>
+		<ul>
+			<li><strong>soap</strong> - "http://schemas.xmlsoap.org/soap/envelope/"</li>
+			<li><strong>xsi</strong> - "http://www.w3.org/2001/XMLSchema-instance"</li>
+			<li><strong>xsd</strong> - "http://www.w3.org/2001/XMLSchema"</li>
+			<li><strong>soapenc</strong> - "http://schemas.xmlsoap.org/soap/encoding/"</li>
+			<li><strong>wsdl</strong> - "http://schemas.xmlsoap.org/wsdl/"</li>
+			<li><strong>soapbind</strong> - "http://schemas.xmlsoap.org/wsdl/soap/"</li>
+			<li><strong>wsi</strong> - "http://ws-i.org/schemas/conformanceClaim/"</li>
+			<li><strong>uddi</strong> - "urn:uddi-org:api_v2"</li>
+		</ul>
+		<h2><a name="scope">2. </a>Scope of the Profile</h2>
+		<p>The <em>scope</em> of the Profile delineates the technologies that it addresses; in other words, the Profile only attempts 				to improve interoperability within its own scope. Initially, the Profile's scope is bounded by the specifications 				referenced by it; for a complete list of the Profile's referenced specifications, see Appendix I.</p>
+		<p>The Profile's scope is further refined by <em>extensibility points</em>. Referenced specifications often provide extension 				mechanisms and unspecified or open-ended configuration parameters. When identified as an extensibility point, 				such a mechanism or parameter is outside the scope of the Profile, and its use is not subject to claims of conformance to this Profile.</p>
+		<p>Because the use of extensibility points may impair interoperability, their use should be negotiated or documented 				in some fashion by the parties to a Web service; for example, this could take the form of an out-of-band agreement.</p>
+		<p>Note that the Profile may still place requirements on the use of an extensibility point, without constraining its range. 				Also, specific uses of extensibility points may be further restricted by other profiles, to improve their interoperability 				when used in conjunction with the Profile.</p>
+		<p>For a complete list of the Profile's extensibility points, see Appendix II.</p>
+		<h2><a name="conformance">3. </a>Profile Conformance</h2>
+		<p>Conformance to the Profile is defined by adherence to the set of requirements for a specific target, within the 				scope of the Profile.</p>
+		<p>The scope of the Profile is defined above ("Scope of the Profile"); conformance to the Profile is dependent upon 				conformance to those referenced specifications that are in-scope, except when in conflict with the Profile's 				Requirements, which take precedence for purposes of conformance.</p>
+		<p><em>Requirements</em> state the criteria for conformance to the Profile within its stated scope. They embody refinements, 				interpretations and clarifications that improve interoperability therein. Requirement levels, using RFC2119 language 				(e.g., MUST, MAY, SHOULD) indicate the nature of the requirement and its impact on conformance. Each requirement				is individually identified (e.g., R9999) for convenience.</p>
+		<p>Additional text may be included in the Profile to illuminate requirements (e.g., rationale and examples); however, 				requirement statements alone should be considered in determining conformance.</p>
+		<p><em>Targets</em> allow for the description of conformance in different contexts, to allow conformance testing and certification 				of artifacts (such as SOAP messages and WSDL descriptions), Web service instances, and Web service consumers. 				The sections below describe the Profile's conformance targets. </p>
+		<p>To allow services to advertise conformance to the Profile, messages, descriptions and registry data can be annotated				with <em>conformance claims</em>, which use a URI to assert conformance with a particular profile.</p>
+		<p>The conformance claim URI for this Profile is "http://ws-i.org/profiles/basic/1.0".</p>
+		<h3><a name="artifacts">3.1</a> Conformance of Artifacts</h3>
+		<p>The most basic level of conformance is that of an artifact. The Profile makes 					requirement statements about three kinds of artifacts:</p>
+		<ul>
+			<li><strong>MESSAGE</strong> - protocol elements that are exchanged, 							usually over a network, to effect a Web service (e.g., SOAP/HTTP 							messages).</li>
+			<li><strong>DESCRIPTION</strong> - descriptions of types, messages, 							interfaces and their concrete protocol and data format bindings, and 							the network access points associated with Web services (e.g., WSDL 							descriptions).</li>
+			<li><strong>REGDATA</strong> - registry elements that are involved in the registration and discovery of Web services (e.g. UDDI tModels).</li>
+		</ul>
+		<p>An instance of an artifact is considered conformant when all of the 					requirements associated with it are met. </p>
+		<h3><a name="services">3.2</a> Conformance of Services, Consumers and Registries</h3>
+		<p>A deployed instance of a Web service (as specified by <code>wsdl:port</code> 					or <code>uddi:bindingTemplate</code>) is					considered conformant if it produces only conformant artifacts, and is					capable of consuming conformant artifacts, as appropriate. Note that this					means that where multiple conformant artifacts are possible, a conformant					service must be able to consume them all (e.g., while a sender might					choose whether to encode XML in UTF-8 or UTF-16 when sending a message, a					receiver must be capable of using either).</p>
+		<p>Similarly, a consumer of a service instance is considered conformant if					it produces only conformant artifacts and is capable of consuming conformant artifacts, 					as appropriate.</p>
+		<p>Finally, a registry is considered conformant if it satisfies the profile requirements for the target REGISTRY.</p>
+		<ul>
+			<li><strong>INSTANCE</strong> - software that implements a <code>wsdl:port</code>							or a <code>uddi:bindingTemplate.</code></li>
+			<li><strong>CONSUMER</strong> - software that invokes an INSTANCE						</li>
+			<li><strong>REGISTRY</strong> - a UDDI registry, capable of managing REGDATA.</li>
+		</ul>
+		<p>Conformant Web service instances must comply with all requirement statements					associated with INSTANCE.</p>
+		<p>Likewise, conformant consumers must comply with all requirements statements associated with 					CONSUMER.</p>
+		<p>Both conformant Web service instances and consumers must comply, as appropriate, 					with all of the requirement statements associated with:</p>
+		<ul>
+			<li><strong>SENDER</strong> - software that generates a message according 							to the protocol(s) associated with it</li>
+			<li><strong>RECEIVER</strong> -  software that consumes a message according 							to the protocol(s) associated with it (e.g., SOAP processors)</li>
+		</ul>
+		<p>Note that conformance does not apply to a service as a whole; 					only ports are considered when determining conformance of instances. 					Therefore, the Profile places no constraints on <code>wsdl:service</code> 					definitions. In particular, they can contain multiple <code>					wsdl:port</code> elements, each of which may or may not be conformant.</p>
+		<p>Types of Web services (as described by <code>wsdl:binding</code> and 					<code>wsdl:portType</code>) are considered conformant if, when properly 					implemented and deployed in the environment in which they were intended to operate,					 they result in conformant instances.</p>
+		<div class="refinement">
+			<div class="rationale">
+				<p>Additionally, an instance of a Web service is required to make the 					contract that it operates under available in some fashion.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R0001">R0001</a>
+				</span> 					An INSTANCE MUST be described by a WSDL 1.1 service description, by a UDDI 					binding template, or both.</p>
+			<div class="explanation">
+				<p>"described," in this context, means that if an authorized consumer 					requests a service description of a conformant service instance, then the 					service instance provider must make the WSDL document, 					the UDDI binding template, or both available to that consumer. A service					instance may provide run-time access to WSDL documents from a server, but is					not required to do so in order to be considered conformant. Similarly, a service 					instance provider may register the instance provider in a UDDI registry, but is not 					required to do so to be considered conformant. In all of these scenarios, the 					WSDL contract must exist, but might be made available through a variety					of mechanisms, depending on the circumstances.</p>
+			</div>
+		</div>
+		<h3><a name="annotation">3.3</a> Conformance Annotation in Descriptions</h3>
+		<div class="refinement">
+			<div class="rationale">
+				<p>	Conformance claims can be associated 	with a particular WSDL element (e.g., <code>wsdl:portType</code>) to scope them to that construct.	</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R0002">R0002</a>
+				</span> A DESCRIPTION MAY contain 					conformance claims regarding instances, as specified in the conformance claim schema.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R0003">R0003</a>
+				</span> A DESCRIPTION's conformance claims 					MUST be children of the <code>wsdl:documentation</code> element of each of the elements:					 <code>wsdl:port</code>, <code>wsdl:binding</code>, 					 <code>wsdl:portType</code>, <code>wsdl:operation</code> (as a child element of 					 <code>wsdl:portType</code> but not of <code>wsdl:binding</code>) and 					 <code>wsdl:message</code>.</p>
+			<div class="explanation">
+				<p>A conformance claim on an element means that the element (and the instance 						it represents, in the case of a port) is conformant to the requirements of the 						Profile it claims to obey that are relevant for this type of element.</p>
+				<p>A conformance claim on an element also implies that the same claim is made 						for all the elements that it uses, based on the following transitivity rules, applied 						recursively:</p>
+				<ul>
+					<li>A claim on a <code>wsdl:port</code> is inherited by the referenced 							<code>wsdl:binding</code></li>
+					<li>A claim on a <code>wsdl:binding</code> is inherited by the referenced 							<code>wsdl:portType</code></li>
+					<li>A claim on a <code>wsdl:portType</code> is inherited by the referenced 							<code>wsdl:operation</code>s</li>
+					<li>A claim on a <code>wsdl:operation</code> is inherited by the referenced 							<code>wsdl:message</code>s of its child <code>wsdl:output</code>							 and/or <code>wsdl:input</code></li>
+				</ul>
+				<p>The conformance claim schema is:</p>
+				<pre class="specification">&lt;?xml version="1.0" encoding="UTF-8" ?&gt; &lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   targetNamespace="http://ws-i.org/schemas/conformanceClaim/"  xmlns:tns="http://ws-i.org/schemas/conformanceClaim/"   xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"   elementFormDefault="qualified"   attributeFormDefault="unqualified" &gt;   &lt;xsd:import namespace="http://schemas.xmlsoap.org/soap/envelope/"     schemaLocation="http://schemas.xmlsoap.org/soap/envelope/" /&gt;  &lt;xsd:element name="Claim" &gt;     &lt;xsd:complexType&gt;       &lt;xsd:sequence&gt;         &lt;xsd:any namespace="##any" processContents="lax"          minOccurs="0" maxOccurs="unbounded" /&gt;       &lt;/xsd:sequence&gt;       &lt;xsd:attribute name="conformsTo" type="xsd:anyURI" use="required"/&gt;       &lt;xsd:attribute ref="soap:mustUnderstand" use="prohibited" /&gt;      &lt;xsd:anyAttribute namespace="##any" processContents="lax"/&gt;     &lt;/xsd:complexType&gt;   &lt;/xsd:element&gt; &lt;/xsd:schema&gt;</pre>
+			</div>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl"   xmlns:tns="http://example.org/myservice"  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap"  xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"  targetNamespace="http://example.org/myservice"&gt;   &lt;wsdl:portType name="MyPortType"&gt;       ...   &lt;/wsdl:portType&gt;   &lt;wsdl:binding name="MyBinding" portType="MyPortType" &gt;       ...   &lt;/wsdl:binding&gt;   &lt;wsdl:service name="MyService" &gt;     &lt;wsdl:port name="MyPort" binding="tns:MyBinding" &gt;       &lt;wsdl:documentation&gt;        &lt;wsi:Claim conformsTo="http://ws-i.org/profiles/basic/1.0" /&gt;      &lt;/wsdl:documentation&gt;      &lt;soapbind:address location="http://example.org/myservice/myport" /&gt;    &lt;/wsdl:port&gt;   &lt;/wsdl:service&gt; &lt;/wsdl:definitions&gt; </pre>
+			</div>
+		</div>
+		<h3><a name="msg-annotation">3.4</a> Conformance Annotation in Messages</h3>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					As new versions of the Profile as well					as other profiles are              released, it is possible for a service to support              multiple profiles. When receiving a message, the service              may want to be able to determine the profile to which              this message conforms. To allow SOAP messages to              indicate the profiles they conform to, WS-I prescribes use              of the wsi:Claim element as a SOAP header.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R0004">R0004</a>
+				</span> 				A MESSAGE MAY contain conformance claims, as specified				in the conformance claim schema.				</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R0005">R0005</a>
+				</span> 				A MESSAGE's conformance claims MUST be carried as				SOAP header blocks.				</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R0006">R0006</a>
+				</span> 				A MESSAGE MAY contain conformance claims for more than				one profile.				</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R0007">R0007</a>
+				</span> 				A SENDER MUST NOT use the <code>soap:mustUnderstand</code>				attribute when sending a SOAP header block 				containing a conformance claim.				</p>
+			<div class="explanation">
+				<p>A SOAP message may contain conformance              claims, carried as SOAP header blocks, indicating to the              recipient that the sender claims that the message              conforms to one or more profiles. Absence of a              conformance claim in a message must not be construed as              implying that the message does or does not conform to one              or more profiles. Also, conformance claim header blocks are               considered informative and therefore must not be mandatory header               blocks. The Profile therefore prevents the use of soap:mustUnderstand               attribute on the conformance claim header block.			  </p>
+			</div>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre> &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" &gt;  &lt;soap:Header&gt;    &lt;!-- other headers --&gt;    &lt;wsi:Claim conformsTo="http://ws-i.org/profiles/basic/1.0"      xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" /&gt;    &lt;!-- other headers --&gt;  &lt;/soap:Header&gt;  &lt;soap:Body&gt;    &lt;!-- body content --&gt;  &lt;/soap:Body&gt;&lt;/soap:Envelope&gt;</pre>
+			</div>
+		</div>
+		<h3><a name="regdata-annotation">3.5</a> Conformance Annotation in Registry Data</h3>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					In the same way that it is useful to annotate various elements of descriptions with profile conformance 					claims, is it useful to do so for <code>uddi:tModel</code> elements. The natural mechanism in UDDI 					for adding attributes to a <code>uddi:tModel</code> is to define and use a category system. The Profile 					adopts this mechanism to add the ability for <code>uddi:tModel</code>s to assert conformance with 					WS-I Profiles, and with the Profile in particular.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R3020">R3020</a>
+				</span> 					REGDATA of type <code>uddi:tModel</code> claiming conformance with a Profile MUST be 					categorized using the ws-i-org:conformsTo:2002_12 taxonomy. 					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R3030">R3030</a>
+				</span> 					REGDATA of type <code>uddi:tModel</code> claiming conformance with a Profile MUST use 					the ws-i-org:conformsTo:2002_12 categorization value corresponding to the conformance claim URI for that Profile.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R3021">R3021</a>
+				</span> A REGISTRY MUST support the WS-I Conformance category 					system by adding the ws-i-org:conformsTo:2002_12 tModel definition to its registry content.					</p>
+			<div class="explanation">
+				<p>The content of the tModel for the ws-i-org:conformsTo:2002_12 tModel is as follows:</p>
+				<pre class="specification">&lt;tModel tModelKey="uuid:65719168-72c6-3f29-8c20-62defb0961c0"&gt;   &lt;name&gt;ws-i-org:conformsTo:2002_12&lt;/name&gt;   &lt;description xml:lang="EN"&gt;Category system used for UDDI entities   to point to the WS-I concept to which they conform to&lt;/description&gt;   &lt;overviewDoc&gt;     &lt;overviewURL&gt;http://ws-i.org/schemas/conformanceClaim/&lt;/overviewURL&gt;   &lt;/overviewDoc&gt;   &lt;categoryBag&gt;   &lt;keyedReference     keyName="uddi-org:types:categorization"     keyValue="categorization"    tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4" /&gt;   &lt;/categoryBag&gt; &lt;/tModel&gt; </pre>
+			</div>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;tModel tModelKey="..."&gt;   &lt;name&gt;BarSOAPService&lt;/name&gt;   &lt;description xml:lang="EN"&gt;Bar's SOAP Service&lt;/description&gt;   &lt;overviewDoc&gt;...&lt;/overviewDoc&gt;   &lt;categoryBag&gt;      &lt;keyedReference         tModelKey="uuid:65719168-72c6-3f29-8c20-62defb0961c0"         keyName="ws-I_conformance:BasicProfile1.0"         keyValue="http://ws-i.org/profiles/basic/1.0" /&gt;   &lt;/categoryBag&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					Since <code>wsdl:service</code> elements are not necessarily mapped to a single 					<code>uddi:businessService</code> and are also not subject to conformance claims, it would be unclear 					what it meant if a <code>uddi:businessEntity</code> or a <code>uddi:businessService</code> 					element were to claim conformance with the Profile. Also, <code>uddi:bindingTemplate</code> elements 					can't be categorized because the UDDI V2 XML Schema does not provide a 					<code>uddi:categoryBag</code> for them. Hence, the conformance claim made by 					<code>wsdl:port</code> elements can't be documented in the corresponding 					<code>uddi:bindingTemplate</code>.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R3005">R3005</a>
+				</span> 					REGDATA other than <code>uddi:tModel</code> elements representing conformant Web service types 					MUST NOT be categorized using the ws-i-org:conformsTo:2002_12 taxonomy and a categorization of 					"http://ws-i.org/profiles/basic/1.0".					</p>
+		</div>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					It would be ambiguous if the conformance claim a <code>uddi:tModel</code> made were not 					consistent with the claim made by the <code>wsdl:binding</code> it uses.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R3004">R3004</a>
+				</span> 					REGDATA of type <code>uddi:tModel</code> MUST be constructed so that the conformance claim it 					makes is consistent with the conformance claim made by the <code>wsdl:binding</code> to which it 					refers.					</p>
+		</div>
+		<h2><a name="messaging">4. </a>Messaging</h2>
+		<p>This section of the Profile incorporates the following		specifications by reference, and defines extensibility points within		them:</p>
+		<ul>
+			<li><a href="http://www.w3.org/TR/SOAP/">Simple Object Access Protocol (SOAP) 1.1</a><br/>Extensibility points:			<ul>
+					<li>Header blocks - Header blocks are the fundamental extensibility mechanism in SOAP. </li>
+					<li>Processing order - The order of processing of a SOAP message's components (e.g., headers) is unspecified, and therefore may need to be negotiated out-of-band.</li>
+					<li>Use of intermediaries - SOAP Intermediaries is an underspecified mechanism in SOAP 1.1, and their use may require out-of-band negotiation.  Their use may also necessitate careful consideration of where Profile conformance is measured.</li>
+					<li>soap:actor values - The value of the soap:actor attribute is a private agreement between the parties to a Web service.</li>
+					<li>Fault details - the contents of a Fault's detail element are not prescribed by SOAP 1.1.</li>
+				</ul></li>
+			<li>
+				<a href="http://www.w3.org/TR/REC-xml">Extensible Markup Language (XML) 1.0 (Second Edition)</a>
+			</li>
+			<li><a href="http://www.ietf.org/rfc/rfc2616">RFC2616: Hypertext Transfer Protocol -- HTTP/1.1</a><br/>Extensibility points:			<ul>
+					<li>HTTP Authentication - HTTP authentication allows for extension schemes, arbitrary digest hash algorithms and parameters.</li>
+					<li>Unspecified Header Fields - HTTP allows arbitrary headers to occur in messages.</li>
+					<li>Expect-extensions - The Expect/Continue mechanism in HTTP allows for expect-extensions.</li>
+					<li>Content-Encoding - The set of content-codings allowed by HTTP is open-ended.</li>
+					<li>Transfer-Encoding - The set of transfer-encodings allowed by HTTP is open-ended.</li>
+					<li>Upgrade - HTTP allows a connection to change to an arbitrary protocol using the Upgrade header.</li>
+				</ul></li>
+			<li>
+				<a href="http://www.ietf.org/rfc/rfc2965">RFC2965: HTTP State Management Mechanism</a>
+			</li>
+		</ul>
+		<h3><a name="SOAPXML">4.1</a> XML Representation of SOAP Messages</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/SOAP/#_Toc478383494">SOAP 1.1, Section 4</a>
+			</li>
+		</ul>
+		<p>SOAP 1.1 defines an XML-based structure for transmitting messages. The Profile mandates 					the use of that structure, and places the following constraints on its use:</p>
+		<div class="refinement">
+			<h4 id="refinement16430696">4.1.1 SOAP Messages and the Unicode BOM</h4>
+			<div class="rationale">
+				<p>XML 1.0 allows UTF-8 encoding to include a BOM; therefore, receivers of messages 					must be prepared to accept them. The BOM is mandatory for XML encoded as UTF-16.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R4001">R4001</a>
+				</span> 					A RECEIVER MUST accept messages that include the Unicode Byte Order Mark (BOM).<span class="statement-type">C</span></p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16431776">4.1.2 SOAP Fault Syntax</h4>
+			<div class="rationale">
+				<p>A SOAP Fault is a SOAP message that has a single child element of the <code>soap:Body</code> element, 					that element being a <code>soap:Fault</code> element. The Profile restricts the content of the 					<code>soap:Fault</code> element to those elements explicitly described in SOAP 1.1.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1000">R1000</a>
+				</span>  When a MESSAGE contains a <code>soap:Fault</code> 					element, that element MUST NOT have element children other than <code>faultcode</code>, 					<code>faultstring</code>, <code>faultactor</code> and <code>detail</code>.</p>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;  &lt;faultcode&gt;soap:Client&lt;/faultcode&gt;  &lt;faultstring&gt;Invalid message format&lt;/faultstring&gt;  &lt;faultactor&gt;http://example.org/someactor&lt;/faultactor&gt;  &lt;detail&gt;There were &lt;b&gt;lots&lt;/b&gt; of elements in the message   that I did not understand  &lt;/detail&gt;  &lt;m:Exception xmlns:m='http://example.org/faults/exceptions' &gt;    &lt;m:ExceptionType&gt;Severe&lt;/m:ExceptionType&gt;  &lt;/m:Exception&gt;&lt;/soap:Fault&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;  &lt;faultcode&gt;soap:Client&lt;/faultcode&gt;  &lt;faultstring&gt;Invalid message format&lt;/faultstring&gt;  &lt;faultactor&gt;http://example.org/someactor&lt;/faultactor&gt;  &lt;detail&gt;     &lt;m:msg xmlns:m='http://example.org/faults/exceptions'&gt;         There were &lt;b&gt;lots&lt;/b&gt; of elements in the message that I did not understand     &lt;/m:msg&gt;     &lt;m:Exception xmlns:m='http://example.org/faults/exceptions'&gt;       &lt;m:ExceptionType&gt;Severe&lt;/m:ExceptionType&gt;     &lt;/m:Exception&gt;   &lt;/detail&gt;&lt;/soap:Fault&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16436064">4.1.3 SOAP Faults and Namespaces</h4>
+			<div class="rationale">
+				<p>The children of the <code>soap:Fault</code> element are					local to that element, therefore namespace					qualification is unnecessary.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1001">R1001</a>
+				</span> 					When a MESSAGE contains a <code>soap:Fault</code> element its element children MUST					be unqualified.</p>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;  &lt;soap:faultcode&gt;soap:Client&lt;/soap:faultcode&gt;  &lt;soap:faultstring&gt;Invalid message format&lt;/soap:faultstring&gt;  &lt;soap:faultactor&gt;http://example.org/someactor&lt;/soap:faultactor&gt;  &lt;soap:detail&gt;      &lt;m:msg xmlns:m='http://example.org/faults/exceptions'&gt;          There were &lt;b&gt;lots&lt;/b&gt; of elements in the message that           I did not understand      &lt;/m:msg&gt;  &lt;/soap:detail&gt;&lt;/soap:Fault&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' 			xmlns='' &gt;  &lt;faultcode&gt;soap:Client&lt;/faultcode&gt;  &lt;faultstring&gt;Invalid message format&lt;/faultstring&gt;  &lt;faultactor&gt;http://example.org/someactor&lt;/faultactor&gt;  &lt;detail&gt;      &lt;m:msg xmlns:m='http://example.org/faults/exceptions'&gt;          There were &lt;b&gt;lots&lt;/b&gt; of elements in the message that           I did not understand      &lt;/m:msg&gt;  &lt;/detail&gt;&lt;/soap:Fault&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16438576">4.1.4 SOAP Fault Extensibility</h4>
+			<div class="rationale">
+				<p>For extensibility, additional attributes are allowed to appear on the <code>detail</code> element and additional 					elements are allowed to appear as children of the detail element.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1002">R1002</a>
+				</span> 					A RECEIVER MUST accept fault messages that have any number of elements, including zero, appearing as 					children of the <code>detail</code> element. Such children can be qualified or unqualified.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1003">R1003</a>
+				</span> 					A RECEIVER MUST accept fault messages that have any number of qualified or unqualified attributes, including zero, appearing 					on the <code>detail</code> element. The namespace of qualified attributes can be anything other than 					"http://schemas.xmlsoap.org/soap/envelope/".					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16441192">4.1.5 SOAP Fault Language</h4>
+			<div class="rationale">
+				<p>Faultstrings are human-readable indications of the nature of a Fault. As such, they 					may not be in a particular language, and therefore xml:lang can be used to indicate the 					language of the faultstring.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1016">R1016</a>
+				</span> 					A RECEIVER MUST accept fault messages that carry an <code>xml:lang</code> attribute on the 					<code>faultstring</code> element.				  </p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16443080">4.1.6 SOAP Custom Fault Codes</h4>
+			<div class="rationale">
+				<p>					SOAP 1.1 allows custom fault codes to appear					inside the <code>faultcode</code> element, 					through the use of the "dot" notation.					</p>
+				<p>					Use of this mechanism to extend the meaning of					the SOAP 1.1-defined fault codes can lead to					namespace collision. Therefore, its use should be					avoided, as doing so may cause interoperability issues					when the same names are used in the right-hand side of					the "." (dot) to convey different meaning.					</p>
+				<p>					Instead, the Profile encourages the use of the 					fault codes defined in SOAP 1.1, along with					additional information in the <code>detail</code>					element to convey the nature of the Fault.						</p>
+				<p>					Alternatively, it is acceptable					to define custom fault codes in a namespace					controlled by the specifying authority.					</p>
+				<p>A number of specifications have already 					defined custom fault codes using the "." (dot) notation. Despite					this, their use in future specifications is					discouraged. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1004">R1004</a>
+				</span> When a MESSAGE contains a					<code>faultcode</code> element the content of that element SHOULD be one of the fault codes					defined in SOAP 1.1 or a namespace qualified fault code. 					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1031">R1031</a>
+				</span> When a MESSAGE contains a					<code>faultcode</code> element the content of that element SHOULD NOT use of the SOAP 1.1 "dot"					notation to refine the	meaning of the Fault.					</p>
+			<div class="explanation">
+				<p>It is recommended that applications that require custom fault codes either use the 					SOAP1.1 defined fault codes and supply additional information in the detail element, or that they 					define these codes in a namespace that is controlled by the specifying authority.</p>
+			</div>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'            xmlns:c='http://example.org/faultcodes' &gt;  &lt;faultcode&gt;soap:Server.ProcessingError&lt;/faultcode&gt;  &lt;faultstring&gt;An error occurred while processing the message  &lt;/faultstring&gt;&lt;/soap:Fault&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'            xmlns:c='http://example.org/faultcodes' &gt;  &lt;faultcode&gt;c:ProcessingError&lt;/faultcode&gt;  &lt;faultstring&gt;An error occured while processing the message  &lt;/faultstring&gt;&lt;/soap:Fault&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;  &lt;faultcode&gt;soap:Server&lt;/faultcode&gt;  &lt;faultstring&gt;An error occured while processing the message  &lt;/faultstring&gt;&lt;/soap:Fault&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16448072">4.1.7 SOAP encodingStyle Attribute</h4>
+			<div class="rationale">
+				<p>The <code>soap:encodingStyle</code> attribute is used to indicate the use of a particular					scheme in the encoding of data into XML. However, this introduces complexity, 					as this function can also be served by the use of XML Namespaces. As a result,					the Profile prefers the use of literal, non-encoded XML.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1005">R1005</a>
+				</span> A MESSAGE MUST NOT contain <code>soap:encodingStyle</code> 					attributes on any of the elements whose namespace name is "http://schemas.xmlsoap.org/soap/envelope/".</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1006">R1006</a>
+				</span> A MESSAGE MUST NOT contain <code>soap:encodingStyle</code>					attributes on any element that is a child of <code>soap:Body</code>.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1007">R1007</a>
+				</span> A MESSAGE described in an rpc-literal binding MUST NOT					contain <code>soap:encodingStyle</code> attribute on any elements are grandchildren of <code>soap:Body</code>.</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16452208">4.1.8 SOAP's use of XML</h4>
+			<div class="rationale">
+				<p>				 XML DTDs and PIs may introduce security vulnerabilities, processing overhead and 				 ambiguity in message semantics when used in SOAP messages. As a result, these 				 XML constructs are disallowed by section 3 of SOAP 1.1.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1008">R1008</a>
+				</span> 				  A MESSAGE MUST NOT contain a Document Type Declaration.				  <span class="statement-type">C</span></p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1009">R1009</a>
+				</span> 				   A MESSAGE MUST NOT contain Processing Instructions.				  <span class="statement-type">C</span></p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16453896">4.1.9 SOAP and XML Declarations</h4>
+			<div class="rationale">
+				<p>				  Presence or absence of an XML declaration does not				  affect interoperability. Certain implementations				  might always precede their XML serialization with				  the XML declaration.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1010">R1010</a>
+				</span> 				  A RECEIVER MUST accept messages that contain an XML Declaration.				  <span class="statement-type">C</span></p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16454952">4.1.10 SOAP Trailers</h4>
+			<div class="rationale">
+				<p>The interpretation					of sibling elements following the <code>soap:Body</code> element is					unclear. Therefore, such elements are disallowed.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1011">R1011</a>
+				</span> 				  A MESSAGE MUST NOT have any element children of				  <code>soap:Envelope</code> following the <code>soap:Body</code> element.				  </p>
+			<div class="explanation">
+				<p>This requirement clarifies a mismatch					between the SOAP 1.1 specification and the SOAP 1.1 XML Schema.</p>
+			</div>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<pre>&lt;soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;  &lt;soap:Body&gt;    &lt;p:Process xmlns:p='http://example.org/Operations' /&gt;  &lt;/soap:Body&gt;  &lt;m:Data xmlns:m='http://example.org/information' &gt;  Here is some data with the message  &lt;/m:Data&gt;&lt;/soap:Envelope&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;  &lt;soap:Body&gt;    &lt;p:Process xmlns:p='http://example.org/Operations' &gt;	  &lt;m:Data xmlns:m='http://example.org/information' &gt;  Here is some data with the message      &lt;/m:Data&gt;    &lt;/p:Process&gt;  &lt;/soap:Body&gt;&lt;/soap:Envelope&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16457984">4.1.11 Acceptable SOAP Character Encodings</h4>
+			<div class="rationale">
+				<p>The Profile requires all XML processors are required support the "UTF-8" and 				  "UTF-16" character encodings, in order to aid interoperability.</p>
+				<p>As a consequence of this, in conjunction with SOAP 1.1's requirement to use				  the text/xml media type (which has a default character encoding of				  "us-ascii"), the <code>charset</code> parameter must always be present 				  on the SOAP envelope's media type. A further consequence of this is that the				  encoding pseudo-attribute of XML declaration within the message is always				  ignored, in accordance with the requirements of both XML 1.0 and RFC3023, "XML Media Types".</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1012">R1012</a>
+				</span> 					A MESSAGE MUST be serialized as either UTF-8 or UTF-16.				  </p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1018">R1018</a>
+				</span> 				  The media type of a MESSAGE's envelope MUST indicate the correct				  character encoding, using the charset parameter.				  <span class="statement-type">C</span></p>
+			<div class="explanation">
+				<p>When SOAP is used with the HTTP binding, the media type 					is carried in the <code>Content-Type</code> HTTP header field.				</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16460896">4.1.12 SOAP mustUnderstand Attribute</h4>
+			<div class="rationale">
+				<p>				  The <code>soap:mustUnderstand</code> attribute has a restricted type of "xsd:boolean" 				  that takes only "0" or "1". Therefore, only those two values are allowed.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1013">R1013</a>
+				</span> 				  A MESSAGE containing a				  <code>soap:mustUnderstand</code> attribute MUST				  only use the lexical forms "0" and "1".				  <span class="statement-type">C</span></p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16462544">4.1.13 SOAP Body and Namespaces</h4>
+			<div class="rationale">
+				<p>				  The use of unqualified element names may cause naming conflicts, therefore 				  qualified names must be used for the children of <code>soap:Body</code>.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1014">R1014</a>
+				</span> 				  The children of the <code>soap:Body</code> element in a MESSAGE MUST				  be namespace qualified.				  </p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16464424">4.1.14 SOAP Envelope Namespace</h4>
+			<div class="rationale">
+				<p>SOAP 1.1 states that a message with an					Envelope element with a namespace name other than 				  	"http://schemas.xmlsoap.org/soap/envelope/" should 				  	be discarded. The Profile requires that a Fault 				  	be generated instead, to assure unambiguous operation.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1015">R1015</a>
+				</span> 				 A RECEIVER MUST generate a fault if they encounter a message whose document				 element has a local name of "Envelope" but a namespace name that is not				 "http://schemas.xmlsoap.org/soap/envelope/".				  </p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16465616">4.1.15 Use of xsi:type Attributes</h4>
+			<div class="rationale">
+				<p>In many cases, senders and receivers					will share some form of type information related					to the messages being exchanged. The <code>xsi:type</code>					attribute is only needed where no such schema					exists, that is where both sides are assuming that					all exchanged items are "xsd:anyType". 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1017">R1017</a>
+				</span> 				  A RECEIVER MUST NOT mandate the use of the 				  <code>xsi:type</code> attribute in				  messages except as required in order to indicate a				  derived type (see XML Schema Part 1: Structures,				  Section 2.6.1).				  </p>
+		</div>
+		<h3><a name="SOAPMEM">4.2</a> SOAP Processing Model</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/SOAP/#_Toc478383491">SOAP 1.1, Section 2</a>
+			</li>
+		</ul>
+		<p>SOAP 1.1 defines a message exchange model for			    processing of messages. In particular, it defines rules			    for the processing of header blocks and the body of			    message. It also defines rules related to generation			    of faults. The Profile places the			    following constraints on the processing model:</p>
+		<div class="refinement">
+			<h4 id="refinement16468312">4.2.1 Mandatory Headers</h4>
+			<div class="rationale">
+				<p>				SOAP 1.1's processing model is underspecified with respect to the processing of mandatory				header blocks. Mandatory header blocks are those children of the <code>soap:Header</code> element bearing a 				<code>soap:mustUnderstand</code> attribute with a value of "1". 				</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1025">R1025</a>
+				</span> 				A RECEIVER MUST handle messages in such a way that				it appears that all checking of mandatory header blocks is				performed before any actual processing.				<span class="statement-origin">SOAP12</span></p>
+			<div class="explanation">
+				<p>This requirement guarantees that no				undesirable side effects will occur as a result of				noticing a mandatory header block after processing other				parts of the message.</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16470360">4.2.2 Generating mustUnderstand Faults</h4>
+			<div class="rationale">
+				<p>The Profile requires that receivers generate a Fault				  when they encounter header blocks that they do not understand 				  targeted at them.				  </p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1027">R1027</a>
+				</span> 				  A RECEIVER MUST generate a				  "soap:MustUnderstand" fault when a message contains a				  mandatory header block (i.e., one that has a <code>soap:mustUnderstand</code> 				  attribute with the value "1") targeted at the receiver (via				  <code>soap:actor</code>) that the receiver does not				  understand.</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16503544">4.2.3 SOAP Fault Processing</h4>
+			<div class="rationale">
+				<p>				  When a Fault is generated, no further processing should be performed. 				  In request-response exchanges, a Fault message will be transmitted 				  to the sender of the request message, and some application level error				  will be flagged to the user.				  </p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1028">R1028</a>
+				</span> 				When a Fault is generated by a RECEIVER, further processing SHOULD NOT				be performed on the SOAP message aside from that which is necessary to rollback, or 				compensate for, any effects of processing the message prior to the generation 				of the Fault.				  </p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1029">R1029</a>
+				</span> 				  Where the normal outcome of processing a SOAP				  message would have resulted in the transmission of a				  SOAP response, but rather a SOAP Fault is generated				  instead, a RECEIVER MUST transmit a SOAP Fault				  message in place of the response.				  </p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1030">R1030</a>
+				</span> 				  A RECEIVER that generates a SOAP Fault SHOULD				  notify the end user that a SOAP Fault has been				  generated when practical, by whatever means is				  deemed appropriate to the circumstance.				  </p>
+		</div>
+		<h3><a name="SOAPHTTP">4.3</a> Use of SOAP in HTTP</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/SOAP/#_Toc478383526">SOAP 1.1, Section 6</a>
+			</li>
+			<li>
+				<a href="http://www.ietf.org/rfc/rfc2616">HTTP/1.1</a>
+			</li>
+			<li>
+				<a href="http://www.ietf.org/rfc/rfc2965">HTTP State Management Mechanism</a>
+			</li>
+		</ul>
+		<p>SOAP 1.1 defines a single protocol binding, for HTTP. The Profile mandates the use of that 					binding, and places the following constraints on its use:</p>
+		<div class="refinement">
+			<h4 id="refinement16504696">4.3.1 HTTP Versions</h4>
+			<div class="rationale">
+				<p>Several versions of HTTP are defined. HTTP/1.1 has 					performance advantages, and is more clearly specified than HTTP/1.0. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1140">R1140</a>
+				</span> 					A MESSAGE SHOULD be sent using HTTP/1.1.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1141">R1141</a>
+				</span> 					A MESSAGE MUST be sent using either HTTP/1.1 or HTTP/1.0.</p>
+			<div class="explanation">
+				<p>Note that support for HTTP/1.0 is implied in HTTP/1.1, and that intermediaries 					may change the version of a message; for more information about HTTP 					versioning, see RFC2145, "Use and Interpretation of HTTP Version Numbers."</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16506696">4.3.2 Identifying SOAP Faults</h4>
+			<div class="rationale">
+				<p>Some consumer implementations use only the HTTP status code to determine the presence 					of a SOAP Fault. Because there are situations where the Web infrastructure changes the HTTP status 					code, and for general reliability, the Profile requires that they examine the envelope.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1107">R1107</a>
+				</span> 					A RECEIVER MUST interpret SOAP messages containing only a <code>soap:Fault</code> 					element as a Fault.</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16508144">4.3.3 HTTP Methods and Extensions</h4>
+			<div class="rationale">
+				<p>The SOAP1.1 specification defined its HTTP binding such that two possible methods					could be used, the HTTP POST method and the HTTP Extension Framework's M-POST					method. The Profile requires that only the HTTP POST method be used and precludes					use of the HTTP Extension Framework.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1132">R1132</a>
+				</span> A HTTP request MESSAGE MUST use the 					HTTP POST method.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1108">R1108</a>
+				</span> A MESSAGE MUST NOT use the 					HTTP Extension Framework (RFC2774).</p>
+			<div class="explanation">
+				<p>The HTTP Extension Framework is an experimental mechanism for extending HTTP in a 					modular fashion. Because it is not deployed widely and also because its benefits to the use of SOAP 					are questionable, the Profile does not allow its use.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16510080">4.3.4 SOAPAction Header Syntax</h4>
+			<div class="rationale">
+				<p>Testing has demonstrated that				  requiring the <code>SOAPAction</code> HTTP header				  field-value to be quoted increases interoperability of				  implementations. Even though HTTP allows unquoted header field-values, some				  SOAP implementations require that they be quoted.</p>
+				<p><code>SOAPAction</code> is purely a hint to				  processors. All vital information regarding the				  intent of a message is carried in <code>soap:Envelope</code>.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1109">R1109</a>
+				</span> 				  The value of the <code>SOAPAction</code> HTTP				  header field in a HTTP request MESSAGE MUST be a quoted string.				  <span class="statement-type">C</span></p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1119">R1119</a>
+				</span> 				  A RECEIVER MAY respond with a Fault if the value of				  the <code>SOAPAction</code> HTTP header field is				  not quoted.				  <span class="statement-type">C</span></p>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<p>A WSDL Description that has:</p>
+				<p>
+					<code>&lt;soapbind:operation soapAction="foo" /&gt;</code>
+				</p>
+				<p>results in a message with a SOAPAction HTTP header field of:</p>
+				<p>
+					<code>SOAPAction: "foo"</code>
+				</p>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<p>A WSDL Description that has:</p>
+				<p>
+					<code>&lt;soapbind:operation /&gt;</code>
+				</p>
+				<p>or </p>
+				<p>
+					<code>&lt;soapbind:operation soapAction="" /&gt;</code>
+				</p>
+				<p>results in a message with a corresponding SOAPAction HTTP header field 					as follows:</p>
+				<p>
+					<code>SOAPAction: ""</code>
+				</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16479784">4.3.5 HTTP and TCP Ports</h4>
+			<div class="rationale">
+				<p>SOAP is designed to take advantage of the HTTP infrastructure. However, there are 				  some situations (e.g., involving proxies, firewalls and other intermediaries) where there may be 				  harmful side effects. As a result, instances may find it advisable to use ports other than the default 				  for HTTP (port 80).</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1110">R1110</a>
+				</span> 				  An INSTANCE MAY accept connections on TCP port 80 (HTTP).				  <span class="statement-type">C</span></p>
+			<div class="explanation">
+				<p>There has been considerable debate within the W3C and IETF regarding the 				  propriety of the use of port 80 for SOAP messages bound to HTTP. It has been concluded 				  that this is an acceptable practice.</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16481112">4.3.6 HTTP Success Status Codes</h4>
+			<div class="rationale">
+				<p>HTTP uses the 2xx series of status codes to communicate success. 					In particular, 200 is the default for successful messages, but 202 can be used 					to indicate that a message has been submitted for processing. Additionally, 					other 2xx status codes may be appropriate, depending on the nature of the HTTP 					interaction.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1124">R1124</a>
+				</span> 					An INSTANCE MUST use a 2xx HTTP status code for responses that indicate a 					successful outcome of a request.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1111">R1111</a>
+				</span> 					An INSTANCE SHOULD use a "200 OK" HTTP status code for responses that 					contain a SOAP message that is not a SOAP fault.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1112">R1112</a>
+				</span> 					An INSTANCE SHOULD use either a "200 OK" or "202 Accepted" HTTP status code 					for a response that does do not contain a SOAP message but indicates successful HTTP 					outcome of a request.</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16483424">4.3.7 HTTP Redirect Status Codes</h4>
+			<div class="rationale">
+				<p>There are interoperability problems with using many of the HTTP 					redirect status codes, generally surrounding whether to use the original 					method, or GET. The Profile mandates "307 Temporary Redirect", which has the					semantic of redirection with the same HTTP method, as the correct status code 					for redirection. For more information, see the 3xx status code descriptions in					RFC2616.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1130">R1130</a>
+				</span> An INSTANCE 					MUST use HTTP status code "307 Temporary Redirect" when redirecting a request 					to a different endpoint.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1131">R1131</a>
+				</span> A 					CONSUMER MAY automatically redirect a request when it encounters a 					"307 Temporary Redirect" HTTP status code in a response.</p>
+			<div class="explanation">
+				<p>RFC2616 notes that user-agents should not automatically 					redirect requests; however, this requirement was aimed at browsers, 					not automated processes (which many Web services will be). Therefore, 					the Profile allows, but does not require, consumers to 					automatically follow redirections.</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16485352">4.3.8 HTTP Client Error Status Codes</h4>
+			<div class="rationale">
+				<p>HTTP uses the 4xx series of status codes to indicate failure 					due to a client error. Although there are a number of situations that may 					result in one of these codes, the Profile highlights those when the payload 					of the HTTP request is not the proper media type (i.e., "text/xml", as required by the 					SOAP/HTTP binding), and when the anticipated method ("POST") is not used.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1125">R1125</a>
+				</span> 					An INSTANCE MUST use a 4xx HTTP status code for responses that indicate 					a problem with the format of the request.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1113">R1113</a>
+				</span> 					An INSTANCE SHOULD use a "400 Bad Request "HTTP status code, if the 					request message is a malformed HTTP request, or not well-formed XML.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1114">R1114</a>
+				</span> 					An INSTANCE SHOULD use a "405 Method not Allowed" HTTP status code 					if the request method was not "POST".</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1115">R1115</a>
+				</span> 					An INSTANCE SHOULD use a "415 Unsupported Media Type" HTTP status 					code if the Content-Type HTTP request header did not have a value consistent 					with the value specified for the corresponding binding of the input message.</p>
+			<div class="explanation">
+				<p>					Note that these requirements do not force an instance to respond to requests. 					In some cases, such as Denial of Service attacks, an instance may choose to ignore requests.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16488480">4.3.9 HTTP Server Error Status Codes</h4>
+			<div class="rationale">
+				<p>HTTP uses the 5xx series of status codes to indicate failure due 					to a server error.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1126">R1126</a>
+				</span> 					An INSTANCE MUST use a "500 Internal Server Error" HTTP status code if 					the response message is a SOAP Fault.</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16489648">4.3.10 HTTP Cookies</h4>
+			<div class="rationale">
+				<p>					The HTTP State Management Mechanism ("Cookies") allows the creation 					of stateful sessions between Web browsers and servers. Being designed 					for hypertext browsing, Cookies do not have well-defined semantics for 					Web services, and, because they are external to the SOAP Envelope, are 					not accommodated by either SOAP 1.1 or WSDL 1.1.					However, there are situations where it may be necessary to use 					Cookies; e.g., for load balancing between servers, or for 					integration with legacy systems that use Cookies. For these 					reasons, the Profile limits the ways in which Cookies can be 					used, without completely disallowing them.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R1120">R1120</a>
+				</span> 					An INSTANCE MAY use the HTTP state mechanism ("Cookies").</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1122">R1122</a>
+				</span> 					An INSTANCE using Cookies SHOULD conform to RFC2965.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1121">R1121</a>
+				</span> 					An INSTANCE SHOULD NOT require consumer support for Cookies in order to function correctly.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R1123">R1123</a>
+				</span> The value of the cookie MUST be considered to be 					opaque by the CONSUMER.</p>
+			<div class="explanation">
+				<p>	    The Profile recommends that cookies not be required by instances for proper operation; they should be a hint, to be used 	    for optimization, without materially affecting the execution of the Web service. However, they may be required in legacy 	    integration and other exceptional use cases, so requiring them does not make an instance non-conformant. While Cookies 	    thus may have meaning to the instance, they should not be used as an out-of-bound data channel between the instance 	    and the consumer. Therefore, interpretation of Cookies is not allowed at all by the consumer - it is required to treat 	    them as opaque (i.e., have no meaning to the consumer).	   </p>
+			</div>
+		</div>
+		<h2><a name="description">5. </a>Service Description</h2>
+		<p>The Profile uses Web Services Description Language (WSDL) to enable the description of services 				as sets of endpoints operating on messages.</p>
+		<p>This section of the Profile incorporates the following		specifications by reference, and defines extensibility points within		them:</p>
+		<ul>
+			<li><a href="http://www.w3.org/TR/wsdl.html">Web Services Description Language (WSDL) 1.1</a><br/>Extensibility points:			<ul>
+					<li>WSDL extensions - WSDL allows extension elements in certain places; use of such extensions requires out-of-band negotiation.</li>
+					<li>Relative URIs - WSDL does not adequately specify the use of relative URIs; their use may require further coordination; see XML Base for more information.</li>
+					<li>Validation mode - whether the parser used to read WSDL and XML Schema documents performs DTD validation or not.</li>
+					<li>Fetching of external resources - whether the parser used to read WSDL and XML Schema documents fetches external entities and DTDs.</li>
+				</ul></li>
+			<li><a href="http://www.w3.org/TR/xmlschema-1">XML Schema Part 1: Structures</a><br/>Extensibility points:			<ul>
+					<li>Schema annotations - XML Schema allows for annotations, which may be used to convey additional information about data structures.</li>
+				</ul></li>
+			<li>
+				<a href="http://www.w3.org/TR/xmlschema-2">XML Schema Part 2: Datatypes</a>
+			</li>
+		</ul>
+		<h3><a name="WSDLDOCSTRUCT">5.1</a> Document Structure</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/wsdl#_document-s">WSDL 1.1, Section 2.1</a>
+			</li>
+		</ul>
+		<p>WSDL 1.1 defines an XML-based structure for describing Web services. The Profile 						   mandates the use of that structure, and places the following constraints on its use:				</p>
+		<div class="refinement">
+			<h4 id="refinement16496720">5.1.1 WSDL Schema Definitions</h4>
+			<div class="rationale">
+				<p>The normative schemas for WSDL appearing in Appendix 4 of the WSDL 1.1 specification have				        inconsistencies with the normative text of the specification. The Profile references new schema documents that have incorporated fixes for known errors.				        </p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2028">R2028</a>
+				</span> 				       A DESCRIPTION using the WSDL namespace (prefixed "wsdl" in this Profile) MUST be valid 				       according to the XML Schema found at "http://schemas.xmlsoap.org/wsdl/2003-02-11.xsd".					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2029">R2029</a>
+				</span> 				       A DESCRIPTION using the WSDL SOAP binding namespace (prefixed "soapbind" in this Profile) 				       MUST be valid according to the XML Schema found at "http://schemas.xmlsoap.org/wsdl/soap/2003-02-11.xsd".				       </p>
+			<div class="explanation">
+				<p>Although the Profile requires WSDL descriptions to be Schema valid, it does not require consumers to validate WSDL documents. 				        It is the responsibility of a WSDL document's author to assure that it is Schema valid.</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16498504">5.1.2 WSDL and Schema Import</h4>
+			<div class="rationale">
+				<p>Some examples in WSDL 1.1 incorrectly show the WSDL import statement being 					used to import XML Schema definitions. The Profile clarifies use of the import mechanisms					to keep them consistent and confined to their respective domains. Imported schema documents are 					also constrained by XML version and encoding requirements consistent to those of the importing 					WSDL documents.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2001">R2001</a>
+				</span>  				  	A DESCRIPTION MUST only use the WSDL "import" statement to import another WSDL description.				  	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2002">R2002</a>
+				</span>  				  	To import XML Schema Definitions, a DESCRIPTION MUST use the XML Schema "import" statement.					      </p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2003">R2003</a>
+				</span>  				  	A DESCRIPTION MUST use the XML Schema "import" statement only within the <code>xsd:schema</code> 				  	element of the types section.					      </p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2004">R2004</a>
+				</span>  				  	A DESCRIPTION MUST NOT use the XML Schema "import" statement to import a Schema from any document 				  	whose root element is not "schema" from the namespace "http://www.w3.org/2001/XMLSchema".				      </p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2009">R2009</a>
+				</span>  					An XML Schema directly or indirectly imported by a DESCRIPTION MAY include the 					Unicode Byte Order Mark (BOM).</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2010">R2010</a>
+				</span> 					An XML Schema directly or indirectly imported by a DESCRIPTION MUST use either 					UTF-8 or UTF-16 encoding.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2011">R2011</a>
+				</span> 					An XML Schema directly or indirectly imported by a DESCRIPTION MUST use version 					1.0 of the eXtensible Markup Language W3C Recommendation.</p>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<pre>&lt;definitions name="StockQuote"   targetNamespace="http://example.com/stockquote/definitions"   xmlns:xsd1="http://example.com/stockquote/schemas""           	 ...   xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;   &lt;import namespace="http://example.com/stockquote/schemas"         location="http://example.com/stockquote/stockquote.xsd"/&gt;            &lt;message name="GetLastTradePriceInput"&gt;        &lt;part name="body" element="xsd1:TradePriceRequest"/&gt;    &lt;/message&gt;               ...&lt;/definitions&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;definitions name="StockQuote"      targetNamespace="http://example.com/stockquote/definitions"&gt;      &lt;import namespace="http://example.com/stockquote/definitions"           location="http://example.com/stockquote/stockquote.wsdl"/&gt;      &lt;message name="GetLastTradePriceInput"&gt;         &lt;part name="body" element="..."/&gt;      &lt;/message&gt;                  ...   &lt;/definitions&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;definitions name="StockQuote"     targetNamespace="http://example.com/stockquote/"   xmlns:xsd1="http://example.com/stockquote/schemas"           	 ...   xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;      &lt;import namespace="http://example.com/stockquote/definitions"        location="http://example.com/stockquote/stockquote.wsdl"/&gt;              &lt;message name="GetLastTradePriceInput"&gt;      &lt;part name="body" element="xsd1:TradePriceRequest"/&gt;   &lt;/message&gt;               ...&lt;/definitions&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16512792">5.1.3 WSDL Import location Attribute Syntax</h4>
+			<div class="rationale">
+				<p>WSDL 1.1 is not clear about whether the <code>location</code> attribute of the 					<code>wsdl:import</code> statement is required, or what its content is required to be. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2007">R2007</a>
+				</span>  				  	A DESCRIPTION MUST specify a non-empty <code>location</code> attribute on the 				  	<code>wsdl:import</code> element.				  	</p>
+			<div class="explanation">
+				<p>Although the <code>wsdl:import</code> statement is modeled after the 					<code>xsd:import</code> statement, the <code>location</code> attribute is required by 					<code>wsdl:import</code> while the corresponding attribute on <code>xsd:import</code>, 					<code>schemaLocation</code> is optional. Consistent with <code>location</code> being 					required, its content is not intended to be empty. </p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16517400">5.1.4 WSDL Import location Attribute Semantics</h4>
+			<div class="rationale">
+				<p>					WSDL 1.1 is unclear about whether WSDL processors must actually retrieve and process the 					WSDL document from the URI specified in the <code>location</code> attribute on the <code>wsdl:import</code> 					statements it encounters.				  	</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2008">R2008</a>
+				</span> In a DESCRIPTION the value 					of the <code>location</code> attribute of a <code>wsdl:import</code> element SHOULD be treated as a hint.				  	<span class="statement-type">C</span></p>
+			<div class="explanation">
+				<p>				  	This means that WSDL processor may, but need not, retrieve a WSDL description from the URI specified in the 				  	<code>location</code> attribute on a <code>wsdl:import</code> element because a WSDL processor may 				  	have other ways of locating a WSDL description for a given namespace. For example, it may already have a				  	cached or built-in representation, or it may retrieve a representation from a metadata repository or UDDI server.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16520392">5.1.5 Placement of WSDL import Elements</h4>
+			<div class="rationale">
+				<p>Example 3 in WSDL 1.1 Section 3.1 causes confusion regarding the placement of 					<code>wsdl:import</code>. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2022">R2022</a>
+				</span> When they appear in a DESCRIPTION, 					<code>wsdl:import</code> elements MUST precede all other elements from the WSDL 					namespace except <code>wsdl:documentation</code>.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2023">R2023</a>
+				</span> When they appear in a DESCRIPTION, 					<code>wsdl:types</code> elements MUST precede all other elements from the WSDL 					namespace except <code>wsdl:documentation</code> and <code>wsdl:import</code>.</p>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<pre>&lt;definitions name="StockQuote"             	 ...   xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;      &lt;import namespace="http://example.com/stockquote/definitions"         location="http://example.com/stockquote/stockquote.wsdl"/&gt;              &lt;message name="GetLastTradePriceInput"&gt;       &lt;part name="body" type="tns:TradePriceRequest"/&gt;   &lt;/message&gt;               ...   &lt;service name="StockQuoteService"&gt;      &lt;port name="StockQuotePort" binding="tns:StockQuoteSoap"&gt;           ....      &lt;/port&gt;   &lt;/service&gt;   &lt;types&gt;      &lt;schema targetNamespace="http://example.com/stockquote/schemas"               xmlns="http://www.w3.org/2001/XMLSchema"&gt;           .......      &lt;/schema&gt;   &lt;/types&gt;&lt;/definitions&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>   &lt;definitions name="StockQuote"      targetNamespace="http://example.com/stockquote/definitions"&gt;     &lt;import namespace="http://example.com/stockquote/base"       location="http://example.com/stockquote/stockquote.wsdl"/&gt;              &lt;message name="GetLastTradePriceInput"&gt;         &lt;part name="body" element="..."/&gt;      &lt;/message&gt;                  ...   &lt;/definitions&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;definitions name="StockQuote"             	 ...   xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;  &lt;types&gt;     &lt;schema targetNamespace="http://example.com/stockquote/schemas"          xmlns="http://www.w3.org/2001/XMLSchema"&gt;           .......     &lt;/schema&gt;   &lt;/types&gt;              &lt;message name="GetLastTradePriceInput"&gt;        &lt;part name="body" element="tns:TradePriceRequest"/&gt;   &lt;/message&gt;               ...   &lt;service name="StockQuoteService"&gt;      &lt;port name="StockQuotePort" binding="tns:StockQuoteSoap"&gt;           ....      &lt;/port&gt;   &lt;/service&gt;&lt;/definitions&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16525000">5.1.6 XML Version Requirements</h4>
+			<div class="rationale">
+				<p>Neither WSDL 1.1 nor XML Schema 1.0 mandate a particular version of XML. For interoperability, WSDL documents and the schemas they import expressed in XML must use version 1.0.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R4004">R4004</a>
+				</span> A DESCRIPTION MUST use version 1.0 of the eXtensible Markup Language W3C Recommendation.</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16526064">5.1.7 WSDL and the Unicode BOM</h4>
+			<div class="rationale">
+				<p>XML 1.0 allows documents that use the UTF-8 character encoding 					to include a BOM; therefore, description processors must be prepared to accept them.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R4002">R4002</a>
+				</span> 					A DESCRIPTION MAY include the Unicode Byte Order Mark (BOM).<span class="statement-type">C</span></p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16527096">5.1.8 Acceptable WSDL Character Encodings</h4>
+			<div class="rationale">
+				<p>The Profile consistently requires either UTF-8 or UTF-16 encoding for both SOAP and WSDL (see 					also R1012).</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R4003">R4003</a>
+				</span> A DESCRIPTION MUST use either UTF-8 or 					UTF-16 encoding.</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16528296">5.1.9 Namespace Coercion</h4>
+			<div class="rationale">
+				<p>Namespace coercion on <code>wsdl:import</code> is disallowed by the 					Profile.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2005">R2005</a>
+				</span>  				  	The <code>targetNamespace</code> attribute on the <code>wsdl:definitions</code> element 				  	of a description that is being imported MUST have same the value as the <code>namespace</code> 				  	attribute on the <code>wsdl:import</code> element in the importing DESCRIPTION.				      </p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16530952">5.1.10 WSDL documentation Element</h4>
+			<div class="rationale">
+				<p>The WSDL 1.1 schema and the WSDL 1.1 specification are inconsistent with respect to where 					<code>wsdl:documentation</code> elements may be placed.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2020">R2020</a>
+				</span> 				   	The <code>wsdl:documentation</code> element MAY occur as a child of the 				   	<code>wsdl:import</code> element in a DESCRIPTION.				      <span class="statement-origin">WSDL20</span></p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2021">R2021</a>
+				</span> 				   	The <code>wsdl:documentation</code> element MAY occur as a child of the 				   	<code>wsdl:part</code> element in a DESCRIPTION.				      <span class="statement-origin">WSDL20</span></p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2024">R2024</a>
+				</span> 				   	The <code>wsdl:documentation</code> element MAY occur as a first child of the 				   	<code>wsdl:definitions</code> element in a DESCRIPTION.				      <span class="statement-origin">WSDL20</span></p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16535632">5.1.11 WSDL Extensions</h4>
+			<div class="rationale">
+				<p>Requiring support for WSDL extensions that are not explicitly specified by this or another					 WS-I Profile can lead to interoperability problems with development tools that have not been 					 instrumented to understand those extensions.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2025">R2025</a>
+				</span> A DESCRIPTION containing WSDL					extensions MUST NOT use them to contradict other requirements of the Profile.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2026">R2026</a>
+				</span> 					A DESCRIPTION SHOULD NOT include extension elements with a <code>wsdl:required</code> 					attribute value of "true" on any WSDL construct (<code>wsdl:binding</code>, <code>					wsdl:portType</code>, <code>wsdl:message</code>, <code>wsdl:types</code> or 					<code>wsdl:import</code>) that claims conformance to the Profile.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2027">R2027</a>
+				</span> If during the processing of an element in the 					 WSDL namespace in a description, a consumer encounters a WSDL extension element amongst 					 its element children, that has a <code>wsdl:required</code> attribute with a boolean value 					 of "true" that the consumer does not understand or cannot process, the CONSUMER MUST fail 					 processing of that element in the WSDL namespace.</p>
+			<div class="explanation">
+				<p>Development tools that consume a WSDL description and generate software for a 					Web service instance might not have built-in understanding of an unknown WSDL extension. 					Hence, use of required WSDL extensions should be avoided. Use of a required WSDL extension 					that does not have an available specification for its use and semantics imposes potentially 					insurmountable interoperability concerns for all but the author of the extension. Use of a required 					WSDL extension that has an available specification for its use and semantics reduces, but does 					not eliminate the interoperability concerns that lead to this refinement.</p>
+				<p>The following elements are extensible via attributes only:</p>
+				<ul>
+					<li>
+						<code>wsdl:import</code>
+					</li>
+					<li>
+						<code>wsdl:part</code>
+					</li>
+					<li>
+						<code>wsdl:portType</code>
+					</li>
+					<li><code>wsdl:input</code> (in portType operation)</li>
+					<li><code>wsdl:output</code> (in portType operation)</li>
+					<li><code>wsdl:fault</code> (in portType operation)</li>
+				</ul>
+				<p>The following elements are extensible via elements as well as attributes:</p>
+				<ul>
+					<li>
+						<code>wsdl:definitions</code>
+					</li>
+					<li>
+						<code>wsdl:types</code>
+					</li>
+					<li>
+						<code>wsdl:message</code>
+					</li>
+					<li>
+						<code>wsdl:operation</code>
+					</li>
+					<li>
+						<code>wsdl:binding</code>
+					</li>
+					<li><code>wsdl:input</code> (in binding operation)</li>
+					<li><code>wsdl:output</code> (in binding operation)</li>
+					<li><code>wsdl:fault</code> (in binding operation)</li>
+					<li>
+						<code>wsdl:service</code>
+					</li>
+					<li>
+						<code>wsdl:port</code>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<h3><a name="WSDLTYPES">5.2</a> Types</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/wsdl#_types">WSDL 1.1, Section 2.2</a>
+			</li>
+		</ul>
+		<p>The <code>wsdl:types</code> element of WSDL 1.1 encloses data type definitions that are relevant to 					the Web service described. The Profile places the following constraints pertinent to those portions of					 the content  of the <code>wsdl:types</code> element that are referred to by WSDL elements that 					 make Profile conformance claims:</p>
+		<div class="refinement">
+			<h4 id="refinement16547792">5.2.1 QName References</h4>
+			<div class="rationale">
+				<p>XML Schema requires each QName reference to use either the target namespace, or an 					imported namespace (one marked explicitly with an <code>xsd:import</code> element). QName 					references to namespaces represented only by nested imports are not allowed.</p>
+				<p>WSDL 1.1 is unclear as to which schema target namespaces are suitable for QName references 					from a WSDL element. The Profile allows QName references from WSDL elements both to the target 					namespace defined by the <code>xsd:schema</code> element, and to imported namespaces. 					Similar to XML Schema, namespaces not referenced directly within the WSDL file (through the 					<code>targetNamespace</code> attribute on <code>xsd:schema</code>, or through the namespace 					attribute on <code>xsd:import</code>) are available for use in QName reference. QName references to 					namespaces that are only defined through a nested import are not allowed.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2101">R2101</a>
+				</span>  					A DESCRIPTION MUST NOT use QName references to elements in namespaces that have been neither imported, 				  	nor defined in the referring WSDL document. 				     </p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2102">R2102</a>
+				</span> 					A QName reference to a Schema component in a DESCRIPTION MUST use the namespace defined 					in the <code>targetNamespace</code> attribute on the <code>xsd:schema</code> element, or to a namespace 					defined in the <code>namespace</code> attribute on an <code>xsd:import</code> element within the 					<code>xsd:schema</code> element.</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16552904">5.2.2 Schema targetNamespace Syntax</h4>
+			<div class="rationale">
+				<p>Requiring a targetNamespace on all xsd:schema elements that are children of <code>wsdl:types</code> is a					  good practice, places a minimal burden on authors of WSDL documents, and avoids the cases that are 					  not as clearly defined as they might be.					  </p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2105">R2105</a>
+				</span>  					All <code>xsd:schema</code> elements contained in a <code>wsdl:types</code> element of a 					DESCRIPTION MUST have a <code>targetNamespace</code> attribute with a valid and non-null value, UNLESS the					<code>xsd:schema</code> element has <code>xsd:import</code> and/or <code>xsd:annotation</code> as its only					child element(s).				      	</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16556272">5.2.3 soapenc:Array</h4>
+			<div class="rationale">
+				<p>The recommendations in WSDL 1.1 Section 2.2 for declaration of array types have been 					interpreted in various ways, leading to interoperability problems. Further, there are other clearer ways to declare arrays.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2110">R2110</a>
+				</span>  				  	In a DESCRIPTION, array declarations MUST NOT extend or restrict the <code>soapenc:Array</code> type.				  	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2111">R2111</a>
+				</span>  				  	In a DESCRIPTION, array declarations MUST NOT use <code>wsdl:arrayType</code> attribute in 				  	the type declaration.				  	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2112">R2112</a>
+				</span>  				  	In a DESCRIPTION, array declaration wrapper elements SHOULD NOT be named using the				  	convention ArrayOfXXX. 				  	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2113">R2113</a>
+				</span>  				  	A MESSAGE containing serialized arrays MUST NOT include the <code>soapenc:arrayType</code> attribute.				  	</p>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<p>Given the WSDL Description:</p>
+				<pre>&lt;xsd:element name="MyArray2" type="tns:MyArray2Type"/&gt;&lt;xsd:complexType name="MyArray2Type"  xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" &gt;  &lt;xsd:complexContent&gt;     &lt;xsd:restriction base="soapenc:Array"&gt;       &lt;xsd:sequence&gt;          &lt;xsd:element name="x" type="xsd:string"            minOccurs="0" maxOccurs="unbounded"/&gt;       &lt;/xsd:sequence&gt;       &lt;xsd:attribute ref="soapenc:arrayType"         wsdl:arrayType="tns:MyArray2Type[]"/&gt;   &lt;/xsd:restriction&gt; &lt;/xsd:complexContent&gt;&lt;/xsd:complexType&gt;</pre>
+				<p>The SOAP message would serialize as (omitting namespace declarations for clarity):</p>
+				<pre>&lt;MyArray2 soapenc:arrayType="tns:MyArray2Type[]" &gt;  &lt;x&gt;abcd&lt;/x&gt;  &lt;x&gt;efgh&lt;/x&gt;&lt;/MyArray2&gt;	</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<p>Given the WSDL Description:</p>
+				<pre>&lt;xsd:element name="MyArray1" type="tns:MyArray1Type"/&gt;&lt;xsd:complexType name="MyArray1Type"&gt;  &lt;xsd:sequence&gt;   &lt;xsd:element name="x" type="xsd:string"     minOccurs="0" maxOccurs="unbounded"/&gt;  &lt;/xsd:sequence&gt;&lt;/xsd:complexType&gt;</pre>
+				<p>The SOAP message would serialize as (omitting namespace declarations for clarity):</p>
+				<pre>&lt;MyArray1&gt;  &lt;x&gt;abcd&lt;/x&gt;  &lt;x&gt;efgh&lt;/x&gt;&lt;/MyArray1&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16562192">5.2.4 WSDL and Schema Definition Target Namespaces</h4>
+			<div class="rationale">
+				<p>The names defined by schemas and the names assigned to WSDL definitions are in separate symbol spaces.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2114">R2114</a>
+				</span> The target namespace for WSDL definitions and the 					target namespace for schema definitions in a DESCRIPTION MAY be the same.<span class="statement-origin">WSDL20</span></p>
+		</div>
+		<h3><a name="WSDLMSGS">5.3</a> Messages</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/wsdl#_messages">WSDL 1.1, Section 2.3</a>
+			</li>
+		</ul>
+		<p>In WSDL 1.1, <code>wsdl:message</code> elements are used to represent abstract definitions of the data being 					transmitted. It uses <code>wsdl:binding</code> elements to define how the abstract definitions are bound to a specific 					wire format. The Profile places the following constraints on <code>wsdl:message</code> elements and on how conformant 					<code>wsdl:binding</code> elements may use <code>wsdl:message</code> element(s).</p>
+		<p> In this section the following definitions are used to make the requirements more compact and easier to understand.</p>
+		<p>An "rpc-literal binding" is a wsdl:binding element whose child   <code>wsdl:operation</code> elements are all rpc-literal operations.</p>
+		<p>An "rpc-literal operation" is a <code>wsdl:operation</code> child element of   <code>wsdl:binding</code> each of whose <code>soapbind:body</code> descendant elements specifies   the <code>use</code> attribute with the value "literal" and each of which either:</p>
+		<ol type="">
+			<li>Specifies the style attribute with the value "rpc"; or</li>
+			<li>Is the child of a <code>soapbind:binding</code> element which specifies the      <code>style</code> attribute with the value "rpc", and does not itself have the <code>style</code> attribute      specified.</li>
+		</ol>
+		<p>A "document-literal binding" is a <code>wsdl:binding</code> element whose child   <code>wsdl:operation</code> elements are all document-literal operations.</p>
+		<p>A "document-literal operation" is a <code>wsdl:operation</code> child element of   <code>wsdl:binding</code> each of whose <code>soapbind:body</code> descendent elements specifies   the <code>use</code> attribute with the value "literal" and each of which either:</p>
+		<ol type="">
+			<li>Specifies the <code>style</code> attribute with the value "document"; or</li>
+			<li>Is the child of a <code>soapbind:binding</code> element which specifies the       <code>style</code> attribute with the value "document", and does not itself have the <code>style</code>      attribute specified; or</li>
+			<li>Is the child of a <code>soapbind:binding</code> element which does not have the      <code>style</code> attribute specified, and does not itself have the <code>style</code>      attribute specified.</li>
+		</ol>
+		<div class="refinement">
+			<h4 id="refinement16574232">5.3.1 Bindings and Parts</h4>
+			<div class="rationale">
+				<p>					There are various interpretations about how many <code>wsdl:part</code> elements are permitted or required 					for document-literal and rpc-literal bindings and how they must be defined.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2201">R2201</a>
+				</span> 				   	A document-literal binding in a DESCRIPTION MUST, in each of its <code>soapbind:body</code> element(s), have 				   	at most one part listed in the <code>parts</code> attribute, if the <code>parts</code> attribute is specified.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2210">R2210</a>
+				</span> 				   	If a document-literal binding in a DESCRIPTION does not specify the <code>parts</code> attribute on a 				   	<code>soapbind:body</code> element, the corresponding abstract <code>wsdl:message</code> MUST 				   	define zero or one <code>wsdl:part</code>s.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2202">R2202</a>
+				</span> 				   	A <code>wsdl:binding</code> in a DESCRIPTION MAY contain <code>soapbind:body</code> element(s)				   	 that specify  that zero parts form the <code>soap:Body</code>.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2203">R2203</a>
+				</span> 				   	An rpc-literal binding in a DESCRIPTION MUST refer, in its <code>soapbind:body</code> element(s), only 				   	to <code>wsdl:part</code> element(s) that have been defined using the <code>type</code> attribute.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2211">R2211</a>
+				</span> 				   	A MESSAGE described with an rpc-literal binding MUST NOT have the <code>xsi:nil</code> attribute with a value of 				   	"1" or "true" on the part accessors.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2207">R2207</a>
+				</span> 					A <code>wsdl:message</code> in a DESCRIPTION MAY contain <code>wsdl:part</code>s that use the 					<code>elements</code> attribute provided those <code>wsdl:part</code>s are not referred to by a 					<code>soapbind:body</code> in an rpc-literal binding.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2204">R2204</a>
+				</span> 					A document-literal binding in a DESCRIPTION MUST refer, in each of its <code>soapbind:body</code> element(s),  					only to <code>wsdl:part</code> element(s) that have been defined using the <code>element</code> attribute.				 	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2208">R2208</a>
+				</span> 				   	A binding in a DESCRIPTION MAY contain <code>soapbind:header</code> element(s) that 				   	refer to <code>wsdl:part</code>s in the same <code>wsdl:message</code>  that are referred to by its 				   	<code>soapbind:body</code> element(s).				   	</p>
+			<div class="explanation">
+				<p>Use of <code>wsdl:message</code> elements with zero parts is permitted in Document styles to permit 						operations that can send or receive messages with empty <code>soap:Body</code>s. Use of 						<code>wsdl:message</code> elements with zero parts is permitted in RPC styles to permit operations 						that have no (zero) parameters and/or a return value.</p>
+				<p>For document-literal bindings, the Profile requires that at most one part, abstractly defined 						with the <code>element</code> attribute, be serialized 						into the <code>soap:Body</code> element.</p>
+				<p>When a <code>wsdl:part</code> element is defined using the <code>type</code> attribute, the wire representation 						of that part is equivalent to an implicit (XML Schema) qualification of a <code>minOccurs</code> attribute with the value 						"1", a <code>maxOccurs</code> attribute with the value "1" and a <code>nillable</code> attribute with the value "false".</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16591144">5.3.2 Bindings and Faults</h4>
+			<div class="rationale">
+				<p>					There are several interpretations for how <code>wsdl:part</code> elements that describe 					<code>soapbind:fault</code>, <code>soapbind:header</code>, and <code>soapbind:headerfault</code> 					may be defined. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2205">R2205</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION MUST refer, in each of its <code>soapbind:header</code>, 					<code>soapbind:headerfault</code> and <code>soapbind:fault</code> elements,  only to <code>wsdl:part</code> 					element(s) that have been defined using the <code>element</code> attribute.					</p>
+			<div class="explanation">
+				<p>					Because faults and headers do not contain parameters, <code>soapbind:fault</code>, 					<code>soapbind:header</code> and <code>soapbind:headerfault</code> assume, per WSDL 1.1, 					that the value of the <code>style</code> attribute is "document". R2204 requires that all <code>wsdl:part</code> elements with 					a <code>style</code> attribute whose value is "document" that are bound to <code>soapbind:body</code> be defined using 					the <code>element</code> attribute. This requirement does the same for <code>soapbind:fault</code>, 					<code>soapbind:header</code> and <code>soapbind:headerfault</code> elements.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16598880">5.3.3 Unbound portType Element Contents</h4>
+			<div class="rationale">
+				<p>					WSDL 1.1 is not explicit about whether it is permissible for a <code>wsdl:binding</code>					 to leave the binding for portions of the content defined by 					a <code>wsdl:portType</code> unspecified.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2209">R2209</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION SHOULD bind every <code>wsdl:part</code> of a 					<code>wsdl:message</code> in the <code>wsdl:portType</code> to which it refers to one of 					<code>soapbind:body</code>, <code>soapbind:header</code>, <code>soapbind:fault</code>					or <code>soapbind:headerfault</code>.				   	</p>
+			<div class="explanation">
+				<p>					A portType defines an abstract contract with a named set of operations and associated abstract messages. 					Although not disallowed, it is expected that every part of the abstract input, output and fault messages specified in 					a portType is bound to <code>soapbind:body</code> or <code>soapbind:header</code> (and so forth) 					as appropriate when using the SOAP binding as defined in WSDL 1.1 Section 3.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16603776">5.3.4 Declaration of part Elements</h4>
+			<div class="rationale">
+				<p>Examples 4 and 5 in WSDL 1.1 Section 3.1 incorrectly show the use of XML Schema					 types (e.g. "xsd:string") as a valid value for the <code>element</code> attribute of a 					 <code>wsdl:part</code> element. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2206">R2206</a>
+				</span> 					A <code>wsdl:message</code> in a DESCRIPTION containing a <code>wsdl:part</code> that 					uses the <code>element</code> attribute MUST refer, in that attribute, to a global element declaration.					</p>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<pre>  &lt;message name="GetTradePriceInput"&gt;      &lt;part name="tickerSymbol" element="xsd:string"/&gt;      &lt;part name="time" element="xsd:timeInstant"/&gt;  &lt;/message&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<pre>  &lt;message name="GetTradePriceInput"&gt;      &lt;part name="tickerSymbol" element="xsd:string"/&gt;  &lt;/message&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>  &lt;message name="GetTradePriceInput"&gt;      &lt;part name="body" element="tns:SubscribeToQuotes"/&gt;         &lt;/message&gt;</pre>
+			</div>
+		</div>
+		<h3><a name="WSDLPORTTYPES">5.4</a> Port Types</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/wsdl#_porttypes">WSDL 1.1, Section 2.4</a>
+			</li>
+		</ul>
+		<p>In WSDL 1.1, <code>wsdl:portType</code> elements are used to group a set of abstract operations. 				The Profile places the following constraints on conformant <code>wsdl:portType</code> element(s):				</p>
+		<div class="refinement">
+			<h4 id="refinement16609080">5.4.1 Ordering of part Elements</h4>
+			<div class="rationale">
+				<p>Permitting the use of <code>parameterOrder</code> helps code generators in mapping between 					method signatures and messages on the wire.				      </p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2301">R2301</a>
+				</span> 				   	The order of the elements in the <code>soap:body</code> of a MESSAGE				   	MUST be the same as that of the <code>wsdl:part</code>s in the 				   	<code>wsdl:message</code> that describes it.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2302">R2302</a>
+				</span> 				   	A DESCRIPTION MAY use the <code>parameterOrder</code> attribute of an 				   	<code>wsdl:operation</code>  element to indicate the return value and method signatures 				   	as a hint to code generators. 				      </p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16612720">5.4.2 Allowed Operations</h4>
+			<div class="rationale">
+				<p>Solicit-Response and Notification operations are not well defined by WSDL 1.1; furthermore, 					WSDL 1.1 does not define bindings for them.  				    	</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2303">R2303</a>
+				</span> 				   	A DESCRIPTION MUST NOT use Solicit-Response and Notification type operations in a 				   	<code>wsdl:portType</code> definition.				   	</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16614152">5.4.3 Distinctive Operations</h4>
+			<div class="rationale">
+				<p>Operation name overloading in a <code>wsdl:portType</code> 					is disallowed by the 	Profile.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2304">R2304</a>
+				</span> 				   	A <code>wsdl:portType</code> in a DESCRIPTION MUST have operations with distinct values for their 				   	<code>name</code> attributes.				   	</p>
+			<div class="explanation">
+				<p>					Note that this requirement applies only to the <code>wsdl:operation</code>s within a given 					<code>wsdl:portType</code>. A <code>wsdl:portType</code> may have 					<code>wsdl:operation</code>s with names that are the same as those found in other 					<code>wsdl:portType</code>s.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16617928">5.4.4 parameterOrder Attribute Construction</h4>
+			<div class="rationale">
+				<p>					WSDL 1.1 does not clearly state how the <code>parameterOrder</code> 					attribute of the <code>wsdl:portType</code> should be constructed.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2305">R2305</a>
+				</span> 					A <code>wsdl:portType</code> in a DESCRIPTION MUST be constructed so that the 					<code>parameterOrder</code> attribute, if present, omits at most 1 <code>wsdl:part</code> from the output 					message.				   	 </p>
+			<div class="explanation">
+				<p>					If a <code>wsdl:part</code> from the output message is omitted from the list of <code>wsdl:part</code>s 					that is the value of the <code>parameterOrder</code> attribute, the single omitted <code>wsdl:part</code> 					is the return value. There are no restrictions on the type of the return value. If no part is omitted, there is no return 					value.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16621984">5.4.5 Exclusivity of type and element Attributes</h4>
+			<div class="rationale">
+				<p>WSDL 1.1 does not clearly state that both <code>type</code> and <code>element</code> 					attributes cannot be specified to define a <code>wsdl:part</code> in a <code>wsdl:message</code>.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2306">R2306</a>
+				</span> 				  	A <code>wsdl:message</code> in a DESCRIPTION MUST NOT specify both <code>type</code> and 				  	<code>element</code> attributes on the same <code>wsdl:part</code>.				   	</p>
+		</div>
+		<h3><a name="WSDLBINDINGS">5.5</a> Bindings</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/wsdl#_bindings">WSDL 1.1, Section 2.5</a>
+			</li>
+		</ul>
+		<p>In WSDL 1.1, the <code>wsdl:binding</code> element supplies the concrete protocol and data format 					specifications for the operations and messages defined by a particular <code>wsdl:portType</code>. The Profile 					places the following constraints on conformant binding specifications:				</p>
+		<div class="refinement">
+			<h4 id="refinement16627160">5.5.1 Use of SOAP Binding</h4>
+			<div class="rationale">
+				<p>The Profile limits the choice of bindings to the well defined and most 					commonly used SOAP binding. MIME and HTTP GET/POST bindings are not permitted by the 					Profile.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2401">R2401</a>
+				</span> 				   	A <code>wsdl:binding</code> element in a DESCRIPTION MUST use WSDL SOAP Binding as 				   	defined in WSDL 1.1 Section 3.				 	</p>
+			<div class="explanation">
+				<p>Note that this places a requirement on the construction of conformant 					<code>wsdl:binding</code> elements. It does not place a requirement on 					descriptions as a whole; in particular, it does not preclude WSDL documents from 					containing non-conformant <code>wsdl:binding</code> elements.					</p>
+			</div>
+		</div>
+		<h3><a name="WSDLSOAPBINDING">5.6</a> SOAP Binding</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/wsdl#_services">WSDL 1.1, Section 3.0</a>
+			</li>
+		</ul>
+		<p>WSDL 1.1 defines a binding for SOAP 1.1 endpoints. The Profile mandates the use of SOAP binding 					as defined in WSDL 1.1, and places the following constraints on its use:				</p>
+		<div class="refinement">
+			<h4 id="refinement16630416">5.6.1 Specifying the transport Attribute</h4>
+			<div class="rationale">
+				<p>There is an inconsistency between the WSDL 1.1 specification and the WSDL 1.1 schema 					regarding the <code>transport</code> attribute. The WSDL 1.1 specification requires it; however, 					the schema shows it to be optional.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2701">R2701</a>
+				</span> 				   	The <code>wsdl:binding</code> element in a DESCRIPTION MUST be constructed so that its 				   	<code>soapbind:binding</code> child element specifies the <code>transport</code> attribute. 					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16632832">5.6.2 HTTP Transport</h4>
+			<div class="rationale">
+				<p>					The profile limits the underlying transport protocol to HTTP. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2702">R2702</a>
+				</span> 				   	A <code>wsdl:binding</code> element in a DESCRIPTION MUST specify the HTTP transport 				   	protocol with SOAP binding. Specifically, the <code>transport</code> attribute of its 				   	<code>soapbind:binding</code> child MUST have the value 				   	"http://schemas.xmlsoap.org/soap/http". 					</p>
+			<div class="explanation">
+				<p>					Note that this requirement does not prohibit the use of HTTPS; See R5000.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16635088">5.6.3 Consistency of style Attribute</h4>
+			<div class="rationale">
+				<p>					The <code>style</code>, "document" or "rpc", of an interaction is 					specified at the 					<code>wsdl:operation</code> level, permitting <code>wsdl:binding</code>s whose 					<code>wsdl:operation</code>s have different <code>style</code>s. This has led to 					interoperability problems.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2705">R2705</a>
+				</span> 				   	A <code>wsdl:binding</code> in a DESCRIPTION MUST use either be a rpc-literal binding or a document-literal binding.					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16638080">5.6.4 Encodings and the use Attribute</h4>
+			<div class="rationale">
+				<p>The Profile prohibits the use of encodings, including the SOAP encoding.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2706">R2706</a>
+				</span> 				   	A <code>wsdl:binding</code> in a DESCRIPTION MUST use the value of 				   	"literal" for the <code>use</code> attribute in all 				   	<code>soapbind:body</code>, <code>soapbind:fault</code>, <code>soapbind:header</code> and 				   	<code>soapbind:headerfault</code> elements.					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16641168">5.6.5 Default for use Attribute</h4>
+			<div class="rationale">
+				<p>There is an inconsistency between the WSDL 1.1 specification and 					the WSDL 1.1 schema regarding whether the <code>use</code> attribute is 					optional on <code>soapbind:body</code>, <code>soapbind:header</code>, and 					<code>soapbind:headerfault</code>, and if so, what omitting the attribute means.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2707">R2707</a>
+				</span> 				   	A <code>wsdl:binding</code> in a DESCRIPTION that contains one or more <code>				   	soapbind:body</code>, <code>soapbind:fault</code>, <code>soapbind:header</code> or <code>				   	soapbind:headerfault</code> elements that do not specify the <code>use</code> 				   	attribute MUST be interpreted as though the value "literal" had been specified in 				   	each case.					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16676496">5.6.6 Multiple Bindings for portType Elements</h4>
+			<div class="rationale">
+				<p>The Profile explicitly permits multiple bindings for the same portType.				   	</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2709">R2709</a>
+				</span> 				   	A <code>wsdl:portType</code> in a DESCRIPTION MAY have zero or more 				   	<code>wsdl:binding</code>s that refer to it, defined in the same or other WSDL documents.				   	</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16645448">5.6.7 Wire Signatures for Operations</h4>
+			<div class="rationale">
+				<p>An endpoint that supports multiple operations must unambiguously identify the operation being					invoked  based on the input message that it receives. This is only possible if all the operations specified in 					the <code>wsdl:binding</code> associated with an endpoint have a unique wire signature.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2710">R2710</a>
+				</span> 					The operations in a <code>wsdl:binding</code> in a DESCRIPTION MUST result in wire signatures 					that are different from one another.					</p>
+			<div class="explanation">
+				<p>The Profile defines the "wire signature" of an operation in a <code>					wsdl:binding</code> to be the fully qualified name of the child element of the <code>					soap:Body</code> of the SOAP input message it describes. For the case of an empty <code>					soap:Body</code> this name is an empty string. </p>
+				<p>In the case of rpc-literal binding, the operation name is used as a wrapper for the part accessors. In the 					document-literal case, since a wrapper with the operation name is not present, the message signatures must be 					correctly designed so that they meet this requirement.</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16646400">5.6.8 Multiple Ports on an Endpoint</h4>
+			<div class="rationale">
+				<p>When input messages destined for two different <code>wsdl:port</code>s at the same network endpoint 					are indistinguishable on the wire, it may not be possible to determine the <code>wsdl:port</code> being invoked by 					them. This may cause interoperability problems. However, there may be situations (e.g., SOAP					versioning, application versioning,  conformance to different profiles) where it is desirable to locate 					more than one port on an endpoint; therefore, the Profile allows this.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2711">R2711</a>
+				</span> 					A DESCRIPTION SHOULD NOT have more than one <code>wsdl:port</code> with the same value for 					the <code>location</code> attribute of the <code>soapbind:address</code> 					element.					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16649056">5.6.9 Child Element for Document-Literal Bindings</h4>
+			<div class="rationale">
+				<p>					WSDL 1.1 is not completely clear what, in document-literal style bindings, 					the child element of <code>soap:Body</code> is.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2712">R2712</a>
+				</span> 					A document-literal binding MUST be represented on the wire as a MESSAGE with a 					<code>soap:Body</code> whose child element is an instance of the global element 					declaration referenced by the corresponding <code>wsdl:message</code> part.					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16651160">5.6.10 One-Way Operations</h4>
+			<div class="rationale">
+				<p>					There are differing interpretations of how HTTP is to be used when performing one-way operations.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2714">R2714</a>
+				</span> 					For one-way operations, an INSTANCE MUST NOT return a HTTP response that contains a SOAP envelope. 					Specifically, the HTTP response entity-body must be empty.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2750">R2750</a>
+				</span> 					A CONSUMER MUST ignore a SOAP response carried in a response from a one-way operation.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2727">R2727</a>
+				</span> 					For one-way operations, a CONSUMER MUST NOT interpret a successful HTTP response status code (i.e., 2xx) 					to mean the message is valid or that the receiver would process it.				   	</p>
+			<div class="explanation">
+				<p>One-way operations do not produce SOAP responses. Therefore, the Profile prohibits sending a SOAP 					envelope in response to a one-way operation. This means that transmission of one-way operations can not 					result in processing level responses or errors. For example, a "500 Internal  Server Error" HTTP response 					that includes a SOAP message containing a SOAP Fault element can not be returned.</p>
+				<p>The HTTP response to a one-way operation indicates the success or failure 					of the transmission of the message. Based on the semantics of the 					different response status codes supported by the HTTP protocol, the 					Profile specifies that "200" and "202" are the preferred status codes that 					the sender should expect, signifying that the one-way message was received. 					A successful transmission does not indicate that the SOAP processing 					layer and the application logic has had a chance to validate the message 					or have committed to processing it. </p>
+				<p>Despite the fact that the HTTP 1.1 assigns different meanings to response status codes "200" and "202", in 				   	 the context of the Profile they should be considered equivalent by the initiator of the request. The Profile accepts both 				   	 status codes because some SOAP implementations have little control over the HTTP protocol implementation and cannot 				   	 control which of these response status codes is sent.</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16654152">5.6.11 Namespaces for soapbind Elements</h4>
+			<div class="rationale">
+				<p>					There is confusion about what namespace is associated with the child elements of various children of 					<code>soap:Envelope</code>, which has led to interoperability difficulties. The Profile defines these.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2716">R2716</a>
+				</span> 					A document-literal binding in a DESCRIPTION MUST NOT have the <code>namespace					</code> attribute specified on contained <code>soapbind:body</code>, <code>					soapbind:header</code>, <code>soapbind:headerfault</code> and <code>					soapbind:fault</code> elements.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2717">R2717</a>
+				</span> 					An rpc-literal binding in a DESCRIPTION MUST have the <code>namespace</code> 					attribute specified, the value of which MUST be an absolute URI,  on contained <code>					soapbind:body</code> elements. 				       </p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2726">R2726</a>
+				</span> 					An rpc-literal binding in a DESCRIPTION MUST NOT have the <code>namespace</code> 					attribute specified on contained <code>soapbind:header</code>,  <code>					soapbind:headerfault</code> and <code>soapbind:fault</code> elements. 					</p>
+			<div class="explanation">
+				<p>In a document-literal SOAP binding, the serialized element child of the <code>soap:Body</code> 						gets its namespace from the targetNamespace of  the schema that defines the element. Use of the 						<code>namespace</code> attribute of the <code>soapbind:body</code> element would override 						the element's namespace. This is not allowed by the Profile.</p>
+				<p>Conversely, in a rpc-literal SOAP binding, the serialized child element of the <code>soap:Body</code> element						consists of a wrapper element, whose namespace is the value of the <code>namespace</code> attribute of 						the <code>soapbind:body</code> element and whose local name is either the name of the operation or the 						name of the operation suffixed with "Response". The <code>namespace</code> attribute is required, as 						opposed to being optional, to ensure that the children of the <code>soap:Body</code> element are 						namespace-qualified.</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16662944">5.6.12 Consistency of portType and binding Elements</h4>
+			<div class="rationale">
+				<p>					The WSDL description must be consistent at both <code>wsdl:portType</code> and <code>wsdl:binding</code>					levels.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2718">R2718</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION MUST have the same set of <code>					wsdl:operation</code>s as the <code>wsdl:portType</code> to which it refers.				  	<span class="statement-type">C</span></p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16665448">5.6.13 Describing headerfault Elements</h4>
+			<div class="rationale">
+				<p>There is inconsistency between WSDL specification text and the WSDL schema regarding 					<code>soapbind:headerfault</code>s.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2719">R2719</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION MAY contain no <code>					soapbind:headerfault</code> elements if there are no known header faults.					</p>
+			<div class="explanation">
+				<p>					The WSDL 1.1 schema makes the specification of <code>soapbind:headerfault</code> 					element mandatory on <code>wsdl:input</code> and <code>wsdl:output</code> 					elements of an operation, whereas the WSDL 1.1 specification marks them optional. The 					specification is correct.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16668704">5.6.14 Enumeration of Faults</h4>
+			<div class="rationale">
+				<p>A Web service description should include all faults known at the time the service is defined. There is 					also need to permit generation of new faults that had not been identified when the Web service was defined. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2740">R2740</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION SHOULD contain a <code>					soapbind:fault</code> describing each known fault.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2741">R2741</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION SHOULD contain a <code>soapbind:headerfault</code>					 describing each known header fault.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2742">R2742</a>
+				</span> 					A MESSAGE MAY contain a fault detail entry in a SOAP fault that is not described by a 					<code>wsdl:fault</code> element in the corresponding WSDL description.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2743">R2743</a>
+				</span> 					A MESSAGE MAY contain the details of a header processing related fault in a SOAP header block 					that is not described by a <code>wsdl:headerfault</code> element in the corresponding WSDL description.					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16673336">5.6.15 Type and Name of SOAP Binding Elements</h4>
+			<div class="rationale">
+				<p>					The WSDL 1.1 schema disagrees with the WSDL 1.1 specification about the name and type of an attribute of the 					<code>soapbind:header</code> and <code>soapbind:headerfault</code> elements.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2720">R2720</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION MUST use the attribute named <code>part</code> 					with a schema type of "NMTOKEN" on all contained <code>soapbind:header</code> and 					<code>soapbind:headerfault</code> elements.</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2749">R2749</a>
+				</span> A <code>wsdl:binding</code> 					in a DESCRIPTION MUST NOT use the attribute named <code>parts</code> 					on contained <code>soapbind:header</code> and <code>soapbind:headerfault</code> elements.					</p>
+			<div class="explanation">
+				<p>					The WSDL Schema gives the attribute's name as "parts" and its type as 					"NMTOKENS". The schema is incorrect since each <code>soapbind:header</code> 					and <code>soapbind:headerfault</code> element references a single <code>wsdl:part</code>.					</p>
+			</div>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;binding name="StockQuoteSoap" type="tns:StockQuotePortType"&gt;  &lt;soapbind:binding style="document"                 transport="http://schemas.xmlsoap.org/soap/http"/&gt;    &lt;operation name="SubscribeToQuotes"&gt;      &lt;input message="tns:SubscribeToQuotes"&gt;        &lt;soapbind:body parts="body" use="literal"/&gt;        &lt;soapbind:header message="tns:SubscribeToQuotes"             		part="subscribeheader" use="literal"/&gt;     &lt;/input&gt;   &lt;/operation&gt;&lt;/binding&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16683792">5.6.16 name Attribute on Faults</h4>
+			<div class="rationale">
+				<p>There is inconsistency between the WSDL 1.1 specification and the WSDL 1.1 schema, 					which does not list the <code>name</code> attribute.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2721">R2721</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION MUST have the <code>name					</code> attribute specified on all contained <code>soapbind:fault</code> elements.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2754">R2754</a>
+				</span> 					In a DESCRIPTION, the value of the <code>name</code> attribute on a <code>soapbind:fault</code> element MUST 					match the value of the <code>name</code> attribute on its parent <code>wsdl:fault</code> element. 					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16687848">5.6.17 Omission of the use Attribute</h4>
+			<div class="rationale">
+				<p>					There is inconsistency between the WSDL 1.1 specification and the WSDL 1.1 schema regarding the 					<code>use</code> attribute.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2722">R2722</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION MAY specify the <code>use</code> attribute on 					contained <code>soapbind:fault</code> elements. 					<span class="statement-type">C</span></p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2723">R2723</a>
+				</span> 					If in a <code>wsdl:binding</code> in a DESCRIPTION the <code>use</code> attribute on a contained 					<code>soapbind:fault</code> element is present, its value MUST be "literal".					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2728">R2728</a>
+				</span> 					A <code>wsdl:binding</code> in a DESCRIPTION that omits the <code>use</code> attribute on a contained 					<code>soapbind:fault</code> element MUST be interpreted as though <code>use</code>="literal" 					had been specified. 					<span class="statement-type">C</span></p>
+			<div class="explanation">
+				<p> WSDL 1.1 Section 3.6 indicates that the <code>use</code> attribute of 						<code>soapbind:fault</code> is required while in the schema the <code>use</code> attribute is defined as 						optional. The Profile defines it as optional, to be consistent with <code>soapbind:body</code>.</p>
+				<p>Since the <code>use</code> attribute is optional, the Profile identifies the default value for the attribute 						when omitted. </p>
+				<p>Finally, to assure that the Profile is self-consistent, the only permitted value for the <code>use</code> 						attribute is "literal".</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16694328">5.6.18 Consistency of Messages with Descriptions</h4>
+			<div class="rationale">
+				<p>These requirements specify that when an instance receives a message thatdoes not conform to the WSDL description, a fault should be generatedunless the instance takes it upon itself to process the message regardless of this.</p>
+				<p>As specified by the SOAP processing model, (a) a "VersionMismatch" faultcodemust be generated if the namespace of the "Envelope" element isincorrect, (b) a "MustUnderstand" fault must be generated if the instance doesnot understand a SOAP header block with a value of "1" for the <code>soap:mustUnderstand</code>attribute.  In all other cases where a message is inconsistent with its WSDL description,a fault with a "Client" faultcode should be generated.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2724">R2724</a>
+				</span> 					If an INSTANCE receives a message that is inconsistent with its WSDL description, it SHOULD 					generate a <code>soap:Fault</code> with a faultcode of "Client", unless a "MustUnderstand" or "VersionMismatch" fault is generated.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2725">R2725</a>
+				</span> 					If an INSTANCE receives a message that is inconsistent with its WSDL description,  it MUST check for					 "VersionMismatch", "MustUnderstand" and "Client" fault conditions in that order.					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16727304">5.6.19 Response Wrappers</h4>
+			<div class="rationale">
+				<p>WSDL 1.1 Section 3.5 could be interpreted to mean the RPC					response wrapper element must be named identical to the name of the <code>wsdl:operation</code>.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2729">R2729</a>
+				</span> 					A MESSAGE described with an rpc-literal binding that is a response message MUST have a wrapper element 					whose name is the corresponding <code>wsdl:operation</code> name suffixed with the string "Response".							</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16696288">5.6.20 Namespace for Part Accessors</h4>
+			<div class="rationale">
+				<p>					For rpc-literal SOAP messages, WSDL 1.1 is not clear what namespace, if any, the accessor					elements for parameters and return value are a part of. Different implementations make different choices, leading					to interoperability problems. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2735">R2735</a>
+				</span> 				   	 A MESSAGE described with an rpc-literal binding MUST place the part accessor elements for parameters 				   	 and return value in no namespace. 				 	</p>
+			<div class="explanation">
+				<p>					Settling on one alternative is crucial to achieving interoperability. The Profile places the 					part accessor elements in no namespace as doing so is simple, covers all cases, and does not lead to logical 					inconsistency.					</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16697656">5.6.21 Namespaces for Children of Part Accessors</h4>
+			<div class="rationale">
+				<p>					For rpc-literal SOAP messages, WSDL 1.1 is not clear on what the correct namespace qualification 					is for the child elements of the part accessor elements when the corresponding abstract parts are defined					to be of types from a different namespace than the <code>targetNamespace</code> of the WSDL 					description for the abstract parts. 					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2737">R2737</a>
+				</span> 				   	 A MESSAGE described with an rpc-literal binding MUST namespace qualify the children of part accessor 				   	 elements for the parameters and the return value with the targetNamespace in which  their types are defined.				   	</p>
+			<div class="explanation">
+				<p>WSDL 1.1 Section 3.5 states: 					"The part names, types and value of the namespace attribute are all inputs to the encoding, although the namespace					 attribute only applies to content not explicitly defined by the abstract types."					</p>
+				<p>					However, it does not explicitly state that the element and attribute content of the abstract (complexType) types is					 namespace qualified to the targetNamespace in which those elements and attributes were defined. WSDL 1.1 					 was intended to function in much the same manner as XML Schema.  Hence, implementations must follow the					 same rules as for XML Schema. If a complexType defined in <code>targetNamespace</code> "A" were 					 imported and referenced in an element declaration in a schema with <code>targetNamespace</code> "B", 					 the element and attribute content of the child elements of that complexType would be qualified to namespace "A" 					 and the element would be qualified to namespace "B".					</p>
+			</div>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<p>Given this WSDL, which defines some schema in the "http://example.org/foo/" namespace in the 					<code>wsdl:types</code> section contained within a <code>wsdl:definitions</code> that has 					a <code>targetNamespace</code> attribute with the value "http://example.org/bar/" (thus, having a type declared in one 					namespace and the containing element defined in another);</p>
+				<pre>&lt;definitions xmlns="http://schemas.xmlsoap.org/wsdl/"xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"xmlns:xsd="http://www.w3.org/2001/XMLSchema"xmlns:bar="http://example.org/bar/"targetNamespace="http://example.org/bar/"xmlns:foo="http://example.org/foo/"&gt;&lt;types&gt;   &lt;xsd:schema targetNamespace="http://example.org/foo/"       xmlns:tns="http://example.org/foo/"       xmlns:xsd="http://www.w3.org/2001/XMLSchema"       elementFormDefault="qualified"       attributeFormDefault="unqualified"&gt;       &lt;xsd:complexType name="fooType"&gt;          &lt;xsd:sequence&gt;             &lt;xsd:element ref="tns:bar"/&gt;             &lt;xsd:element ref="tns:baf"/&gt;          &lt;/xsd:sequence&gt;       &lt;/xsd:complexType&gt;       &lt;xsd:element name="bar" type="xsd:string"/&gt;       &lt;xsd:element name="baf" type="xsd:integer"/&gt;   &lt;/xsd:schema&gt;&lt;/types&gt;&lt;message name="BarMsg"&gt;   &lt;part name="BarAccessor" type="foo:fooType"/&gt;&lt;/message&gt;&lt;portType name="BarPortType"&gt;   &lt;operation name="BarOperation"&gt;     &lt;input message="bar:BarMsg"/&gt;   &lt;/operation&gt;&lt;/portType&gt;&lt;binding name="BarSOAPBinding" type="bar:BarPortType"&gt;   &lt;soapbind:binding     transport="http://schemas.xmlsoap.org/soap/http/"     style="rpc"/&gt;   &lt;operation name="BarOperation"&gt;     &lt;input message="bar:BarMsg"&gt;       &lt;soapbind:body use="literal" namespace="http://example.org/bar/"/&gt;     &lt;/input&gt;   &lt;/operation&gt;&lt;/binding&gt;&lt;service name="serviceName"&gt;  &lt;port name="BarSOAPPort" binding="bar:BarSOAPBinding"&gt;    &lt;soapbind:address location="http://example.org/myBarSOAPPort"/&gt;  &lt;/port&gt;&lt;/service&gt;&lt;/definitions&gt;</pre>
+				<p>The resulting SOAP message for BarOperation is:</p>
+				<pre>&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xmlns:xsd="http://www.w3.org/2001/XMLSchema"xmlns:foo="http://example.org/foo/"&gt;  &lt;s:Header/&gt;    &lt;s:Body&gt;      &lt;m:BarOperation xmlns:m="http://example.org/bar/"&gt;         &lt;BarAccessor&gt;            &lt;foo:bar&gt;String&lt;/foo:bar&gt;            &lt;foo:baf&gt;0&lt;/foo:baf&gt;         &lt;/BarAccessor&gt;      &lt;/m:BarOperation&gt;    &lt;/s:Body&gt;&lt;/s:Envelope&gt;</pre>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16702248">5.6.22 Required Headers</h4>
+			<div class="rationale">
+				<p>					 WSDL 1.1 does not clearly specify whether all <code>soapbind:header</code>s specified on the					 <code>wsdl:input</code> or <code>wsdl:output</code> elements of a 					 <code>wsdl:operation</code> element in the SOAP binding section of a WSDL description must 					 be included in the resultant SOAP messages when they are transmitted. 					 The Profile makes all such headers mandatory, as there is no way in WSDL 1.1 to mark a header 					 optional.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2738">R2738</a>
+				</span> 				   	 A MESSAGE MUST include all <code>soapbind:header</code>s specified on a <code>wsdl:input</code> 				   	 or <code>wsdl:output</code> of a <code>wsdl:operation</code> of a 						<code>wsdl:binding</code> that describes it. 				 	</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16706144">5.6.23 Allowing Undescribed Headers</h4>
+			<div class="rationale">
+				<p>					 Headers are SOAP's extensibility mechanism. Headers that are not defined in the WSDL description may 					 need to be included in the SOAP messages for various reasons.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2739">R2739</a>
+				</span> 					A MESSAGE MAY contain SOAP header blocks that are not described in the <code>wsdl:binding</code>					 that describes it.				   	</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2753">R2753</a>
+				</span> 				   	A MESSAGE containing SOAP header blocks that are not described in the appropriate 				   	<code>wsdl:binding</code> MAY have the <code>mustUnderstand</code> attribute on				   	such SOAP header blocks set to '1'.				   	</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16708592">5.6.24 Ordering Headers</h4>
+			<div class="rationale">
+				<p>There is no correlation between the order of <code>soapbind:header</code>s in the description					and the order of SOAP header blocks in the message. Similarly, more than one instance of each					specified SOAP header block may occur in the message.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2751">R2751</a>
+				</span> 					The order of <code>soapbind:header</code> elements in <code>soapbind:binding</code>					sections of a DESCRIPTION MUST be considered independent of the order of					SOAP header blocks in the message. 										</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2752">R2752</a>
+				</span> 					A MESSAGE MAY contain more than one instance of each SOAP header block for each					<code>soapbind:header</code> element in the appropriate child of <code>soapbind:binding</code> in					the corresponding description.					</p>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16711648">5.6.25 Describing SOAPAction</h4>
+			<div class="rationale">
+				<p>Interoperability testing has demonstrated that requiring the <code>SOAPAction</code> HTTP header					  	field-value to be quoted increases interoperability of implementations. Even though HTTP allows for header 					  	field-values to be unquoted, some implementations require that the value be quoted.					  	</p>
+				<p>The <code>SOAPAction</code> header is purely a hint to processors. All vital information regarding the						intent of a message is carried in the Envelope.						</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2744">R2744</a>
+				</span>  					A HTTP request MESSAGE MUST contain a <code>SOAPAction</code> HTTP header field with a quoted value equal to the 					value of the <code>soapAction</code> attribute of <code>soapbind:operation</code>, if present in the 					corresponding WSDL description.						</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2745">R2745</a>
+				</span> 					A HTTP request MESSAGE MUST contain a <code>SOAPAction</code> HTTP header field with a quoted empty string value, if in the 					corresponding WSDL description, the <code>soapAction</code> of <code>soapbind:operation</code> is 					either not present, or present with an empty string as its value.					</p>
+			<div class="explanation">
+				<p>See also R1119 and related requirements for more discussion of SOAPAction.</p>
+			</div>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<p>A WSDL Description that has:</p>
+				<p>
+					<code>&lt;soapbind:operation soapAction="foo" /&gt;</code>
+				</p>
+				<p>results in a message with a corresponding SOAPAction HTTP header fieldas follows:</p>
+				<p>
+					<code>SOAPAction: "foo"</code>
+				</p>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<p>A WSDL Description that has:</p>
+				<p>
+					<code>&lt;soapbind:operation /&gt;</code>
+				</p>
+				<p>or</p>
+				<p>
+					<code>&lt;soapbind:operation soapAction="" /&gt;</code>
+				</p>
+				<p>results in a message with a corresponding SOAPAction HTTP header fieldas follows:</p>
+				<p>
+					<code>SOAPAction: ""</code>
+				</p>
+			</div>
+		</div>
+		<div class="refinement">
+			<h4 id="refinement16719424">5.6.26 SOAP Binding Extensions</h4>
+			<div class="rationale">
+				<p>The <code>wsdl:required</code> attribute has been widely misunderstood and used by WSDL 						authors sometimes to incorrectly indicate the optionality of <code>soapbind:header</code>s. The 						<code>wsdl:required</code> attribute, as specified in WSDL1.1, is an extensibility mechanism aimed 						at WSDL processors. It allows new WSDL extension elements to be introduced in a graceful manner. The 						intent of <code>wsdl:required</code> is to signal to the WSDL processor whether the extension 						element needs to be recognized and understood by the WSDL processor in order that the WSDL 						description be correctly processed. It is not meant to signal conditionality or optionality of some construct 						that is included in the messages. For example, a <code>wsdl:required</code> attribute with the value "false" on a 						<code>soapbind:header</code> element must not be interpreted to signal to the WSDL processor 						that the described SOAP header block is conditional or optional in the messages generated from the 						WSDL description. It is meant to be interpreted as "in order to send a message 	to the endpoint 						that includes in its description the <code>soapbind:header</code> element, the WSDL processor MUST 						understand the semantic implied by the <code>soapbind:header</code> element."</p>
+				<p>The default value for the <code>wsdl:required</code> attribute for WSDL 1.1 SOAP Binding 						extension elements is "false". Most WSDL descriptions in practice do not specify the 						<code>wsdl:required</code> attribute on the SOAP Binding extension elements, which could be 						interpreted by WSDL processors to mean that the extension elements may be ignored. The Profile 						requires that all WSDL SOAP 1.1 extensions be understood and processed by the consumer, 						irrespective of the presence or the value of the <code>wsdl:required</code> attribute on an 						extension element.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2747">R2747</a>
+				</span>  					A CONSUMER MUST understand and process all WSDL 1.1 SOAP Binding extension elements, irrespective of 					the presence or absence of the <code>wsdl:required</code> attribute on an extension element; and irrespective 					of the value of the <code>wsdl:required</code> attribute, when present.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2748">R2748</a>
+				</span>  					A CONSUMER MUST NOT interpret the presence of the <code>wsdl:required</code> attribute on a 					<code>soapbind</code> extension element with a value of "false"  to mean the extension element is optional 					in the messages generated from the WSDL description.					</p>
+		</div>
+		<h3><a name="WSDLSCHEMA">5.7</a> Use of XML Schema</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/xmlschema-1">XML Schema Part 1: Structures</a>
+			</li>
+			<li>
+				<a href="http://www.w3.org/TR/xmlschema-2">XML Schema Part 2: Datatypes</a>
+			</li>
+		</ul>
+		<p>WSDL 1.1 uses XML Schema as one of its type					systems. The Profile mandates the use of XML					Schema as the type system for WSDL descriptions of					Web Services.</p>
+		<div class="refinement">
+			<div class="rationale">
+				<p/>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R2800">R2800</a>
+				</span> 					A DESCRIPTION MAY use any construct from XML Schema 1.0.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R2801">R2801</a>
+				</span> 					A DESCRIPTION MUST use XML Schema 1.0 Recommendation as the basis of user defined datatypes and structures.				  	</p>
+		</div>
+		<h2><a name="discovery">6. </a>Service Publication and Discovery</h2>
+		<p>When publication or discovery of Web services is required, UDDI is the mechanism the Profile has 				adopted to describe Web service providers and the Web services they provide. Business, intended 				use, and Web service type descriptions are made in UDDI terms; detailed technical descriptions are 				made in WSDL terms. Where the two specifications define overlapping descriptive data and both 				forms of description are used, the Profile specifies that the descriptions must not conflict.</p>
+		<p>Registration of Web service instances in UDDI registries is optional. By no means do all usage 				scenarios require the kind of metadata and discovery UDDI provides, but where such capability is 				needed, UDDI is the sanctioned mechanism.</p>
+		<p>Note that the Web services that constitute UDDI V2 are not fully conformant with the Profile 1.0 because they 			do not accept messages encoded in both UTF-8 and UTF-16 as required by the Profile. (They accept 			UTF-8 only.) That there should be such a discrepancy is hardly surprising given that UDDI V2 was 			designed and, in many cases, implemented before the Profile was developed. UDDI's designers are 			aware of UDDI V2's nonconformance and will take it into consideration in their future work.</p>
+		<p>This section of the Profile incorporates the following		specifications by reference, and defines extensibility points within		them:</p>
+		<ul>
+			<li>
+				<a href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm">UDDI Version 2.04 API Specification, Dated 19 July 2002</a>
+			</li>
+			<li>
+				<a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm">UDDI Version 2.03 Data Structure Reference, Dated 19 July 2002</a>
+			</li>
+			<li>
+				<a href="http://uddi.org/schema/uddi_v2.xsd">UDDI Version 2 XML Schema</a>
+			</li>
+		</ul>
+		<h3><a name="UDDIBTS">6.1</a> bindingTemplates</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm#_Toc25130769">UDDI Version 2.03 Data Structure Reference, Section 7</a>
+			</li>
+		</ul>
+		<p>UDDI represents Web service instances as <code>uddi:bindingTemplate</code> elements. 					The <code>uddi:bindingTemplate</code> plays a role that is the rough analog of the 					<code>wsdl:port</code>, but provides options that are not expressible in WSDL. To keep the 					WSDL description of an instance and its UDDI description consistent, the Profile places the following 					constraints on how <code>uddi:bindingTemplate</code> elements may be constructed.</p>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					WSDL's <code>soapbind:address</code> element requires the network address of the 					instance to be directly specified. In contrast, UDDI V2 provides two alternatives for specifying 					the network address of instances it represents. One, the <code>uddi:accessPoint</code>, 					mirrors the WSDL mechanism by directly specifying the address. The other, the 					<code>uddi:hostingRedirector</code>, provides a Web service-based indirection mechanism 					for resolving the address, and is inconsistent with the WSDL mechanism.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R3100">R3100</a>
+				</span> 					REGDATA of type <code>uddi:bindingTemplate</code> representing a conformant INSTANCE 					MUST contain the <code>uddi:accessPoint</code> element.					</p>
+			<p class="example-banner">For example,</p>
+			<div class="example">
+				<p class="incorrect">INCORRECT: </p>
+				<pre>&lt;bindingTemplate bindingKey="..."&gt;   &lt;description xml:lang="EN"&gt;BarSOAPPort&lt;/description&gt;   &lt;hostingRedirector bindingKey="..."/&gt;    &lt;tModelInstanceDetails&gt;      ...   &lt;/tModelInstanceDetails&gt;&lt;/bindingTemplate&gt;</pre>
+			</div>
+			<div class="example">
+				<p class="correct">CORRECT: </p>
+				<pre>&lt;bindingTemplate bindingKey="..."&gt;   &lt;description xml:lang="EN"&gt;BarSOAPPort&lt;/description&gt;   &lt;accessPoint&gt;http://example.org/myBarSOAPPort&lt;/accessPoint&gt;   &lt;tModelInstanceDetails&gt;      ...   &lt;/tModelInstanceDetails&gt;&lt;/bindingTemplate&gt;</pre>
+			</div>
+		</div>
+		<h3><a name="UDDITMS">6.2</a> tModels</h3>
+		<p>The following specifications (or sections thereof) are referred to		in this section of the Profile;</p>
+		<ul>
+			<li>
+				<a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm#_Toc25130775">UDDI Version 2.03 Data Structure Reference, Section 8</a>
+			</li>
+		</ul>
+		<p>UDDI represents Web service types as <code>uddi:tModel</code> elements. 					(See <a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm#_Toc25130777">UDDI 					Data Structures section 8.1.1</a>.) These may, but need not, point (using a URI) to the document that 					contains the actual description. Further, UDDI is agnostic with respect to the mechanisms used to 					describe Web service types. The Profile cannot be agnostic about this because interoperation is very 					much complicated if Web service types do not have descriptions or if the descriptions can take arbitrary 					forms.</p>
+		<p>The <a href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm#_Toc25137792">UDDI 					API Specification, appendix I.1.2.1.1</a> allows but does not require <code>uddi:tModel</code> 					elements that use WSDL to describe the Web service type they represent to state that they use WSDL 					as the description language. Not doing so leads to interoperability problems because it is then ambiguous 					what description language is being used.</p>
+		<p>Therefore the Profile places the following constraints on how <code>uddi:tModel</code> 					elements that describe Web service types may be constructed:</p>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					The Profile chooses WSDL as the description language because it is by far the most widely 					used such language.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R3002">R3002</a>
+				</span> 					REGDATA of type <code>uddi:tModel</code> representing a conformant Web service type 					MUST use WSDL as the description language.					</p>
+		</div>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					To specify that conformant Web service types use WSDL, the Profile adopts the UDDI categorization for 					making this assertion.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R3003">R3003</a>
+				</span> 					REGDATA of type <code>uddi:tModel</code> representing a conformant Web service type MUST be 					categorized using the uddi:types  taxonomy and a categorization of "wsdlSpec".					</p>
+		</div>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					For the <code>uddi:overviewURL</code> in a <code>uddi:tModel</code>  to resolve to a <code>					wsdl:binding</code>, the Profile must adopt a convention for distinguishing among multiple 					<code>wsdl:binding</code>s in a WSDL document. The UDDI Best Practice for Using WSDL in a UDDI 					Registry specifies the most widely recognized such convention.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R3010">R3010</a>
+				</span> 					REGDATA of type <code>uddi:tModel</code> representing a conformant Web service type 					MUST follow 					<a href="http://www.oasis-open.org/committees/uddi-spec/doc/bp/uddi-spec-tc-bp-using-wsdl-v108-20021110.htm">V1.08 					of the UDDI Best Practice for Using WSDL in a UDDI Registry</a>.					</p>
+		</div>
+		<div class="refinement">
+			<div class="rationale">
+				<p>It would be inconsistent if the <code>wsdl:binding</code> that is referenced by the <code>uddi:tModel</code> 					does not conform to the Profile.</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R3011">R3011</a>
+				</span> 					The wsdl:binding that is referenced by REGDATA of type <code>uddi:tModel</code> MUST itself conform to the Profile.					</p>
+		</div>
+		<h2><a name="security">7. </a>Security</h2>
+		<p>As is true of all network-oriented information technologies, the subject of security is a crucial one for Web 				services. For Web services, as for other information technologies, security consists of understanding the potential 				threats an attacker may mount and applying operational, physical, and technological countermeasures to reduce the 				risk of a successful attack to an acceptable level. Because an "acceptable level of risk" varies hugely 				depending on the application, and because costs of implementing countermeasures is also highly variable, there can 				be no universal "right answer" for securing Web services. Choosing the absolutely correct balance of 				countermeasures and acceptable risk can only be done on a case by case basis.</p>
+		<p>That said, there <em>are</em> common patterns of countermeasures that experience shows reduce the 				risks to acceptable levels for many Web services. The Profile adopts, but does not mandate use of, the most widely 				used of these: HTTP secured with either TLS 1.0 or SSL 3.0 (HTTPS). That is, conformant Web services may use 				HTTPS; they may also use other countermeasure technologies or none at all.</p>
+		<p>HTTPS is widely regarded as a mature standard for encrypted transport connections to provide a basic level of 				confidentiality. HTTPS thus forms the first and simplest means of achieving some basic security features that are 				required by many real-world Web service applications. HTTPS may also be used to provide client authentication 				through the use of client-side certificates.</p>
+		<p>This section of the Profile incorporates the following		specifications by reference, and defines extensibility points within		them:</p>
+		<ul>
+			<li>
+				<a href="http://www.ietf.org/rfc/rfc2818">RFC2818: HTTP Over TLS</a>
+			</li>
+			<li><a href="http://www.ietf.org/rfc/rfc2246">RFC2246: The TLS Protocol Version 1.0</a><br/>Extensibility points:			<ul>
+					<li>TLS Cyphersuite - TLS allows for the use of arbitrary encryption algorithms.</li>
+					<li>TLS Extensions - TLS allows for extensions during the handshake phase.</li>
+				</ul></li>
+			<li><a href="http://wp.netscape.com/eng/ssl3/draft302.txt">The SSL Protocol Version 3.0</a><br/>Extensibility points:			<ul>
+					<li>SSL Cyphersuite - SSL allows for the use of arbitrary encryption algorithms.</li>
+				</ul></li>
+			<li><a href="http://www.ietf.org/rfc/rfc2459">RFC2459: Internet X.509 Public Key Infrastructure Certificate and 				CRL Profile</a><br/>Extensibility points:			<ul>
+					<li>Certificate Authority - The choice of the Certificate Authority is a private agreement between parties.</li>
+					<li>Certificate Extensions - X509 allows for arbitrary certificate extensions.</li>
+				</ul></li>
+		</ul>
+		<h3><a name="HTTPSBase">7.1</a> Use of HTTPS</h3>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					HTTPS is such a useful, widely understood basic security mechanism that the Profile needs to allow it.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R5000">R5000</a>
+				</span> 					An INSTANCE MAY require the use of HTTPS.					</p>
+			<p class="statement"><span class="statement-id">
+					<a name="R5001">R5001</a>
+				</span> 					If an INSTANCE requires the use of HTTPS, the location attribute of the <code>soapbind:address</code> 					element in its <code>wsdl:port</code> description MUST be a URI whose scheme is "https"; otherwise it 					MUST be a URI whose scheme is "http".					</p>
+		</div>
+		<div class="refinement">
+			<div class="rationale">
+				<p>					Simple HTTPS provides authentication of the Web service instance by the consumer but not authentication 					of the consumer by the instance. For many instances this leaves the risk too high to permit interoperation. 					Including the mutual authentication facility of HTTPS in the Profile permits instances to use the 					countermeasure of authenticating the consumer. In cases in which authentication of the instance by 					the consumer is insufficient, this often reduces the risk sufficiently to permit interoperation.					</p>
+			</div>
+			<p class="statement"><span class="statement-id">
+					<a name="R5010">R5010</a>
+				</span> 					An INSTANCE MAY require the use of HTTPS with mutual authentication.					</p>
+		</div>
+		<h2 id="references">Appendix I: Referenced Specifications</h2>
+		<p>The following specifications' requirements are incorporated into the Profile by reference, except where superseded by the Profile:</p>
+		<ul>
+			<li>
+				<a href="http://www.w3.org/TR/SOAP/">Simple Object Access Protocol (SOAP) 1.1</a>
+			</li>
+			<li>
+				<a href="http://www.w3.org/TR/REC-xml">Extensible Markup Language (XML) 1.0 (Second Edition)</a>
+			</li>
+			<li>
+				<a href="http://www.ietf.org/rfc/rfc2616">RFC2616: Hypertext Transfer Protocol -- HTTP/1.1</a>
+			</li>
+			<li>
+				<a href="http://www.ietf.org/rfc/rfc2965">RFC2965: HTTP State Management Mechanism</a>
+			</li>
+			<li>
+				<a href="http://www.w3.org/TR/wsdl.html">Web Services Description Language (WSDL) 1.1</a>
+			</li>
+			<li>
+				<a href="http://www.w3.org/TR/xmlschema-1">XML Schema Part 1: Structures</a>
+			</li>
+			<li>
+				<a href="http://www.w3.org/TR/xmlschema-2">XML Schema Part 2: Datatypes</a>
+			</li>
+			<li>
+				<a href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm">UDDI Version 2.04 API Specification, Dated 19 July 2002</a>
+			</li>
+			<li>
+				<a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm">UDDI Version 2.03 Data Structure Reference, Dated 19 July 2002</a>
+			</li>
+			<li>
+				<a href="http://uddi.org/schema/uddi_v2.xsd">UDDI Version 2 XML Schema</a>
+			</li>
+			<li>
+				<a href="http://www.ietf.org/rfc/rfc2818">RFC2818: HTTP Over TLS</a>
+			</li>
+			<li>
+				<a href="http://www.ietf.org/rfc/rfc2246">RFC2246: The TLS Protocol Version 1.0</a>
+			</li>
+			<li>
+				<a href="http://wp.netscape.com/eng/ssl3/draft302.txt">The SSL Protocol Version 3.0</a>
+			</li>
+			<li>
+				<a href="http://www.ietf.org/rfc/rfc2459">RFC2459: Internet X.509 Public Key Infrastructure Certificate and 				CRL Profile</a>
+			</li>
+		</ul>
+		<h2 id="points">Appendix II: Extensibility Points</h2>
+		<p>This section identifies extensibility points, as defined in "Scope of the Profile," for the Profile's component specifications.</p>
+		<p>These mechanisms are out of the scope of the Profile; their use may affect interoperability, and may require private agreement		between the parties to a Web service.</p>
+		<p>In <a href="http://www.w3.org/TR/SOAP/">Simple Object Access Protocol (SOAP) 1.1:</a></p>
+		<ul>
+			<li><strong>Header blocks</strong> - Header blocks are the fundamental extensibility mechanism in SOAP. </li>
+			<li><strong>Processing order</strong> - The order of processing of a SOAP message's components (e.g., headers) is unspecified, and therefore may need to be negotiated out-of-band.</li>
+			<li><strong>Use of intermediaries</strong> - SOAP Intermediaries is an underspecified mechanism in SOAP 1.1, and their use may require out-of-band negotiation.  Their use may also necessitate careful consideration of where Profile conformance is measured.</li>
+			<li><strong>soap:actor values</strong> - The value of the soap:actor attribute is a private agreement between the parties to a Web service.</li>
+			<li><strong>Fault details</strong> - the contents of a Fault's detail element are not prescribed by SOAP 1.1.</li>
+		</ul>
+		<p>In <a href="http://www.ietf.org/rfc/rfc2616">RFC2616: Hypertext Transfer Protocol -- HTTP/1.1:</a></p>
+		<ul>
+			<li><strong>HTTP Authentication</strong> - HTTP authentication allows for extension schemes, arbitrary digest hash algorithms and parameters.</li>
+			<li><strong>Unspecified Header Fields</strong> - HTTP allows arbitrary headers to occur in messages.</li>
+			<li><strong>Expect-extensions</strong> - The Expect/Continue mechanism in HTTP allows for expect-extensions.</li>
+			<li><strong>Content-Encoding</strong> - The set of content-codings allowed by HTTP is open-ended.</li>
+			<li><strong>Transfer-Encoding</strong> - The set of transfer-encodings allowed by HTTP is open-ended.</li>
+			<li><strong>Upgrade</strong> - HTTP allows a connection to change to an arbitrary protocol using the Upgrade header.</li>
+		</ul>
+		<p>In <a href="http://www.w3.org/TR/wsdl.html">Web Services Description Language (WSDL) 1.1:</a></p>
+		<ul>
+			<li><strong>WSDL extensions</strong> - WSDL allows extension elements in certain places; use of such extensions requires out-of-band negotiation.</li>
+			<li><strong>Relative URIs</strong> - WSDL does not adequately specify the use of relative URIs; their use may require further coordination; see XML Base for more information.</li>
+			<li><strong>Validation mode</strong> - whether the parser used to read WSDL and XML Schema documents performs DTD validation or not.</li>
+			<li><strong>Fetching of external resources</strong> - whether the parser used to read WSDL and XML Schema documents fetches external entities and DTDs.</li>
+		</ul>
+		<p>In <a href="http://www.w3.org/TR/xmlschema-1">XML Schema Part 1: Structures:</a></p>
+		<ul>
+			<li><strong>Schema annotations</strong> - XML Schema allows for annotations, which may be used to convey additional information about data structures.</li>
+		</ul>
+		<p>In <a href="http://www.ietf.org/rfc/rfc2246">RFC2246: The TLS Protocol Version 1.0:</a></p>
+		<ul>
+			<li><strong>TLS Cyphersuite</strong> - TLS allows for the use of arbitrary encryption algorithms.</li>
+			<li><strong>TLS Extensions</strong> - TLS allows for extensions during the handshake phase.</li>
+		</ul>
+		<p>In <a href="http://wp.netscape.com/eng/ssl3/draft302.txt">The SSL Protocol Version 3.0:</a></p>
+		<ul>
+			<li><strong>SSL Cyphersuite</strong> - SSL allows for the use of arbitrary encryption algorithms.</li>
+		</ul>
+		<p>In <a href="http://www.ietf.org/rfc/rfc2459">RFC2459: Internet X.509 Public Key Infrastructure Certificate and 				CRL Profile:</a></p>
+		<ul>
+			<li><strong>Certificate Authority</strong> - The choice of the Certificate Authority is a private agreement between parties.</li>
+			<li><strong>Certificate Extensions</strong> - X509 allows for arbitrary certificate extensions.</li>
+		</ul>
+		<h2 id="acks">Appendix III: Acknowledgements</h2>
+		<p>This Profile is the work of the WS-I Basic Profile Working Group, whose 		members have included:</p>
+		<p>Mark Allerton (Crystal Decisions Corporation), George Arriola (Talking Blocks, Inc.), Keith Ballinger (Microsoft Corporation),  Ilya Beyer (KANA),  Rich Bonneau (IONA Technologies), Don Box (Microsoft Corporation), Andrew Brown (Verisign),  Heidi Buelow (Quovadx),  David Burdett (Commerce One, Inc.), Luis Felipe Cabrera (Microsoft Corporation), Maud Cahuzac (France Telecom), Bhaskar Chakrabarti (United Airlines), Chia Chao (IONA Technologies), Martin Chapman (Oracle Corporation), Richard Chin (Avinon),  Roberto Chinnici (Sun Microsystems), Sergio Compean (Avanade, Inc.), Tim Cooke (Onyx Software), Ugo Corda (SeeBeyond Tech), Paul Cotton (Microsoft Corporation), Joseph Curran (Accenture),  Ayse Dilber (AT&amp;T),  Dave Ehnebuske (IBM),  Mark Ericson (Mindreef Inc.), Colleen Evans (Sonic Software), Tim Ewald (Microsoft Corporation), Chuck Fay (FileNet Corporation), Chris Ferris (IBM),  Daniel Foody (Actional Corporation), Toru Fujii (NTT),  Satoru Fujita (NEC Corporation), Shishir Garg (France Telecom), Yaron Goland (BEA Systems), Hans Granqvist (Verisign),  Martin Gudgin (Microsoft Corporation), Marc Hadley (Sun Microsystems), Bob Hall (Unisys Corporation), Scott Hanselman (Corillian),  Muir Harding (Autodesk, Inc.), Loren Hart (Verisign),  Harry Holstrom (Accenture),  Larry Hsiung (Quovadx),  Hemant Jain (Tata Consultancy), Steve Jenisch (SAS Institute), Erik Johnson (Epicor Software Corporation), Bill Jones (Oracle Corporation), Menno Jonkers (Tryllian BV), Anish Karmarkar (Oracle Corporation), Takahiro Kawamura (Toshiba),  Bhushan Khanal (WRQ, Inc.), Sunil Kunisetty (Oracle Corporation), Canyang Kevin Liu (SAP AG), Jonathan Marsh (Microsoft Corporation), David Meyer (Plumtree Software, Inc.), Jeff Mischkinsky (Oracle Corporation), Tom Moog (Sarvega Inc.), Gilles Mousseau (Hummingbird Ltd.), Richard Nikula (BMC Software, Inc.), Eisaku Nishiyama (Hitachi, Ltd.), Mark Nottingham (BEA Systems), David Orchard (BEA Systems), Jesse Pangburn (Quovadx),  TJ Pannu (ContentGuard, Inc.), Eduardo Pelegri-Llopart (Sun Microsystems), Vijay Rajan (Novell),  Eric Rajkovic (Oracle Corporation), Graeme Riddell (Bowstreet),  Claus von Riegen (SAP AG), Tom Rutt (Fujitsu Limited), Roger Sanborn (Crystal Decisions Corporation), Krishna Sankar (Cisco Systems, Inc.), Don Schricker (Micro Focus), Dave Seidel (Mindreef Inc.), Akira Shimaya (NTT),  Yasser Shohoud (Microsoft Corporation), David Smiley (Mercator Software, Inc.), Seumas Soltysik (IONA Technologies), Joseph Stanko (Plumtree Software, Inc.), Keith Stobie (Microsoft Corporation), Yasuo Takemoto (NTT),  Nobuyoshi Tanaka (NEC Corporation), Jorgen Thelin (Cape Clear Software), Sameer Vaidya (Talking Blocks, Inc.), William Vambenepe (Hewlett-Packard),  Rick Weil (Eastman Kodak Company), Scott Werden (WRQ, Inc.), Ajamu Wesley (IBM),  Shannon Wheatley (Kinzan, Inc.), Ian White (Micro Focus), Sue Worthman (Tryllian BV), Prasad Yendluri (webMethods Inc.).		</p>
+	</body>
+</html>=

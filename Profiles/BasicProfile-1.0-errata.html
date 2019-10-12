@@ -1,0 +1,1243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML 
+                                    ><HEAD><TITLE>Basic Profile Version 1.0 Errata (BdAD)</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<STYLE type=text/css>BODY {
+	BACKGROUND: white; COLOR: black; FONT-FAMILY: sans-serif
+}
+DT {
+	FONT-WEIGHT: bold; COLOR: #666
+}
+DD {
+	WHITE-SPACE: normal
+}
+.meta {
+	BACKGROUND-COLOR: #eee
+}
+DL {
+	PADDING-RIGHT: 24pt; PADDING-LEFT: 0pt; PADDING-BOTTOM: 12pt; PADDING-TOP: 0pt
+}
+TD {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 0px; VERTICAL-ALIGN: top; PADDING-TOP: 3px
+}
+TH {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 0px; VERTICAL-ALIGN: top; PADDING-TOP: 3px
+}
+TH {
+	COLOR: #fff; BACKGROUND-COLOR: #666; TEXT-ALIGN: left
+}
+TH A {
+	COLOR: #fff; BACKGROUND-COLOR: #666; TEXT-ALIGN: left
+}
+TD.title {
+	BORDER-TOP: black 1px solid; BACKGROUND-COLOR: #fec
+}
+</STYLE>
+
+<META content="MSHTML 6.00.2900.2769" name=GENERATOR></HEAD>
+<BODY>
+<P><A href="http://www.ws-i.org/"><IMG height=88 alt=WS-I 
+src="http://www.ws-i.org/images/WS-I-logo.gif" width=107 
+border=0> </A></P>
+<H1>Basic Profile Version 1.0 Errata</H1>
+<H2>Board Approval Draft</H2>
+<H3>Revision: 1.37 </H3>
+<H3>Date: 2005/10/25 </H3>
+<DT>This version: 
+<DD><A 
+href="http://www.ws-i.org/Profiles/BasicProfile-1.0-errata-2005-10-25.html">http://www.ws-i.org/Profiles/BasicProfile-1.0-errata-2005-10-25.html</A>
+<DT>Latest version: 
+<DD><A 
+href="http://www.ws-i.org/Profiles/BasicProfile-1.0-errata.html">http://www.ws-i.org/Profiles/BasicProfile-1.0-errata.html</A>
+<H3>Editors:</H3>
+<UL>
+  <LI>Chris Ferris, IBM 
+  <LI>Anish Karmarkar, Oracle Corp. 
+  <LI>Mark Nottingham, BEA Systems </LI></UL>
+<H3>Administrative contact:</H3>
+<UL><A href="mailto:secretary@ws-i.org">secretary@ws-i.org</A> </UL>
+<P class=copyright id=copyright>Copyright © 2002-2004 by <A 
+href="http://www.ws-i.org/">The Web Services-Interoperability Organization</A> 
+(<ABBR title="Web Services Interoperability Organization">WS-I</ABBR>) and 
+Certain of its Members. All Rights Reserved. </P>
+<HR>
+
+<H2 id=abstract>Abstract</H2>
+<P>This document contains the set of published errata against the WS-I <A 
+href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">BasicProfile-1.0</A>.</P>
+<H2 id=status>Status of this Document</H2>
+<P>This document is a Board Approval Draft; it has been approved for publication 
+by the Working Group, and is submitted for consideration by the Board of 
+Directors, and for public comment. It is a work in progress, and should not be 
+considered as final; other documents may supersede this document. </P>
+<H2 id=license>Notice</H2>
+<P>The material contained herein is not a license, either expressly or 
+impliedly, to any intellectual property owned or controlled by any of the 
+authors or developers of this material or WS-I. The material contained herein is 
+provided on an &quot;AS IS&quot; basis and to the maximum extent permitted by applicable 
+law, this material is provided AS IS AND WITH ALL FAULTS, and the authors and 
+developers of this material and WS-I hereby disclaim all other warranties and 
+conditions, either express, implied or statutory, including, but not limited to, 
+any (if any) implied warranties, duties or conditions of merchantability, of 
+fitness for a particular purpose, of accuracy or completeness of responses, of 
+results, of workmanlike effort, of lack of viruses, and of lack of negligence. 
+ALSO, THERE IS NO WARRANTY OR CONDITION OF TITLE, QUIET ENJOYMENT, QUIET 
+POSSESSION, CORRESPONDENCE TO DESCRIPTION OR NON-INFRINGEMENT WITH REGARD TO 
+THIS MATERIAL. </P>
+<P>IN NO EVENT WILL ANY AUTHOR OR DEVELOPER OF THIS MATERIAL OR WS-I BE LIABLE 
+TO ANY OTHER PARTY FOR THE COST OF PROCURING SUBSTITUTE GOODS OR SERVICES, LOST 
+PROFITS, LOSS OF USE, LOSS OF DATA, OR ANY INCIDENTAL, CONSEQUENTIAL, DIRECT, 
+INDIRECT, OR SPECIAL DAMAGES WHETHER UNDER CONTRACT, TORT, WARRANTY, OR 
+OTHERWISE, ARISING IN ANY WAY OUT OF THIS OR ANY OTHER AGREEMENT RELATING TO 
+THIS MATERIAL, WHETHER OR NOT SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY 
+OF SUCH DAMAGES.</P>
+<H2 id=feedback>Feedback</H2>
+<P>The Web Services-Interoperability Organization (WS-I) would like to receive 
+input, suggestions and other feedback (&quot;Feedback&quot;) on this work from a wide 
+variety of industry participants to improve its quality over time. </P>
+<P>By sending email, or otherwise communicating with WS-I, you (on behalf of 
+yourself if you are an individual, and your company if you are providing 
+Feedback on behalf of the company) will be deemed to have granted to WS-I, the 
+members of WS-I, and other parties that have access to your Feedback, a 
+non-exclusive, non-transferable, worldwide, perpetual, irrevocable, royalty-free 
+license to use, disclose, copy, license, modify, sublicense or otherwise 
+distribute and exploit in any manner whatsoever the Feedback you provide 
+regarding the work. You acknowledge that you have no expectation of 
+confidentiality with respect to any Feedback you provide. You represent and 
+warrant that you have rights to provide this Feedback, and if you are providing 
+Feedback on behalf of a company, you represent and warrant that you have the 
+rights to provide Feedback on behalf of your company. You also acknowledge that 
+WS-I is not required to review, discuss, use, consider or in any way incorporate 
+your Feedback into future versions of its work. If WS-I does incorporate some or 
+all of your Feedback in a future version of the work, it may, but is not 
+obligated to include your name (or, if you are identified as acting on behalf of 
+your company, the name of your company) on a list of contributors to the work. 
+If the foregoing is not acceptable to you and any company on whose behalf you 
+are acting, please do not provide any Feedback.</P>
+<P>Feedback on this document should be directed to <A 
+href="mailto:wsbasic_comment@ws-i.org">wsbasic_comment@ws-i.org</A>.</P>
+<P>
+<HR>
+
+<P>
+<TABLE cellSpacing=0 width="95%">
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er001>er001</A> </TD>
+    <TD class=title><STRONG>Use of xsi:type</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R1017 does not give clear guidance regarding the use of xsi:type. 
+        For instance, if a part is defined using an XSD data type (e.g. 
+        <CODE>xsd:string</CODE> or <CODE>xsd:int</CODE>) and it is used in a 
+        rpc-literal binding, should the part accessor in the message have an 
+        xsi:type attribute? 
+        <DT class=resolution>Resolution: 2003-09-16 
+        <DD class=resolution>
+        <P>Delete the second sentence in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.htm#refinement34259632">Section 
+        4.1.15</A> which reads:</P>
+        <P>The xsi:type attribute is only needed where no such schema exists, 
+        that is where both sides are assuming that all exchanged items are 
+        &quot;xsd:anyType&quot;.</P>
+        <P>Section 4.1.15 now reads as follows:</P>
+        <P>In many cases, senders and receivers will share some form of type 
+        information related to the messages being exchanged.</P>
+        <P>R1017 A RECEIVER MUST NOT mandate the use of the xsi:type attribute 
+        in messages except as required in order to indicate a derived type (see 
+        XML Schema Part 1: Structures, Section 2.6.1).</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er002>er002</A> </TD>
+    <TD class=title><STRONG>NS qualification of children of part accessors for 
+      rpc-lit binding and R2737</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R2737 is incorrect as it always requires the children of part 
+        accessors (for rpc-literal binding) to be NS qualified with the 
+        targetNamespace in which the part types are defined. 
+        <DT class=resolution>Resolution: 2003-09-23 
+        <DD class=resolution>
+        <P>Change <A 
+        href="http://ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.htm#r2737">R2737</A> 
+        from:</P>
+        <P>R2737 A MESSAGE described with an rpc-literal binding MUST namespace 
+        qualify the children of part accessor elements for the parameters and 
+        the return value with the targetNamespace in which their types are 
+        defined.</P>
+        <P>to:</P>
+        <P>R2737 A MESSAGE described with an rpc-literal binding MUST namespace 
+        qualify the descendents of part accessor elements for the parameters and 
+        the return value, as defined by the schema in which the part accessor 
+        types are defined.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er003>er003</A> </TD>
+    <TD class=title><STRONG>R2101 is ambiguous as to whether it applies to 
+      Schema or WSDL components</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Does R2101 apply only to schema OR to WSDL components? 
+        <DT class=resolution>Resolution: 2003-09-16 
+        <DD class=resolution>
+        <P>Change <A 
+        href="http://ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.htm#r2101">R2101</A> 
+        from:</P>
+        <P>R2101 A DESCRIPTION MUST NOT use QName references to elements in 
+        namespaces that have been neither imported, nor defined in the referring 
+        WSDL document.</P>
+        <P>to:</P>
+        <P>R2101 A DESCRIPTION MUST NOT use QName references to WSDL components 
+        in namespaces that have been neither imported, nor defined in the 
+        referring WSDL document.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er005>er005</A> </TD>
+    <TD class=title><STRONG>R2705 wordings are awkward</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R2705 wording are awkward/incorrect 
+        <DT class=resolution>Resolution: 2003-09-16 
+        <DD class=resolution>
+        <P>Change <A 
+        href="http://ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.htm#r2705">R2705</A> 
+        from:</P>
+        <P>R2705 A <CODE>wsdl:binding</CODE> in a DESCRIPTION MUST use either be 
+        a rpc-literal binding or a document-literal binding. </P>
+        <P>to:</P>
+        <P>R2705 A <CODE>wsdl:binding</CODE> in a DESCRIPTION MUST either be an 
+        rpc-literal binding or a document-literal 
+  binding.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er006>er006</A> </TD>
+    <TD class=title><STRONG>Intent of R2004</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Was it the intention of BP 1.0 to prevent multiple inlined schemas 
+        in the same WSDL document to refer to each other (using 
+        <CODE>xsd:import</CODE>) 
+        <DT class=resolution>Resolution: 2003-11-13 
+        <DD class=resolution>
+        <P>The schemaLocation attribute of the <CODE>xsd:import</CODE> element 
+        is optional, R2004 does not prevent importation of schemas using the 
+        namespace attribute alone. This allows, for example, a schema within a 
+        <CODE>wsdl:types</CODE> section to import another schema defined within 
+        the same <CODE>wsdl:types</CODE> section using <CODE>xsd:import</CODE> 
+        with just the namespace attribute.</P>
+        <P>Change <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#R2004">R2004</A> 
+        from:</P>
+        <P>R2004 A DESCRIPTION MUST NOT use the XML Schema &quot;import&quot; statement to 
+        import a Schema from any document whose root element is not &quot;schema&quot; 
+        from the namespace &quot;http://www.w3.org/2001/XMLSchema&quot;.</P>
+        <P>to:</P>
+        <P>R2004 In a DESCRIPTION the schemaLocation attribute of an 
+        <CODE>xsd:import</CODE> element MUST NOT resolve to any document whose 
+        root element is not &quot;schema&quot; from the namespace 
+        &quot;http://www.w3.org/2001/XMLSchema&quot;.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er007>er007</A> </TD>
+    <TD class=title><STRONG>Incorrect use of the word 'array' in R2110, R2111, 
+      R2112, and R2113</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R2110, R2111, R2112, and R2113 restricts array descriptions. This is 
+        confusing and untestable as the concept of &quot;array&quot; is alien to XML 
+        Schema 
+        <DT class=resolution>Resolution: 2003-10-21 
+        <DD class=resolution>
+        <P>Remove the use of the word &quot;array&quot; in R2110, R2111, R2112, and 
+        R2113</P>
+        <UL>
+          <LI>
+          <P>Change <A 
+          href="http://ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.htm#R2110">R2110</A> 
+          from:</P>
+          <P>R2110 In a DESCRIPTION, array declarations MUST NOT extend or 
+          restrict the <CODE>soapenc:Array</CODE> type.</P>
+          <P>to:</P>
+          <P>R2110 In a DESCRIPTION, declarations MUST NOT extend or restrict 
+          the <CODE>soapenc:Array</CODE> type.</P>
+          <LI>
+          <P>Change <A 
+          href="http://ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.htm#R2111">R2111</A> 
+          from:</P>
+          <P>R2111 In a DESCRIPTION, array declarations MUST NOT use 
+          <CODE>wsdl:arrayType</CODE> attribute in the type declaration.</P>
+          <P>to:</P>
+          <P>R2111 In a DESCRIPTION, declarations MUST NOT use 
+          <CODE>wsdl:arrayType</CODE> attribute in the type declaration.</P>
+          <LI>
+          <P>Change <A 
+          href="http://ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.htm#R2112">R2112</A> 
+          from:</P>
+          <P>R2112 In a DESCRIPTION, array declaration wrapper elements SHOULD 
+          NOT be named using the convention ArrayOfXXX.</P>
+          <P>to:</P>
+          <P>R2112 In a DESCRIPTION, elements SHOULD NOT be named using the 
+          convention ArrayOfXXX.</P>
+          <LI>
+          <P>Change <A 
+          href="http://ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.htm#R2113">R2113</A> 
+          from:</P>
+          <P>R2113 A MESSAGE containing serialized arrays MUST NOT include the 
+          <CODE>soapenc:arrayType</CODE> attribute.</P>
+          <P>to:</P>
+          <P>R2113 A MESSAGE MUST NOT include the <CODE>soapenc:arrayType</CODE> 
+          attribute.</P></LI></UL></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er008>er008</A> </TD>
+    <TD class=title><STRONG>Incorrect definition of &quot;rpc-literal&quot; and 
+      &quot;document-literal&quot; operations</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Section 5.3 is confusing as it does not clearly specify where the 
+        style attribute can occur. 
+        <DT class=resolution>Resolution: 2003-11-13 
+        <DD class=resolution>
+        <P>Change the fifth paragraph of <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#WSDLMSGS">Section 
+        5.3</A> from:</P>
+        <P>An &quot;rpc-literal operation&quot; is a <CODE>wsdl:operation</CODE> child 
+        element of <CODE>wsdl:binding</CODE> each of whose 
+        <CODE>soapbind:body</CODE> descendant elements specifies the use 
+        attribute with the value &quot;literal&quot; and each of which either:</P>
+        <OL>
+          <LI>Specifies the style attribute with the value &quot;rpc&quot;; or 
+          <LI>Is the child of a <CODE>soapbind:binding</CODE> element which 
+          specifies the style attribute with the value &quot;rpc&quot;, and does not 
+          itself have the style attribute specified. </LI></OL>
+        <P>to:</P>
+        <P>An &quot;rpc-literal operation&quot; is a <CODE>wsdl:operation</CODE> child 
+        element of <CODE>wsdl:binding</CODE> whose <CODE>soapbind:body</CODE> 
+        descendant elements specify the use attribute with the value &quot;literal&quot;, 
+        and either:</P>
+        <OL>
+          <LI>The style attribute with the value &quot;rpc&quot; is specified on the child 
+          <CODE>soapbind:operation</CODE> element; or 
+          <LI>The style attribute is not present on the child 
+          <CODE>soapbind:operation</CODE> element, and the 
+          <CODE>soapbind:binding</CODE> element in the enclosing 
+          <CODE>wsdl:binding</CODE> specifies the style attribute with the value 
+          &quot;rpc&quot; </LI></OL>
+        <P>
+        <P>Change the seventh paragraph of <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#WSDLMSGS">Section 
+        5.3</A> from:</P>
+        <P>A &quot;document-literal operation&quot; is a <CODE>wsdl:operation</CODE> child 
+        element of <CODE>wsdl:binding</CODE> each of whose 
+        <CODE>soapbind:body</CODE> descendent elements specifies the use 
+        attribute with the value &quot;literal&quot; and each of which either:</P>
+        <OL>
+          <LI>Specifies the style attribute with the value &quot;document&quot;; or 
+          <LI>Is the child of a <CODE>soapbind:binding</CODE> element which 
+          specifies the style attribute with the value &quot;document&quot;, and does not 
+          itself have the style attribute specified; or 
+          <LI>Is the child of a <CODE>soapbind:binding</CODE> element which does 
+          not have the style attribute specified, and does not itself have the 
+          style attribute specified. </LI></OL>
+        <P>to:</P>
+        <P>A &quot;document-literal operation&quot; is a <CODE>wsdl:operation</CODE> child 
+        element of <CODE>wsdl:binding</CODE> whose <CODE>soapbind:body</CODE> 
+        descendent elements specifies the use attribute with the value &quot;literal&quot; 
+        and, either:</P>
+        <OL>
+          <LI>The style attribute with the value &quot;document&quot; is specified on the 
+          child <CODE>soapbind:operation</CODE> element; or 
+          <LI>The style attribute is not present on the child 
+          <CODE>soapbind:operation</CODE> element, and the 
+          <CODE>soapbind:binding</CODE> element in the enclosing 
+          <CODE>wsdl:binding</CODE> specifies the style attribute with the value 
+          &quot;document&quot;; or 
+          <LI>The style attribute is not present on both the child 
+          <CODE>soapbind:operation</CODE> element and the 
+          <CODE>soapbind:binding</CODE> element in the enclosing 
+          <CODE>wsdl:binding</CODE>. </LI></OL></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er009>er009</A> </TD>
+    <TD class=title><STRONG>Intent of R2401</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>What is the intent of R2401? Does is disallow other binding or 
+        binding extensions? 
+        <DT class=resolution>Resolution: 2003-11-18 
+        <DD class=resolution>
+        <P>Change the first paragraph of <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#refinement35473288">Section 
+        5.5.1</A> from:</P>
+        <P>The Profile limits the choice of bindings to the well defined and 
+        most commonly used SOAP binding. MIME and HTTP GET/POST bindings are not 
+        permitted by the Profile.</P>
+        <P>to:</P>
+        <P>The Profile limits the choice of bindings to the well defined and 
+        most commonly used SOAP binding. HTTP GET/POST bindings, MIME or any 
+        other attachments technology, are not permitted by the Profile.</P>
+        <P>
+        <P>Change R2401 from:</P>
+        <P>R2401 A <CODE>wsdl:binding</CODE> element in a DESCRIPTION MUST use 
+        WSDL SOAP Binding as defined in WSDL 1.1 Section 3.</P>
+        <P>to:</P>
+        <P>R2401 A <CODE>wsdl:binding</CODE> element in a DESCRIPTION MUST only 
+        use the WSDL SOAP Binding as defined in WSDL 1.1 Section 3.</P>
+        <P>
+        <P>Add a new requirement:</P>
+        <P>R2490 In a DESCRIPTION WSDL binding extension elements and attributes 
+        which cause messages on the wire to be non-conformant to BP 1.0 MUST NOT 
+        be used.</P>
+        <P>
+        <P>Add a new requirement</P>
+        <P>R2491 In a DESCRIPTION the WSDL MIME and HTTP GET/POST and DIME 
+        binding extensions MUST NOT appear in the SOAP 
+  binding</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er010>er010</A> </TD>
+    <TD class=title><STRONG>What is the meaning of &quot;on the wire&quot;?</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>What is the meaning of &quot;on the wire&quot;? 
+        <DT class=resolution>Resolution: 2004-02-10 
+        <DD class=resolution>
+        <UL>
+          <LI>Section 1.1 Guiding Principles - no change; this is not normative, 
+          and the phrase is used colloquially. 
+          <LI>Section 5.3 Messages - change &quot;specific wire format&quot; to &quot;specific 
+          message serialization.&quot; 
+          <LI>Section 5.3.1 Bindings and Parts - change &quot;the wire representation 
+          of that part&quot; to &quot;the serialization of that part in a message&quot; 
+          <LI>Section 5.4.1 Ordering of part Elements - change &quot;method 
+          signatures and messages on the wire&quot; to &quot;methods' signatures and their 
+          serializations.&quot; 
+          <LI>Section 5.6.7 Wire Signatures for Operations - change section 
+          title to &quot;Operation Signatures.&quot; Change the first paragraph to read: 
+          An endpoint that supports multiple operations must unambiguously 
+          identify the operation being invoked based on the input message that 
+          it receives. This is only possible if all the operations specified in 
+          the <CODE>wsdl:binding</CODE> associated with an endpoint have a 
+          unique operation signature. 
+          <LI>Section 5.6.7 Wire Signatures for Operations - Change the second 
+          paragraph to read: The profile defines the operation signature to be 
+          the fully qualified name of the child element of SOAP body of the SOAP 
+          input message described by an operation in a WSDL binding. 
+          <LI>R2710 - change &quot;wire signature&quot; to &quot;operation signature&quot; 
+          <LI>Section 5.6.8 - change &quot;on the wire&quot; to &quot;when serialized.&quot; 
+          <LI>R2712 - change &quot;represented on the wire&quot; to &quot;serialized.&quot; 
+        </LI></UL></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er011>er011</A> </TD>
+    <TD class=title><STRONG>SOAP version 1.2 is no longer in 
+      development</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Section 1.2, says that SOAP 1.2 is &quot;currently under development.&quot; 
+        This is no longer the case. 
+        <DT class=resolution>Resolution: 2004-01-13 
+        <DD class=resolution>
+        <P>Remove the phrase &quot;currently under development&quot; from <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#conventions">Section 
+        1.2</A>.</P>
+        <P>This changes the sixth paragraph of Section 1.2 from:</P>
+        <P>Some statements are derived from ongoing standardization work on the 
+        referenced specification(s). For convenience, such forward-derived 
+        statements are annotated in the following manner: xxxx, where &quot;xxxx&quot; is 
+        an identifier for the specification (e.g., &quot;SOAP12&quot; for SOAP Version 
+        1.2, currently under development). Note that because such work is not 
+        complete, the specification that the requirement is derived from may 
+        change; this information is included only as a convenience to 
+        implementers.</P>
+        <P>to:</P>
+        <P>Some statements are derived from ongoing standardization work on the 
+        referenced specification(s). For convenience, such forward-derived 
+        statements are annotated in the following manner: xxxx, where &quot;xxxx&quot; is 
+        an identifier for the specification (e.g., &quot;SOAP12&quot; for SOAP Version 
+        1.2). Note that because such work is not complete, the specification 
+        that the requirement is derived from may change; this information is 
+        included only as a convenience to 
+implementers.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er012>er012</A> </TD>
+    <TD class=title><STRONG>Incorrect reference to media type in 
+      R1018</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R1018 should refer to a Content-Type header, not a media type (media 
+        types do not contain parameters) 
+        <DT class=resolution>Resolution: 2004-02-03 
+        <DD class=resolution>
+        <P>Replace <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#R1018">R1018</A> 
+        text with the following: </P>
+        <P>R1018 The Content-Type HTTP header field value of a MESSAGE MUST 
+        indicate the correct character encoding, using the charset parameter. 
+        [C] </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er013>er013</A> </TD>
+    <TD class=title><STRONG>Extraneous &quot;do&quot; in R1112</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Extraneous &quot;do&quot; in R1112 
+        <DT class=resolution>Resolution: 2004-01-13 
+        <DD class=resolution>
+        <P>Remove the extraneous &quot;do&quot; from <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#R1112">R1112</A>.</P>
+        <P>Change R1112 from:</P>
+        <P>An INSTANCE SHOULD use either a &quot;200 OK&quot; or &quot;202 Accepted&quot; HTTP 
+        status code for a response that does do not contain a SOAP message but 
+        indicates successful HTTP outcome of a request.</P>
+        <P>to:</P>
+        <P>An INSTANCE SHOULD use either a &quot;200 OK&quot; or &quot;202 Accepted&quot; HTTP 
+        status code for a response that does not contain a SOAP message but 
+        indicates successful HTTP outcome of a 
+request.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er014>er014</A> </TD>
+    <TD class=title><STRONG>Misplaced space in R1113</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R1113 has a misplaced space 
+        <DT class=resolution>Resolution: 2004-02-01 
+        <DD class=resolution>
+        <P>Remove the extra space character between 'Request' and '&quot;' and add a 
+        space character between '&quot;' and 'HTTP status code' in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#R1113">R1113</A>.</P>
+        <P>This changes R1113 from:</P>
+        <P>An INSTANCE SHOULD use a &quot;400 Bad Request &quot;HTTP status code, if the 
+        request message is a malformed HTTP request, or not well-formed XML.</P>
+        <P>to:</P>
+        <P>An INSTANCE SHOULD use a &quot;400 Bad Request&quot; HTTP status code, if the 
+        request message is a malformed HTTP request, or not well-formed 
+        XML.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er015>er015</A> </TD>
+    <TD class=title><STRONG>Placement of WSDL extensibility elements in 
+      WSDL</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>WSDL schema and the specification contradict each other with respect 
+        to the placement of WSDL extensibility elements as children of 
+        <CODE>wsdl:definitions</CODE>. 
+        <DT class=resolution>Resolution: 2005-08-16 
+        <DD class=resolution>
+        <P>The WS-I WSDL schema published at 
+        http://schemas.xmlsoap.org/wsdl/2003-02-11.xsd is inconsistent with the 
+        WSDL1.1 specification text with regards to the correct placement of 
+        top-level extensibility element content. </P>
+        <P>The WS-I WSDL schema published at 
+        http://schemas.xmlsoap.org/wsdl/2003-02-11.xsd is therefore amended to 
+        allow element extensibility at the end of the sequence in the 
+        tDefinitions type: </P><PRE>  &lt;xs:complexType name=&quot;tDefinitions&quot;&gt;
+    &lt;xs:complexContent&gt;
+      &lt;xs:extension base=&quot;wsdl:tExtensibleDocumented&quot;&gt;
+        &lt;xs:sequence minOccurs=&quot;0&quot;&gt;
+          &lt;xs:group ref=&quot;wsdl:anyTopLevelOptionalElement&quot;/&gt;
+          &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+            &lt;xs:group ref=&quot;wsdl:anyTopLevelOptionalElement&quot;/&gt;
+            &lt;xs:any namespace=&quot;##other&quot; processContents=&quot;lax&quot;/&gt;
+          &lt;xs:choice&gt;
+        &lt;xs:sequence&gt;
+        &lt;xs:attribute name=&quot;targetNamespace&quot; type=&quot;xs:anyURI&quot; use=
+&quot;optional&quot;/&gt;
+        &lt;xs:attribute name=&quot;name&quot; type=&quot;xs:NCName&quot; use=&quot;optional&quot;/&gt;
+      &lt;xs:extension&gt;
+    &lt;xs:complexContent&gt;
+  &lt;xs:complexType&gt;
+</PRE>
+        <P>As a convenience, WS-I has posted a version of the revised WSDL 
+        schema at: <A 
+        href="http://ws-i.org/profiles/basic/1.1/wsdl-2004-08-24.xsd">http://ws-i.org/profiles/basic/1.0/wsdl-2005-03-09.xsd</A> 
+        </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er016>er016</A> </TD>
+    <TD class=title><STRONG>Extraneous &quot;are required&quot; in Section 
+      4.1.11</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Extraneous &quot;are required&quot; in Section 4.1.11 
+        <DT class=resolution>Resolution: 2004-02-01 
+        <DD class=resolution>
+        <P>Replace &quot;are required&quot; with &quot;to&quot; in the first line of <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#refinement36956000">Section 
+        4.1.11</A>.</P>
+        <P>This changes Section 4.1.11 from:</P>
+        <P>The Profile requires all XML processors are required support the 
+        &quot;UTF-8&quot; and &quot;UTF-16&quot; character encodings, in order to aid 
+        interoperability.</P>
+        <P>to:</P>
+        <P>The Profile requires all XML processors to support the &quot;UTF-8&quot; and 
+        &quot;UTF-16&quot; character encodings, in order to aid 
+      interoperability.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er017>er017</A> </TD>
+    <TD class=title><STRONG>Section 5.4.4 incorrectly indicates that the 
+      parameterOrder attribute is on the wsdl:portType element</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Section 5.4.4 and R2305 talk about the usage of the parameterOrder 
+        attribute, but it incorrectly indicates that this attribute is on the 
+        <CODE>wsdl:portType</CODE> element. It is actually on the 
+        <CODE>wsdl:operation</CODE> element. 
+        <DT class=resolution>Resolution: 2004-01-13 
+        <DD class=resolution>
+        <P>Change the first paragraph in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#refinement35427752">Section 
+        5.4.4</A> from:</P>
+        <P>WSDL 1.1 does not clearly state how the parameterOrder attribute of 
+        the <CODE>wsdl:portType</CODE> should be constructed.</P>
+        <P>to:</P>
+        <P>WSDL 1.1 does not clearly state how the parameterOrder attribute of 
+        the <CODE>wsdl:operation</CODE> element (which is the child of the 
+        <CODE>wsdl:portType</CODE> element) should be constructed.</P>
+        <P>
+        <P>Change <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#R2305">R2305</A> 
+        from:</P>
+        <P>A <CODE>wsdl:portType</CODE> in a DESCRIPTION MUST be constructed so 
+        that the parameterOrder attribute, if present, omits at most 1 
+        <CODE>wsdl:part</CODE> from the output message.</P>
+        <P>to:</P>
+        <P>A <CODE>wsdl:operation</CODE> element child of a 
+        <CODE>wsdl:portType</CODE> element in a DESCRIPTION MUST be constructed 
+        so that the parameterOrder attribute, if present, omits at most 1 
+        <CODE>wsdl:part</CODE> from the output 
+message.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er018>er018</A> </TD>
+    <TD class=title><STRONG>Incorrect namespace prefix for the headerfault 
+      element in R2743</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>In Section 5.6.14, requirement R2743 makes a reference to a 
+        <CODE>wsdl:headerfault</CODE> element. This element does not exist in 
+        the WSDL namespace 
+        <DT class=resolution>Resolution: 2004-01-13 
+        <DD class=resolution>
+        <P>Change <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#R2743">R2743</A> 
+        from:</P>
+        <P>A MESSAGE MAY contain the details of a header processing related 
+        fault in a SOAP header block that is not described by a 
+        <CODE>wsdl:headerfault</CODE> element in the corresponding WSDL 
+        description.</P>
+        <P>to:</P>
+        <P>A MESSAGE MAY contain the details of a header processing related 
+        fault in a SOAP header block that is not described by a 
+        <CODE>soapbind:headerfault</CODE> element in the corresponding WSDL 
+        description.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er019>er019</A> </TD>
+    <TD class=title><STRONG>Inconsistency between the spec and the schema for 
+      WSDL extensibility</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Section 5.1.11 extensibility list is different from the 
+        extensibility in the schema file located at 
+        http://schemas.xmlsoap.org/wsdl/2003-02-11.xsd 
+        <DT class=resolution>Resolution: 2004-02-03 
+        <DD class=resolution>
+        <P>Remove the phrase &quot;as well as attributes&quot; from the BP1.0 text in 
+        section 5.1.11 </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er020>er020</A> </TD>
+    <TD class=title><STRONG>Incorrect URL for SOAP 1.1</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>The URL http://www.w3.org/TR/SOAP/ is intended to reference the most 
+        recent version of the SOAP specification, which is currently SOAP 
+        Version 1.2. The correct URL for SOAP 1.1 is 
+        http://www.w3.org/TR/2000/NOTE-SOAP-20000508/ 
+        <DT class=resolution>Resolution: 2004-01-20 
+        <DD class=resolution>
+        <P>Change the hyperlink in the first bullet in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#messaging">Section 
+        4</A>, around the text &quot;Simple Object Access Protocol (SOAP) 1.1&quot; 
+        from:</P>
+        <P>http://www.w3.org/TR/SOAP/</P>
+        <P>to:</P>
+        <P>http://www.w3.org/TR/2000/NOTE-SOAP-20000508/</P>
+        <P>
+        <P>Change the hyperlink in the first bullet in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#SOAPXML">Section 
+        4.1</A>, around the text &quot;SOAP 1.1, Section 4&quot; from:</P>
+        <P>http://www.w3.org/TR/SOAP/#_Toc478383494</P>
+        <P>to:</P>
+        <P>http://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383494</P>
+        <P>
+        <P>Change the hyperlink in the first bullet in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#SOAPMEM">Section 
+        4.2</A>, around the text &quot;SOAP 1.1, Section 2&quot; from:</P>
+        <P>http://www.w3.org/TR/SOAP/#_Toc478383491</P>
+        <P>to:</P>
+        <P>http://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383491</P>
+        <P>
+        <P>Change the hyperlink in the first bullet in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#SOAPHTTP">Section 
+        4.3</A>, around the text &quot;SOAP 1.1, Section 6&quot; from:</P>
+        <P>http://www.w3.org/TR/SOAP/#_Toc478383526</P>
+        <P>to:</P>
+        <P>http://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383526</P>
+        <P>
+        <P>Change the hyperlink in the first bullet in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#references">Appendix 
+        I</A>, around the text &quot;Simple Object Access Protocol (SOAP) 1.1&quot; 
+        from:</P>
+        <P>http://www.w3.org/TR/SOAP/</P>
+        <P>to:</P>
+        <P>http://www.w3.org/TR/2000/NOTE-SOAP-20000508/</P>
+        <P>
+        <P>Change the hyperlink in the third paragraph in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#points">Appendix 
+        II</A>, around the text &quot;Simple Object Access Protocol (SOAP) 1.1:&quot; 
+        from:</P>
+        <P>http://www.w3.org/TR/SOAP/</P>
+        <P>to:</P>
+        <P>http://www.w3.org/TR/2000/NOTE-SOAP-20000508/</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er021>er021</A> </TD>
+    <TD class=title><STRONG>Is the RECEIVER required to accept UTF-8 message 
+      that don't have a BOM?</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R4001 requires the RECEIVER to accept messages that do have a BOM, 
+        but there is no mention of messages that do not have a BOM (which is 
+        allowed by UTF-8) 
+        <DT class=resolution>Resolution: 2004-01-20 
+        <DD class=resolution>
+        <P>Change <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#R4001">R4001</A> 
+        from:</P>
+        <P>A RECEIVER MUST accept messages that include the Unicode Byte Order 
+        Mark (BOM).</P>
+        <P>to</P>
+        <P>A RECEIVER MUST accept messages with envelopes that include the 
+        Unicode Byte Order Mark (BOM), in addition to accepting UTF-8 encoded 
+        envelops that do not include a BOM.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er022>er022</A> </TD>
+    <TD class=title><STRONG>Is the RECEIVER required to accept a message that 
+      does not have the XML declaration?</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R1010 requires the RECEIVER to accept messages that that have an XML 
+        declaration, but there is no mention of messages that do not have an XML 
+        declaration 
+        <DT class=resolution>Resolution: 2004-01-20 
+        <DD class=resolution>
+        <P>Change <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#R1010">R1010</A> 
+        from:</P>
+        <P>A RECEIVER MUST accept messages that contain an XML Declaration.</P>
+        <P>to</P>
+        <P>A RECEIVER MUST accept messages with envelopes that contain an XML 
+        Declaration, in addition to those that omit the 
+    declaration.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er023>er023</A> </TD>
+    <TD class=title><STRONG>The profile does not say how the 'encoding' 
+      pseudo-attribute of the XML declaration is treated.</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R1018 requires that the HTTP Content-Type header must specify the 
+        'charset' parameter, but does not say how the 'encoding' 
+        pseudo-attribute of the XML declaration of the SOAP is treated. 
+        <DT class=resolution>Resolution: 2004-01-20 
+        <DD class=resolution>
+        <P>Add a new requirement R1019 in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#refinement36956000">Section 
+        4.1.11</A>:</P>
+        <P>R1019 A RECEIVER MUST ignore the <CODE>encoding</CODE> 
+        pseudo-attribute of the envelope's XML declaration in a message.</P>
+        <P>
+        <P>Add the following sentence at the end of the second paragraph in <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html#refinement36956000">Section 
+        4.1.11</A>:</P>
+        <P>The <CODE>charset</CODE> parameter of <CODE>Content-Type</CODE> HTTP 
+        header field must be used to determine the correct character encoding of 
+        the message, in absence of a <CODE>charset</CODE> parameter, the default 
+        value for <CODE>charset</CODE> (which is &quot;us-ascii&quot;) must be 
+        used.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er024>er024</A> </TD>
+    <TD class=title><STRONG>Clarify the meaning of generating a fault and 
+      explain the difference between generating a fault and transmitting a 
+      fault</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>The profile has requirements regarding genaration of a fault (e.g., 
+        R1027), but does not describe the meaning of generating a fault. The 
+        profile also does not specify the distinction between generating and 
+        transmitting a fault. 
+        <DT class=resolution>Resolution: 2004-02-03 
+        <DD class=resolution>
+        <P>In <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#refinement16503544">Section 
+        4.2.3</A>, add the following explanation text: </P>
+        <P>&quot;Both SOAP and this Profile use the term 'generate' to denote the 
+        creation of a SOAP Fault. It is important to realize that generation of 
+        a Fault is distinct from its transmission, which in some cases is not 
+        required.&quot; </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er025>er025</A> </TD>
+    <TD class=title><STRONG>Change the 'MUST' to 'SHOULD' in R1029</STRONG> 
+</TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R1029 requires that the service transmit a fault in case of an 
+        error. This means that a service will always have to send a fault, even 
+        when it is facing a DoS attack. 
+        <DT class=resolution>Resolution: 2004-02-03 
+        <DD class=resolution>
+        <P>Add the following to conformance <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#conformance">Section 
+        3</A>, following the third paragraph:</P>
+        <P>&quot;None of the requirements of this profile, regardless of their 
+        strength, are to be considered as limiting the ability of an otherwise 
+        conforming instance to apply security countermeasures in response to a 
+        real or perceived threat. E.g. a requirement that states that an 
+        instance MUST send a message in response to a request need not be 
+        observed in the face of a DOS.&quot; </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er026>er026</A> </TD>
+    <TD class=title><STRONG>SOAP 1.1 schema located at 
+      http://schemas.xmlsoap.org/soap/envelope/ does not allow xml:lang 
+      attribute on the faultstring element</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R1016 requires that receiver must accept fault messages that carry 
+        xml:lang attribute on the faultstring element, but the SOAP 1.1 schema 
+        at http://schemas.xmlsoap.org/soap/envelope/ does not allow this 
+        attribute. 
+        <DT class=resolution>Resolution: 2004-02-10 
+        <DD class=resolution>
+        <P>Add a Note following <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#R1016">R1016</A> 
+        that reads: Note that this requirement conflicts with the schema for 
+        SOAP appearing at its namespace URL. A schema without conflicts can be 
+        found at 'http://schemas.xmlsoap.org/soap/envelope/2004-01-21.xsd'. 
+        </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er027>er027</A> </TD>
+    <TD class=title><STRONG>Clarify that wsdl:operation applies to both 
+      binding and portType</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Clarify that <CODE>wsdl:operation</CODE> applies to child of either 
+        <CODE>wsdl:portType</CODE> or <CODE>wsdl:binding</CODE>. 
+        <DT class=resolution>Resolution: 2004-02-03 
+        <DD class=resolution>
+        <P>Amend <CODE>wsdl:operation</CODE> bullet item in the list in <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#refinement16535632">Section 
+        5.1.11</A> to append &quot;(in portType or binding)&quot; 
+  </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er028>er028</A> </TD>
+    <TD class=title><STRONG>clarify R1107</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>clarify R1107 
+        <DT class=resolution>Resolution: 2004-02-03 
+        <DD class=resolution>
+        <P>Amend <A 
+        href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.htm#R1107">R1107</A> 
+        to read: &quot;A RECEIVER MUST interpret a SOAP message as a Fault when the 
+        <CODE>soap:Body</CODE> of the message has a single 
+        <CODE>soap:Fault</CODE> child.&quot; </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er029>er029</A> </TD>
+    <TD class=title><STRONG>Should the schemas for WSDL and SOAP should be 
+      posted at a WS-I URI</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>The URIs for the normative WSDL and WSDL SOAP schemas should be 
+        ws-i.org URIs. 
+        <DT class=resolution>Resolution: 2004-10-25 
+        <DD class=resolution>
+        <P>Modify section <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#refinement16496720">5.1.1 
+        WSDL Schema Definitions</A> to read as follows:</P>
+        <P>
+        <P>The normative schemas for WSDL appearing in Appendix 4 of the WSDL 
+        1.1 specification have inconsistencies with the normative text of the 
+        specification. The Profile references new schema documents that have 
+        incorporated fixes for known errors.</P>
+        <P>R2028 A DESCRIPTION using the WSDL namespace (prefixed &quot;wsdl&quot; in this 
+        Profile) MUST be valid according to the XML Schema found at 
+        &quot;<a href="http://ws-i.org/profiles/basic/1.1/wsdl-2004-08-24.xsd">http://ws-i.org/profiles/basic/1.0/wsdl-2005-03-09.xsd</a>&quot;.</P>
+        <P>R2029 A DESCRIPTION using the WSDL SOAP binding namespace (prefixed 
+        &quot;soapbind&quot; in this Profile) MUST be valid according to the XML Schema 
+        found at 
+        &quot;http://ws-i.org/profiles/basic/1.1/wsdlsoap-2004-08-24.xsd&quot;.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er030>er030</A> </TD>
+    <TD class=title><STRONG>clarification of soap:actor extensibility point 
+      description</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Does http://schemas.xmlsoap.org/soap/actor/next count as an 
+        extensibility point? 
+        <DT class=resolution>Resolution: 2004-02-24 
+        <DD class=resolution>
+        <P>Amend the text for the <CODE>soap:actor</CODE> extensibility point in 
+        <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#points">Appendix 
+        II</A> to read: Values of the <CODE>soap:actor</CODE> attribute, other 
+        than the special uri &quot;http://schemas.xmlsoap.org/soap/actor/next&quot; , 
+        represent a private agreement between parties of the web service. 
+        </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er032>er032</A> </TD>
+    <TD class=title><STRONG>xmlns:xml issue</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Confusion as to whether it is acceptable to have messages and/or 
+        descriptions use the xmlns:xml namespace declaration. 
+        <DT class=resolution>Resolution: 2004-03-09 
+        <DD class=resolution>
+        <OL>
+          <LI>Add XML 1.0 reference to BP 1.0 <A 
+          href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#description">Section 
+          5</A> list of profiled specs. 
+          <LI>Add Namespaces in XML 1.0 (<A 
+          href="http://www.w3.org/TR/1999/REC-xml-names-19990114">http://www.w3.org/TR/1999/REC-xml-names-19990114</A>) 
+          to the list of specs profiled by BP 1.0. 
+          <LI>Add Namespaces in XML 1.0 to BP 1.0 <A 
+          href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#messaging">Section 
+          4</A> list of profiled specs, just below XML 1.0. 
+          <LI>Add Namespaces in XML 1.0 to BP 1.0 <A 
+          href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#description">Section 
+          5</A> list of profiled specs, just below XML 1.0. 
+          <LI>Add Namespaces in XML 1.0 to BP 1.0 <A 
+          href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#references">Appendix 
+          I</A>, just below XML 1.0. 
+          <LI>
+          <P>Add the following two requirements after BP 1.0 <A 
+          href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#refinement16452208">Section 
+          4.1.8</A>:</P>
+          <P>R1033: An ENVELOPE SHOULD NOT contain the namespace declaration 
+          xmlns:xml=&quot;http://www.w3.org/XML/1998/namespace&quot;. [c]</P>
+          <P>R1034: A DESCRIPTION SHOULD NOT contain the namespace declaration 
+          xmlns:xml=&quot;http://www.w3.org/XML/1998/namespace&quot;. [c]</P></LI></OL>
+        <P>Although published errata NE05 (see <A 
+        href="http://www.w3.org/XML/xml-names-19990114-errata">http://www.w3.org/XML/xml-names-19990114-errata</A>) 
+        allows this namespace declaration to appear, some older processors 
+        considered such a declaration to be an error. These requirements ensure 
+        that conformant artifacts have the broadest interoperability possible. 
+        </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er033>er033</A> </TD>
+    <TD class=title><STRONG>R1000 contains an ambiguous term/target 'Message 
+      contains a soap:Fault'</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R1000 talks about a 'MESSAGE contains a <CODE>soap:Fault</CODE>' and 
+        not about SOAP Envelopes that are Faults. 
+        <DT class=resolution>Resolution: 2004-03-17 
+        <DD class=resolution>
+        <P>Replace <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#R1000">R1000</A> 
+        with the following:</P>
+        <P>R1000 When an ENVELOPE is a Fault, the <CODE>soap:Fault</CODE> 
+        element MUST NOT have element children other than faultcode, 
+        faultstring, faultactor and detail.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er034>er034</A> </TD>
+    <TD class=title><STRONG>R2027 is hard to understand</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>R2027 is hard to understand. 
+        <DT class=resolution>Resolution: 2004-03-18 
+        <DD class=resolution>
+        <P>Amend <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#R2027">R2027</A> 
+        to read as follows: </P>
+        <P>R2027 If during the processing of a description, a consumer 
+        encounters a WSDL extension element that has a 
+        <CODE>wsdl:required</CODE> attribute with a boolean value of &quot;true&quot; that 
+        the consumer does not understand or cannot process, the CONSUMER MUST 
+        fail processing. </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er035>er035</A> </TD>
+    <TD class=title><STRONG>Part accessors local name of rpc-literal 
+      binding</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Section 5.6.20 does not specify the value of the part accessors 
+        local names. 
+        <DT class=resolution>Resolution: 2004-03-18 
+        <DD class=resolution>
+        <P>Change the section title for <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#refinement16696288">Section 
+        5.6.20</A> to &quot;Part Accessors&quot;. Add the following requirement to <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#refinement16696288">Section 
+        5.6.20</A>: </P>
+        <P>R2755 The part accessor elements in a MESSAGE described with an 
+        rpc-literal binding MUST have a local name of the same value as the name 
+        attribute of the corresponding <CODE>wsdl:part</CODE> element. 
+      </P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er036>er036</A> </TD>
+    <TD class=title><STRONG>Incorrect namespace prefixes in R2742 and 
+      R2743</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Incorrect namespace prefixes in R2742 and R2743. 
+        <DT class=resolution>Resolution: 2004-03-18 
+        <DD class=resolution>
+        <P>In <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#R2742">R2742</A>, 
+        change <CODE>wsdl:fault</CODE> to <CODE>soapbind:fault</CODE>.</P>
+        <P>In <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#R2743">R2743</A>, 
+        change <CODE>wsdl:headerfault</CODE> to 
+        <CODE>soapbind:headerfault</CODE>.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er037>er037</A> </TD>
+    <TD class=title><STRONG>Section 4.1.3</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Section 4.1.3 -- 'contain a fault' vs. 'is a fault' 
+        <DT class=resolution>Resolution: 2004-03-17 
+        <DD class=resolution>
+        <P>Replace <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#R1001">R1001</A> 
+        with the following:</P>
+        <P>R1001 When an ENVELOPE is a Fault, the element children of the 
+        <CODE>soap:Fault</CODE> element MUST be 
+  unqualified.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er038>er038</A> </TD>
+    <TD class=title><STRONG>Messages encoded in both UTF-8 and UTF-16 and 
+      UDDI</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>Section 6 of Basic Profile 1.0 says that -- &quot;Note that the Web 
+        services that constitute UDDI V2 are not fully conformant with the 
+        Profile 1.0 because they do not accept messages encoded in both UTF-8 
+        and UTF-16 as required by the Profile. (They accept UTF-8 only.) &quot; This 
+        should really say that the message is encoded in either UTF-8 or UTF-16. 
+
+        <DT class=resolution>Resolution: 2005-09-06 
+        <DD class=resolution>
+        <P>Replace the following sentence in <A 
+        href="http://www.ws-i.org/Profiles/BasicProfile-1.0-2004-04-16.html#discovery">Section 
+        6</A>:</P>
+        <P>Note that the Web services that constitute UDDI V2 are not fully 
+        conformant with the Profile 1.0 because they do not accept messages 
+        encoded in both UTF-8 and UTF-16 as required by the Profile.</P>
+        <P>with:</P>
+        <P>Note that the Web services that constitute UDDI V2 are not fully 
+        conformant with the Profile 1.0 because they do not accept messages 
+        encoded in either UTF-8 or UTF-16 as required by the 
+    Profile.</P></DD></DL></TD></TR></TBODY>
+  <TBODY class=closed>
+  <TR class=title>
+    <TD class=title vAlign=top align=right><A name=er039>er039</A> </TD>
+    <TD class=title><STRONG>WSDL SOAP binding schema does not allow parts 
+      attribute on the soapbind:body element to be empty</STRONG> </TD>
+    <TD class=title align=right></TD>
+  <TR>
+    <TD>
+    <TD colSpan=2>
+      <DL>
+        <DT>Description 
+        <DD>The WSDL SOAP binding schema represented by the soapbind namespace 
+        prefix does not allows the parts attribute of the 
+        <CODE>soapbind:body</CODE> element to be empty. I.e., &lt;soapbind:body 
+        parts=&quot;&quot;/&gt; Such an empty attribute is required to indicate that none 
+        of the message parts are bound to <CODE>soap:Body</CODE>. 
+        <DT class=resolution>Resolution: 2005-10-25 
+        <DD class=resolution>
+        <P>Modify the schema to for soapbind namespace as follows:</P>
+        <P>
+        <OL>
+          <LI>
+          <P>Add a new type:</P><PRE>  &lt;xs:simpleType name=&quot;tParts&quot;&gt;
+    &lt;xs:list itemType=&quot;xs:NMTOKEN&quot;/&gt;
+  &lt;xs:simpleType&gt;
+</PRE>
+          <LI>
+          <P>Change the type of the 'parts' attribute of complexType tBody to 
+          tParts as follows:</P><PRE>  &lt;xs:complexType name=&quot;tBody&quot; &gt;
+    &lt;xs:complexContent&gt;
+      &lt;xs:extension base=&quot;wsdl:tExtensibilityElement&quot; &gt;
+        &lt;xs:attribute name=&quot;parts&quot; type=&quot;soapbind:tParts&quot; use=&quot;optional&quot; /&gt;
+        &lt;xs:attributeGroup ref = &quot;soapbind:tBodyAttributes&quot; /&gt;
+      &lt;xs:extension&gt;
+    &lt;xs:complexContent&gt;
+  &lt;xs:complexType&gt;
+</PRE></LI></OL></DD></DL></TD></TR></TBODY></TABLE></P></DD></BODY></HTML>

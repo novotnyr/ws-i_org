@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.ws-i.org/testing/2002/12/report/"
+    xmlns:tns="http://www.ws-i.org/testing/2002/12/report/" 
+    xmlns:wsi-analyzerConfig="http://www.ws-i.org/testing/2002/12/analyzerConfig/"
+    xmlns:wsi-log="http://www.ws-i.org/testing/2002/12/log/"
+    xmlns:wsi-monConfig="http://www.ws-i.org/testing/2002/12/monitorConfig/"
+    elementFormDefault="qualified">	
+  
+  <xsd:import namespace="http://www.ws-i.org/testing/2002/12/analyzerConfig/" 
+        schemaLocation="analyzerConfig.xsd"/>
+
+  <xsd:import namespace="http://www.ws-i.org/testing/2002/12/log/" 
+        schemaLocation="log.xsd"/>
+
+  <xsd:import namespace="http://www.ws-i.org/testing/2002/12/monitorConfig/" 
+        schemaLocation="monitorConfig.xsd"/>
+  
+  <xsd:element name="report" type="tns:report" nillable="true"/>
+  <xsd:complexType name="report">
+    <xsd:sequence>
+      <xsd:element name="analyzer" type="tns:analyzer"/>
+      <xsd:element name="artifact" type="tns:artifact" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="summary" type="tns:summary" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="testCoverage" type="tns:testCoverage" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="analyzerFailure" type="tns:analyzerFailure" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="optional"/>
+    <xsd:attribute name="timestamp" type="xsd:dateTime" use="required"/>
+  </xsd:complexType>
+	
+  <xsd:complexType name="analyzer">
+    <xsd:sequence>
+      <xsd:element name="implementer" type="tns:implementer"/>
+      <xsd:element name="environment" type="tns:environment"/>
+      <xsd:element name="configuration" type="wsi-analyzerConfig:configuration"/>
+    </xsd:sequence>
+    <xsd:attribute name="version" type="xsd:string" use="required"/>
+    <xsd:attribute name="releaseDate" type="xsd:date" use="required"/>
+  </xsd:complexType>
+	
+  <xsd:complexType name="implementer">
+    <xsd:attribute name="name" type="xsd:string"/>
+    <xsd:attribute name="location" type="xsd:anyURI"/>
+  </xsd:complexType>
+		
+  <xsd:complexType name="environment">
+    <xsd:sequence>
+      <xsd:element name="runtime" type="tns:environmentElement"/>
+      <xsd:element name="operatingSystem" type="tns:environmentElement"/>
+      <xsd:element name="xmlParser" type="tns:environmentElement"/>
+      <xsd:element name="log" type="tns:log" minOccurs="0" maxOccurs="1"/>
+   </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="environmentElement">
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="version" type="xsd:string" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="log">
+    <xsd:sequence>
+      <xsd:element name="comment" type="wsi-monConfig:comment" minOccurs="0" maxOccurs="1"/>
+   </xsd:sequence>
+    <xsd:attribute name="timestamp" type="xsd:dateTime" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="artifact">
+    <xsd:sequence>
+      <xsd:element name="entry" type="tns:entry" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="type" use="required">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="message"/>
+          <xsd:enumeration value="description"/>
+          <xsd:enumeration value="discovery"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+  </xsd:complexType>
+
+  <xsd:complexType name="entry">
+    <xsd:complexContent>
+      <xsd:extension base="tns:baseEntry">
+        <xsd:sequence>
+          <xsd:element name="logEntry" type="wsi-log:logEntry" minOccurs="0" maxOccurs="1"/>
+          <xsd:element name="assertionResult" type="tns:assertionResult" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+   </xsd:complexType>
+
+  <xsd:complexType name="baseEntry">
+    <xsd:attribute name="type" type="tns:entryTypes" use="optional"/>
+    <xsd:attribute name="referenceID" type="xsd:string" use="optional"/>
+  </xsd:complexType>
+	
+  <xsd:complexType name="assertionResult">
+    <xsd:sequence>
+      <xsd:element name="additionalEntryList" type="tns:additionalEntryList" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="prereqFailedList" type="tns:prereqFailedList" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="assertionDescription" type="tns:message" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="failureMessage" type="tns:message" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="failureDetail" type="tns:failureDetail" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:string" use="required"/>
+    <xsd:attribute name="result" type="tns:allResults" use="required"/>
+  </xsd:complexType>
+	
+  <xsd:complexType name="prereqFailedList">
+    <xsd:sequence>
+      <xsd:element name="testAssertionID" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+	
+  <xsd:complexType name="additionalEntryList">
+    <xsd:sequence>
+      <xsd:element name="additionalEntry" type="tns:additionalEntry" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+	
+  <xsd:complexType name="additionalEntry">
+    <xsd:complexContent>
+      <xsd:extension base="tns:baseEntry"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+	
+  <xsd:complexType name="summary">
+    <xsd:attribute name="result" type="tns:summaryResults" use="required"/>
+  </xsd:complexType>
+	
+  <xsd:complexType name="testCoverage">
+    <xsd:sequence>
+      <xsd:element name="service" type="tns:service" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>  
+  </xsd:complexType>
+	
+  <xsd:complexType name="service">
+    <xsd:sequence>
+      <xsd:element name="operation" type="tns:operation" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>  
+    <xsd:attribute name="name" type="xsd:NCName" use="required"/>
+    <xsd:attribute name="location" type="xsd:anyURI" use="required"/>
+  </xsd:complexType>
+	
+  <xsd:complexType name="operation">
+    <xsd:attribute name="messages" type="xsd:integer" use="required"/>
+    <xsd:attribute name="name" type="xsd:NCName" use="required"/>
+    <xsd:attribute name="input" type="xsd:NCName" use="required"/>
+    <xsd:attribute name="output" type="xsd:NCName" use="required"/>
+    <xsd:attribute name="fault" type="xsd:NCName" use="optional"/>
+  </xsd:complexType>
+	
+  <xsd:complexType name="analyzerFailure">
+    <xsd:sequence>
+      <xsd:element name="failureDetail" type="tns:message"/>
+    </xsd:sequence>  
+  </xsd:complexType>
+	
+  <xsd:complexType name="message">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+	
+  <xsd:complexType name="failureDetail">
+    <xsd:complexContent>
+      <xsd:extension base="tns:message">
+        <xsd:attribute name="referenceType" type="tns:referenceType" use="optional"/>
+        <xsd:attribute name="referenceID" type="xsd:string" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:simpleType name="referenceType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="operation"/>
+      <xsd:enumeration value="message"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="summaryResults">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="passed"/>
+      <xsd:enumeration value="failed"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="otherResults">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="warning"/>
+      <xsd:enumeration value="notApplicable"/>
+      <xsd:enumeration value="notTestable"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="allResults">
+    <xsd:union memberTypes="tns:summaryResults tns:otherResults"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="entryTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="request"/>
+      <xsd:enumeration value="response"/>
+      <xsd:enumeration value="message"/>
+      <xsd:enumeration value="portType"/>
+      <xsd:enumeration value="binding"/>
+      <xsd:enumeration value="port"/>
+      <xsd:enumeration value="bindingTemplate"/>
+      <xsd:enumeration value="tModel"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

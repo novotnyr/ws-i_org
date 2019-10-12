@@ -1,0 +1,3409 @@
+From: <Saved by Microsoft Internet Explorer 5>
+Subject: Basic Profile - Version 1.0 (WGD)
+Date: Wed, 5 Feb 2003 17:17:07 -0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0000_01C2CD3A.6907A0A0";
+	type="text/html"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C2CD3A.6907A0A0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Documents%20and%20Settings\ckurt\Desktop\BasicProfile-1.0-WGD.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?xml version=3D"1.0" encoding=3D"utf-8"?><HTML=20
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>Basic Profile - =
+Version 1.0 (WGD)</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252">
+<STYLE type=3Dtext/css>BODY {
+	BACKGROUND: white; MARGIN: 16pt 24pt; COLOR: black; FONT-FAMILY: =
+sans-serif
+}
+DT {
+	PADDING-TOP: 0.5em; FONT-STYLE: italic
+}
+.refinement {
+	MARGIN: 18pt 0em
+}
+.statement {
+	MARGIN: 0.5em 5.5em; TEXT-INDENT: -4em; FONT-STYLE: italic
+}
+.statement-id {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; PADDING-BOTTOM: 0em; =
+PADDING-TOP: 0em; FONT-STYLE: normal; BACKGROUND-COLOR: #ffa
+}
+.statement-type {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; FONT-SIZE: 0.7em; =
+PADDING-BOTTOM: 0em; VERTICAL-ALIGN: text-top; PADDING-TOP: 0em; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #ccf
+}
+.statement-origin {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; FONT-SIZE: 0.7em; =
+PADDING-BOTTOM: 0em; VERTICAL-ALIGN: text-top; PADDING-TOP: 0em; =
+FONT-STYLE: normal; BACKGROUND-COLOR: #fcc
+}
+.rationale {
+	MARGIN: 0.5em 0em
+}
+.explanation {
+	MARGIN: 0.5em 0em
+}
+.explanation P {
+	MARGIN: 0.25em 0px
+}
+.rationale P {
+	MARGIN: 0.25em 0px
+}
+.practice {
+	BACKGROUND-COLOR: green
+}
+.example {
+	MARGIN: 0.5em 2em; BACKGROUND-COLOR: #eee
+}
+.example-banner {
+	MARGIN: 0.25em 0px
+}
+.specification {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; =
+MARGIN: 0.5em 2em; PADDING-TOP: 0.5em; BACKGROUND-COLOR: #ffa
+}
+.ednote {
+	PADDING-RIGHT: 1.2em; PADDING-LEFT: 1.2em; PADDING-BOTTOM: 1.2em; =
+MARGIN: 1.2em; PADDING-TOP: 1.2em; BACKGROUND-COLOR: #fee
+}
+.correct {
+	FONT-WEIGHT: bold; FONT-SIZE: 0.9em; FONT-FAMILY: sans-serif
+}
+.incorrect {
+	FONT-WEIGHT: bold; FONT-SIZE: 0.9em; FONT-FAMILY: sans-serif
+}
+.correct {
+	COLOR: #090
+}
+.incorrect {
+	COLOR: #900
+}
+.note {
+	MARGIN-LEFT: 1.5em; BACKGROUND-COLOR: #fcc
+}
+.toc {
+	MARGIN-LEFT: 2em
+}
+.subtoc {
+	MARGIN-LEFT: 3em
+}
+</STYLE>
+
+<META content=3D"MSHTML 6.00.2800.1106" name=3DGENERATOR></HEAD>
+<BODY>
+<DIV class=3Dhead>
+<P><A href=3D"http://www.ws-i.org/"><IMG height=3D88 alt=3DWS-I=20
+src=3D"http://www.ws-i.org/images/WS-I-logo.gif" width=3D107 =
+border=3D0></A></P>
+<H1>Basic Profile Version 1.0</H1>
+<H2>Working Group Draft</H2>
+<H2>Date: 2003/01/24 09:47:33 </H2>
+<DL>
+  <DT>This revision:=20
+  <DD><A=20
+  =
+href=3D"http://www.ws-i.org/Profiles/Basic/2003-01/BasicProfile-1.0-WGD.h=
+tml">http://www.ws-i.org/Profiles/Basic/2003-01/BasicProfile-1.0-WGD.html=
+</A>=20
+
+  <DT>Editors:=20
+  <DD><A href=3D"mailto:keithba@microsoft.com">Keith Ballinger</A>, =
+Microsoft=20
+  <DD><A href=3D"mailto:davide@us.ibm.com">David Ehnebuske</A>, IBM=20
+  <DD><A href=3D"mailto:mgudgin@microsoft.com">Martin Gudgin</A>, =
+Microsoft=20
+  <DD><A href=3D"mailto:mark.nottingham@bea.com">Mark Nottingham</A>, =
+BEA Systems=20
+  <DD><A href=3D"mailto:pyendluri@webmethods.com">Prasad Yendluri </A>, =
+webMethods=20
+
+  <DT>Administrative contact:=20
+  <DD><A href=3D"mailto:secretary@ws-i.org">secretary@ws-i.org</A> =
+</DD></DL>
+<P class=3Dcopyright id=3Dcopyright>Copyright =A9 2002-2003 by <A=20
+href=3D"http://www.ws-i.org/">The Web Services-Interoperability =
+Organization</A>=20
+(<ABBR title=3D"Web Services Interoperability Organization">WS-I</ABBR>) =
+and=20
+Certain of its Members. All Rights Reserved. </P></DIV>
+<HR>
+
+<H2 id=3Dabstract>Abstract</H2>
+<P>This document defines the WS-I Basic Profile, consisting of a set of=20
+non-proprietary Web services specifications, along with clarifications =
+and=20
+amendments to those specifications which promote interoperability.</P>
+<H2 id=3Dstatus>Status of this Document</H2>
+<P>This document is a Working Group Draft; it has been accepted by the =
+Working=20
+Group as reflecting the current state of discussions. It is a work in =
+progress,=20
+and should not be considered authoritative or final; other documents may =
+
+supercede this document. </P>
+<P>The Working Group believes this Working Group Draft to be =
+substantively=20
+complete with regards to the technical refinements, clarifications and=20
+constraints specified. The Working Group will be publishing another =
+Working=20
+Group Draft reflecting the remaining issue resolutions, additional =
+rationale=20
+text, and editorial changes within the next month, and intends to pursue =
+an=20
+aggressive schedule for completion of its work. Therefore, the Working =
+Group=20
+invites all parties interested in contributing to the review and =
+feedback=20
+process of the Basic Profile v1.0 to do so based on this version so that =
+any=20
+technical concerns expressed can be considered by the Working Group =
+before it=20
+concludes its formal review period. </P>
+<H2 id=3Dnotice>Notice</H2>
+<P>The material contained herein is not a license, either expressly or=20
+impliedly, to any intellectual property owned or controlled by any of =
+the=20
+authors or developers of this material or WS-I. The material contained =
+herein is=20
+provided on an "AS IS" basis and to the maximum extent permitted by =
+applicable=20
+law, this material is provided AS IS AND WITH ALL FAULTS, and the =
+authors and=20
+developers of this material and WS-I hereby disclaim all other =
+warranties and=20
+conditions, either express, implied or statutory, including, but not =
+limited to,=20
+any (if any) implied warranties, duties or conditions of =
+merchantability, of=20
+fitness for a particular purpose, of accuracy or completeness of =
+responses, of=20
+results, of workmanlike effort, of lack of viruses, and of lack of =
+negligence.=20
+ALSO, THERE IS NO WARRANTY OR CONDITION OF TITLE, QUIET ENJOYMENT, QUIET =
+
+POSSESSION, CORRESPONDENCE TO DESCRIPTION OR NON-INFRINGEMENT WITH =
+REGARD TO=20
+THIS MATERIAL.</P>
+<P>IN NO EVENT WILL ANY AUTHOR OR DEVELOPER OF THIS MATERIAL OR WS-I BE =
+LIABLE=20
+TO ANY OTHER PARTY FOR THE COST OF PROCURING SUBSTITUTE GOODS OR =
+SERVICES, LOST=20
+PROFITS, LOSS OF USE, LOSS OF DATA, OR ANY INCIDENTAL, CONSEQUENTIAL, =
+DIRECT,=20
+INDIRECT, OR SPECIAL DAMAGES WHETHER UNDER CONTRACT, TORT, WARRANTY, OR=20
+OTHERWISE, ARISING IN ANY WAY OUT OF THIS OR ANY OTHER AGREEMENT =
+RELATING TO=20
+THIS MATERIAL, WHETHER OR NOT SUCH PARTY HAD ADVANCE NOTICE OF THE =
+POSSIBILITY=20
+OF SUCH DAMAGES.</P>
+<H2 id=3Dfeedback>Feedback</H2>
+<P>The Web Services-Interoperability Organization (WS-I) would like to =
+receive=20
+input, suggestions and other feedback ("Feedback") on this work from a =
+wide=20
+variety of industry participants to improve its quality over time. </P>
+<P>By sending email, or otherwise communicating with WS-I, you (on =
+behalf of=20
+yourself if you are an individual, and your company if you are providing =
+
+Feedback on behalf of the company) will be deemed to have granted to =
+WS-I,the=20
+members of WS-I, and other parties that have access to your Feedback, a=20
+non-exclusive, non-transferable, worldwide, perpetual, irrevocable, =
+royalty-free=20
+license to use, disclose, copy, license, modify, sublicense or otherwise =
+
+distribute and exploit in any manner whatsoever the Feedback you provide =
+
+regarding the work. You acknowledge that you have no expectation of=20
+confidentiality with respect to any Feedback you provide. You represent =
+and=20
+warrant that you have rights to provide this Feedback, and if you are =
+providing=20
+Feedback on behalf of a company, you represent and warrant that you have =
+the=20
+rights to provide Feedback on behalf of your company. You also =
+acknowledge that=20
+WS-I is not required to review, discuss, use, consider or in any way =
+incorporate=20
+your Feedback into future versions of its work. If WS-I does incorporate =
+some or=20
+all of your Feedback in a future version of the work, it may, but is not =
+
+obligated to include your name (or, if you are identified as acting on =
+behalf of=20
+your company, the name of your company) on a list of contributors to the =
+work.=20
+If the foregoing is not acceptable to you and any company on whose =
+behalf you=20
+are acting, please do not provide any Feedback.</P>
+<P>Feedback on this document should be directed to <A=20
+href=3D"mailto:wsbasic_comment@ws-i.org">wsbasic_comment@ws-i.org</A>.</P=
+>
+<HR>
+
+<H2 id=3Dtoc>Table of Contents</H2>
+<P class=3Dtoc>1. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#introduction">Introduction</A><BR><SPAN=20
+class=3Dsubtoc>1.1. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#philosophy">Guiding=20
+Principles</A></SPAN><BR><SPAN class=3Dsubtoc>1.2. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#conventions">Notational=20
+Conventions</A></SPAN><BR>2. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#conformance">Profile=20
+Conformance</A><BR><SPAN class=3Dsubtoc>2.1. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#artifacts">Conformance=20
+of Artifacts</A></SPAN><BR><SPAN class=3Dsubtoc>2.2. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#services">Conformance=20
+of Services and Consumers</A></SPAN><BR><SPAN class=3Dsubtoc>2.3. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#annotation">Conformance=20
+Annotation</A></SPAN><BR>3. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#messaging">Messaging</A><BR><SPAN=20
+class=3Dsubtoc>3.1. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#SOAPXML">XML=20
+Representation of SOAP Messages</A></SPAN><BR><SPAN class=3Dsubtoc>3.2. =
+<A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#SOAPMEM">The=20
+SOAP Processing Model</A></SPAN><BR><SPAN class=3Dsubtoc>3.3. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#SOAPHTTP">Using=20
+SOAP in HTTP</A></SPAN><BR>4. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#description">Service=20
+Description</A><BR><SPAN class=3Dsubtoc>4.1. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#WSDLDOCSTRUCT">Document=20
+Structure</A></SPAN><BR><SPAN class=3Dsubtoc>4.2. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#WSDLTYPES">Types</A></SPAN><BR><SPAN=20
+class=3Dsubtoc>4.3. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#WSDLMSGS">Messages</A></SPAN><BR><SPAN=20
+class=3Dsubtoc>4.4. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#WSDLPORTTYPES">Port=20
+Types</A></SPAN><BR><SPAN class=3Dsubtoc>4.5. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#WSDLBINDINGS">Bindings</A></SPAN><BR><SPAN=20
+class=3Dsubtoc>4.6. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#WSDLPORTS">Ports</A></SPAN><BR><SPAN=20
+class=3Dsubtoc>4.7. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#WSDLSERVICES">Services</A></SPAN><BR><SPAN=20
+class=3Dsubtoc>4.8. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#WSDLSOAPBINDING">SOAP=20
+Binding</A></SPAN><BR><SPAN class=3Dsubtoc>4.9. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#WSDLSCHEMA">XML=20
+Schema</A></SPAN><BR>5. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#discovery">Service=20
+Publication and Discovery</A><BR><SPAN class=3Dsubtoc>5.1. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#UDDIBTS">bindingTemplates</A></SPAN><BR><SPAN=20
+class=3Dsubtoc>5.2. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#UDDITMS">tModels</A></SPAN><BR>6.=20
+<A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#security">Security</A><BR><SPAN=20
+class=3Dsubtoc>6.1. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#HTTPSBase">The=20
+Use of HTTPS</A></SPAN><BR><SPAN class=3Dsubtoc>6.2. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#HTTPSCertAuth">Certificate=20
+Authority</A></SPAN><BR><SPAN class=3Dsubtoc>6.3. <A=20
+href=3D"file:///C:/Documents%20and%20Settings/ckurt/Desktop/BasicProfile-=
+1.0-WGD.html#HTTPSCertEncr">Permitted=20
+HTTPS Encryption Algorithms</A></SPAN><BR></P>
+<H2><A name=3Dintroduction>1. </A>Introduction</H2>
+<P>This document defines the WS-I Basic Profile, consisting of a set of=20
+non-proprietary Web services specifications, along with clarifications =
+and=20
+amendments to those specifications which promote interoperability.</P>
+<P>Section 1 introduces the profile, its scope, and the philosophy that =
+it takes=20
+to interoperability.</P>
+<P>Section 2, "Profile Conformance," explains what it means to be =
+conformant to=20
+the Basic Profile. Each subsequent section addresses a component =
+specification=20
+of the Profile, and consists of two parts; an overview of the approach =
+to the=20
+specification taken, followed by subsections which address individual =
+parts of=20
+the component specification.</P>
+<H3><A name=3Dphilosophy>1.1</A> Guiding Principles</H3>
+<P>The Basic Profile was developed according to a set of principles =
+that,=20
+together, form the philosophy of the profile, as it relates to bringing =
+about=20
+interoperability. This section documents these guidelines.</P>
+<DL>
+  <DT>No guarantee of interoperability=20
+  <DD>It is impossible to completely guarantee the interoperability of a =
+
+  particular service. However, the Profile does address the most common =
+problems=20
+  that implementation experience has revealed to date.=20
+  <DT>Application semantics=20
+  <DD>Although communication of application semantics can be facilitated =
+by the=20
+  technologies that comprise the Profile, assuring the common =
+understanding of=20
+  those semantics is out of scope.=20
+  <DT>Testability=20
+  <DD>When possible, the Profile makes statements that are testable. =
+However,=20
+  such testability is not required. Preferably, testing is achieved in a =
+
+  non-intrusive manner (e.g., examining artifacts "on the wire"). =
+However,=20
+  testability of statements is not required.=20
+  <DT>Strength of requirements=20
+  <DD>The Profile makes strong requirements (e.g., MUST, MUST NOT) =
+wherever=20
+  feasible; if there are legitimate cases where such a requirement =
+cannot be=20
+  met, conditional requirements (e.g., SHOULD, SHOULD NOT) are used. =
+Optionally=20
+  is avoided as much as possible.=20
+  <DT>Restriction vs. relaxation=20
+  <DD>When amending the requirements of referenced specifications, the =
+Profile=20
+  may restrict their requirements, but does not relax them (i.e., change =
+a MUST=20
+  to a MAY). Optional and conditional requirements introduce ambiguity =
+and=20
+  mismatches between implementations.=20
+  <DT>Multiple mechanisms=20
+  <DD>If a referenced specification allows multiple mechanisms to be =
+used=20
+  interchangeably, the Profile selects those that are well-understood, =
+widely=20
+  implemented and useful. Extraneous or underspecified mechanisms and =
+extensions=20
+  introduce complexity and therefore reduce interoperability.=20
+  <DT>Future compatibility=20
+  <DD>When possible, the Profile aligns its requirements with =
+in-progress=20
+  revisions to the specifications it references (e.g., SOAP 1.2, WSDL =
+1.2). This=20
+  aids implementers by enabling a graceful transition, and assures that =
+WS-I=20
+  does not 'fork' from these efforts. When the Profile cannot address an =
+issue=20
+  in a specification it references, this information is communicated to =
+the=20
+  appropriate body to assure their consideration.=20
+  <DT>Compatibility with deployed services=20
+  <DD>Backwards compatibility with deployed Web services is not a goal =
+for the=20
+  Profile, but due consideration is given to it; the Profile does not =
+introduce=20
+  a change to existing specifications unless there are specific =
+interoperability=20
+  issues.=20
+  <DT>Focus on interoperability=20
+  <DD>Although there are potentially a number of inconsistencies and =
+design=20
+  flaws in the referenced specifications, the Profile only addresses =
+those that=20
+  affect interoperability.=20
+  <DT>Conformance targets=20
+  <DD>Where possible, the Profile places requirements on artifacts =
+(e.g., WSDL=20
+  descriptions, SOAP messages) rather than the producing or consuming =
+software's=20
+  behaviors or roles. Artifacts are concrete, making them easier to =
+verify and=20
+  therefore making conformance easier to understand and less =
+error-prone.=20
+  <DT>Lower-layer interoperability=20
+  <DD>The Profile speaks to interoperability at the application layer; =
+it=20
+  assumes that interoperability of lower-layer protocols (e.g., TCP, IP, =
+
+  Ethernet) is adequate and well-understood. Similarly, statements about =
+
+  application-layer substrate protocols (e.g., SSL/TLS, HTTP) are only =
+made when=20
+  there is an issue affecting Web services specifically; WS-I does not =
+attempt=20
+  to assure the interoperability of these protocols as a whole. This =
+assures=20
+  that WS-I's expertise in and focus on Web services standards is used=20
+  effectively. </DD></DL>
+<H3><A name=3Dconventions>1.2</A> Notational Conventions</H3>
+<P>The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", =
+"SHOULD",=20
+"SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are =
+to be=20
+interpreted as described in RFC2119.</P>
+<P>Normative statements in the profile (i.e., those impacting =
+conformance, as=20
+outlined in section 3) are presented in the following manner:</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id>Rnnnn</SPAN>Statement =
+text here.</P>
+<P>where "nnnn" is replaced by the statement number. Each statement will =
+contain=20
+exactly one requirement level keyword (e.g., "MUST") and one conformance =
+target=20
+keyword (e.g., "MESSAGE").</P>
+<P>Some statements clarify the referenced specification(s), but do not =
+place=20
+additional constraints upon implementations. For convenience, =
+clarifications are=20
+annotated in the following manner: <SPAN class=3Dstatement-type>C</SPAN> =
+</P>
+<P>Some statements are derived from ongoing standardization work on the=20
+referenced specification(s). For convenience, forward-derived statements =
+are=20
+annotated in the following manner: <SPAN =
+class=3Dstatement-origin>xxxx</SPAN>,=20
+where "xxxx" is an identifier for the specification (e.g., "SOAP12" for =
+SOAP=20
+Version 1.2, currently under development). Note that because such work =
+is not=20
+complete, the specification which the requirement is derived from may =
+change;=20
+this information is included only as a convenience to implementers.</P>
+<P>This specification uses a number of namespace prefixes throughout; =
+their=20
+associated URIs are listed below. Note that the choice of any namespace =
+prefix=20
+is arbitrary and not semantically significant.</P>
+<UL>
+  <LI><STRONG>soap</STRONG> - http://schemas.xmlsoap.org/soap/envelope/=20
+  <LI><STRONG>xsi</STRONG> - http://www.w3.org/2001/XMLSchema-instance=20
+  <LI><STRONG>xsd</STRONG> - http://www.w3.org/2001/XMLSchema=20
+  <LI><STRONG>soapenc</STRONG> - =
+http://schemas.xmlsoap.org/soap/encoding/=20
+  <LI><STRONG>wsdl</STRONG> - http://schemas.xmlsoap.org/wsdl/=20
+  <LI><STRONG>soapbind</STRONG> - http://schemas.xmlsoap.org/wsdl/soap/ =
+</LI></UL>
+<H2><A name=3Dconformance>2. </A>Profile Conformance</H2>
+<P>Conformance to the Basic Profile is defined by adherence to the=20
+specifications on which the profile is based (as outlined in the =
+remainder of=20
+the document), subject to the refinements, interpretations, and =
+clarifications=20
+set forth.</P>
+<P>To allow the description of conformance in different contexts, the =
+profile=20
+defines a number of <EM>conformance targets</EM>, allowing the =
+conformance=20
+testing and certification of artifacts (such as SOAP messages and WSDL=20
+descriptions), Web services themselves, and software that is used in =
+conjunction=20
+with a conformant Web Service.</P>
+<P>The criteria for conformance is defined by <EM>requirement =
+statements</EM>,=20
+which are associated with conformance targets (denoted with capital =
+letters,=20
+e.g., MESSAGE) and use requirement levels (using RFC2119 language, e.g., =
+MUST)=20
+to indicate the nature of the requirement. Requirement statements are=20
+individually identified (e.g., r999) for convenience. Additional text =
+may be=20
+included to illuminate the requirements (e.g., rationale and examples); =
+however,=20
+requirement statements alone should be considered in determining=20
+conformance.</P>
+<P>The sections below describe this profile's conformance targets, from =
+the=20
+basic artifacts (upon which requirements are directly placed) to the =
+conformance=20
+of services and software, which is derived from these artifacts and =
+additional=20
+requirements.</P>
+<H3><A name=3Dartifacts>2.1</A> Conformance of Artifacts</H3>
+<P>The most basic level of conformance is that of an artifact. This =
+profile=20
+makes requirement statements about three kinds of artifacts;</P>
+<UL>
+  <LI><STRONG>MESSAGE</STRONG> - protocol elements that are exchanged, =
+usually=20
+  over a network, to effect a Web service (i.e., SOAP/HTTP messages)=20
+  <LI><STRONG>DESCRIPTION</STRONG> - descriptions of types, messages, =
+interfaces=20
+  and their concrete protocol and data format bindings, and the network =
+access=20
+  points associated with Web services (i.e., WSDL descriptions)=20
+  <LI><STRONG>REGDATA</STRONG> - statements about Web services that are =
+used to=20
+  discover their capabilities (e.g., UDDI tModels) </LI></UL>
+<P>An instance of an artifact is considered conformant when all of the=20
+requirements associated with it are met. </P>
+<H3><A name=3Dservices>2.2</A> Conformance of Services and =
+Consumers</H3>
+<P>A deployed instance of a Web service (as specified by wsdl:port or=20
+uddi:bindingTemplate) is considered conformant if it produces only =
+conformant=20
+artifacts, and is capable of consuming conformant artifacts, as =
+appropriate.=20
+Note that this means that where multiple conformant artifacts are =
+possible, a=20
+conformant service must be able to consume them all (e.g., while a =
+sender might=20
+choose whether to encode XML in UTF-8 or UTF-16 when sending a message, =
+a=20
+receiver must be capable of using either).</P>
+<P>Conformant Web service instances must comply with all requirement =
+statements=20
+associated with <STRONG>INSTANCE</STRONG>.</P>
+<P>Similarly, a consumer of a service instance is considered conformant =
+if it=20
+produces only conformant artifacts and is capable of consuming =
+conformant=20
+artifacts, as appropriate.</P>
+<P>Conformant consumers must comply with all requirements statements =
+associated=20
+with <STRONG>CONSUMER</STRONG>.</P>
+<P>Both conformant Web service instances and consumers must comply, as=20
+appropriate, with all of the requirement statements associated with:</P>
+<UL>
+  <LI><STRONG>SENDER</STRONG> - software that generates a message =
+according to=20
+  the protocol(s) associated with it.=20
+  <LI><STRONG>RECEIVER</STRONG> - software that consumes a message =
+according to=20
+  the protocol(s) associated with it (e.g., SOAP processors) </LI></UL>
+<P>Note that conformance does not apply to wsdl:service elements; only =
+wsdl:port=20
+elements are considered when determining conformance of instances. =
+Therefore,=20
+the profile places no constraints on wsdl:service definitions. In =
+particular,=20
+they can have more multiple ports, each of which may or may not be=20
+conformant.</P>
+<P>Types of Web services (as specified by wsdl:binding and =
+wsdl:portType) are=20
+considered conformant if, when deployed with due consideration, they =
+produce=20
+conformant instances.</P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Additionally, an instance of a Web service is required to make the =
+contract=20
+that it operates under available in some fashion.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR0001>R0001</A></SPAN> An=20
+INSTANCE MUST be described by a WSDL 1.1 service description, by a UDDI =
+binding=20
+template, or both.</P>
+<DIV class=3Dexplanation>
+<P>"described," in this context, means that if an authorized consumer =
+requests a=20
+service description of a conformant service instance, then the service =
+instance=20
+provider must make the WSDL document, the UDDI binding template, or both =
+
+available to that consumer. A service instance may provide run-time =
+access to=20
+WSDL documents from a server, but is not required to do so in order to =
+be=20
+considered conformant. Similarly, a service instance provider may =
+register the=20
+instance provider in a UDDI registry, but is not required to do so to be =
+
+considered conformant. In all of these scenarios, the WSDL contract must =
+exist,=20
+but might be made available through a variety of mechanisms, depending =
+on the=20
+circumstances.</P></DIV></DIV>
+<H3><A name=3Dannotation>2.3</A> Conformance Annotation</H3>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>To allow services to advertise conformance to the Profile, =
+<EM>conformance=20
+claims</EM> regarding instances can be placed at the appropriate place =
+in a=20
+service's WSDL description. Claims can be associated with a particular =
+element=20
+(e.g., portType) to scope them to that construct. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR0002>R0002</A></SPAN>=20
+DESCRIPTIONs MAY contain conformance claims regarding instances, as =
+specified in=20
+the conformance claim schema.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR0003>R0003</A></SPAN>=20
+DESCRIPTIONs' conformance claims MUST be children of the documentation =
+element=20
+of each of the wsdl elements: port, binding, portType, operation and=20
+message.</P>
+<DIV class=3Dexplanation>
+<P>A conformance claim on an element means that the element (and the =
+instance it=20
+represents, in the case of a port) is conformant to the profile it =
+claims to=20
+obey (as relevant to the type of element).</P>
+<P>A conformance claim on an element also implies that the same claim is =
+made=20
+for all the elements that it uses, based on the following transitivity =
+rules,=20
+applied recursively:</P>
+<UL>
+  <LI>A claim on a port is inherited by the referenced binding=20
+  <LI>A claim on a binding is inherited by the referenced portType=20
+  <LI>A claim on a portType is inherited by the referenced operations=20
+  <LI>A claim on an operation is inherited by the referenced messages =
+</LI></UL>
+<P>The conformance claim schema is:</P><PRE =
+class=3Dspecification>&lt;?xml version=3D"1.0" encoding=3D"UTF-8"?&gt;=20
+&lt;xs:schema xmlns:xs=3D"http://www.w3.org/2001/XMLSchema"=20
+           targetNamespace=3D"http://ws-i.org/schemas/conformanceClaim/"
+           xmlns:tns=3D"http://ws-i.org/schemas/conformanceClaim/"=20
+           elementFormDefault=3D"qualified"=20
+           attributeFormDefault=3D"unqualified" &gt;=20
+    &lt;xs:element name=3D"Claim" &gt;=20
+        &lt;xs:complexType&gt;=20
+            &lt;xs:sequence&gt;=20
+                &lt;xs:any namespace=3D"##any" =
+processContents=3D"lax"/&gt;=20
+            &lt;/xs:sequence&gt;=20
+            &lt;xs:attribute name=3D"conformsTo" type=3D"xs:anyURI"/&gt; =
+
+            &lt;xs:anyAttribute namespace=3D"##any" =
+processContents=3D"lax"/&gt;=20
+        &lt;/xs:complexType&gt;=20
+    &lt;/xs:element&gt;=20
+&lt;/xs:schema&gt;
+</PRE></DIV>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dcorrect>CORRECT: </SPAN>
+<CODE>
+&lt;wsdl:definitions xmlns:wsdl=3D"http://schemas.xmlsoap.org/wsdl"=20
+                  xmlns:tns=3D"http://example.org/myservice"
+                  targetNamespace=3D"http://example.org/myservice"&gt;=20
+    &lt;wsdl:portType name=3D"MyPortType"&gt;=20
+        ...=20
+    &lt;/wsdl:portType&gt;=20
+    &lt;wsdl:binding name=3D"MyBinding" portType=3D"MyPortType"&gt;=20
+        ...=20
+    &lt;/wsdl:binding&gt;=20
+    &lt;wsdl:service name=3D"MyService"&gt;=20
+        &lt;wsdl:port name=3D"MyPort" binding=3D"tns:MyBinding"&gt;=20
+            &lt;wsdl:documentation&gt;
+              &lt;wsi:Claim =
+conformsTo=3D"http://ws-i.org/profiles/basic1.0/"/&gt;=20
+            &lt;/wsdl:documentation&gt;
+            &lt;soap:address =
+location=3D"http://example.org/myservice/myport"/&gt;=20
+        &lt;/wsdl:port&gt;=20
+    &lt;/wsdl:service&gt;=20
+&lt;/wsdl:definitions&gt;=20
+</CODE>
+</PRE>
+<P class=3Dednote><STRONG>Editors' note:</STRONG>The editors have an =
+outstanding=20
+action item to obtain a URI for use in conjunction with conformance=20
+claims.</P></DIV>
+<H2><A name=3Dmessaging>3. </A>Messaging</H2>
+<P>This portion of the profile incorporates the following specifications =
+by=20
+reference;</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/SOAP/">Simple Object Access =
+Protocol (SOAP)=20
+  1.1 </A>.=20
+  <LI><A href=3D"http://www.w3.org/TR/REC-xml">Extensible Markup =
+Language (XML)=20
+  1.0 (Second Edition)</A>.=20
+  <LI><A href=3D"http://www.ietf.org/rfc/rfc2616">RFC2616: Hypertext =
+Transfer=20
+  Protocol -- HTTP/1.1</A>.=20
+  <LI><A href=3D"http://www.ietf.org/rfc/rfc2965">RFC2965: HTTP State =
+Management=20
+  Mechanism</A>. </LI></UL>
+<H3><A name=3DSOAPXML>3.1</A> XML Representation of SOAP Messages</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/SOAP/#_Toc478383494">SOAP 1.1, =
+Section=20
+  4</A>. </LI></UL>
+<P>SOAP 1.1 defines an XML-based structure for transmitting messages. =
+This=20
+profile mandates the use of that structure, and places the following =
+constraints=20
+on its use:</P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The XML specification allows UTF-8 encoding to include a BOM; =
+therefore,=20
+receivers of messages must be prepared to accept them. The BOM is =
+mandatory for=20
+XML encoded as UTF-16.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR4001>R4001</A></SPAN> A=20
+RECEIVER MUST accept messages that include the Unicode Byte Order Mark=20
+(BOM).<SPAN class=3Dstatement-type>C</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For interoperability the content of the <CODE>soap:Fault</CODE> =
+element is=20
+restricted to those elements explicitly described in the SOAP 1.1=20
+specification.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1000>R1000</A></SPAN> When=20
+a MESSAGE contains a <CODE>soap:Fault</CODE> element, that element MUST =
+NOT have=20
+element children other than <CODE>faultcode</CODE>, =
+<CODE>faultstring</CODE>,=20
+<CODE>faultactor</CODE> and <CODE>detail</CODE>.</P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dincorrect>INCORRECT: </SPAN>
+<CODE>&lt;soap:Fault =
+xmlns:soap=3D'http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;faultcode&gt;soap:Client&lt;/faultcode&gt;
+  &lt;faultstring&gt;Invalid message format&lt;/faultstring&gt;
+  &lt;faultactor&gt;http://example.org/someactor&lt;/faultactor&gt;
+  &lt;detail&gt;There were &lt;b&gt;lots&lt;/b&gt; of elements in the =
+message=20
+  that I did not understand
+  &lt;/detail&gt;
+  &lt;m:Exception xmlns:m=3D'http://example.org/faults/exceptions' &gt;
+    &lt;m:ExceptionType&gt;Severe&lt;/m:ExceptionType&gt;
+  &lt;/m:Exception&gt;
+&lt;/soap:Fault&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;soap:Fault =
+xmlns:soap=3D'http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;faultcode&gt;soap:Client&lt;/faultcode&gt;
+  &lt;faultstring&gt;Invalid message format&lt;/faultstring&gt;
+  &lt;faultactor&gt;http://example.org/someactor&lt;/faultactor&gt;
+  &lt;detail&gt;There were &lt;b&gt;lots&lt;/b&gt; of elements in the =
+message
+   that I did not understand
+   &lt;/detail&gt;
+&lt;/soap:Fault&gt;</CODE>
+</PRE></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The children of the <CODE>soap:Fault</CODE> element are local to that =
+element=20
+and do not need to be namespace qualified.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1001>R1001</A></SPAN> When=20
+a MESSAGE contains a <CODE>soap:Fault</CODE> element its element =
+children MUST=20
+be unqualified.</P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dincorrect>INCORRECT: </SPAN>
+<CODE>&lt;soap:Fault =
+xmlns:soap=3D'http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;soap:faultcode&gt;soap:Client&lt;/soap:faultcode&gt;
+  &lt;soap:faultstring&gt;Invalid message =
+format&lt;/soap:faultstring&gt;
+  =
+&lt;soap:faultactor&gt;http://example.org/someactor&lt;/soap:faultactor&g=
+t;
+  &lt;soap:detail&gt;There were &lt;b&gt;lots&lt;/b&gt; of elements in =
+the message=20
+  that I did not understand
+  &lt;/soap:detail&gt;
+&lt;/soap:Fault&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;soap:Fault =
+xmlns:soap=3D'http://schemas.xmlsoap.org/soap/envelope/'=20
+			xmlns=3D'' &gt;
+  &lt;faultcode&gt;soap:Client&lt;/faultcode&gt;
+  &lt;faultstring&gt;Invalid message format&lt;/faultstring&gt;
+  &lt;faultactor&gt;http://example.org/someactor&lt;/faultactor&gt;
+  &lt;detail&gt;There were &lt;b&gt;lots&lt;/b&gt; of elements in the =
+message=20
+  that I did not understand
+  &lt;/detail&gt;
+&lt;/soap:Fault&gt;</CODE>
+</PRE></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For extensibility, additional attributes are allowed to appear on the =
+detail=20
+element and additional elements are allowed to appear as children of the =
+detail=20
+element .</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1002>R1002</A></SPAN> A=20
+RECEIVER MUST accept fault messages that have any number of elements, =
+including=20
+zero, appearing as children of the <CODE>detail</CODE> element. Such =
+children=20
+can be qualified or unqualified. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1003>R1003</A></SPAN> A=20
+RECEIVER MUST accept fault messages that have any number of qualified=20
+attributes, including zero, appearing on the <CODE>detail</CODE> =
+element. The=20
+namespace of such attributes can be anything other than=20
+"http://schemas.xmlsoap.org/soap/envelope/". </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>To help internationalization the language of faultstrings may be=20
+indicated.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1016>R1016</A></SPAN> A=20
+RECEIVER MUST accept fault messages that carry an <CODE>xml:lang</CODE>=20
+attribute on the <CODE>faultstring</CODE> element. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Custom fault codes must not appear inside the <CODE>faultcode</CODE> =
+element;=20
+for interoperability, a fixed set of fault codes is needed.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1004>R1004</A></SPAN> When=20
+a MESSAGE contains a <CODE>faultcode</CODE> element the content of that =
+element=20
+MUST be one of the fault codes defined in the SOAP 1.1 specification. =
+</P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dincorrect>INCORRECT: </SPAN>
+<CODE>&lt;soap:Fault =
+xmlns:soap=3D'http://schemas.xmlsoap.org/soap/envelope/'
+            xmlns:c=3D'http://example.org/faultcodes' &gt;
+  &lt;faultcode&gt;c:ProcessingError&lt;/faultcode&gt;
+  &lt;faultstring&gt;An error occurred while processing the message
+  &lt;/faultstring&gt;
+&lt;/soap:Fault&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;soap:Fault =
+xmlns:soap=3D'http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;faultcode&gt;soap:Server&lt;/faultcode&gt;
+  &lt;faultstring&gt;An error occurred while processing the message
+  &lt;/faultstring&gt;
+&lt;/soap:Fault&gt;</CODE>
+</PRE></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For interoperability, literal XML is preferred.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1005>R1005</A></SPAN> A=20
+MESSAGE MUST NOT contain <CODE>soap:encodingStyle</CODE> attributes on =
+any of=20
+the elements whose [namespace name] is=20
+"http://schemas.xmlsoap.org/soap/envelope/".</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1006>R1006</A></SPAN> A=20
+MESSAGE MUST NOT contain <CODE>soap:encodingStyle</CODE> attributes on =
+any=20
+element which is a child of <CODE>soap:Body</CODE>.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1007>R1007</A></SPAN> A=20
+MESSAGE MUST NOT contain <CODE>soap:encodingStyle</CODE> attributes on =
+any=20
+elements which are grandchildren of <CODE>soap:Body</CODE>.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For interoperability, security and ease of processing these XML =
+constructs=20
+are disallowed.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1008>R1008</A></SPAN> A=20
+MESSAGE MUST NOT contain a Document Type Declaration. <SPAN=20
+class=3Dstatement-type>C</SPAN></P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1009>R1009</A></SPAN> A=20
+MESSAGE MUST NOT contain Processing Instructions. <SPAN=20
+class=3Dstatement-type>C</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Presence or absence of such a declaration does not affect =
+interoperability.=20
+Certain implementations might always precede their XML serialization =
+with the=20
+XML declaration.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1010>R1010</A></SPAN> A=20
+RECEVIER MUST accept messages that contain an XML Declaration. <SPAN=20
+class=3Dstatement-type>C</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>This requirement clarifies a mismatch between the SOAP 1.1 =
+specification and=20
+the associated XML Schema document</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1011>R1011</A></SPAN> A=20
+MESSAGE MUST NOT have any element children of <CODE>soap:Envelope</CODE> =
+
+following the <CODE>soap:Body</CODE> element. </P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dincorrect>INCORRECT: </SPAN>
+<CODE>&lt;soap:Envelope =
+xmlns:soap=3D'http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;soap:Body&gt;
+    &lt;p:Process xmlns:p=3D'http://example.org/Operations' /&gt;
+  &lt;/soap:Body&gt;
+  &lt;m:Data xmlns:m=3D'http://example.org/information' &gt;
+  Here is some data with the message
+  &lt;/m:Data&gt;
+&lt;/soap:Envelope&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;soap:Envelope =
+xmlns:soap=3D'http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;soap:Body&gt;
+    &lt;p:Process xmlns:p=3D'http://example.org/Operations' &gt;
+	  &lt;m:Data xmlns:m=3D'http://example.org/information' &gt;
+  Here is some data with the message
+      &lt;/m:Data&gt;
+    &lt;/p:Process&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</CODE>
+</PRE></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>All XML Processors must support UTF-8 and UTF-16, per the XML 1.0=20
+specification so requiring these encodings places no burden on =
+implementations=20
+and aids interoperability. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1012>R1012</A></SPAN> A=20
+MESSAGE MUST be serialized as either UTF-8 or UTF-16. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The <CODE>soap:mustUnderstand</CODE> attribute has a type of =
+xsd:boolean=20
+which allows all four lexical forms but for compatibility only two are =
+allowed.=20
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1013>R1013</A></SPAN>=20
+MESSAGEs containing a <CODE>soap:mustUnderstand</CODE> attribute MUST =
+only use=20
+the lexical forms 0 and 1. <SPAN =
+class=3Dstatement-type>C</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The interpretation of unqualified element names is ambiguous, =
+therefore=20
+qualified names must be used. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1014>R1014</A></SPAN> The=20
+children of the <CODE>soap:Body</CODE> element in a MESSAGE MUST be =
+namespace=20
+qualified. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>SOAP 1.1 only stated that the message be discarded in such cases. For =
+
+interoperability faults must be generated instead.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1015>R1015</A></SPAN> A=20
+RECEIVER MUST generate a fault if they encounter a message whose =
+document=20
+element has a local name of "Envelope" but a namespace name which is not =
+
+"http://schemas.xmlsoap.org/soap/envelope/". </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>In many cases senders and receivers will share some form of type =
+information=20
+related to the messages being exchanged. xsi:type is only needed where =
+no such=20
+schema exists, that is where both sides are assuming that all exchanged =
+items=20
+are xs:anyType. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1017>R1017</A></SPAN> A=20
+RECEIVER MUST NOT mandate the use of the <CODE>xsi:type </CODE>attribute =
+in=20
+messages except as required in order to indicate a derived type (see XML =
+Schema=20
+Part 1: Structures, Section 2.6.1). </P></DIV>
+<H3><A name=3DSOAPMEM>3.2</A> The SOAP Processing Model</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/SOAP/#_Toc478383491">SOAP 1.1, =
+Section=20
+  2</A>. </LI></UL>
+<P>SOAP 1.1 defines a message exchange model for processing of messages. =
+This=20
+profile places the following constraints on that model:</P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>This guarantees that no undesirable side-effects will occur as a =
+result of=20
+noticing a mandatory header AFTER processing other parts of the message. =
+
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1025>R1025</A></SPAN> A=20
+RECEIVER MUST handle messages in such a way that it appears that all =
+checking of=20
+mandatory headers is performed before any actual processing. <SPAN=20
+class=3Dstatement-origin>SOAP12</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P><CODE>soap:actor</CODE> is used to target header blocks at =
+intermediaries.=20
+The SOAP specification has nothing to say about its value. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1026>R1026</A></SPAN> The=20
+value of the <CODE>soap:actor</CODE> attribute in a MESSAGE is a private =
+
+agreement between the sender and the receiver of the header carrying the =
+
+attribute. <SPAN class=3Dstatement-type>C</SPAN></P>
+<P class=3Dednote><STRONG>Editors' note:</STRONG>This statement isn't =
+really a=20
+requirement; it might become a Best Practice.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Requiring that receivers generate faults ensures that mandatory =
+headers are=20
+not silently and erroneously ignored. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1027>R1027</A></SPAN> A=20
+RECEIVER MUST generate a soap:MustUnderstand fault when a message =
+contains a=20
+mandatory header targeted at the receiver ( via soap:actor ) that the =
+receiver=20
+does not understand. A mandatory header is one which carries a=20
+<CODE>soap:mustUnderstand</CODE> attribute with the value 1. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>These requirements ensure that, when a Fault is generated, no further =
+
+processing will be done on the message, a Fault message will be =
+transmitted to=20
+the sender of the request message in request-response cases and some =
+application=20
+level error will be flagged to the user. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1028>R1028</A></SPAN> Upon=20
+generating a SOAP Fault a RECEIVER MUST NOT effect any further =
+processing of a=20
+SOAP message beyond that which is necessary to handle the generated SOAP =
+Fault.=20
+</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1029>R1029</A></SPAN> Where=20
+the normal outcome of processing a SOAP message would have resulted in =
+the=20
+transmission of a SOAP response, but rather a SOAP Fault is generated =
+instead, a=20
+RECEIVER MUST transmit a SOAP Fault message in place of the response. =
+</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1030>R1030</A></SPAN> A=20
+RECEIVER that generates a SOAP Fault SHOULD notify the end user that a =
+SOAP=20
+Fault has been generated when practical, by whatever means is deemed =
+appropriate=20
+to the circumstance. </P></DIV>
+<H3><A name=3DSOAPHTTP>3.3</A> Using SOAP in HTTP</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/SOAP/#_Toc478383526">SOAP 1.1, =
+Section=20
+  6</A>.=20
+  <LI><A href=3D"http://www.ietf.org/rfc/rfc2616">HTTP/1.1</A>.=20
+  <LI><A href=3D"http://www.ietf.org/rfc/rfc2965">HTTP State Management=20
+  Mechanism</A>. </LI></UL>
+<P>SOAP 1.1 defines a single protocol binding, for HTTP. This profile =
+mandates=20
+the use of that binding, and places the following constraints on its =
+use:</P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>HTTP/1.1 has several performance advantages and is more clearly =
+specified, in=20
+comparison to HTTP/1.0. Note that support for HTTP/1.0 is implied in =
+HTTP/1.1,=20
+and that intermediaries may change the version of a message; for more=20
+information about HTTP versioning, see RFC2145.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1140>R1140</A></SPAN> A=20
+MESSAGE SHOULD be sent using HTTP/1.1.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Some consumer implementations use only the HTTP status code to =
+determine the=20
+presence of a SOAP Fault. Because there are situations where the Web=20
+infrastructure changes the HTTP status code, and for general =
+reliability, the=20
+Profile requires that they examine the envelope. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1107>R1107</A></SPAN> A=20
+RECEIVER MUST interpret SOAP messages containing only a =
+<CODE>soap:Fault</CODE>=20
+element as a Fault.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The HTTP Extension Framework is an experimental mechanism for =
+extending HTTP=20
+in a modular fashion. Because it is not deployed widely and also because =
+the=20
+benefits to the use of SOAP are questionable, the Profile does not allow =
+its=20
+use.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1108>R1108</A></SPAN> A=20
+MESSAGE MUST NOT use the HTTP Extension Framework [RFC2774]. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Interoperability testing has demonstrated that requiring the value of =
+the=20
+<CODE>SOAPAction</CODE> HTTP Header Field to be quoted increases=20
+interoperability of implementations. Even though HTTP allows for the =
+value of=20
+HTTP Header Fields to be unquoted, some implementations require that the =
+value=20
+be quoted.</P>
+<P>The <CODE>SOAPAction</CODE> header is purely a hint to processors. =
+All vital=20
+information regarding the intent of a message is carried in the=20
+Envelope.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1109>R1109</A></SPAN> The=20
+value of the <CODE>SOAPAction</CODE> HTTP header field in a MESSAGE MUST =
+be a=20
+quoted string. <SPAN class=3Dstatement-type>C</SPAN></P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1117>R1117</A></SPAN> A=20
+MESSAGE MUST contain a <CODE>SOAPAction</CODE> HTTP header field with a =
+quoted=20
+value equal to the value of the =
+<CODE>soapbind:operation/@soapAction</CODE>=20
+attribute, if present in the DESCRIPTION. <SPAN=20
+class=3Dstatement-type>C</SPAN></P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1118>R1118</A></SPAN> A=20
+MESSAGE MUST contain a <CODE>SOAPAction</CODE> HTTP Header Field with a =
+quoted=20
+empty string if the <CODE>soapbind:operation/@soapAction</CODE> =
+attribute is=20
+either not present in the DESCRIPTION, or is present and contains an =
+empty=20
+string as its value. <SPAN class=3Dstatement-type>C</SPAN></P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1119>R1119</A></SPAN> A=20
+RECEIVER MAY respond with a Fault if the value of the =
+<CODE>SOAPAction</CODE>=20
+HTTP Header Field is not quoted. <SPAN =
+class=3Dstatement-type>C</SPAN></P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dcorrect>CORRECT: </SPAN>
+<CODE>
+A WSDL Description that has:
+
+&lt;soapbind:operation soapAction=3D"foo" /&gt;
+
+results in a message with a corresponding SOAPAction HTTP header field
+as follows:
+
+SOAPAction: "foo"
+</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>
+A WSDL Description that has:
+
+&lt;soapbind:operation /&gt;
+
+or=20
+
+&lt;soapbind:operation soapAction=3D"" /&gt;
+
+
+results in a message with a corresponding SOAPAction HTTP header field
+as follows:
+
+SOAPAction: ""
+</CODE>
+</PRE></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>SOAP is designed to take advantage of the HTTP infrastructure. =
+However, there=20
+are some situations (e.g., involving proxies, firewalls and other=20
+intermediaries) where there may be harmful side effects. As a result, =
+instances=20
+may find it advisable use other ports.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1110>R1110</A></SPAN> An=20
+INSTANCE MAY use TCP port 80 (HTTP). <SPAN=20
+class=3Dstatement-type>C</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>HTTP uses the 2xx series of status codes to communicate success. In=20
+particular, 200 is the default for successful messages, but 202 can be =
+used to=20
+indicate that a messages has been submitted for processing. =
+Additionally, other=20
+2xx status codes may be appropriate, depending on the nature of the HTTP =
+
+interaction.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1124>R1124</A></SPAN> An=20
+INSTANCE MUST use a 2xx HTTP status code for responses that indicate a=20
+successful outcome of a request.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1111>R1111</A></SPAN> An=20
+INSTANCE SHOULD use a "200 OK" HTTP status code for responses that =
+contain a=20
+SOAP message that is not a SOAP fault.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1112>R1112</A></SPAN> An=20
+INSTANCE SHOULD use either a "200 OK" or "202 Accepted" HTTP status code =
+for=20
+responses that indicate successful HTTP outcome of a request but do not =
+contain=20
+a SOAP message.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>There are interoperability problems with using many of the HTTP =
+redirect=20
+status codes, generally surrounding whether to use the original method, =
+or GET.=20
+The profile mandates "307 Temporary Redirect" as the correct status code =
+for=20
+redirection; for more information, see the 3xx status code descriptions =
+in=20
+RFC2616.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1130>R1130</A></SPAN> An=20
+INSTANCE MUST use HTTP status code "307 Temporary Redirect" when =
+redirecting a=20
+request to a different endpoint.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1131>R1131</A></SPAN> A=20
+CONSUMER MAY automatically redirect a request when it encounters a "307=20
+Temporary Redirect" HTTP status code in a response.</P>
+<DIV class=3Dexplanation>
+<P>RFC2616 notes that user-agents should not automatically redirect =
+requests;=20
+however, this requirement was aimed at browsers, not automated processes =
+(which=20
+many Web services will be). Therefore, the Profile allows, but does not =
+require,=20
+consumers to come to be configured to automatically follow=20
+redirections.</P></DIV></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>HTTP uses the 4xx series of status codes to indicate failure due to a =
+client=20
+error. Although there are a number of situations which may result in one =
+of=20
+these codes, the profile highlights those when the payload of the HTTP =
+request=20
+is not the proper media type, and when the anticipated method is not=20
+used.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1125>R1125</A></SPAN> An=20
+INSTANCE MUST use a 4xx HTTP status code for responses that indicate a =
+problem=20
+with the format of the request.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1113>R1113</A></SPAN> An=20
+INSTANCE SHOULD use a "400 Bad Request" HTTP status code if the request =
+message=20
+is invalid (HTTP request malformed, XML not well formed, ...).</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1114>R1114</A></SPAN> An=20
+INSTANCE SHOULD use a "405 Method not Allowed" HTTP status code if the =
+request=20
+method was not "POST".</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1115>R1115</A></SPAN> An=20
+INSTANCE SHOULD use a "415 Unsupported Media Type" HTTP status code if =
+the=20
+Content-Type HTTP request header did not have a value of =
+"text/xml".</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>HTTP uses the 5xx series of status codes to indicate failure due to a =
+server=20
+error.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1116>R1116</A></SPAN> An=20
+INSTANCE MUST use a 5xx HTTP status code for responses that indicate an=20
+unsuccessful outcome of a well formed request.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1126>R1126</A></SPAN> An=20
+INSTANCE MUST use a "500 Internal Server Error" HTTP status code if the =
+response=20
+message contains a SOAP Fault.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The HTTP State Management Mechanism, or "Cookies", allows the =
+creation of=20
+stateful sessions between Web browsers and servers. Being designed for =
+hypertext=20
+browsing, Cookies do not have well-defined semantics for Web services, =
+and,=20
+because they are external to the SOAP Envelope, are not accommodated by =
+either=20
+the SOAP or WSDL specifications. However, there are situations where it =
+may be=20
+necessary to use Cookies; e.g., for load balancing between servers, or =
+for=20
+integration with legacy systems that use Cookies. For these reasons, the =
+profile=20
+limits the ways in which Cookies can be used, without completely =
+disallowing=20
+them. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1120>R1120</A></SPAN> An=20
+INSTANCE MAY use the HTTP state mechanism ("Cookies").</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1122>R1122</A></SPAN> An=20
+INSTANCE using Cookies SHOULD conform to RFC2965.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1121>R1121</A></SPAN> An=20
+INSTANCE SHOULD NOT require consumer support for Cookies in order to =
+function=20
+correctly.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR1123>R1123</A></SPAN> The=20
+value of the cookie MUST be considered to be opaque by the CONSUMER.</P>
+<DIV class=3Dexplanation>
+<P>The Profile recommends that cookies not be required by instances for =
+proper=20
+operation; they should be a hint, to be used for optimization, without=20
+materially affecting the execution of the Web service. However, they may =
+be=20
+required in legacy integration and other exceptional use cases, so =
+requiring=20
+them does not make an instance non-conformant. While Cookies thus may =
+have=20
+meaning to the instance, they should not be used as an out-of-bound data =
+channel=20
+between the instance and the consumer. Therefore, interpretation of =
+Cookies is=20
+not allowed at all on the consumer side - it is required to treat them =
+as opaque=20
+(i.e., have no meaning to the consumer). </P></DIV></DIV>
+<H2><A name=3Ddescription>4. </A>Service Description</H2>
+<P>The profile uses Web Services Description Language (WSDL) to enable =
+the=20
+description of services as a set of endpoints operating on messages.</P>
+<P>This portion of the profile incorporates the following specifications =
+by=20
+reference;</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/wsdl.html">Web Services =
+Description Language=20
+  (WSDL) 1.1</A>.=20
+  <LI><A href=3D"http://www.w3.org/TR/xmlschema-1">XML Schema Part 1:=20
+  Structures</A>.=20
+  <LI><A href=3D"http://www.w3.org/TR/xmlschema-2">XML Schema Part 2:=20
+  Datatypes</A>. </LI></UL>
+<H3><A name=3DWSDLDOCSTRUCT>4.1</A> Document Structure</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/wsdl#_document-s">WSDL 1.1, =
+Section 2.1</A>.=20
+  </LI></UL>
+<P>WSDL 1.1 defines an XML-based structure for describing Web services. =
+This=20
+profile mandates the use of that structure, and places the following =
+constraints=20
+on its use: </P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Some of the examples in WSDL 1.1 specification incorrectly show WSDL =
+import=20
+statement being used to import XML Schema definitions. To promote=20
+interoperability the profile keeps the import mechanisms consistent and =
+confined=20
+to their respective domains; the wsdl related mechanism in the "wsdl" =
+domain and=20
+the schema related mechanisms in "schema" domain where the normal rules =
+from the=20
+schema specification can be applied consistently. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2001>R2001</A></SPAN> A=20
+DESCRIPTION MUST only use the WSDL "import" statement to import another =
+WSDL=20
+description. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2002>R2002</A></SPAN> To=20
+import XML Schema Definitions, a DESCRIPTION MUST use the XML Schema =
+"import"=20
+statement. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2003>R2003</A></SPAN> A=20
+DESCRIPTION MUST only use the XML Schema "import" statement within the=20
+xsd:schema element of the types section. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2004>R2004</A></SPAN> A=20
+DESCRIPTION MUST NOT use the XML Schema "import" statement to import a =
+Schema=20
+definition embedded in line within another WSDL description. </P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dincorrect>INCORRECT: </SPAN>
+<CODE>&lt;definitions name=3D"StockQuote"
+   targetNamespace=3D"http://example.com/stockquote/definitions"
+   xmlns:xsd1=3D"http://example.com/stockquote.xsd"
+           	 ...
+   xmlns=3D"http://schemas.xmlsoap.org/wsdl/"&gt;
+
+   &lt;import namespace=3D"http://example.com/stockquote/schemas"
+         location=3D"http://example.com/stockquote/stockquote.xsd"/&gt;
+        =20
+   &lt;message name=3D"GetLastTradePriceInput"&gt;
+        &lt;part name=3D"body" element=3D"xsd1:TradePriceRequest"/&gt;
+    &lt;/message&gt;
+               ...
+&lt;/definitions&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;definitions name=3D"StockQuote" =20
+   targetNamespace=3D"http://example.com/stockquote/definitions"
+   xmlns:xsd1=3D"http://example.com/stockquote/schemas"
+           	 ...
+   xmlns=3D"http://schemas.xmlsoap.org/wsdl/"&gt;
+  =20
+   &lt;types&gt;
+     &lt;xsd:schema =
+targetNamespace=3D"http://example.com/stockquote/definitions"
+     	 xmlns:xsd=3D"http://www.w3.org/2001/XMLSchema"&gt;
+     	=20
+       &lt;xsd:import =
+namespace=3D"http://example.com/stockquote/schemas"=20
+         =
+schemaLocation=3D"http://example.com/stockquote/stockquote.xsd"/&gt;
+         ...
+         ...
+     &lt;/xsd:schema&gt;
+   &lt;/types&gt;
+
+   &lt;message name=3D"GetLastTradePriceInput"&gt;
+      &lt;part name=3D"body" element=3D"xsd1:TradePriceRequest"/&gt;
+   &lt;/message&gt;
+               ...
+&lt;/definitions&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;definitions name=3D"StockQuote" =20
+   targetNamespace=3D"http://example.com/stockquote/definitions"
+   xmlns:xsd1=3D"http://example.com/stockquote/schemas"
+           	 ...
+   xmlns=3D"http://schemas.xmlsoap.org/wsdl/"&gt;
+  =20
+   &lt;import namespace=3D"http://example.com/stockquote/definitions"
+        location=3D"http://example.com/stockquote/stockquote.wsdl"/&gt;
+          =20
+   &lt;message name=3D"GetLastTradePriceInput"&gt;
+      &lt;part name=3D"body" element=3D"xsd1:TradePriceRequest"/&gt;
+   &lt;/message&gt;
+               ...
+&lt;/definitions&gt;</CODE>
+</PRE></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The XML specification allows UTF-8 encoding to include a BOM; =
+therefore,=20
+description processors must be prepared to accept them.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR4002>R4002</A></SPAN>=20
+DESCRIPTIONs MAY include the Unicode Byte Order Mark (BOM)</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The profile consistently requires either UTF-8 or UTF-16 encoding for =
+both=20
+SOAP and WSDL. See also R1012.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR4003>R4003</A></SPAN>=20
+DESCRIPTIONs MUST use either UTF-8 or UTF-16 encoding. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Namespace coercion on wsdl:import is disallowed by the Basic Profile, =
+as it=20
+has been found to be undesirable from interoperability =
+perspective.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2005>R2005</A></SPAN> The=20
+<CODE>targetNamespace</CODE> attribute on the =
+<CODE>wsdl:definitions</CODE>=20
+element of a description that is being imported MUST have same the value =
+as the=20
+<CODE>namespace</CODE> attribute on the <CODE>wsdl:import</CODE> element =
+in the=20
+importing DESCRIPTION. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Eliminate confusion about whether the <CODE>location</CODE> attribute =
+of the=20
+<CODE>wsdl:import</CODE> statement is required and what its content is =
+required=20
+to be. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2007>R2007</A></SPAN> A=20
+DESCRIPTION MUST specify a valid and non-null value for the=20
+<CODE>location</CODE> attribute on the <CODE>wsdl:import</CODE> element. =
+</P>
+<DIV class=3Dexplanation>
+<P>Although the <CODE>wsdl:import</CODE> statement is modeled after the=20
+xsd:import statement, the <CODE>location</CODE> attribute is required by =
+
+<CODE>wsdl:import</CODE> while the corresponding attribute on=20
+<CODE>xsd:import</CODE>, <CODE>schemaLocation</CODE> is optional. =
+Consistent=20
+with <CODE>location</CODE> being required, its content is not intended =
+to be=20
+empty. </P></DIV></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>A WSDL processor may not need to retrieve a WSDL description from the =
+URI=20
+specified in the location attribute on a wsdl:import element. A WSDL =
+processor=20
+may have other ways of locating a WSDL description for a given =
+namespace,=20
+including but not limited to; already having a cached representation, =
+having a=20
+built-in representation, retrieving a representation from a metadata =
+repository=20
+or UDDI server. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2008>R2008</A></SPAN> In a=20
+DESCRIPTION the value of the <CODE>location</CODE> attribute of a=20
+<CODE>wsdl:import</CODE> element SHOULD be treated as a hint. <SPAN=20
+class=3Dstatement-type>C</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Eliminate inconsistency between WSDL 1.1 schema and the WSDL 1.1=20
+specification in this area.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2020>R2020</A></SPAN> The=20
+<CODE>wsdl:documentation</CODE> element MAY occur as a child of the=20
+<CODE>wsdl:import</CODE> element in a DESCRIPTION. <SPAN=20
+class=3Dstatement-origin>WSDL12</SPAN></P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2021>R2021</A></SPAN> The=20
+<CODE>wsdl:documentation</CODE> element MAY occur as a child of the=20
+<CODE>wsdl:part</CODE> element in a DESCRIPTION. <SPAN=20
+class=3Dstatement-origin>WSDL12</SPAN></P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2024>R2024</A></SPAN> The=20
+<CODE>wsdl:documentation</CODE> element MAY occur as a first child of =
+the=20
+<CODE>wsdl:definitions</CODE> element in a DESCRIPTION. <SPAN=20
+class=3Dstatement-origin>WSDL12</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Eliminate confusion created by example 3 in section 3.1 of the WSDL =
+1.1=20
+specification and also align with the W3C WSDL WG resolution on this. =
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2022>R2022</A></SPAN> In a=20
+DESCRIPTION the <CODE>wsdl:import</CODE> element(s), when present, MUST =
+occur=20
+either prior to any other child elements under the =
+<CODE>wsdl:definitions</CODE>=20
+element, if no <CODE>wsdl:documentation</CODE> element is present; or=20
+immediately following the <CODE>wsdl:documentation</CODE> element if =
+present.=20
+<SPAN class=3Dstatement-origin>WSDL12</SPAN></P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2023>R2023</A></SPAN> In a=20
+DESCRIPTION the <CODE>wsdl:types</CODE> element MUST occur either as the =
+first=20
+child of the <CODE>wsdl:definitions</CODE> element if no=20
+<CODE>wsdl:documentation</CODE> or <CODE>wsdl:import</CODE> elements are =
+
+present; or immediately following the <CODE>wsdl:documentation</CODE> =
+and/or=20
+<CODE>wsdl:import</CODE> elements if present. <SPAN=20
+class=3Dstatement-origin>WSDL12</SPAN></P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dincorrect>INCORRECT: </SPAN>
+<CODE>&lt;definitions name=3D"StockQuote" =20
+           	 ...
+   xmlns=3D"http://schemas.xmlsoap.org/wsdl/"&gt;
+  =20
+   &lt;import namespace=3D"http://example.com/stockquote/definitions"
+         location=3D"http://example.com/stockquote/stockquote.wsdl"/&gt;
+          =20
+   &lt;message name=3D"GetLastTradePriceInput"&gt;
+       &lt;part name=3D"body" type=3D"tns:TradePriceRequest"/&gt;
+   &lt;/message&gt;
+               ...
+   &lt;service name=3D"StockQuoteService"&gt;
+      &lt;port name=3D"StockQuotePort" =
+binding=3D"tns:StockQuoteSoap"&gt;
+           ....
+      &lt;/port&gt;
+   &lt;/service&gt;
+
+   &lt;types&gt;
+      &lt;schema targetNamespace=3D"http://example.com/stockquote.xsd"
+               xmlns=3D"http://www.w3.org/2001/XMLSchema"&gt;
+           .......
+      &lt;/schema&gt;
+   &lt;/types&gt;
+&lt;/definitions&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;definitions name=3D"StockQuote"
+           	 ...
+   xmlns=3D"http://schemas.xmlsoap.org/wsdl/"&gt;
+  =20
+  &lt;import namespace=3D"http://example.com/stockquote/definitions"
+           =
+location=3D"http://example.com/stockquote/stockquote.wsdl"/&gt;
+  =20
+  &lt;types&gt;
+    &lt;schema targetNamespace=3D"http://example.com/stockquote.xsd"
+         xmlns=3D"http://www.w3.org/2001/XMLSchema"&gt;
+           .......
+    &lt;/schema&gt;
+   &lt;/types&gt;
+          =20
+   &lt;message name=3D"GetLastTradePriceInput"&gt;
+      &lt;part name=3D"body" element=3D"tns:TradePriceRequest"/&gt;
+   &lt;/message&gt;
+               ...
+   &lt;service name=3D"StockQuoteService"&gt;
+      &lt;port name=3D"StockQuotePort" =
+binding=3D"tns:StockQuoteSoap"&gt;
+           ....
+      &lt;/port&gt;
+   &lt;/service&gt;
+&lt;/definitions&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;definitions name=3D"StockQuote" =20
+           	 ...
+   xmlns=3D"http://schemas.xmlsoap.org/wsdl/"&gt;
+
+  &lt;types&gt;
+     &lt;schema targetNamespace=3D"http://example.com/stockquote.xsd"
+          xmlns=3D"http://www.w3.org/2001/XMLSchema"&gt;
+           .......
+     &lt;/schema&gt;
+   &lt;/types&gt;
+          =20
+   &lt;message name=3D"GetLastTradePriceInput"&gt;
+        &lt;part name=3D"body" element=3D"tns:TradePriceRequest"/&gt;
+   &lt;/message&gt;
+               ...
+   &lt;service name=3D"StockQuoteService"&gt;
+      &lt;port name=3D"StockQuotePort" =
+binding=3D"tns:StockQuoteSoap"&gt;
+           ....
+      &lt;/port&gt;
+   &lt;/service&gt;
+&lt;/definitions&gt;</CODE>
+</PRE></DIV>
+<H3><A name=3DWSDLTYPES>4.2</A> Types</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/wsdl#_types">WSDL 1.1, Section =
+2.2</A>.=20
+</LI></UL>
+<P>The <CODE>wsdl:types</CODE> element of WSDL 1.1 encloses data type=20
+definitions that are relevant to the Web service described. This profile =
+places=20
+the following constraints pertinent to those portions of the content of =
+the=20
+<CODE>wsdl:types</CODE> element that are referred to by WSDL elements =
+that make=20
+profile conformance claims:</P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The WSDL specification is not explicit that WSDL documents may only =
+refer,=20
+using a QName, to a name that is in a namespace that has either been =
+imported or=20
+defined in the referring document.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2101>R2101</A></SPAN> A=20
+DESCRIPTION MUST NOT use QName references to elements in namespaces that =
+have=20
+been neither imported, nor defined in the referring WSDL document. =
+</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Requiring a targetNamespace on all xsd:schema elements that are =
+children of=20
+wsdl:types is a good practice, places a minimal burden on authors of =
+WSDL=20
+documents, and avoids the cases that are not as clearly defined as they =
+might=20
+be. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2105>R2105</A></SPAN> All=20
+<CODE>xsd:schema</CODE> elements contained in a <CODE>wsdl:types</CODE> =
+element=20
+of a DESCRIPTION MUST have a <CODE>targetNamespace</CODE> attribute with =
+a valid=20
+and non-null value. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The recommendations in section 2.2 of the WSDL 1.1 specification for=20
+declaration of Array types are prohibited by the Basic Profile, as they =
+are=20
+based on SOAP 1.1 encoding scheme. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2110>R2110</A></SPAN> In a=20
+DESCRIPTION <CODE>array</CODE> declarations MUST NOT extend the=20
+<CODE>soapenc:Array</CODE> type. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2111>R2111</A></SPAN> In a=20
+DESCRIPTION <CODE>array</CODE> declarations MUST NOT use=20
+<CODE>wsdl:arrayType</CODE> attribute in the type declaration. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2112>R2112</A></SPAN> In a=20
+DESCRIPTION <CODE>array</CODE> declaration wrapper elements SHOULD NOT =
+be named=20
+using the convention ArrayOfXXX. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2113>R2113</A></SPAN>=20
+MESSAGEs with serialized form of arrays MUST NOT include the=20
+<CODE>soapenc:arrayType</CODE> attribute. </P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dincorrect>INCORRECT: </SPAN>
+<CODE>
+&lt;xsd:element name=3D"MyArray2" type=3D"tns:MyArray2Type"/&gt;
+&lt;xsd:complexType name=3D"MyArray2Type" =
+xmlns:soapenc=3D"http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:wsdl=3D"http://schemas.xmlsoap.org/wsdl/" &gt;
+  &lt;xsd:complexContent&gt;
+     &lt;xsd:restriction base=3D"soapenc:Array"&gt;
+       &lt;xsd:sequence&gt;
+          &lt;xsd:element name=3D"x" type=3D"xsd:string"  minOccurs=3D0 =
+maxOccurs=3D"unbounded"/&gt;
+       &lt;/xsd:sequence&gt;
+       &lt;xsd:attribute ref=3D"soapenc:arrayType" =
+wsdl:arrayType=3D"tns:MyArray2Type[]"/&gt;
+   &lt;/xsd:restriction&gt;
+ &lt;/xsd:complexContent&gt;
+&lt;/xsd:complexType&gt;
+
+In a SOAP message this would serialize as below (omitting namespace =
+declarations for clarity):
+
+&lt;MyArray2 soapenc:arrayType=3D"tns:MyArray2Type[]" &gt;
+  &lt;x&gt;abcd&lt;/x&gt;
+  &lt;x&gt;efgh&lt;/x&gt;
+&lt;/MyArray2&gt;=09
+</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>
+&lt;xsd:element name=3D"MyArray1" type=3D"tns:MyArray1Type"/&gt;
+&lt;xsd:complexType name=3D"MyArray1Type"&gt;
+  &lt;xsd:sequence&gt;
+   &lt;xsd:element name=3D"x" type=3D"xsd:string" minOccurs=3D0 =
+maxOccurs=3D"unbounded"/&gt;
+  &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;
+ =20
+In a SOAP message this would serialize as below (omitting namespace =
+declarations for clarity):
+&lt;MyArray1&gt;
+  &lt;x&gt;abcd&lt;/x&gt;
+  &lt;x&gt;efgh&lt;/x&gt;
+&lt;/MyArray1&gt;
+					</CODE>
+</PRE></DIV>
+<H3><A name=3DWSDLMSGS>4.3</A> Messages</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/wsdl#_messages">WSDL 1.1, Section =
+2.3</A>.=20
+  </LI></UL>
+<P>In WSDL 1.1 message elements are used to represent abstract =
+definitions of=20
+the data being transmitted and binding elements to define how the =
+abstract=20
+definitions are bound to a specific wire format.</P>
+<P>In discussing this the following definitions are useful.</P>
+<P>An "rpc-literal binding" is a <CODE>wsdl:binding</CODE> that contains =
+a=20
+<CODE>soapbind:binding</CODE> element whose <CODE>style</CODE> attribute =
+has the=20
+value "rpc" and all of whose <CODE>soapbind:body</CODE> elements specify =
+the=20
+<CODE>use</CODE>=3D"literal" attribute.</P>
+<P>A "document-literal binding" is a <CODE>wsdl:binding</CODE> that =
+contains a=20
+<CODE>soapbind:binding</CODE> element whose <CODE>style</CODE> attribute =
+is=20
+either omitted or specified with a value of "document" and all of whose=20
+<CODE>soapbind:body</CODE> elements specify the =
+<CODE>use</CODE>=3D"literal"=20
+attribute.</P>
+<P>This profile places the following constraints message elements and on =
+how=20
+conformant binding elements may use message element(s).</P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Use of <CODE>wsdl:message</CODE> elements with zero parts is =
+permitted in=20
+Document styles to permit operations that can send or receive MESSAGEs =
+with=20
+empty SOAP Bodies. Use of <CODE>wsdl:message</CODE> elements with zero =
+parts is=20
+permitted in RPC styles to permit operations that have no (zero) =
+parameters=20
+and/or return value. This case is explicitly permitted by the Basic =
+Profile.=20
+</P>
+<P>For Document-literal binding, the Basic Profile requires that at most =
+one=20
+wsdl:part is marshaled in SOAP Body, which needs to be defined via the =
+element=20
+form at the abstract level. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2201>R2201</A></SPAN> A=20
+document-literal binding in a DESCRIPTION MUST, in each of its=20
+<CODE>soapbind:body</CODE> element(s), have at most one part listed in =
+the=20
+<CODE>parts</CODE> attribute, if the <CODE>parts</CODE> attribute is =
+specified.=20
+</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2210>R2210</A></SPAN> If a=20
+document-literal binding in a DESCRIPTION does not specify the=20
+<CODE>parts</CODE> attribute on a <CODE>soapbind:body</CODE> element, =
+the=20
+corresponding abstract <CODE>wsdl:message</CODE> MUST define a single=20
+<CODE>wsdl:part</CODE>. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2202>R2202</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MAY contain=20
+<CODE>soapbind:body</CODE> element(s) that specify that zero parts form =
+the=20
+<CODE>soap:body</CODE>. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2203>R2203</A></SPAN> An=20
+rpc-literal binding in a DESCRIPTION MUST refer, in its=20
+<CODE>soapbind:body</CODE> element(s), only to <CODE>wsdl:part</CODE> =
+element(s)=20
+that have been defined using the <CODE>type</CODE> attribute. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2207>R2207</A></SPAN> A=20
+<CODE>wsdl:message</CODE> in a DESCRIPTION MAY contain =
+<CODE>wsdl:part</CODE>s=20
+that use the <CODE>elements</CODE> attribute provided those=20
+<CODE>wsdl:part</CODE>s are not referred to by a =
+<CODE>soapbind:body</CODE> in=20
+an rpc-literal binding. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2204>R2204</A></SPAN> A=20
+document-literal binding in a DESCRIPTION MUST refer, in each of its=20
+<CODE>soapbind:body</CODE> element(s), only to <CODE>wsdl:part</CODE> =
+element(s)=20
+that have been defined using the <CODE>element</CODE> attribute. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2208>R2208</A></SPAN> A=20
+document-literal binding in a DESCRIPTION MAY contain=20
+<CODE>soapbind:header</CODE> element(s) that refer to =
+<CODE>wsdl:part</CODE>s in=20
+the same <CODE>wsdl:message</CODE> that are referred to by its=20
+<CODE>soapbind:body</CODE> element(s). </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>soapbind:fault, soapbind:header and soapbind:headerfault assume that=20
+style=3D"document", since faults and headers do not contain parameters. =
+This=20
+requirement is consistent with R2204, which requires that all parts in=20
+style=3D"document" that are bound to soapbind:body be defined using the =
+element=20
+attribute. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2205>R2205</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MUST refer, in each of its=20
+<CODE>soapbind:header</CODE>, <CODE>soapbind:headerfault</CODE> and=20
+<CODE>soapbind:fault</CODE> elements, only to <CODE>wsdl:part</CODE> =
+element(s)=20
+that have been defined using the <CODE>element</CODE> attribute. =
+</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>A portType defines an abstract contract with a named set of =
+operations and=20
+associated abstract messages. Although not disallowed, it is expected =
+that every=20
+part of the abstract input, output and fault message specified in the =
+portType=20
+is bound to soapbind:body or soapbind:header etc. as appropriate when =
+using SOAP=20
+binding as defined in WSDL 1.1 section 3. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2209>R2209</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION SHOULD bind every =
+<CODE>part</CODE>=20
+of a <CODE>wsdl:message</CODE> in the <CODE>wsdl:portType</CODE> to =
+which it=20
+refers to one of <CODE>soapbind:body</CODE>, =
+<CODE>soapbind:header</CODE>,=20
+<CODE>soapbind:fault</CODE> or <CODE>soapbind:headerfault</CODE>. =
+</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The examples 4, 5 in section 3.1 of the WSDL 1.1 specification =
+incorrectly=20
+show the use of Schema types (e.g. xsd:string) as a valid value for the=20
+<CODE>element</CODE> attribute of a <CODE>wsdl:part</CODE> element. =
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2206>R2206</A></SPAN> A=20
+<CODE>wsdl:message</CODE> in a DESCRIPTION containing a =
+<CODE>wsdl:part</CODE>=20
+that uses the <CODE>element</CODE> attribute MUST refer, in that =
+attribute, to a=20
+global element declaration. </P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dincorrect>INCORRECT: </SPAN>
+<CODE>  &lt;message name=3D"GetTradePriceInput"&gt;
+      &lt;part name=3D"tickerSymbol" element=3D"xsd:string"/&gt;
+      &lt;part name=3D"time" element=3D"xsd:timeInstant"/&gt;
+  &lt;/message&gt;
+   =20
+  &lt;message name=3D"GetTradePricesInput"&gt;
+      &lt;part name=3D"tickerSymbol" element=3D"xsd:string"/&gt;
+  &lt;/message&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>     &lt;message name=3D"GetTradePriceInput"&gt;
+      &lt;part name=3D"body" element=3D"tns:SubscribeToQuotes"/&gt;      =
+=20
+  &lt;/message&gt;</CODE>
+</PRE></DIV>
+<H3><A name=3DWSDLPORTTYPES>4.4</A> Port Types</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/wsdl#_porttypes">WSDL 1.1, Section =
+2.4</A>.=20
+  </LI></UL>
+<P>In WSDL 1.1, <CODE>portType</CODE> elements are used to group a set =
+of=20
+abstract operations. This profile places the following constraints on =
+the use of=20
+<CODE>portType</CODE> element(s): </P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Permitting the use of parameterOrder helps code generators in mapping =
+between=20
+method signatures and on the wire MESSAGE instances. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2301>R2301</A></SPAN> The=20
+order of the parts in a message in the DESCRIPTION MUST be the =
+definitive order=20
+of the part elements on the wire for any part in an operation. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2302>R2302</A></SPAN> A=20
+DESCRIPTION MAY use the <CODE>parameterOrder</CODE> attribute of an=20
+<CODE>wsdl:operation</CODE> element to indicate the return value and =
+method=20
+signatures as a hint to code generators. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Solicit-Response and Notification are not well defined by the WSDL =
+1.1=20
+specification and the WSDL 1.1 specification defines bindings for the =
+One-way=20
+and Request-response primitives only. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2303>R2303</A></SPAN> A=20
+DESCRIPTION MUST NOT use Solicit-Response and Notification type =
+operations in a=20
+<CODE>wsdl:portType</CODE> definition. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>To promote interoperability operation name overloading in a portType =
+is=20
+disallowed by the Basic Profile. Note however that a portType may name=20
+operations same as the ones in another portType. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2304>R2304</A></SPAN> A=20
+<CODE>wsdl:portType</CODE> in a DESCRIPTION MUST have operations with =
+distinct=20
+values for their <CODE>name</CODE> attributes. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>WSDL representation of an RPC function can have 0 or 1 return value =
+while the=20
+return value can be an instance of a complex type. The parameterOrder =
+definition=20
+where provided, must be consistent with this as well. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2305>R2305</A></SPAN> A=20
+<CODE>wsdl:portType</CODE> in a DESCRIPTION MUST be constructed so that =
+the=20
+<CODE>parameterOrder</CODE> attribute, if present, omits at most 1 part =
+from the=20
+output message. </P>
+<DIV class=3Dexplanation>
+<P>If a part from the output message is omitted from the list of parts =
+that is=20
+the value of the <CODE>parameterOrder</CODE> attribute, the single =
+omitted part=20
+is the return value. There are no restrictions on the type of the return =
+value.=20
+If no part is omitted, there is no return value. </P></DIV></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>WSDL 1.1 specification does not clearly state that both =
+<CODE>type</CODE> and=20
+<CODE>element</CODE> attributes can not be specified to define a=20
+<CODE>part</CODE> in a <CODE>wsdl:message</CODE>. This loop-hole needs =
+to be=20
+closed. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2306>R2306</A></SPAN> A=20
+<CODE>wsdl:portType</CODE> in a DESCRIPTION MUST NOT refer to=20
+<CODE>wsdl:message</CODE>s that define <CODE>wsdl:part</CODE>s that =
+specify both=20
+<CODE>type</CODE> and <CODE>element</CODE> attributes on the same=20
+<CODE>wsdl:part</CODE>. </P></DIV>
+<H3><A name=3DWSDLBINDINGS>4.5</A> Bindings</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/wsdl#_bindings">WSDL 1.1, Section =
+2.5</A>.=20
+  </LI></UL>
+<P>In WSDL 1.1 the <CODE>binding</CODE> element supplies the concrete =
+protocol=20
+and data format specifications for the operations and messages defined =
+by a=20
+particular portType. This profile places the following constraints on =
+the=20
+binding specifications: </P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For interoperability the choice of bindings is limited to the well =
+defined=20
+and most commonly used SOAP Binding. MIME, HTTP GET/POST bindings are =
+not=20
+permitted by the Basic Profile. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2401>R2401</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MUST use WSDL SOAP Binding as =
+defined=20
+in section "3 SOAP Binding" of the WSDL 1.1 specification. </P></DIV>
+<H3><A name=3DWSDLPORTS>4.6</A> Ports</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/wsdl#_ports">WSDL 1.1, Section =
+2.6</A>.=20
+</LI></UL>
+<P>In WSDL 1.1 the port element specifies an address for binding on a =
+portType,=20
+thus defining a communication end-point for the Web service. This =
+profile places=20
+the following constraints on the use of the port element: </P>
+<P class=3Dednote><STRONG>Editors' note:</STRONG>The Working Group has =
+not closed=20
+any issues relating to Ports as of publication.</P>
+<H3><A name=3DWSDLSERVICES>4.7</A> Services</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/wsdl#_services">WSDL 1.1, Section =
+2.7</A>.=20
+  </LI></UL>
+<P>In WSDL 1.1 the service element is used to aggregate a set of related =
+ports.=20
+This profile places the following constraints on the use of the service =
+element:=20
+</P>
+<P class=3Dednote><STRONG>Editors' note:</STRONG>The Working Group has =
+not closed=20
+any issues relating to Services as of publication.</P>
+<H3><A name=3DWSDLSOAPBINDING>4.8</A> SOAP Binding</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/wsdl#_services">WSDL 1.1, Section =
+3.0</A>.=20
+  </LI></UL>
+<P>WSDL 1.1 defines a binding for SOAP 1.1 endpoints. This profile =
+mandates the=20
+use of SOAP binding as defined in the WSDL 1.1 specification, and places =
+the=20
+following constraints on its use: </P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>SOAP 1.2 specification differs from the SOAP 1.1 specification in =
+many=20
+respects. For interoperability the profile limits the SOAP binding to =
+the SOAP=20
+1.1 protocol.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2700>R2700</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> DESCRIPTION MUST use SOAP 1.1 protocol with =
+SOAP=20
+Binding. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Eliminate inconsistency between the WSDL 1.1 specification text and =
+the WSDL=20
+1.1 schema. The WSDL 1.1 specification shows it to be required but, the =
+schema=20
+shows this attribute to be optional, where as the Basic profile sees =
+this to be=20
+a required attribute. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2701>R2701</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MUST be constructed so that =
+its=20
+<CODE>soapbind:binding</CODE> child specifies the <CODE>transport</CODE> =
+
+attribute. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For interoperability the transport protocol is limited to HTTP. To =
+permit=20
+secure transfers at the HTTP level use of HTTP(S) is allowed.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2702>R2702</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MUST specify the HTTP =
+transport=20
+protocol with SOAP binding. Specifically, the <CODE>transport</CODE> =
+attribute=20
+of is <CODE>soapbind:binding</CODE> child MUST have the value=20
+"http://schemas.xmlsoap.org/soap/http". </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Disallow mix and match of operation "style" in the same =
+binding.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2705>R2705</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MUST use the same value, =
+either "rpc"=20
+or "document," for the <CODE>style</CODE> attribute for all of its=20
+<CODE>soapbind:operation</CODE>s. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For interoperability the profile prohibits the use of different =
+encodings=20
+including the SOAP encoding.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2706>R2706</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MUST use the value of =
+"literal" for=20
+the <CODE>use</CODE> attribute in all <CODE>soapbind:body </CODE>,=20
+<CODE>soapbind:header</CODE>, and <CODE>soapbind:headerfault</CODE> =
+elements.=20
+</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Eliminate the ambiguity between the WDSL specification text and the =
+Schema=20
+given in Appendix A4 about whether the <CODE>use</CODE> attribute is =
+optional on=20
+<CODE>soapbind:body</CODE>, <CODE>soapbind:header</CODE>, and=20
+<CODE>soapbind:headerfault</CODE>, and if so, what omitting the =
+attribute means.=20
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2707>R2707</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION that contains one or more=20
+<CODE>soapbind:body</CODE>, <CODE>soapbind:header</CODE>, or=20
+<CODE>soapbind:headerfault</CODE> elements that do not specify the=20
+<CODE>use</CODE> attribute MUST be interpreted as though the value =
+"literal" had=20
+been specified in each case. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Explicitly permit multiple bindings for the same portType, to =
+alleviate any=20
+ambiguity in this area. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2709>R2709</A></SPAN> A=20
+<CODE>wsdlportType</CODE> in a DESCRIPTION MAY have any number of=20
+<CODE>wsdl:binding</CODE>s that refer to it defined in the same or other =
+WSDL=20
+documents. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>An endpoint that supports multiple operations has to identify =
+unambiguously=20
+the operation being invoked based on the input message that it receives. =
+This is=20
+only possible if all the operations specified in the wsdl:binding =
+associated=20
+with an endpoint have a unique wire signature. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2710>R2710</A></SPAN> The=20
+Basic Profile defines the "wire signature" of an operation in a=20
+<CODE>wsdl:binding</CODE> to be the fully qualified name of the child =
+element of=20
+the <CODE>soap:Body</CODE> of the SOAP input message it describes. For =
+the case=20
+of an empty <CODE>soap:Body</CODE> this name is an empty string. The =
+operations=20
+in a <CODE>wsdl:binding </CODE>in a DESCRIPTION MUST result in wire =
+signatures=20
+that are different from one another. </P>
+<DIV class=3Dexplanation>
+<P>In the case of RPC/literal binding, the operation name is used as =
+wrapper for=20
+the part accessors. However in the doc (literal) SOAP binding case since =
+a=20
+wrapper with the operation name is not present, there might be an =
+ambiguity as=20
+to which operation is invoked, if there are more than one operation in a =
+port=20
+which is bound with doc/literal style. Hence the server needs to ensure =
+it can=20
+distinguish the operation based on, on the wire SOAP message for the =
+operation.=20
+</P></DIV></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>It is perceivable and it has also been demonstarted in the field that =
+
+multiple Web services are hosted at the same network end-point by some=20
+implementations. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2711>R2711</A></SPAN> A=20
+DESCRIPTION MAY have more than one <CODE>port</CODE> with the same value =
+for the=20
+<CODE>location</CODE> attribute of the <CODE>soapbind:address</CODE> =
+element.=20
+</P>
+<DIV class=3Dexplanation>
+<P>While it is not a conformance issue to have multiple =
+<CODE>wsdl:port</CODE>s=20
+at the same network address, when the input messages destined for two =
+different=20
+<CODE>wsdl:port</CODE>s are indistinguishable on the wire, the endpoint =
+will not=20
+be able to determine the wsdl:port being invoked and this may result in=20
+implementation problems. </P></DIV></DIV>
+<DIV class=3Drefinement>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2712>R2712</A></SPAN> When=20
+a Doc/literal binding is in use, the wire representation of a MESSAGE =
+MUST be an=20
+instance of the global element declaration referenced by the =
+corresponding=20
+<CODE>wsdl:message part</CODE>. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Disambiguate the meaning of missing SOAPAction attribute =
+specification in a=20
+WSDL description. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2713>R2713</A></SPAN> If=20
+the value of the <CODE>soapAction</CODE> attribute on the=20
+<CODE>soapbind:operation</CODE> element is empty (as indicated by two =
+quotes),=20
+the DESCRIPTION MUST be treated equivalent to the one that does not =
+specify the=20
+<CODE>soapAction</CODE> attribute. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>HTTP being a request/response protocole, the profile needs to clarify =
+what=20
+the expected behavior is in the case of a one-way message being =
+exchanged. </P>
+<P>Any SOAP content sent in reponse to a one-way operation would =
+constitute a=20
+response message. Transmission of one-way operations MUST not result in=20
+processing level response or errors. It is therefore fobidden by the =
+profile to=20
+send a SOAP envelop in reply to a one-way document. Hence a HTTP 500 =
+"Internal=20
+Server Error" response that includes a SOAP message in the response =
+containing a=20
+SOAP Fault element MUST NOT be returned.</P>
+<P>There is no way at the HTTP level for the initiator of a request to =
+know that=20
+the request was succesfully received until an HTTP response code is sent =
+back.=20
+Based on the scemantics of the different response codes supported by the =
+HTTP=20
+protocol, the profile specify that response codes 200 and 202 are the =
+only=20
+response codes that the sender should interprete to signify that the =
+message was=20
+succesfully delivered. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2714>R2714</A></SPAN> For=20
+one-way operations, INSTANCEs MUST NOT return a HTTP response that =
+contains a=20
+SOAP envelope. Specifically, the HTTP entity-body of the response MUST =
+be empty.=20
+</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2715>R2715</A></SPAN>=20
+INSTANCEs MUST NOT consider transmission of one-way operations complete =
+until a=20
+HTTP response code of either "200 OK" or "202 accepted" is received by =
+the HTTP=20
+client. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2727>R2727</A></SPAN> For=20
+one-way operations, INSTANCEs MUST NOT interpret the HTTP response code =
+of 200=20
+or 202 to mean the message is valid or that the receiver would process =
+it. </P>
+<DIV class=3Dexplanation>
+<P>Despite the fact that the HTTP 1.1 specification assigns different =
+meanings=20
+to responce codes 200 and 202, in the context of the basic profile there =
+should=20
+be considered the same by the initiator of the request. This is due to =
+the fact=20
+that some SOAP implementations have little control over the HTTP layer =
+they=20
+depend on and might not be able to control the HTTP response code sent =
+and when=20
+it is sent. As a result, the initiator of a one-way message should only=20
+interpret a 200 or 202 response code to mean that the message was =
+succesfully=20
+received at the transport level but not that the SOAP processing layer =
+and the=20
+application logic had a chance to validate the message or are commiting =
+to=20
+processing it. </P></DIV></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>In a document/literal SOAP binding, the serialized element child of =
+the=20
+SOAP:Body gets its namespace from the targetNamespace of the schema that =
+defines=20
+the element. Use of the soapbind:body/@namespace attribute would =
+override the=20
+element's namespace, which is prevented by the Basic Profile. </P>
+<P>Conversely, in a rpc/literal SOAP binding, the serialized element =
+child of=20
+the SOAP:Body is generated by wrapping the xsd Types referenced in the=20
+wsdl:part/@type attributes of the wsdl:message, into an element whose =
+name is=20
+constructed from the value of the wsdl:part/@name attribute as the =
+localname=20
+part, and whose assigned namespace is taken from the value of the=20
+soapbind:body/@namespace attribute. If the =
+soapbind:body/@namespaceattribute=20
+were not specified, then the child of the SOAP:Body would not be =
+namespace=20
+qualified. </P>
+<P>Even for rpc/literal SOAP binding the soapbind:header, =
+soapbind:headerfault=20
+and soapbind:fault assume that style=3D"document", since faults and =
+headers do not=20
+contain parameters. This requirement is consistent with R2716, which =
+requires=20
+that all parts for style=3D"document" not contain the namespace =
+attribute.=20
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2716>R2716</A></SPAN> A=20
+document-literal binding in a DESCRIPTION MUST NOT have the =
+<CODE>namespace=20
+</CODE>attribute specified on contained <CODE>soapbind:body</CODE>,=20
+<CODE>soapbind:header</CODE>, <CODE>soapbind:headerfault</CODE> and=20
+<CODE>soapbind:fault</CODE> elements. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2717>R2717</A></SPAN> An=20
+rpc-literal binding in a DESCRIPTION MUST have the =
+<CODE>namespace</CODE>=20
+attribute specified, the value of which MUST be an absolute URI, on =
+contained=20
+<CODE>soapbind:body</CODE> elements. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2726>R2726</A></SPAN> An=20
+rpc-literal binding in a DESCRIPTION MUST NOT have the =
+<CODE>namespace</CODE>=20
+attribute specified on contained <CODE>soapbind:header</CODE>,=20
+<CODE>soapbind:headerfault</CODE> and <CODE>soapbind:fault</CODE> =
+elements.=20
+</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The WSDL definition must be consistent at both abstract (portType) =
+and=20
+concrete (binding) levels. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2718>R2718</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MUST have the same list of=20
+<CODE>wsdl:operation</CODE>s as the <CODE>wsdl:portType</CODE> to which =
+it=20
+refers. <SPAN class=3Dstatement-type>C</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>All known header faults for an operation should be idenfied in a WSDL =
+
+description. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2736>R2736</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION SHOULD contain=20
+<CODE>soapbind:headerfault</CODE> elements describing each known header =
+fault=20
+that might be generated. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Eliminate inconsistency between WSDL specification text and the WSDL =
+schema.=20
+WSDL 1.1 schema makes the specification of =
+<CODE>soapbind:headerfault</CODE>=20
+element manadatory on <CODE>wsdl:input</CODE> and =
+<CODE>wsdl:output</CODE>=20
+elements of an operation, where as the WSDL 1.1 specification marks them =
+
+optional. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2719>R2719</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MAY contain no=20
+<CODE>soapbind:headerfault</CODE> elements if there are no known header =
+faults.=20
+</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>A Web service definition should include all faults known at the time =
+the=20
+service is defined. There is also need to permit generation of new =
+faults that=20
+had not been indentified when the Web service was defined. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2740>R2740</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTIONs SHOULD contain a=20
+<CODE>soapbind:fault</CODE> describing each known fault. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2741>R2741</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTIONs SHOULD contain a=20
+<CODE>soapbind:headerfault</CODE> each known header fault. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2742>R2742</A></SPAN> A=20
+MESSAGE MAY contain fault detail elements in a <CODE>soap:Fault</CODE> =
+element=20
+that are NOT described by a <CODE>wsdl:fault</CODE> element in the =
+corresponding=20
+WSDL description. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2743>R2743</A></SPAN> A=20
+MESSAGE MAY contain fault detail elements in a <CODE>soap:Header</CODE> =
+element=20
+that are NOT described by a <CODE>wsdl:headerfault</CODE> element in the =
+
+corresponding WSDL description. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The WSDL 1.1 schema is inconsistent with the WSDL 1.1 specification =
+here and=20
+incorrectly names the attribute <CODE>parts</CODE> and gives a type of=20
+"NMTOKENS". The schema is incorrect since each =
+<CODE>soapbind:header</CODE>=20
+element references a single part. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2720>R2720</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTIONs MUST use the attribute named =
+
+<CODE>part</CODE> with a Schema type of "NMTOKEN" on all contained=20
+<CODE>soapbind:header</CODE> and <CODE>soapbind:headerfault</CODE> =
+elements. It=20
+MUST NOT use the attribute named <CODE>parts</CODE> on contained=20
+<CODE>soapbind:header</CODE> and <CODE>soapbind:headerfault</CODE> =
+elements.=20
+</P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;binding name=3D"StockQuoteSoap" =
+type=3D"tns:StockQuotePortType"&gt;
+  &lt;soap:binding style=3D"document"=20
+                transport=3D"http://schemas.xmlsoap.org/soap/http"/&gt;
+    &lt;operation name=3D"SubscribeToQuotes"&gt;
+      &lt;input message=3D"tns:SubscribeToQuotes"&gt;
+        &lt;soap:body parts=3D"body" use=3D"literal"/&gt;
+        &lt;soap:header message=3D"tns:SubscribeToQuotes"
+             		part=3D"subscribeheader" use=3D"literal"/&gt;
+     &lt;/input&gt;
+   &lt;/operation&gt;
+&lt;/binding&gt;</CODE>
+</PRE></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Eliminate inconsistency between WSDL1.1 specification text and the =
+schema.=20
+The WSDL 1.1 schema does not list the <CODE>name</CODE> attribute. =
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2721>R2721</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MUST have the <CODE>name=20
+</CODE>attribute specified on all contained <CODE>soapbind:fault</CODE>=20
+elements. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Eliminate inconsistency between WSDL 1.1 specification text and the=20
+schema.</P>
+<P>WSDL 1.1 specification section 3.6 soap:Fault grammar, indicates that =
+the=20
+<CODE>use</CODE> attribute of fault is required while in the schema the=20
+<CODE>use</CODE> attribute is defined as optional. </P>
+<P>Also ensure the correct value is provided for the <CODE>use</CODE> =
+attribute=20
+when present and identify the correct default value for the attribute =
+when=20
+omitted. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2722>R2722</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION MAY specificy the =
+<CODE>use</CODE>=20
+attribute on contained <CODE>soapbind:fault</CODE> elements. <SPAN=20
+class=3Dstatement-type>C</SPAN></P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2723>R2723</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION if the <CODE>use</CODE> =
+attribute on=20
+a contained <CODE>soapbind:fault</CODE> element is present, its value =
+MUST be=20
+"literal". </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2728>R2728</A></SPAN> A=20
+<CODE>wsdl:binding</CODE> in a DESCRIPTION that omits the =
+<CODE>use</CODE>=20
+attribute on a contained <CODE>soapbind:fault</CODE> element MUST be =
+interpreted=20
+as though <CODE>use</CODE>=3D"literal" had been specified. <SPAN=20
+class=3Dstatement-type>C</SPAN></P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For interoperability, it is important to define how a conformant port =
+should=20
+behave when a message that does not conform to its WSDL description is =
+received.=20
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2724>R2724</A></SPAN> If an=20
+INSTANCE receives a message that is inconsistent with its WSDL =
+description, it=20
+MUST return a <CODE>soap:Fault</CODE> with a faultcode of =
+"VersionMismatch", or=20
+"MustUnderstand", or "Client". </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2725>R2725</A></SPAN> If an=20
+INSTANCE receives a message that is inconsistent with its WSDL =
+description, it=20
+MUST check for "VersionMismatch", or "MustUnderstand", or "Client" fault =
+
+conditions in that order. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The description in section 3.5 of the WSDL 1.1 specification could be =
+
+interpreted to mean the RPC response wrapper element must be named =
+identical to=20
+the name of the <CODE>wsdl:operation</CODE>. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2729>R2729</A></SPAN> A=20
+MESSAGE described with an rpc-literal binding that is a response message =
+MUST=20
+have a wrapper element whose name is the corresponding=20
+<CODE>wsdl:operation</CODE> name suffixed with the string =
+"Response".</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For rpc-literal SOAP messages, the WSDL 1.1 specification is not =
+clear what=20
+namespace, if any, the accessor elements for parameters and return value =
+are a=20
+part of. Different implementations make different choices, leading to=20
+interoperability problems. Settling on one of the alternatives is =
+crucial to=20
+achieving interoperability. The Basic Profile chose to place the part =
+accessor=20
+elements in no namespace as it is simple, covers all cases and does not =
+lead to=20
+logical inconsistency. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2735>R2735</A></SPAN> A=20
+MESSAGE described with an rpc-literal binding MUST place the part =
+accessor=20
+elements for parameters and return value in no namespace. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For rpc-literal SOAP messages, the WSDL 1.1 specification is not =
+clear on=20
+what the correct namespace qualification is, for the child elements of =
+the part=20
+accessor elements, when the corresponding abstract parts are defined to =
+be of=20
+types from a different namespace than the targetNamespace of the WSDL=20
+description for the abstract parts. The Basic Profile chose to qualify =
+the child=20
+elements of the part accessor elements with the targetNamespace in which =
+their=20
+types (elements and attributes) were defined. </P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2737>R2737</A></SPAN> A=20
+MESSAGE described with an rpc-literal binding MUST namespace qualify the =
+
+children of part accessor elements for parameters and return with the=20
+targetNamespace in which their types are defined. </P>
+<DIV class=3Dexplanation>
+<P>The WSDL1.1 spec in sect 3.5 states:</P>
+<P>"The part names, types and value of the namespace attribute are all =
+inputs to=20
+the encoding, although the namespace attribute only applies to content =
+not=20
+explicitly defined by the abstract types." </P>
+<P>Yet, it doesn't explicitly state that the element and attribute =
+content of=20
+the abstract (complexType) types is namespace qualified to the =
+targetNamespace=20
+in which those elements and attributes were defined. WSDL was intended =
+to=20
+function in much the same manner as XML Schema. Hence, implementations =
+must=20
+follow the same rules as for XML Schema. If a complexType defined in=20
+targetNamespace A were imported and referenced in an element declaration =
+in a=20
+schema with targetNamespace B. The element and attribute content of the =
+child=20
+elements of that complexType would be qualified to namespace A and the =
+element=20
+would be qualified to namespace B. </P></DIV>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;definitions xmlns=3D"http://schemas.xmlsoap.org/wsdl/"
+xmlns:soap=3D"http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:http=3D"http://schemas.xmlsoap.org/wsdl/http/"
+xmlns:xs=3D"http://www.w3.org/2001/XMLSchema"
+xmlns:bar=3D"http://example.org/bar/"
+targetNamespace=3D"http://example.org/bar/"
+xmlns:foo=3D"http://example.org/foo/"&gt;
+&lt;types&gt;
+   &lt;xs:schema targetNamespace=3D"http://example.org/foo/"
+       xmlns:tns=3D"http://example.org/foo/"
+       xmlns:xs=3D"http://www.w3.org/2001/XMLSchema"
+       elementFormDefault=3D"qualified"
+       attributeFormDefault=3D"unqualified"&gt;
+       &lt;xs:complexType name=3D"fooType"&gt;
+          &lt;xs:sequence&gt;
+             &lt;xs:element ref=3D"tns:bar"/&gt;
+             &lt;xs:element ref=3D"tns:baf"/&gt;
+          &lt;/xs:sequence&gt;
+       &lt;/xs:complexType&gt;
+       &lt;xs:element name=3D"bar" type=3D"xs:string"/&gt;
+       &lt;xs:element name=3D"baf" type=3D"xs:integer"/&gt;
+   &lt;/xs:schema&gt;
+&lt;/types&gt;
+&lt;message name=3D"BarMsg"&gt;
+   &lt;part name=3D"BarAccessor" type=3D"foo:fooType"/&gt;
+&lt;/message&gt;
+&lt;portType name=3D"BarPortType"&gt;
+   &lt;operation name=3D"BarOperation"&gt;
+     &lt;input message=3D"bar:BarMsg"/&gt;
+   &lt;/operation&gt;
+&lt;/portType&gt;
+&lt;binding name=3D"BarSOAPBinding" type=3D"bar:BarPortType"&gt;
+   &lt;soap:binding transport=3D"http://schemas.xmlsoap.org/soap/http/" =
+style=3D"rpc"/&gt;
+   &lt;operation name=3D"BarOperation"&gt;
+     &lt;input message=3D"bar:BarMsg"&gt;
+       &lt;soap:body use=3D"literal"/&gt;
+     &lt;/input&gt;
+   &lt;/operation&gt;
+&lt;/binding&gt;
+&lt;service name=3D"serviceName"&gt;
+  &lt;port name=3D"BarSOAPPort" binding=3D"bar:BarSOAPBinding"&gt;
+    &lt;soap:address location=3D"http://example.org/myBarSOAPPort"/&gt;
+  &lt;/port&gt;
+&lt;/service&gt;
+&lt;/definitions&gt;</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>&lt;s:Envelope =
+xmlns:s=3D"http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd=3D"http://www.w3.org/2001/XMLSchema"
+xmlns:foo=3D"http://example.org/foo/"&gt;
+  &lt;s:Header/&gt;
+    &lt;s:Body&gt;
+      &lt;m:BarOperation xmlns:m=3D"http://example.org/bar/"&gt;
+         &lt;BarAccessor&gt;
+            &lt;foo:bar&gt;String&lt;/foo:bar&gt;
+            &lt;foo:baf&gt;0&lt;/foo:baf&gt;
+         &lt;/BarAccessor&gt;
+      &lt;/m:BarOperation&gt;
+    &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</CODE>
+</PRE>
+<P class=3Dednote><STRONG>Editors' note:</STRONG>The examples above =
+demonstrate=20
+the purpose of this requirement. The first segment shows a WSDL that =
+defines=20
+some schema in the http://example.org/foo/ namespace in the wsdl:types =
+section=20
+contained within a wsdl:definitions that has as its targetNamespace=20
+http://example.org/bar/. Thus, we have a type declared in one namespace =
+and the=20
+containing element defined in another. The resulting SOAP message for=20
+BarOperation is shown in the segment that follows. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>WSDL 1.1 specification is not clear if all =
+<CODE>soapbind:headers</CODE>=20
+specified on <CODE>wsdl:input</CODE> or <CODE>wsd:output</CODE> of an=20
+<CODE>operation</CODE> in the SOAP binding section of a WSDL document =
+must be=20
+included in the resultant SOAP messages transmitted. Basic Profile chose =
+to make=20
+all the headers mandatory as there is no way in WSDL 1.1 to mark a =
+header=20
+optional.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2738>R2738</A></SPAN> A=20
+MESSAGE MUST include all <CODE>soapbind:header</CODE>s specified on=20
+<CODE>wsdl:input</CODE> or <CODE>wsd:output</CODE> of an =
+<CODE>operation</CODE>=20
+<CODE>wsdl:binding</CODE> that describes it. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Headers are SOAP's extensibility mechanism and headers that are not =
+defined=20
+in the WSDL document may need to be included in the SOAP messages for =
+various=20
+valid reasons described in SOAP.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2739>R2739</A></SPAN> A=20
+MESSAGE MAY contain headers that are not described in the=20
+<CODE>wsdl:binding</CODE> that describes it. These headers MAY (or may =
+not) have=20
+the mustUnderstand attribute set to '1'. </P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Interoperability testing has demonstrated that requiring the value of =
+the=20
+<CODE>SOAPAction</CODE> HTTP Header Field to be quoted increases=20
+interoperability of implementations. Even though HTTP allows for the =
+value of=20
+HTTP Header Fields to be unquoted, some implementations require that the =
+value=20
+be quoted. </P>
+<P>The <CODE>SOAPAction</CODE> header is purely a hint to processors. =
+All vital=20
+information regarding the intent of a message is carried in the =
+Envelope.=20
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2744>R2744</A></SPAN> A=20
+MESSAGE MUST contain a <CODE>SOAPAction</CODE> HTTP header field with a =
+quoted=20
+value equal to the value of the <CODE>soapAction</CODE> attribute of=20
+<CODE>soapbind:operation</CODE>, if present in the corresponding WSDL=20
+description. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2745>R2745</A></SPAN> A=20
+MESSAGE MUST contain a <CODE>SOAPAction</CODE> HTTP Header Field with a =
+quoted=20
+empty string, if in the corresponding WSDL description, the=20
+<CODE>soapAction</CODE> of <CODE>soapbind:operation</CODE> is either not =
+
+present, or present with an empty string as its value. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2746>R2746</A></SPAN> A=20
+RECEIVER MAY respond with a Fault if the value of the =
+<CODE>SOAPAction</CODE>=20
+HTTP Header Field is not quoted. </P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dcorrect>CORRECT: </SPAN>
+<CODE>
+A WSDL Description that has:
+
+&lt;soapbind:operation soapAction=3D"foo" /&gt;
+
+results in a message with a corresponding SOAPAction HTTP header field
+as follows:
+
+SOAPAction: "foo"
+</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>
+A WSDL Description that has:
+
+&lt;soapbind:operation /&gt;
+
+or=20
+
+&lt;soapbind:operation soapAction=3D"" /&gt;
+
+
+results in a message with a corresponding SOAPAction HTTP header field
+as follows:
+
+SOAPAction: ""
+</CODE>
+</PRE></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The wsdl:required attributed has been widely misunderstood and used =
+by WSDL=20
+writers sometimes to incorrectly to indicate the optionality of=20
+soapbind:headers. The wsdl:required attribute, as specified in WSDL1.1, =
+is an=20
+extensibility mechanism aimed at WSDL processors. It allows new WSDL =
+extension=20
+elements to be introduced in a graceful manner. The intent of =
+wsdl:required is=20
+to signal to the WSDL processor whether the extension element needs to =
+be=20
+recognized and understood by the WSDL processor in order that the WSDL=20
+description be correctly processed. It is not meant to signal =
+conditionality or=20
+optionality of some construct that is included in the messages. For =
+example,=20
+wsdl:required=3D'false' on a soapbind:header element must not be =
+interpreted to=20
+signal to the WSDL processor that the described SOAP header block is =
+conditional=20
+or optional in the messages generated from the WSDL description. It is =
+meant to=20
+be interpreted as "in order to send a message to the endpoint that =
+includes in=20
+its description the soapbind:header element, the WSDL processor MUST =
+understand=20
+the semantic implied by the soapbind:header element". </P>
+<P>The default value for the wsdl:required attribute for WSDL 1.1 SOAP =
+Binding=20
+extension elements is "false". Most WSDL descriptions in practice do not =
+specify=20
+the wsdl:required attribute on the SOAP Binding extension elements, =
+which could=20
+be interpreted by WSDL processors to mean, the extension elements may be =
+
+ignored. The Basic Profile requires that all WSDL SOAP 1.1 extensions be =
+
+understood and processed by the WSDL processors, irrespective of the =
+presence or=20
+the value of the wsdl:required attribute on an extension element. =
+</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2747>R2747</A></SPAN> A=20
+WSDL RECEIVER MUST understand and process all WSDL 1.1 SOAP Binding =
+extension=20
+elements, irrespective of the presence or absence of the=20
+<CODE>wsdl:required</CODE> attribute on an extension element; and =
+irrespective=20
+of the value of the <CODE>wsdl:required</CODE> attribute, when present. =
+</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2748>R2748</A></SPAN> A=20
+WSDL RECEIVER MUST NOT interpret the presence of the =
+<CODE>wsdl:required</CODE>=20
+attribute on a <CODE>soapbind</CODE> extension element with a value of =
+'false'=20
+to mean the extension element is optional in the messages generated from =
+the=20
+WSDL description. </P></DIV>
+<H3><A name=3DWSDLSCHEMA>4.9</A> XML Schema</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A href=3D"http://www.w3.org/TR/xmlschema-1">XML Schema Part 1:=20
+  Structures</A>.=20
+  <LI><A href=3D"http://www.w3.org/TR/xmlschema-2">XML Schema Part 2:=20
+  Datatypes</A>. </LI></UL>
+<P>WSDL 1.1 uses XML Schema as one of its type systems. This profile =
+mandates=20
+the use of XML Schema as the type system for WSDL descriptions of Web=20
+Services.</P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P></P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2800>R2800</A></SPAN>=20
+DESCRIPTIONs MAY use any construct from XML Schema 1.0. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR2801>R2801</A></SPAN>=20
+DESCRIPTIONs MUST use XML Schema 1.0 Recommendation, with the namespace =
+URI=20
+"http://www.w3.org/2001/XMLSchema". </P></DIV>
+<H2><A name=3Ddiscovery>5. </A>Service Publication and Discovery</H2>
+<P>When publication or discovery of Web services is required, UDDI is =
+the=20
+mechanism the Basic Profile has adopted to describe Web service =
+providers and=20
+the Web services they provide. Business, intended use, and Web service =
+type=20
+descriptions are made in UDDI terms; detailed technical descriptions are =
+made in=20
+WSDL terms. Where the two specifications define overlapping descriptive =
+data and=20
+both forms of description are used, the Basic Profile specifies that the =
+
+descriptions must not conflict.</P>
+<P>Registration of Web service instances in UDDI registries is optional. =
+By no=20
+means do all usage scenarios require the kind of metadata and discovery =
+UDDI=20
+provides, but where such capability is needed, UDDI is the sanctioned=20
+mechanism.</P>
+<P class=3Dednote><STRONG>Editors' note:</STRONG>The Web services that =
+constitute=20
+UDDI V2 are not fully conformant with the Basic Profile 1.0 because they =
+do not=20
+accept messages encoded in both UTF-8 and UTF-16 as required by the =
+profile.=20
+(They accept UTF-8 only.) That there should be such a discrepancy is =
+hardly=20
+surprising given that UDDI V2 was designed and, in many cases, =
+implemented=20
+before the Basic Profile was developed. UDDI's designers are aware of =
+UDDI V2's=20
+nonconformance and will take it into consideration in their future =
+work.</P>
+<P>This portion of the profile incorporates the following specifications =
+by=20
+reference;</P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm"=
+>UDDI=20
+  Version 2.04 API Specification, Dated 19 July 2002</A>.=20
+  <LI><A=20
+  =
+href=3D"http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm">=
+UDDI=20
+  Version 2.03 Data Structure Reference, Dated 19 July 2002</A>.=20
+  <LI><A href=3D"http://uddi.org/schema/uddi_v2.xsd">UDDI Version 2 XML=20
+  Schema</A>. </LI></UL>
+<H3><A name=3DUDDIBTS>5.1</A> bindingTemplates</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm#_=
+Toc25130769">UDDI=20
+  Version 2.03 Data Structure Reference, Section 7</A>. </LI></UL>
+<P>UDDI represents Web service INSTANCEs as =
+<CODE>uddi:bindingTemplate</CODE>=20
+elements. The <CODE>uddi:bindingTemplate</CODE> plays a role that is the =
+rough=20
+analog of the <CODE>wsdl:port</CODE>, but provides options that are not=20
+expressible in WSDL. To keep the WSDL description of an INSTANCE and its =
+UDDI=20
+description consistent, the profile places the following constraints on =
+how=20
+<CODE>uddi:bindingTemplate</CODE> elements may be constructed.</P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>WSDL's <CODE>soapbind:address</CODE> element requires the network =
+address of=20
+the INSTANCE to be directly specified. In contrast, UDDI V2 provides two =
+
+alternatives for specifying the network address of INSTANCEs it =
+represents. One,=20
+the <CODE>uddi:accessPoint</CODE>, mirrors the WSDL mechanism by =
+directly=20
+specifying the address. The other, the =
+<CODE>uddi:hostingRedirector</CODE>,=20
+provides a Web service-based indirection mechanism for resolving the =
+address,=20
+and is inconsistent with the WSDL mechanism.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR3100>R3100</A></SPAN>=20
+REGDATA of type <CODE>uddi:bindingTemplate</CODE> representing a =
+conformant=20
+INSTANCE MUST contain the <CODE>uddi:accessPoint</CODE> element.</P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dincorrect>INCORRECT: </SPAN>
+<CODE>
+&lt;bindingTemplate bindingKey=3D"..."&gt;
+   &lt;description xml:lang=3D"EN"&gt;BarSOAPPort&lt;/description&gt;
+   &lt;hostingRedirector bindingKey=3D"..."/&gt;=20
+   &lt;tModelInstanceDetails&gt;
+      ...
+   &lt;/tModelInstanceDetails&gt;
+&lt;/bindingTemplate&gt;
+				</CODE>
+</PRE><PRE class=3Dexample><SPAN class=3Dcorrect>CORRECT: </SPAN>
+<CODE>
+&lt;bindingTemplate bindingKey=3D"..."&gt;
+   &lt;description xml:lang=3D"EN"&gt;BarSOAPPort&lt;/description&gt;
+   =
+&lt;accessPoint&gt;http://example.org/myBarSOAPPort&lt;/accessPoint&gt;
+   &lt;tModelInstanceDetails&gt;
+      ...
+   &lt;/tModelInstanceDetails&gt;
+&lt;/bindingTemplate&gt;
+				</CODE>
+</PRE></DIV>
+<H3><A name=3DUDDITMS>5.2</A> tModels</H3>
+<P>This portion of the profile modifies and refers to the following=20
+specifications (or sections thereof);</P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm#_=
+Toc25130775">UDDI=20
+  Version 2.03 Data Structure Reference, Section 8</A>. </LI></UL>
+<P>UDDI represents Web service types as <CODE>uddi:tModel</CODE> =
+elements. (See=20
+<A=20
+href=3D"http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm#_=
+Toc25130777">UDDI=20
+Data Structures section 8.1.1</A>.) These may, but need not, point =
+(using a URI)=20
+to the document that contains the actual description. Further, UDDI is =
+agnostic=20
+with respect to the mechanisms used to describe Web service types. The =
+Basic=20
+Profile cannot be agnostic about this because interoperation is very =
+much=20
+complicated if Web service types do not have descriptions or if the =
+descriptions=20
+can take arbitrary forms.</P>
+<P>The <A=20
+href=3D"http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm#=
+_Toc25137792">UDDI=20
+API Specification, appendix I.1.2.1.1</A> allows but does not require=20
+<CODE>uddi:tModel</CODE> elements that use WSDL to describe the Web =
+service type=20
+they represent to state that they use WSDL as the description language. =
+Not=20
+doing so leads to interoperability problems because it is then ambiguous =
+what=20
+description language is being used.</P>
+<P>It is not easy and in some cases it may be impossible to determine =
+whether a=20
+given <CODE>uddi:tModel</CODE> represents a conformant Web service type =
+by=20
+inspection alone because <CODE>uddi:tModel</CODE> elements describing =
+conformant=20
+and non-conformant Web service types can look very similar. It needs to =
+be easy=20
+for inquirers to determine whether a given <CODE>uddi:tModel</CODE> =
+conforms and=20
+to discover conforming <CODE>uddi:tModel</CODE> elements.</P>
+<P>Therefore the Basic Profile places the following constraints on how=20
+<CODE>uddi:tModel</CODE> elements that describe Web service types may be =
+
+constructed:</P>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The profile chooses WSDL as the description language because it is by =
+far the=20
+most widely used such language.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR3002>R3002</A></SPAN>=20
+REGDATA of type <CODE>uddi:tModel</CODE> representing a conformant Web =
+service=20
+type MUST use WSDL as the description language.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>For the <CODE>uddi:overviewURL</CODE> in a <CODE>uddi:tModel</CODE> =
+to=20
+resolve to a <CODE>wsdl:binding</CODE>, the profile must adopt a =
+convention for=20
+distinguishing among multiple <CODE>wsdl:binding</CODE>s in a WSDL =
+document. The=20
+UDDI Best Practice for Using WSDL in a UDDI Registry specifies the most =
+widely=20
+recognized such convention.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR3010>R3010</A></SPAN>=20
+REGDATA of type <CODE>uddi:tModel</CODE> representing a conformant Web =
+service=20
+type MUST follow <A=20
+href=3D"http://www.oasis-open.org/committees/uddi-spec/doc/bp/uddi-spec-t=
+c-bp-using-wsdl-v108-20021110.htm">V1.08=20
+of the UDDI Best Practice for Using WSDL in a UDDI =
+Registry</A>.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>To specify that conformant Web service types use WSDL, the profile =
+adopts the=20
+UDDI categorization for making this assertion.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR3003>R3003</A></SPAN>=20
+REGDATA of type <CODE>uddi:tModel</CODE> representing a conformant Web =
+service=20
+type MUST be categorized using the uddi:types taxonomy and a =
+categorization of=20
+"wsdlSpec".</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>It would be ambiquous if the conformance claim a =
+<CODE>uddi:tModel</CODE>=20
+made were not consistent with the claim made by the =
+<CODE>wsdl:binding</CODE> it=20
+uses.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR3004>R3004</A></SPAN>=20
+REGDATA of type <CODE>uddi:tModel</CODE> MUST be constructed so that the =
+
+conformance claim it makes is consistent with the conformance claim made =
+by the=20
+<CODE>wsdl:binding</CODE> to which it refers.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>The natural mechanism in UDDI for adding attributes to a=20
+<CODE>uddi:tModel</CODE> is to define and use a category system. The =
+profile=20
+adopts this mechanism to add the ability for <CODE>uddi:tModel</CODE>s =
+to assert=20
+conformance with WS-I profiles, and with the Basic Profile in=20
+particular.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR3020>R3020</A></SPAN>=20
+REGDATA of type <CODE>uddi:tModel</CODE> claiming conformance with a =
+WS-I=20
+profile MUST be categorized using the ws-i-org:conformsTo taxonomy. </P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR3030>R3030</A></SPAN>=20
+REGDATA of type <CODE>uddi:tModel</CODE> claiming conformance with a the =
+Basic=20
+Profile MUST use the ws-i-org:conformsTo categorization value of=20
+"http://www.ws-i.org/profiles/base/1.0".</P>
+<P class=3Dexample-banner>For example,</P><PRE class=3Dexample><SPAN =
+class=3Dcorrect>CORRECT: </SPAN>
+<CODE>
+&lt;tModel tModelKey=3D"..."&gt;
+   &lt;name&gt;BarSOAPService&lt;/name&gt;
+   &lt;description xml:lang=3D"EN"&gt;Bar=E2=80=99s SOAP =
+Service&lt;/description&gt;
+   &lt;overviewDoc&gt;...&lt;/overviewDoc&gt;
+   &lt;categoryBag&gt;
+      &lt;keyedReference
+         tModelKey=3D"uddi:..."
+         keyName=3D"ws-I_conformance:BasicProfile1.0"
+         keyValue=3D"http://www.ws-i.org/profiles/basic/1.0" /&gt;
+   &lt;/categoryBag&gt;
+				</CODE>
+</PRE>
+<P class=3Dednote><STRONG>Editors' note:</STRONG>The value of the =
+categorization=20
+in R3030 is intended to match the value used in the resolution of issue =
+w27=20
+concerning how to mark WSDL elements that conform to the profile. If the =
+value=20
+representing the Basic Profile 1.0 changes in the final resolution, the =
+value=20
+used here should be changed to match.</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Since <CODE>wsdl:service</CODE> elements are not necessarily mapped =
+to a=20
+single <CODE>uddi:businessService</CODE> and are also not subject to =
+conformance=20
+claims, it would be unclear what it meant if a =
+<CODE>uddi:businessEntity</CODE>=20
+or a <CODE>uddi:businessService</CODE> element were to claim conformance =
+with=20
+the Basic Profile. Also, <CODE>uddi:bindingTemplate</CODE> elements =
+can't be=20
+categorized because the UDDI V2 XML Schema does not provide a=20
+<CODE>uddi:categoryBag</CODE> for them. Hence, the conformance claim =
+made by=20
+<CODE>wsdl:port</CODE> elements can't be documented in the corresponding =
+
+<CODE>uddi:bindingTemplate</CODE>.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR3005>R3005</A></SPAN>=20
+REGDATA other than <CODE>uddi:tModel</CODE> elements representing =
+conformant Web=20
+service types MUST NOT be categorized using the ws-i-org:conformsTo =
+taxonomy and=20
+a categorization of "http://www.ws-i.org/profiles/base/1.0".</P></DIV>
+<H2><A name=3Dsecurity>6. </A>Security</H2>
+<P>As is true of all network-oriented information technologies, the =
+subject of=20
+security is a crucial one for Web services. For Web services, as for =
+other=20
+information technologies, security consists of understanding the =
+potential=20
+threats an attacker may mount and applying operational, physical, and=20
+technological countermeasures to reduce the risk of a successful attack =
+to an=20
+acceptable level. Because an "acceptable level of risk" varies hugely =
+depending=20
+on the application, and because costs of implementing countermeasures is =
+also=20
+highly variable, there can be no universal "right answer" for securing =
+Web=20
+services. Choosing the absolutely correct balance of countermeasures and =
+
+acceptable risk can only be done on a case by case basis.</P>
+<P>That said, there <EM>are</EM> common patterns of countermeasures that =
+
+experience shows reduce the risks to acceptable levels for many Web =
+services.=20
+The Basic Profile adopts, but does not mandate use of, the most widely =
+used of=20
+these: HTTP secured with either TLS 1.0 or SSL 3.0 (HTTPS). That is, =
+conformant=20
+Web services may use HTTPS; they may also use other countermeasure =
+technologies=20
+or none at all.</P>
+<P>HTTPS is widely regarded as mature standard for encrypted transport=20
+connections to provide a basic level of confidentiality. HTTPS thus =
+forms the=20
+first and simplest means of achieving some basic security features which =
+are=20
+required by many real-world web service applications. HTTPS may also be =
+used to=20
+provide client authentication through the use of client-side =
+certificates.</P>
+<P>This portion of the profile incorporates the following specifications =
+by=20
+reference;</P>
+<UL>
+  <LI><A href=3D"http://www.ietf.org/rfc/rfc2818">RFC2818: HTTP Over =
+TLS</A>.=20
+  <LI><A href=3D"http://www.ietf.org/rfc/rfc2246">RFC2246: The TLS =
+Protocol=20
+  Version 1.0</A>.=20
+  <LI><A href=3D"http://wp.netscape.com/eng/ssl3/draft302.txt">The SSL =
+Protocol=20
+  Version 3.0</A>.=20
+  <LI><A href=3D"http://www.ietf.org/rfc/rfc2459">RFC2459: Internet =
+X.509 Public=20
+  Key Infrastructure Certificate and CRL Profile</A>. </LI></UL>
+<H3><A name=3DHTTPSBase>6.1</A> The Use of HTTPS</H3>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>HTTPS is such a useful, widely understood basic security mechanism =
+that the=20
+profile needs to allow it.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR5000>R5000</A></SPAN> An=20
+INSTANCE MAY require the use of HTTPS.</P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR5001>R5001</A></SPAN> If an=20
+INSTANCE requires the use of HTTPS, the location attribute of the=20
+<CODE>soapbind:address</CODE> element in its <CODE>wsdl:port</CODE> =
+description=20
+MUST be a URI whose scheme is "https"; otherwise it MUST be a URI whose =
+scheme=20
+is "http".</P></DIV>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Simple HTTPS provides authentication of the Web service instance by =
+the=20
+consumer but not authentication of the consumer by the instance. For =
+many=20
+instances this leaves the risk too high to permit interoperation. =
+Including the=20
+mutual authentication facility of HTTPS in the profile permits instances =
+to use=20
+the countermeasure of authenticating the consumer. In cases in which=20
+authentication of the instance by the consumer is insufficient, this =
+often=20
+reduces the risk sufficiently to permit interoperation.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR5010>R5010</A></SPAN>=20
+INSTANCEs MAY require the use of HTTPS with mutual =
+authentication.</P></DIV>
+<H3><A name=3DHTTPSCertAuth>6.2</A> Certificate Authority</H3>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Successful use of basic HTTPS requires the consumer to agree that the =
+
+instance's certificate was issued by an acceptable authority. Successful =
+use of=20
+mutual authentication additionally requires the instance to agree that =
+the=20
+consumer's certificate was issued by an acceptable authority. The choice =
+of=20
+which certificate authorities are acceptable is an important =
+consideration in=20
+the effectiveness of using HTTPS, but is a policy decision that is =
+beyond the=20
+scope of the profile.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR5100>R5100</A></SPAN> If an=20
+INSTANCE requires use of basic HTTPS, it MUST choose a certificate =
+authority for=20
+its certificate that is acceptable to the consumer.<SPAN=20
+class=3Dstatement-type>C</SPAN></P>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR5110>R5110</A></SPAN> If an=20
+INSTANCE requires the use of HTTPS with mutual authentication, it MUST =
+find the=20
+choice of certificate authority for the consumer's certificate =
+acceptable.<SPAN=20
+class=3Dstatement-type>C</SPAN></P></DIV>
+<H3><A name=3DHTTPSCertEncr>6.3</A> Permitted HTTPS Encryption =
+Algorithms</H3>
+<DIV class=3Drefinement>
+<DIV class=3Drationale>
+<P>Successful use of HTTPS requires the consumer and the instance to =
+agree on a=20
+mutually acceptable encryption algorithm. The choice of which encryption =
+
+algorithms are acceptable is an important consideration in the =
+effectiveness of=20
+using HTTPS, but is a policy decision that is beyond the scope of the=20
+profile.</P></DIV>
+<P class=3Dstatement><SPAN class=3Dstatement-id><A =
+name=3DR5200>R5200</A></SPAN> If an=20
+INSTANCE requires the use of HTTPS, it MUST choose an encryption =
+algorithm that=20
+is acceptable to the consumer.<SPAN=20
+class=3Dstatement-type>C</SPAN></P></DIV></BODY></HTML>
+
+------=_NextPart_000_0000_01C2CD3A.6907A0A0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.ws-i.org/images/WS-I-logo.gif
+
+R0lGODlhawBYALMAAJiYmP////ZzDztontPT0/iaU56ruuLk5meJs/q9j8jV5IWFhbe+xv3o1/zV
+t/Ly8yH5BAAAAAAALAAAAABrAFgAAAT/MMhJq70469BcSkXxOc9mnpUTrqFjgmzRbE0cJmkh7Dwv
+zqigAkEsIhSNno+m3OE0iabAJalJpYlS0MQYeL8DRkDX1GKizcKGrAQmr9cCdZvpgr1itHJ+Ye8z
+VkoFJW9wcHx0FXZ3Yg5YgHBPF45NT36GUoiJEotgYmNpGXppZhWjPC6FaR+XPkCbFJ1fn60CrxQP
+tagYrYMBlIKvDypKkhQHDKUnsngSwD3GE8+PFqpLAadOFrk7MhgECwYHW8xhVVJqFro+yr/U2QLp
+Fh8aBAD3ySjln6CCytyYNNVycyVLInv3AIhbdqeZBHiIpsWpALCHvH5pbp1AmBBAPg37/yZY00Zh
+nZJSEgUYG9lDU72OCQ0QANnQnISK7ESiy0QBYgpD3jbC7PjRQsgJ8F6lDGSxpJR2KVsKHdpxptGa
+/NxVmtALmxSCoSZhSqDRAkeq+MbFwkqBZTqWLlI+gRetrUk5L9HCJGDmKNevXoNJ6IqxR1lc8KC1
+k3BWL4AFVgP4fcizlaSkOLudIAYnaIXGevlOmKy1GFydlVjWxfAgcbeyoIcuXNswa4DM8bL5+ivI
+ZxDO6Mw6BhCZNiN1mK4hTc5jsYbWkT7rZaD2am0LUZsgYhl8U9SLAWITp3m9AndBfZi7RBGVD+ii
+GEgPTr46u+EMKsCbosa4o0yG5e2Hyf9h5+VUDRurUbbVBBzBR95x2GGiH2/R4QIcDwZRVIt74RTH
+BVsXjIVfQOZ1RsJNF943ATLO1QEicnAcdhNQZbkWzwqdwaLIiwJ2l8E6ExbG3B86jsZjW4dskF2C
+uA2ZYCLyUdjGBk3akkGVhjwJ5ZE9+QiFlxikaGKR1kF4QQ02rGeeDXiZ0BqQbZJZwRBGEKGAnHie
+6cEHfDogY56ABirooIQWauihiCaq6KKMNuroo5BGKumklFZq6aWYZqrpppgeUN1NyhzwwAMElGrq
+OAeUKioGqTIQWaqmlloCrASsGoCnFzwgqq4VtOqqGaTGWqsEyAzLCQClMJDVAZCB09H/Ask89hi0
+Zi1wTzijSpsQZMxae20yDCzQTrikItuftQYY8JgBJYQLkxjOrlsCOK9a29cCkgGw66ijQjtquFk9
+cM+o9ojqL7+zHkyqv9TiEk54C4wTrjglEDwwA8gi3C+75aql0AQGLADZBB9jvM3IEjw8gcAAUNTw
+MShLoK5kEccibnjIgmPbTXyZ7LIBF5B7K2QhzzsyxrV66ukD0HoarofOVsc0dUqLyuxMBD/MNNDE
+NmwPyxtgXDWuE4c6cshDi4E2zd4+Fq21IpsrXcMCt22tp96qay8nNQdQdH/M7qxI2+syJrKHCl0t
+M7INIz321qbe8+lNZW/9OLMhN13B/8eKA/5yfPqOvXLIWbkrN7OPqeWzw5Ft/Q3DO1+NebUImfH1
+PWG3DFLMTMfst7Wjyb0y7yrfWtzAn3c9E+rKTFvc1zpfkOoDq6/YevEBPFZK4KNFXHW/VNvTN8TJ
+UM+wOFUPbRXzFIDDdfcSW8vXqMjYK/b3AP/re6lGVffeA+qKyeQ4Qi0ADkVU4yFWAkcDNXb1Zyj5
+eA/NvrUJjY3qNghjjapWZsGbUKRFuKDIqT6oMWLJioPtsOAFO5hBiiwNF/xCYQxbSKUYevA2MMQg
+wia3KgMggAEIkFq6fGgEOhFhAEeo051uhQAwBPE2dUqGAZDYxCRS8YcVSBcFpkgEjv8hIF0IMMMX
+uVhFIH7iAUQYxxS78EQoHgGIAzCAAhSARGUxYI5IVAAcdeUFOSpgigNQwAPyCEcgvvGOdPxhIVfk
+hSUGoIkMmCLQqDgAMQYRjnJEYyD9ZhMf2uGJaESAzAaAKnNckI5co+MQSHmMJh7gixJAJSwveIA4
+xtKWo0SiFogwKl3GkZcTIMIo1RLKLrzPk79kpTA5WcoryhGJ6cojLtdiSB82sopFeGUcAblEOt7R
+JlVsxi/DGExRMnMCdNQlyH4YSE3SaZi3gma6vvkFdnnTAt40Qia7OERt9nGJmvyiF0pQRS4OgYiW
+hCfINrnOLtzJn+acYikdGYB8snL/kOSkQBMPigtYMjKa/GBjEWy5TFkitJwK5QQrG8pQTXJNovFE
+n6hU6U7J5HFUq2TXNN04Nluu8Ta65NcUVzlHSX5xowcQ5DJhis6VyoydjgwlPP35z01q807pPKIp
+PXqTJn4hiB4d6lA7qtU+ojGaswirUyu61qQ+gKK3IWZ1kjpHBVhtZXa9iR7vaAZB9qqudtWVGeg6
+uVvZta5aUBpgBUssuL7VObQqha6U1g5aFZY1uapYXL9HkWM8LlQjXJn0bBeTezjwd0RhUGnxIdkF
+hud9o2EXcQ7wLNv851bXMm3BHqgQ044DgB6irVUAtqpy6St7Mn0azWRSsfqVbm+G/zvt4pjGF6WF
+7FPOai5tZXq0cBRXfON4THEUR69tDMwjFPAI9yyAq66FLDLgwBbI2EW8gFGQZJ9gFt52xrK6vUy4
+yH3ddun3NHWBcHE004LYBiYz+kbGwDZbmBnQO7QDzEx6kPFI9HA7E9+xLmRVCfAxYoUqyOhKZRjL
+1nHTRV3lwax8H5MAha8W4wt4BL3uu814KMzeiCkEYCTTnWopqK1pScxcdUOGg2UsZJnZDWUzjtiF
+T4axT+gMwOG67HnFoFyIechwqWpW5FqWYpCZtsXgwC60YsXgKIf5yzSjLT9oK14d+87CI6NwlvkG
+H/dNrVfNEt7vHCww+8I2bdnLb27N3osL5fJ4aCgz34+l5TF+XPdY4YikvP6WRY/cLBYODpe3oCW0
+wW3XxRM0gKYT+GgO44IAdvxUexkjNVgry1jGEuGsQ2g1YSktV9Ulpmh4Zsdh36qwF+SUspfN7GY7
++9nQjra0p03talv72oWKAAA7
+
+------=_NextPart_000_0000_01C2CD3A.6907A0A0--

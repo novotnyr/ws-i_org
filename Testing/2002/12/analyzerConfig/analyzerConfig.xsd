@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.ws-i.org/testing/2002/12/analyzerConfig/"
+    xmlns:tns="http://www.ws-i.org/testing/2002/12/analyzerConfig/" 
+    xmlns:uddi="urn:uddi-org:api_v2" 
+    elementFormDefault="qualified">	
+  
+  <xsd:element name="configuration" type="tns:configuration" nillable="true"/>
+  <xsd:complexType name="configuration">
+    <xsd:sequence>
+      <xsd:element name="options" type="tns:options"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="optional"/>
+    <xsd:attribute name="version" type="xsd:string" use="required"/>
+  </xsd:complexType>
+	
+  <xsd:complexType name="options">
+    <xsd:sequence>
+      <xsd:element name="assertionResults" type="tns:assertionResults"/>
+      <xsd:element name="reportFile" type="tns:reportFile"/>
+      <xsd:element name="testAssertionsFile" type="xsd:anyURI"/>
+      <xsd:element name="logFile" type="tns:logFile"/>
+      <xsd:element name="wsdl" type="tns:wsdl"/>
+    </xsd:sequence>
+    <xsd:attribute name="verbose" type="tns:verbose" use="required"/>
+  </xsd:complexType>
+	
+  <xsd:simpleType name="verbose">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="5"/>
+   </xsd:restriction>
+  </xsd:simpleType>
+		
+  <xsd:complexType name="assertionResults">
+    <xsd:attribute name="type" use="optional" default="resultEqualsFailed">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="all"/>
+          <xsd:enumeration value="resultEqualsFailed"/>
+          <xsd:enumeration value="notPassed"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+    <xsd:attribute name="logEntry" type="xsd:boolean" use="optional" default="false"/>
+    <xsd:attribute name="assertionDescription" type="xsd:boolean" use="optional" 
+               default="false"/>
+    <xsd:attribute name="failureMessage" type="xsd:boolean" use="optional" 
+               default="false"/>
+    <xsd:attribute name="failureDetail" type="xsd:boolean" use="optional" 
+               default="true"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="reportFile">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:anyURI">
+        <xsd:attribute name="replace" type="xsd:boolean" use="optional" default="false"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="logFile">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:anyURI">
+        <xsd:attribute name="correlationType" use="optional" default="operation">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:enumeration value="operation"/>
+              <xsd:enumeration value="namespace"/>
+              <xsd:enumeration value="endpoint"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+	
+  <xsd:complexType name="wsdl">
+    <xsd:choice>
+      <xsd:element name="wsdlFile" type="xsd:anyURI"/>
+      <xsd:element name="uddiEntry" type="tns:uddiEntry"/>
+    </xsd:choice>
+    <xsd:attribute name="type" type="xsd:QName" use="optional"/>
+    <xsd:attribute name="name" type="xsd:QName" use="optional"/>
+    <xsd:attribute name="serviceName" type="xsd:QName" use="optional"/>
+  </xsd:complexType>
+	
+  <xsd:complexType name="uddiEntry">
+    <xsd:sequence>
+      <xsd:element name="uddiKey" type="tns:uddiKey"/>
+      <xsd:element name="inquiryURL" type="xsd:anyURI"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="uddiKey">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:NMTOKEN">
+        <xsd:attribute name="type" use="required">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:enumeration value="bindingKey"/>
+              <xsd:enumeration value="tModelKey"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:schema>

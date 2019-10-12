@@ -1,0 +1,840 @@
+﻿<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Simple SOAP Binding Profile - Version 1.0 (WGD)</title>
+<style>
+<!--
+@media Print    
+{
+A.offsite:unknown {
+	FONT-WEIGHT: lighter; FONT-SIZE: 85%; content: " &lt;" attr(href) "&gt; "
+}
+    }
+
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-believe-normal-left:yes;}
+h1
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h2
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:18.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h4
+	{margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	font-size:9.5pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:blue;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+code
+	{font-family:"Courier New";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.refinement, li.refinement, div.refinement
+	{margin-top:.25in;
+	margin-right:0in;
+	margin-bottom:.25in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.statement, li.statement, div.statement
+	{margin-top:6.0pt;
+	margin-right:66.0pt;
+	margin-bottom:6.0pt;
+	margin-left:66.0pt;
+	text-indent:-48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.statement-id, li.statement-id, div.statement-id
+	{margin-right:0in;
+	margin-left:0in;
+	background:#FFFFAA;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.statement-type, li.statement-type, div.statement-type
+	{margin-right:0in;
+	margin-left:0in;
+	background:#CCCCFF;
+	font-size:8.5pt;
+	font-family:"Times New Roman";}
+p.statement-origin, li.statement-origin, div.statement-origin
+	{margin-right:0in;
+	margin-left:0in;
+	background:#FFCCCC;
+	font-size:8.5pt;
+	font-family:"Times New Roman";}
+p.rationale, li.rationale, div.rationale
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.explanation, li.explanation, div.explanation
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.practice, li.practice, div.practice
+	{margin-right:0in;
+	margin-left:0in;
+	background:green;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.example, li.example, div.example
+	{margin-top:6.0pt;
+	margin-right:24.0pt;
+	margin-bottom:6.0pt;
+	margin-left:24.0pt;
+	background:#EEEEEE;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.example-banner, li.example-banner, div.example-banner
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.correct, li.correct, div.correct
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:Arial;
+	color:#009900;
+	font-weight:bold;}
+p.incorrect, li.incorrect, div.incorrect
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:Arial;
+	color:#990000;
+	font-weight:bold;}
+p.specification, li.specification, div.specification
+	{margin-top:6.0pt;
+	margin-right:24.0pt;
+	margin-bottom:6.0pt;
+	margin-left:24.0pt;
+	background:#FFFFAA;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.ednote, li.ednote, div.ednote
+	{margin:.2in;
+	background:#FFEEEE;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.note, li.note, div.note
+	{margin-right:0in;
+	margin-left:.25in;
+	background:#FFCCCC;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.toc, li.toc, div.toc
+	{margin-right:0in;
+	margin-left:24.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.subtoc, li.subtoc, div.subtoc
+	{margin-right:0in;
+	margin-left:.5in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.subsubtoc, li.subsubtoc, div.subsubtoc
+	{margin-right:0in;
+	margin-left:48.0pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.chg, li.chg, div.chg
+	{margin-right:0in;
+	margin-left:0in;
+	background:orange;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	text-decoration:underline;}
+p.add, li.add, div.add
+	{margin-right:0in;
+	margin-left:0in;
+	background:green;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	text-decoration:underline;}
+p.del, li.del, div.del
+	{margin-right:0in;
+	margin-left:0in;
+	background:red;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	text-decoration:line-through;}
+p.copyright, li.copyright, div.copyright
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+span.statement-id1
+	{background:#FFFFAA;
+	font-style:normal;}
+span.statement-type1
+	{background:#CCCCFF;
+	font-style:normal;}
+span.statement-origin1
+	{background:#FFCCCC;
+	font-style:normal;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ -->
+</style>
+<![if mso 9]>
+<style>
+p.MsoNormal
+	{margin-left:24.0pt;}
+</style>
+<![endif]>
+</head>
+
+<body bgcolor=white lang=EN-US link=blue vlink=blue style='margin-left:24.0pt;
+margin-top:16.0pt;margin-right:24.0pt;margin-bottom:16.0pt'>
+
+<div class=Section1>
+
+<div>
+
+<p><span style='font-family:Arial;color:black'><a href="http://www.ws-i.org/"><span
+style='text-decoration:none'><img border=0 width=107 height=88
+src="http://www.ws-i.org/images/WS-I-logo.gif"
+alt=WS-I></span></a></span></p>
+
+<h1><span style='font-family:Arial;color:black'>Simple SOAP Binding Profile
+Version 1.0</span></h1>
+
+<h2><span style='font-family:Arial;color:black'>Working Group Draft</span></h2>
+
+<h2><span style='font-family:Arial;color:black'>Date: 2003/12/06 07:51:19 </span></h2>
+
+<p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><i><span
+style='font-family:Arial;color:black'>This revision: </span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><span style='font-family:Arial;
+color:black'><a
+href="http://www.ws-i.org/Profiles/Basic/2003-08/SimpleSoapBindingProfile-1.0.htm">http://www.ws-i.org/Profiles/Basic/2003-08/SimpleSoapBindingProfile-1.0.htm</a>
+</span></p>
+
+<p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><i><span
+style='font-family:Arial;color:black'>Editors: </span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><span style='font-family:Arial;
+color:black'>Mark Nottingham, BEA Systems </span></p>
+
+<p class=MsoNormal style='margin:0in;margin-bottom:.0001pt'><i><span
+style='font-family:Arial;color:black'>Administrative contact: </span></i></p>
+
+<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;margin-bottom:.0001pt'><span style='font-family:Arial;
+color:black'><a href="mailto:secretary@ws-i.org">secretary@ws-i.org</a> </span></p>
+
+<p class=copyright><span style='font-family:Arial;color:black'>Copyright ©
+2002-2003 by <a href="http://www.ws-i.org/">The Web Services-Interoperability
+Organization</a> (WS-I) and Certain of its Members. All Rights Reserved. </span></p>
+
+</div>
+
+<div class=MsoNormal align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><span style='font-family:Arial;color:black'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span style='font-family:Arial;color:black'>Abstract</span></h2>
+
+<p><span style='font-family:Arial;color:black'>This document defines the WS-I
+Simple SOAP Binding Profile 1.0, consisting of a set of non-proprietary Web
+services specifications, along with clarifications and amendments to those
+specifications which promote interoperability.</span></p>
+
+<h2><span style='font-family:Arial;color:black'>Status of this Document</span></h2>
+
+<p><span style='font-family:Arial;color:black'>This document is a Working Group
+Draft; it has been accepted by the Working Group as reflecting the current
+state of discussions. It is a work in progress, and should not be considered
+authoritative or final; other documents may supersede this document. </span></p>
+
+<h2><span style='font-family:Arial;color:black'>Feedback</span></h2>
+
+<p><span style='font-family:Arial;color:black'>The Web Services-Interoperability
+Organization (WS-I) would like to receive input, suggestions and other feedback
+(&quot;Feedback&quot;) on this work from a wide variety of industry
+participants to improve its quality over time. </span></p>
+
+<p><span style='font-family:Arial;color:black'>By sending email, or otherwise
+communicating with WS-I, you (on behalf of yourself if you are an individual,
+and your company if you are providing Feedback on behalf of the company) will
+be deemed to have granted to WS-I, the members of WS-I, and other parties that
+have access to your Feedback, a non-exclusive, non-transferable, worldwide,
+perpetual, irrevocable, royalty-free license to use, disclose, copy, license,
+modify, sublicense or otherwise distribute and exploit in any manner whatsoever
+the Feedback you provide regarding the work. You acknowledge that you have no
+expectation of confidentiality with respect to any Feedback you provide. You
+represent and warrant that you have rights to provide this Feedback, and if you
+are providing Feedback on behalf of a company, you represent and warrant that
+you have the rights to provide Feedback on behalf of your company. You also
+acknowledge that WS-I is not required to review, discuss, use, consider or in
+any way incorporate your Feedback into future versions of its work. If WS-I
+does incorporate some or all of your Feedback in a future version of the work,
+it may, but is not obligated to include your name (or, if you are identified as
+acting on behalf of your company, the name of your company) on a list of
+contributors to the work. If the foregoing is not acceptable to you and any
+company on whose behalf you are acting, please do not provide any Feedback.</span></p>
+
+<p><span style='font-family:Arial;color:black'>Feedback on this document should
+be directed to <a href="mailto:wsbasic_comment@ws-i.org">wsbasic_comment@ws-i.org</a>.</span></p>
+
+<div class=MsoNormal align=center style='margin:0in;margin-bottom:.0001pt;
+text-align:center'><span style='font-family:Arial;color:black'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h2><span style='font-family:Arial;color:black'>Table of Contents</span></h2>
+
+<p class=toc><span style='font-family:Arial;color:black'>1. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#introduction">Introduction</a>
+<br>
+<span class=subtoc1>1.1. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#relationships">Relationships
+to Other Profiles</a> </span><br>
+<span class=subtoc1>1.2. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#conventions">Notational
+Conventions</a> </span><br>
+2. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#CONFORMANCE">Profile
+Conformance</a> <br>
+3. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#MESSAGE">Messaging</a>
+<br>
+<span class=subtoc1>3.1. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#SERIALIZATION">Message
+Serialization</a> </span><br>
+<span class=subsubtoc1>3.1.1. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#d0e121">XML
+Envelope Serialization</a> </span><br>
+<span class=subsubtoc1>3.1.2. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#d0e130">Unicode
+BOMs</a> </span><br>
+<span class=subsubtoc1>3.1.3. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#d0e135">XML
+Declarations</a> </span><br>
+<span class=subsubtoc1>3.1.4. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#d0e140">Character
+Encodings</a> </span><br>
+<span class=subtoc1>3.2. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#HTTP">HTTP
+Behaviors</a> </span><br>
+<span class=subsubtoc1>3.2.1. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#d0e151">HTTP
+Client Error Status Codes</a> </span><br>
+4. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#DESCRIPTION">Description</a>
+<br>
+<span class=subtoc1>4.1. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download">Bindings</a>
+</span><br>
+<span class=subsubtoc1>4.1.1. <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#d0e162">SOAP
+Binding Extensions</a> </span><br>
+Appendix I: <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#references">Referenced
+Specifications</a> <br>
+Appendix II: <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#points">Extensibility
+Points</a> <br>
+Appendix III: <a
+href="http://members.ws-i.org/dman/Document.phx/Private+Folders/Community+Folder/Working+Groups/WSBasic+Profile/Profile/v1.1/SimpleSoapBindingProfile-1.0-WGD.html?cmd=download#acks">Acknowledgements</a>
+</span></p>
+
+<h2><a name=introduction><span style='font-family:Arial;color:black'>1. </span></a><span
+style='font-family:Arial;color:black'>Introduction</span></h2>
+
+<p><span style='font-family:Arial;color:black'>This document defines the WS-I
+Simple SOAP Binding Profile 1.0 (hereafter, &quot;Profile&quot;), consisting of
+a set of non-proprietary Web services specifications, along with clarifications
+to and amplifications of those specifications which promote interoperability.</span></p>
+
+<p><span style='font-family:Arial;color:black'>Section 1 introduces the Profile,
+and explains its relationships to other profiles.</span></p>
+
+<p><span style='font-family:Arial;color:black'>Section 2, &quot;Profile
+Conformance,&quot; explains what it means to be conformant to the Profile. </span></p>
+
+<p><span style='font-family:Arial;color:black'>Each subsequent section
+addresses a component of the Profile, and consists of two parts; an overview
+detailing the component specifications and their extensibility points, followed
+by subsections that address individual parts of the component specifications.
+Note that there is no relationship between the section numbers in this document
+and those in the referenced specifications.</span></p>
+
+<h3><a name=relationships><span style='font-family:Arial;color:black'>1.1</span></a><span
+style='font-family:Arial;color:black'> Relationships to Other Profiles</span></h3>
+
+<p><span style='font-family:Arial;color:black'>This Profile is derived from
+those Basic Profile 1.0 requirements related to the serialization of the
+envelope and its representation in the message, incorporating any errata to
+date. These requirements have been factored out of the Basic Profile 1.1 to
+enable other Profiles to be composable with it.</span></p>
+
+<p><span style='font-family:Arial;color:black'>A combined claim of conformance
+to both the Basic Profile 1.1 and the Simple SOAP Binding Profile 1.0 should be
+equivalent to a claim of conformance to the Basic Profile 1.0.</span></p>
+
+<h3><a name=conventions><span style='font-family:Arial;color:black'>1.2</span></a><span
+style='font-family:Arial;color:black'> Notational Conventions</span></h3>
+
+<p><span style='font-family:Arial;color:black'>The keywords &quot;MUST&quot;,
+&quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL
+NOT&quot;, &quot;SHOULD&quot;, &quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;,
+&quot;MAY&quot;, and &quot;OPTIONAL&quot; in this document are to be
+interpreted as described in RFC2119.</span></p>
+
+<p><span style='font-family:Arial;color:black'>Normative statements in the
+Profile (i.e., those impacting conformance, as outlined in &quot;Profile
+Conformance&quot;) are presented in the following manner:</span></p>
+
+<p class=statement><span class=statement-id1><span style='font-family:Arial;
+color:black'>Rnnnn</span></span><span style='font-family:Arial;color:black'>Statement
+text here.</span></p>
+
+<p><span style='font-family:Arial;color:black'>where &quot;nnnn&quot; is
+replaced by the statement number. Each statement contains exactly one
+requirement level keyword (e.g., &quot;MUST&quot;) and one conformance target
+keyword (e.g., &quot;MESSAGE&quot;).</span></p>
+
+<p><span style='font-family:Arial;color:black'>Some statements clarify the
+referenced specification(s), but do not place additional constraints upon
+implementations. For convenience, clarifications are annotated in the following
+manner: </span><span class=statement-type1><span style='font-size:8.5pt;
+font-family:Arial;color:black'>C</span></span><span style='font-family:Arial;
+color:black'> </span></p>
+
+<p><span style='font-family:Arial;color:black'>Some statements are derived from
+ongoing standardization work on the referenced specification(s). For
+convenience, such forward-derived statements are annotated in the following
+manner: </span><span class=statement-origin1><span style='font-size:8.5pt;
+font-family:Arial;color:black'>xxxx</span></span><span style='font-family:Arial;
+color:black'>, where &quot;xxxx&quot; is an identifier for the specification
+(e.g., &quot;SOAP12&quot; for SOAP Version 1.2). Note that because such work is
+not complete, the specification that the requirement is derived from may
+change; this information is included only as a convenience to implementers.</span></p>
+
+<p><span style='font-family:Arial;color:black'>This specification uses a number
+of namespace prefixes throughout; their associated URIs are listed below. Note
+that the choice of any namespace prefix is arbitrary and not semantically
+significant.</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='color:black'><strong><span style='font-family:Arial'>soap</span></strong><span
+     style='font-family:Arial'> -
+     &quot;http://schemas.xmlsoap.org/soap/envelope/&quot; </span></li>
+ <li class=MsoNormal style='color:black'><strong><span style='font-family:Arial'>xsi</span></strong><span
+     style='font-family:Arial'> - &quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+     </span></li>
+ <li class=MsoNormal style='color:black'><strong><span style='font-family:Arial'>xsd</span></strong><span
+     style='font-family:Arial'> - &quot;http://www.w3.org/2001/XMLSchema&quot; </span></li>
+ <li class=MsoNormal style='color:black'><strong><span style='font-family:Arial'>soapenc</span></strong><span
+     style='font-family:Arial'> -
+     &quot;http://schemas.xmlsoap.org/soap/encoding/&quot; </span></li>
+ <li class=MsoNormal style='color:black'><strong><span style='font-family:Arial'>wsdl</span></strong><span
+     style='font-family:Arial'> - &quot;http://schemas.xmlsoap.org/wsdl/&quot; </span></li>
+ <li class=MsoNormal style='color:black'><strong><span style='font-family:Arial'>soapbind</span></strong><span
+     style='font-family:Arial'> -
+     &quot;http://schemas.xmlsoap.org/wsdl/soap/&quot; </span></li>
+</ul>
+
+<h2><a name=CONFORMANCE><span style='font-family:Arial;color:black'>2. </span></a><span
+style='font-family:Arial;color:black'>Profile Conformance</span></h2>
+
+<p class=ednote><strong><span style='font-family:Arial;color:black'>Editors'
+note:</span></strong><span style='font-family:Arial;color:black'>Conformance
+Section TBD</span></p>
+
+<h2><a name=MESSAGE><span style='font-family:Arial;color:black'>3. </span></a><span
+style='font-family:Arial;color:black'>Messaging</span></h2>
+
+<p><span style='font-family:Arial;color:black'>This section of the Profile
+incorporates the following specifications by reference, and defines
+extensibility points within them;</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='color:black'><span style='font-family:Arial'><a
+     href="http://www.w3.org/TR/SOAP/">Simple Object Access Protocol (SOAP) 1.1</a>
+     </span></li>
+ <li class=MsoNormal style='color:black'><span style='font-family:Arial'><a
+     href="http://www.w3.org/TR/REC-xml">Extensible Markup Language (XML) 1.0
+     (Second Edition)</a> </span></li>
+ <li class=MsoNormal style='color:black'><span style='font-family:Arial'><a
+     href="http://www.ietf.org/rfc/rfc2616">RFC2616: Hypertext Transfer
+     Protocol -- HTTP/1.1</a> </span></li>
+</ul>
+
+<h3><a name=SERIALIZATION><span style='font-family:Arial;color:black'>3.1</span></a><span
+style='font-family:Arial;color:black'> Message Serialization</span></h3>
+
+<p><span style='font-family:Arial;color:black'>SOAP 1.1 defines an XML
+structure for transmitting messages, the envelope. The Profile mandates the use
+of that structure, and places the following constraints on its use:</span></p>
+
+<div style='margin-top:.25in;margin-bottom:.25in'>
+
+<h4><span style='font-family:Arial;color:black'>3.1.1 XML Envelope
+Serialization</span></h4>
+
+<p class=statement><a name=R9700><span class=statement-id1><span
+style='font-family:Arial;color:black'>R9700</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>A MESSAGE MUST serialize the envelope as
+the exclusive payload of the HTTP entity-body.</span></p>
+
+<p class=statement><a name=R9701><span class=statement-id1><span
+style='font-family:Arial;color:black'>R9701</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>A MESSAGE MUST serialize the envelope as
+XML 1.0.</span></p>
+
+<p class=statement><a name=R9702><span class=statement-id1><span
+style='font-family:Arial;color:black'>R9702</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>A MESSAGE MUST have a
+&quot;Content-Type&quot; HTTP header field.</span></p>
+
+<p class=statement><a name=R9703><span class=statement-id1><span
+style='font-family:Arial;color:black'>R9703</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>A MESSAGE's &quot;Content-Type&quot; HTTP
+header field MUST have a field-value whose media type is &quot;text/xml&quot;.</span></p>
+
+</div>
+
+<div style='margin-top:.25in;margin-bottom:.25in'>
+
+<h4><span style='font-family:Arial;color:black'>3.1.2 Unicode BOMs</span></h4>
+
+<div style='margin-top:6.0pt;margin-bottom:6.0pt'>
+
+<p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><span style='font-family:Arial;color:black'>XML 1.0 allows
+UTF-8 encoding to include a BOM; therefore, receivers of envelopes must be
+prepared to accept them. The BOM is mandatory for XML encoded as UTF-16.</span></p>
+
+</div>
+
+<p class=statement><a name=R4001><span class=statement-id1><span
+style='font-family:Arial;color:black'>R4001</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>A RECEIVER MUST accept envelopes that
+include the Unicode Byte Order Mark (BOM).</span><span class=statement-type1><span
+style='font-size:8.5pt;font-family:Arial;color:black'>C</span></span><span
+style='font-family:Arial;color:black'> </span></p>
+
+</div>
+
+<div style='margin-top:.25in;margin-bottom:.25in'>
+
+<h4><span style='font-family:Arial;color:black'>3.1.3 XML Declarations</span></h4>
+
+<div style='margin-top:6.0pt;margin-bottom:6.0pt'>
+
+<p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><span style='font-family:Arial;color:black'>Presence or
+absence of an XML declaration does not affect interoperability. Certain
+implementations might always precede their XML serialization with the XML
+declaration.</span></p>
+
+</div>
+
+<p class=statement><a name=R1010><span class=statement-id1><span
+style='font-family:Arial;color:black'>R1010</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>A RECEIVER MUST accept messages with
+envelopes that contain an XML Declaration. </span><span class=statement-type1><span
+style='font-size:8.5pt;font-family:Arial;color:black'>C</span></span><span
+style='font-family:Arial;color:black'> </span></p>
+
+</div>
+
+<div style='margin-top:.25in;margin-bottom:.25in'>
+
+<h4><span style='font-family:Arial;color:black'>3.1.4 Character Encodings</span></h4>
+
+<div style='margin-top:6.0pt;margin-bottom:6.0pt'>
+
+<p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><span style='font-family:Arial;color:black'>The Profile
+requires XML processors to support the &quot;UTF-8&quot; and &quot;UTF-16&quot;
+character encodings, in order to aid interoperability.</span></p>
+
+<p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><span style='font-family:Arial;color:black'>As a consequence
+of this, in conjunction with SOAP 1.1's requirement to use the
+&quot;text/xml&quot; media type (which has a default character encoding of
+&quot;us-ascii&quot;) on envelopes, the &quot;charset&quot; parameter must
+always be present on the envelope's content-type. A further consequence of this
+is that the encoding pseudo-attribute of XML declaration within the message is
+always ignored, in accordance with the requirements of both XML 1.0 and
+RFC3023, &quot;XML Media Types&quot;.</span></p>
+
+</div>
+
+<p class=statement><a name=R1012><span class=statement-id1><span
+style='font-family:Arial;color:black'>R1012</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>A MESSAGE MUST serialize the envelope
+using either UTF-8 or UTF-16 character encoding. </span></p>
+
+<p class=statement><a name=R1018><span class=statement-id1><span
+style='font-family:Arial;color:black'>R1018</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>A MESSAGE's &quot;Content-Type&quot; HTTP
+header field-value MUST indicate the correct character encoding, using the
+&quot;charset&quot; parameter. </span><span class=statement-type1><span
+style='font-size:8.5pt;font-family:Arial;color:black'>C</span></span><span
+style='font-family:Arial;color:black'> </span></p>
+
+</div>
+
+<h3><a name=HTTP><span style='font-family:Arial;color:black'>3.2</span></a><span
+style='font-family:Arial;color:black'> HTTP Behaviors</span></h3>
+
+<div style='margin-top:.25in;margin-bottom:.25in'>
+
+<h4><span style='font-family:Arial;color:black'>3.2.1 HTTP Client Error Status
+Codes</span></h4>
+
+<div style='margin-top:6.0pt;margin-bottom:6.0pt'>
+
+<p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><span style='font-family:Arial;color:black'>HTTP uses the 4xx
+series of status codes to indicate failure due to a client error. Although
+there are a number of situations that may result in one of these codes, the
+Profile highlights those when the payload of the HTTP request does not have the
+proper media type (&quot;text/xml&quot;, as required by the SOAP/HTTP binding),
+and when the anticipated method (&quot;POST&quot;) is not used.</span></p>
+
+</div>
+
+<p class=statement><a name=R1113><span class=statement-id1><span
+style='font-family:Arial;color:black'>R1113</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>An INSTANCE SHOULD use a &quot;400 Bad
+Request&quot; HTTP status code, if a HTTP request message is malformed, or if
+an envelope is not well-formed XML 1.0.</span></p>
+
+<p class=statement><a name=R1115><span class=statement-id1><span
+style='font-family:Arial;color:black'>R1115</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>An INSTANCE SHOULD use a &quot;415
+Unsupported Media Type&quot; HTTP status code if a HTTP request message's Content-Type
+header field-value has media type that is not &quot;text/xml&quot;.</span></p>
+
+<div style='margin-top:6.0pt;margin-bottom:6.0pt'>
+
+<p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><span style='font-family:Arial;color:black'>Note that these
+requirements do not force an instance to respond to requests. In some cases,
+such as Denial of Service attacks, an instance may choose to ignore requests. </span></p>
+
+</div>
+
+</div>
+
+<h2><a name=DESCRIPTION><span style='font-family:Arial;color:black'>4. </span></a><span
+style='font-family:Arial;color:black'>Description</span></h2>
+
+<h3><a name=""><span style='font-family:Arial;color:black'>4.1</span></a><span
+style='font-family:Arial;color:black'> Bindings</span></h3>
+
+<div style='margin-top:.25in;margin-bottom:.25in'>
+
+<h4><span style='font-family:Arial;color:black'>4.1.1 SOAP Binding Extensions</span></h4>
+
+<div style='margin-top:6.0pt;margin-bottom:6.0pt'>
+
+<p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><span style='font-family:Arial;color:black'>The Profile limits
+the choice of WSDL bindings to the well defined and most commonly used WSDL
+SOAP binding. WSDL 1.1 defined binding extensions for HTTP GET/POST and MIME,
+or any other attachments technology, are not permitted by the Profile.</span></p>
+
+</div>
+
+<p class=statement><a name=R2401><span class=statement-id1><span
+style='font-family:Arial;color:black'>R2401</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>A </span><code><span style='font-size:
+10.0pt;color:black'>wsdl:binding</span></code><span style='font-family:Arial;
+color:black'> element in a DESCRIPTION MUST only use the WSDL SOAP Binding as
+defined in WSDL 1.1 Section 3. </span></p>
+
+<p class=statement><a name=R9800><span class=statement-id1><span
+style='font-family:Arial;color:black'>R9800</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>In a DESCRIPTION WSDL binding extension
+elements and attributes which cause messages on the wire to be non-conformant
+to the Profile MUST NOT be used.</span><span class=statement-type1><span
+style='font-size:8.5pt;font-family:Arial;color:black'>C</span></span><span
+style='font-family:Arial;color:black'> </span></p>
+
+<p class=statement><a name=R9801><span class=statement-id1><span
+style='font-family:Arial;color:black'>R9801</span></span></a><span
+class=statement-id1><span style='font-family:Arial;color:black'> </span></span><span
+style='font-family:Arial;color:black'>In a DESCRIPTION the WSDL MIME and HTTP
+GET/POST and DIME binding extensions MUST NOT appear in the SOAP binding.</span><span
+class=statement-type1><span style='font-size:8.5pt;font-family:Arial;
+color:black'>C</span></span><span style='font-family:Arial;color:black'> </span></p>
+
+<div style='margin-top:6.0pt;margin-bottom:6.0pt'>
+
+<p class=MsoNormal style='margin-top:3.0pt;margin-right:0in;margin-bottom:3.0pt;
+margin-left:0in'><span style='font-family:Arial;color:black'>Note that this
+places a requirement on the construction of conformant </span><code><span
+style='font-size:10.0pt;color:black'>wsdl:binding</span></code><span
+style='font-family:Arial;color:black'> elements. It does not place a
+requirement on descriptions as a whole; in particular, it does not preclude
+WSDL documents from containing non-conformant </span><code><span
+style='font-size:10.0pt;color:black'>wsdl:binding</span></code><span
+style='font-family:Arial;color:black'> elements. </span></p>
+
+</div>
+
+</div>
+
+<h2><span style='font-family:Arial;color:black'>Appendix I: Referenced
+Specifications</span></h2>
+
+<p><span style='font-family:Arial;color:black'>The following specifications'
+requirements are incorporated into the Profile by reference, except where
+superseded by the Profile:</span></p>
+
+<ul type=disc>
+ <li class=MsoNormal style='color:black'><span style='font-family:Arial'><a
+     href="http://www.w3.org/TR/SOAP/">Simple Object Access Protocol (SOAP) 1.1</a>
+     </span></li>
+ <li class=MsoNormal style='color:black'><span style='font-family:Arial'><a
+     href="http://www.w3.org/TR/REC-xml">Extensible Markup Language (XML) 1.0
+     (Second Edition)</a> </span></li>
+ <li class=MsoNormal style='color:black'><span style='font-family:Arial'><a
+     href="http://www.ietf.org/rfc/rfc2616">RFC2616: Hypertext Transfer
+     Protocol -- HTTP/1.1</a> </span></li>
+</ul>
+
+<h2><span style='font-family:Arial;color:black'>Appendix II: Extensibility
+Points</span></h2>
+
+<p><span style='font-family:Arial;color:black'>This section identifies
+extensibility points, as defined in &quot;Scope of the Profile,&quot; for the
+Profile's component specifications.</span></p>
+
+<p><span style='font-family:Arial;color:black'>These mechanisms are out of the
+scope of the Profile; their use may affect interoperability, and may require
+private agreement between the parties to a Web service.</span></p>
+
+<h2><span style='font-family:Arial;color:black'>Appendix III: Acknowledgements</span></h2>
+
+<p><span style='font-family:Arial;color:black'>This Profile is the work of the
+WS-I Simple SOAP Binding Profile Working Group, whose members have included:</span></p>
+
+<p><span style='font-family:Arial;color:black'>Mark Allerton (Crystal Decisions
+Corporation), George Arriola (Talking Blocks, Inc.), Keith Ballinger (Microsoft
+Corporation), Ilya Beyer (KANA), Rich Bonneau (IONA Technologies), Don Box
+(Microsoft Corporation), Andrew Brown (Verisign), Heidi Buelow (Quovadx), David
+Burdett (Commerce One, Inc.), Luis Felipe Cabrera (Microsoft Corporation), Maud
+Cahuzac (France Telecom), Bhaskar Chakrabarti (United Airlines), Chia Chao
+(IONA Technologies), Martin Chapman (Oracle Corporation), Richard Chin
+(Avinon), Roberto Chinnici (Sun Microsystems), Sergio Compean (Avanade, Inc.),
+Tim Cooke (Onyx Software), Ugo Corda (SeeBeyond Tech), Paul Cotton (Microsoft
+Corporation), Joseph Curran (Accenture), Ayse Dilber (AT&amp;T), Dave Ehnebuske
+(IBM), Mark Ericson (Mindreef Inc.), Colleen Evans (Sonic Software), Tim Ewald
+(Microsoft Corporation), Chuck Fay (FileNet Corporation), Chris Ferris (IBM),
+Daniel Foody (Actional Corporation), Toru Fujii (NTT), Satoru Fujita (NEC
+Corporation), Shishir Garg (France Telecom), Yaron Goland (BEA Systems), Hans
+Granqvist (Verisign), Martin Gudgin (Microsoft Corporation), Marc Hadley (Sun
+Microsystems), Bob Hall (Unisys Corporation), Scott Hanselman (Corillian), Muir
+Harding (Autodesk, Inc.), Loren Hart (Verisign), Harry Holstrom (Accenture),
+Larry Hsiung (Quovadx), Hemant Jain (Tata Consultancy), Steve Jenisch (SAS
+Institute), Erik Johnson (Epicor Software Corporation), Bill Jones (Oracle
+Corporation), Menno Jonkers (Tryllian BV), Anish Karmarkar (Oracle
+Corporation), Takahiro Kawamura (Toshiba), Bhushan Khanal (WRQ, Inc.), Sunil
+Kunisetty (Oracle Corporation), Canyang Kevin Liu (SAP AG), Jonathan Marsh
+(Microsoft Corporation), David Meyer (Plumtree Software, Inc.), Jeff
+Mischkinsky (Oracle Corporation), Tom Moog (Sarvega Inc.), Gilles Mousseau
+(Hummingbird Ltd.), Richard Nikula (BMC Software, Inc.), Eisaku Nishiyama
+(Hitachi, Ltd.), Mark Nottingham (BEA Systems), David Orchard (BEA Systems),
+Jesse Pangburn (Quovadx), TJ Pannu (ContentGuard, Inc.), Eduardo
+Pelegri-Llopart (Sun Microsystems), Vijay Rajan (Novell), Eric Rajkovic (Oracle
+Corporation), Graeme Riddell (Bowstreet), Claus von Riegen (SAP AG), Tom Rutt
+(Fujitsu Limited), Roger Sanborn (Crystal Decisions Corporation), Krishna Sankar
+(Cisco Systems, Inc.), Don Schricker (Micro Focus), Dave Seidel (Mindreef
+Inc.), Akira Shimaya (NTT), Yasser Shohoud (Microsoft Corporation), David
+Smiley (Mercator Software, Inc.), Seumas Soltysik (IONA Technologies), Joseph
+Stanko (Plumtree Software, Inc.), Keith Stobie (Microsoft Corporation), Yasuo
+Takemoto (NTT), Nobuyoshi Tanaka (NEC Corporation), Jorgen Thelin (Cape Clear
+Software), Sameer Vaidya (Talking Blocks, Inc.), William Vambenepe
+(Hewlett-Packard), Rick Weil (Eastman Kodak Company), Scott Werden (WRQ, Inc.),
+Ajamu Wesley (IBM), Shannon Wheatley (Kinzan, Inc.), Ian White (Micro Focus),
+Sue Worthman (Tryllian BV), Prasad Yendluri (webMethods Inc.). </span></p>
+
+</div>
+
+</body>
+
+</html>

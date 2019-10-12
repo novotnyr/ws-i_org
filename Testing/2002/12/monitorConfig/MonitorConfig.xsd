@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    This is the schema for the Monitor Configuration file created
+    for the WS-I.ORG testing tools group.
+    © Copyright 2002 by The Web Services-Interoperability Organization.
+    All rights reserved.
+-->
+<xs:schema xmlns:tns="http://www.ws-i.org/testing/2002/12/monitorConfig/" elementFormDefault="qualified" targetNamespace="http://www.ws-i.org/testing/2002/12/monitorConfig/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="configuration" nillable="true" type="tns:configuration" />
+	<xs:complexType name="logFile">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="replace" type="xs:boolean" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="configuration">
+		<xs:sequence>
+			<xs:element name="comment" minOccurs="0" maxOccurs="1" type="tns:comment" />
+			<xs:element minOccurs="1" maxOccurs="1" name="logFile" type="tns:logFile" />
+			<xs:element minOccurs="1" maxOccurs="1" name="logDuration" type="xs:int" />
+			<xs:element minOccurs="1" maxOccurs="1" name="cleanupTimeoutSeconds" type="xs:int" />
+			<xs:element minOccurs="0" maxOccurs="1" name="manInTheMiddle" type="tns:ArrayOfRedirect" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ArrayOfRedirect">
+		<xs:sequence>
+			<xs:element name="comment" minOccurs="0" maxOccurs="1" type="tns:comment" />
+			<xs:element minOccurs="1" maxOccurs="unbounded" name="redirect" nillable="true" type="tns:redirect" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="redirect">
+		<xs:sequence>
+			<xs:element name="comment" minOccurs="0" maxOccurs="1" type="tns:comment" />
+			<xs:element minOccurs="1" maxOccurs="1" name="listenPort" type="xs:int" />
+			<xs:element minOccurs="1" maxOccurs="1" name="schemeAndHostPort" type="xs:anyURI" />
+			<xs:element minOccurs="1" maxOccurs="1" name="maxConnections" type="xs:int" />
+			<xs:element minOccurs="1" maxOccurs="1" name="readTimeoutSeconds" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="comment">
+		<xs:restriction base="xs:string" />
+	</xs:simpleType>
+</xs:schema>

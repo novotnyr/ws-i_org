@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    This is the schema for the Monitor Log file created
+    for the WS-I.ORG testing tools group.
+    © Copyright 2002 by The Web Services-Interoperability Organization.
+    All rights reserved.
+-->
+<xs:schema xmlns:tns="http://www.ws-i.org/testing/2002/12/log/" elementFormDefault="qualified"
+    targetNamespace="http://www.ws-i.org/testing/2002/12/log/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsi-monConfig="http://www.ws-i.org/testing/2002/12/monitorConfig/">
+    <xs:import namespace="http://www.ws-i.org/testing/2002/12/monitorConfig/" />
+    <xs:element name="log" nillable="true" type="tns:log" />
+    <xs:complexType name="log">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="monitor" type="tns:monitor" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="logEntry" type="tns:logEntry" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="monitor">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="implementer" type="tns:implementation" />
+            <xs:element minOccurs="1" maxOccurs="1" name="environment" type="tns:environment" />
+            <xs:element minOccurs="1" maxOccurs="1" name="configuration" type="wsi-monConfig:configuration" />
+        </xs:sequence>
+        <xs:attribute name="releaseDate" type="xs:dateTime" />
+        <xs:attribute name="version" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="implementation">
+        <xs:attribute name="name" type="xs:string" />
+        <xs:attribute name="location" type="xs:anyURI" />
+    </xs:complexType>
+    <xs:complexType name="environment">
+        <xs:sequence>
+            <xs:element minOccurs="1" maxOccurs="1" name="runtime" type="tns:nameVersionPair" />
+            <xs:element minOccurs="1" maxOccurs="1" name="operatingSystem" type="tns:nameVersionPair" />
+            <xs:element minOccurs="1" maxOccurs="1" name="xmlParser" type="tns:nameVersionPair" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="nameVersionPair">
+        <xs:attribute name="name" type="xs:string" />
+        <xs:attribute name="version" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="logEntry" abstract="true">
+        <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="message" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="timestamp" type="xs:dateTime" />
+        <xs:attribute name="conversationID" type="xs:NMTOKEN" />
+        <xs:attribute name="ID" type="xs:ID" />
+    </xs:complexType>
+    <xs:complexType name="tcpLog" abstract="true">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:logEntry">
+                <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="1" name="senderHostAndPort" type="xs:string" />
+                    <xs:element minOccurs="1" maxOccurs="1" name="receiverHostAndPort" type="xs:string" />
+                </xs:sequence>
+                <xs:attribute name="type" type="tns:tcpMessageType" />
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:simpleType name="tcpMessageType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="request" />
+            <xs:enumeration value="response" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="httpLogEntry">
+        <xs:complexContent mixed="false">
+            <xs:extension base="tns:tcpLog">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="httpHeaders" type="xs:string" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

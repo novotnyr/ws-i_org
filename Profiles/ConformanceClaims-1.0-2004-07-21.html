@@ -1,0 +1,571 @@
+﻿
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Conformance Claim Attachment Mechanisms - 
+					Version 1.0 
+					(BdAD)
+				</title>
+      <style type="text/css">
+                     body { color: black; background: white; font-family: sans-serif; margin: 16pt 24pt; }
+                     dt { font-style: italic; padding-top: 0.5em; }
+                     h4 { font-weight: normal; font-style: italic; font-size: 0.8em; margin-bottom: 0; }
+                     .refinement { margin: 18pt 0em; }
+                    .statement { font-style: italic; margin: 0.5em 5.5em; text-indent: -4em; }
+                    .statement-id { background-color: #ffa; font-style: normal; padding: 0em 0.3em; }
+                    .statement-type { background-color: #ccf; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }
+                    .statement-origin { background-color: #fcc; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }
+                    .rationale { margin: 0.5em 0em;  }
+                    .explanation { margin: 0.5em 0em; }
+                    .definition { margin: 0.5em 5.5em;}
+                    .explanation p, .rationale p { margin: 0.25em 0; }
+                    .practice { background-color: green; }
+                    .example { background-color: #eee; margin: 0.5em 2em; padding: 0.5em; }
+                    .example-banner { margin: 0; }
+                    .example pre { margin: 0; }
+                    .correct, .incorrect { font-family: sans-serif; font-weight: bold; font-size: 0.9em; margin: 0; }
+                    .correct { color: #090; }
+                    .incorrect { color: #900; }
+                    .specification { padding: 0.5em; background-color: #ffa; margin: 0.5em 2em; }
+                    .ednote { margin: 1.2em; padding: 1.2em; background-color: #fcc; }
+                    .note { background-color: #fcc; margin-left: 1.5em; }
+                    .toc { margin-left: 2em; }
+                    .subtoc { margin-left: 3em; }
+                    .subsubtoc { margin-left: 4em; }
+                    .chg { background-color: orange; text-decoration: underline; }
+                    .add { background-color: green; text-decoration: underline; }
+                    .del { background-color: red; text-decoration: line-through; }
+                    @media print {
+                        a.offsite:after { content: " [" attr(href) "] "; font-size: 85%; font-weight: lighter; }
+                    } 
+                    [id]:hover:after { content: " #" attr(id) " "; font-size: 50%; color: #ccc; text-decoration: none; }
+		        </style>
+   </head>
+   <body>
+      <div class="head">
+         <p>
+            <a href="http://www.ws-i.org/">
+               <img src="http://www.ws-i.org/images/WS-I-logo.gif" height="88" width="107" border="0" alt="WS-I"/>
+            </a>
+         </p>
+         <h1>Conformance Claim Attachment Mechanisms Version 1.0</h1>
+         <h2>Board Approval Draft</h2>
+         <h2>2004-07-21</h2>
+         <dl>
+            <dt>This version:</dt>
+            <dd>
+               <a href="http://www.ws-i.org/Profiles/ConformanceClaims-1.0-2004-07-21.html">http://www.ws-i.org/Profiles/ConformanceClaims-1.0-2004-07-21.html
+							</a>
+            </dd>
+            <dt>Latest version:</dt>
+            <dd>
+               <a href="http://www.ws-i.org/Profiles/ConformanceClaims-1.0.html">http://www.ws-i.org/Profiles/ConformanceClaims-1.0.html
+							</a>
+            </dd>
+            <dt>Editors:</dt>
+            <dd>Mark Nottingham, BEA Systems</dd>
+            <dd>Claus von Riegen, SAP</dd>
+            <dt>Administrative contact:</dt>
+            <dd>
+               <a href="mailto:secretary@ws-i.org">secretary@ws-i.org</a>
+            </dd>
+         </dl>
+         <p class="copyright" id="copyright"> Copyright &#169;  2002-2004 by
+			<a href="http://www.ws-i.org/">The Web Services-Interoperability
+			Organization</a> (<abbr title="Web Services Interoperability    Organization">WS-I</abbr>) and Certain of its Members. All Rights
+			Reserved.</p>
+      </div>
+      <hr/>
+      <h2 id="abstract">Abstract</h2>
+      <p>This document catalogues mechanisms that can be used to attach WS-I Profile 
+		Conformance Claims to Web services artifacts (e.g., WSDL descriptions, UDDI registries).</p>
+      <h2 id="status">Status of this Document</h2>
+      <p> This document is a Board
+				Approval Draft; it has been approved for publication by the
+				Working Group, and is submitted for consideration by the Board
+				of Directors, and for public comment. It is a work in
+				progress, and should not be considered as final; other
+				documents may supersede this document. </p>
+      <h2 id="license">Notice</h2>
+      <p>The material contained herein is not a license, either expressly or
+		impliedly, to any intellectual property owned or controlled by any of
+		the authors or developers of this material or WS-I. The material
+		contained herein is provided on an "AS IS" basis and to the maximum
+		extent permitted by applicable law, this material is provided AS IS
+		AND WITH ALL FAULTS, and the authors and developers of this material
+		and WS-I hereby disclaim all other warranties and conditions, either
+		express, implied or statutory, including, but not limited to, any (if
+		any) implied warranties, duties or conditions of merchantability, of
+		fitness for a particular purpose, of accuracy or completeness of
+		responses, of results, of workmanlike effort, of lack of viruses, and
+		of lack of negligence. ALSO, THERE IS NO WARRANTY OR CONDITION OF
+		TITLE, QUIET ENJOYMENT, QUIET POSSESSION, CORRESPONDENCE TO
+		DESCRIPTION OR NON-INFRINGEMENT WITH REGARD TO THIS MATERIAL. </p>
+      <p>IN NO EVENT WILL ANY AUTHOR OR DEVELOPER OF THIS MATERIAL OR WS-I
+		BE LIABLE TO ANY OTHER PARTY FOR THE COST OF PROCURING SUBSTITUTE
+		GOODS OR SERVICES, LOST PROFITS, LOSS OF USE, LOSS OF DATA, OR ANY
+		INCIDENTAL, CONSEQUENTIAL, DIRECT, INDIRECT, OR SPECIAL DAMAGES
+		WHETHER UNDER CONTRACT, TORT, WARRANTY, OR OTHERWISE, ARISING IN ANY
+		WAY OUT OF THIS OR ANY OTHER AGREEMENT RELATING TO THIS MATERIAL,
+		WHETHER OR NOT SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF
+		SUCH DAMAGES.</p>
+      <h2 id="feedback">Feedback</h2>
+      <p>The Web Services-Interoperability Organization (WS-I)
+					would like to receive input, suggestions and other
+					feedback ("Feedback") on this work from a wide variety of
+					industry participants to improve its quality over time.
+					</p>
+      <p>By sending email, or otherwise communicating with WS-I, you (on
+			behalf of yourself if you are an individual, and your company if
+			you are providing Feedback on behalf of the company) will be
+			deemed to have granted to WS-I, the members of WS-I, and other
+			parties that have access to your Feedback, a non-exclusive,
+			non-transferable, worldwide, perpetual, irrevocable, royalty-free
+			license to use, disclose, copy, license, modify, sublicense or
+			otherwise distribute and exploit in any manner whatsoever the
+			Feedback you provide regarding the work. You acknowledge that you
+			have no expectation of confidentiality with respect to any
+			Feedback you provide. You represent and warrant that you have
+			rights to provide this Feedback, and if you are providing Feedback
+			on behalf of a company, you represent and warrant that you have
+			the rights to provide Feedback on behalf of your company. You also
+			acknowledge that WS-I is not required to review, discuss, use,
+			consider or in any way incorporate your Feedback into future
+			versions of its work. If WS-I does incorporate some or all of your
+			Feedback in a future version of the work, it may, but is not
+			obligated to include your name (or, if you are identified as
+			acting on behalf of your company, the name of your company) on a
+			list of contributors to the work. If the foregoing is not
+			acceptable to you and any company on whose behalf you are acting,
+			please do not provide any Feedback.</p>
+      <p>Feedback on this document should be directed to <a href="mailto:wsbasic_comment@ws-i.org">wsbasic_comment@ws-i.org</a>.</p>
+      <hr/>
+      <h2 id="toc">Table of Contents</h2>
+      <p class="toc">1. <a href="#introduction">Introduction</a>
+         <br/>
+         <span class="subtoc">1.1. <a href="#conventions">Notational Conventions</a>
+         </span>
+         <br/>2. <a href="#claimMechanisms">Conformance Claim Attachment Mechanisms</a>
+         <br/>
+         <span class="subtoc">2.1. <a href="#wsdlInstances">WSDL 1.1 Claim Attachment Mechanism for Web Services Instances</a>
+         </span>
+         <br/>
+         <span class="subtoc">2.2. <a href="#wsdlConstucts">WSDL 1.1 Claim Attachment Mechanism for Description Constructs</a>
+         </span>
+         <br/>
+         <span class="subtoc">2.3. <a href="#uddiRegistrations">UDDI Claim Attachment Mechanism for Web Service Registrations</a>
+         </span>
+         <br/>
+         <span class="subtoc">2.4. <a href="#uddiInstances">UDDI Claim Attachment Mechanism for Web Service Instances</a>
+         </span>
+         <br/>3. <a href="#conformanceSchema">Conformance Claim XML Schema</a>
+         <br/>4. <a href="#conformanceTmodels">Conformance Claim tModels</a>
+         <br/>
+         <span class="subtoc">4.1. <a href="#uddi2Tmodel">UDDI Version 2</a>
+         </span>
+         <br/>
+         <span class="subtoc">4.2. <a href="#uddi3Tmodel">UDDI Version 3</a>
+         </span>
+         <br/>
+            Appendix A: <a href="#acks">Acknowledgements</a>
+         <br/>
+      </p>
+      <h2 id="introduction">1. Introduction</h2>
+      <p>To allow advertisement of profile conformance, artifacts can be annotated
+with conformance claims, which use URIs to assert that a particular claim
+subject (e.g., an artifact or a party to a Web service) meets the appropriate
+requirements in the indicated profile.</p>
+      <p>The requirements considered in-scope for a particular conformance claim
+are those placed upon the conformance target(s) associated with the claim
+attachment mechanism by the relevant profile.</p>
+      <p>Therefore, every profile specifies its own conformance claim URI.
+Furthermore, every profile documents which of its conformance targets are
+in-scope for each claim attachment mechanism described in the following
+sections.</p>
+      <h3 id="conventions">1.1 
+            Notational Conventions
+        </h3>
+      <p>The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+        "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+        document are to be interpreted as described in <a class="offsite" href="http://www.ietf.org/rfc/rfc2119.txt">RFC2119</a>.</p>
+      <p>This specification uses a number of namespace prefixes throughout;
+            their associated URIs are listed below. Note that the choice of any
+            namespace prefix is arbitrary and not semantically significant.</p>
+      <ul>
+         <li>
+            <strong>wsdl</strong> - "http://schemas.xmlsoap.org/wsdl/"</li>
+         <li>
+            <strong>uddi</strong> - "urn:uddi-org:api_v2"</li>
+      </ul>
+      <h2 id="claimMechanisms">2. Conformance Claim Attachment Mechanisms</h2>
+      <h3 id="wsdlInstances">2.1 WSDL 1.1 Claim Attachment Mechanism for Web Services Instances</h3>
+      <p>Conformance claims can be attached to a <code>wsdl:port</code>
+element in a <a class="offsite" href="http://www.w3.org/TR/wsdl.html">WSDL 1.1</a> description as a child of its 
+<code>wsdl:documentation</code> element,
+using the Conformance Claim Schema (see "Conformance Claim XML Schema").</p>
+      <p>Such conformance claims indicate that the associated Web service instance
+exhibits conformant behavior, as determined by the requirements associated
+with this attachment mechanism by the referenced profile.</p>
+      <p>A conformance claim attached to a wsdl:port element also indicates that
+it itself is a conformant XML construct. Additionally, the same claim is made
+for all elements recursively referenced by it, based on the transitivity rules
+described in "WSDL 1.1 Claim Attachment Mechanism for Description
+Constructs."</p>
+      <pre class="example">
+wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl" 
+  xmlns:tns="http://example.org/myservice"
+  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap"
+  xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+  targetNamespace="http://example.org/myservice"&gt; 
+  &lt;wsdl:portType name="MyPortType"&gt; 
+      ... 
+  &lt;/wsdl:portType&gt; 
+  &lt;wsdl:binding name="MyBinding" portType="MyPortType" &gt; 
+      ... 
+  &lt;/wsdl:binding&gt; 
+  &lt;wsdl:service name="MyService" &gt; 
+    &lt;wsdl:port name="MyPort" binding="tns:MyBinding" &gt; 
+      &lt;wsdl:documentation&gt;
+        &lt;wsi:Claim 
+         conformsTo="http://ws-i.org/profiles/basic/1.0" /&gt;
+      &lt;/wsdl:documentation&gt;
+      &lt;soapbind:address  
+       location="http://example.org/myservice/myport" /&gt;
+    &lt;/wsdl:port&gt; 
+  &lt;/wsdl:service&gt; 
+&lt;/wsdl:definitions&gt;
+</pre>
+      <h3 id="wsdlConstucts">2.2 WSDL 1.1 Claim Attachment Mechanism for Description Constructs</h3>
+      <p>Conformance claims can be attached to <code>wsdl:binding</code>,
+<code>wsdl:portType</code>, <code>wsdl:operation</code> (as a child
+element of <code>wsdl:portType</code>, but not of
+<code>wsdl:binding</code>) and <code>wsdl:message</code> elements in a
+<a class="offsite" href="http://www.w3.org/TR/wsdl.html">WSDL 1.1</a> description, using the Conformance Claim Schema (see "Conformance Claim XML Schema").</p>
+      <p>A conformance claim attached to any of these elements indicates that it
+is a conformant XML construct, as determined by the requirements associated
+with this attachment mechanism by the referenced profile. Additionally, the
+same claim is made for all elements that it references, based on the following
+transitivity rules, applied recursively:</p>
+      <ul>
+         <li>A claim on a <code>wsdl:port</code> element is inherited by the
+referenced <code>wsdl:binding</code> element</li>
+         <li>A claim on a <code>wsdl:binding</code> element is inherited by the
+referenced <code>wsdl:portType</code> element</li>
+         <li>A claim on a <code>wsdl:portType</code> element is inherited by the
+referenced <code>wsdl:operation</code> elements</li>
+         <li>A claim on a <code>wsdl:operation</code> element is inherited by the
+referenced <code>wsdl:message</code> elements of its child
+<code>wsdl:output</code> and/or <code>wsdl:input</code>
+elements</li>
+      </ul>
+      <h3 id="uddiRegistrations">2.3 UDDI Claim Attachment Mechanism for Web Service Registrations</h3>
+      <p>Conformance claims can be attached to a <code>uddi:tModel</code> in a
+<a class="offsite" href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm">UDDI Version 2</a> or 3 registry using the appropriate
+<code>ws-i-org:conformsTo:2002_12</code> category system tModel (see
+"Conformance Claim tModels").</p>
+      <p>A conformance claim attached to a tModel indicates that it is a
+conformant XML construct, as determined by the requirements associated with
+this attachment mechanism by the referenced profile.</p>
+      <p>
+         <code>uddi:tModels</code> should be constructed so that the
+conformance claims placed upon them are consistent with the conformance claims
+made by the <code>wsdl:bindings</code> to which they refer.</p>
+      <p>The categorization value should correspond to the conformance claim URI
+for the profile.</p>
+      <pre class="example">
+&lt;tModel tModelKey="..."&gt;
+   &lt;name&gt;BarSOAPService&lt;/name&gt;
+   &lt;description xml:lang="EN"&gt;Bar's SOAP Service&lt;/description&gt;
+   &lt;overviewDoc&gt;...&lt;/overviewDoc&gt;
+   &lt;categoryBag&gt;
+      &lt;keyedReference
+         tModelKey="uuid:65719168-72c6-3f29-8c20-62defb0961c0"
+         keyName="ws-i_conformance:BasicProfile1.0"
+         keyValue="http://ws-i.org/profiles/basic/1.0" /&gt;
+   &lt;/categoryBag&gt;
+&lt;/tModel&gt;
+</pre>
+      <p>Here, the tModel with the name "BarSOAPService" claims to conform to the
+Basic Profile 1.0, as indicated by the keyedReference – the tModelKey
+references the <code>ws-i-org:conformsTo:2002_12</code> category system
+and the keyValue identifies the conformance claim URI for the Basic Profile
+1.0.</p>
+      <p>In UDDI Version 2 registries, <code>uddi:bindingTemplate</code>
+elements can't be categorized because the UDDI Version 2 XML Schema does not
+provide a <code>uddi:categoryBag</code> for them. Hence, the conformance
+claim made by <code>wsdl:port</code> elements can't be documented in their
+corresponding UDDI Version 2 <code>uddi:bindingTemplates</code>.</p>
+      <h3 id="uddiInstances">2.4 UDDI Claim Attachment Mechanism for Web Service Instances</h3>
+      <p>Conformance claims can be attached to a
+<code>uddi:bindingTemplate</code> in a UDDI Version 3 registry using the
+<code>ws-i-org:conformsTo:2002_12</code> category system tModel specified
+in Section 4.2. Note that this attachment mechanism is not available in UDDI
+Version 2 registries.</p>
+      <p>Such conformance claims indicate that the associated Web service instance
+exhibits conformant behavior, as determined by the requirements associated
+with this attachment mechanism by the referenced profile.</p>
+      <p>A conformance claim attached to a <code>uddi:bindingTemplate</code>
+also indicates that the tModel itself is a conformant registry contruct.
+Additionally, a claim made for a <code>uddi:bindingTemplate</code> is made
+for all tModels it references.</p>
+      <pre class="example">
+&lt;tModel tModelKey="uddi:example.org/myservice"&gt;
+   &lt;name&gt;BarSOAPServiceDefinition&lt;/name&gt;
+   &lt;description xml:lang="EN"&gt;Bar's SOAP Service Definition&lt;/description&gt;
+   &lt;overviewDoc&gt;...&lt;/overviewDoc&gt;
+   &lt;categoryBag&gt;
+      &lt;keyedReference
+         tModelKey="uddi:65719168-72c6-3f29-8c20-62defb0961c0"
+         keyName="ws-i_conformance:BasicProfile1.0"
+         keyValue="http://ws-i.org/profiles/basic/1.0" /&gt;
+   &lt;/categoryBag&gt;
+&lt;/tModel&gt;
+</pre>
+      <p>Since UDDI Version 3 allows the categorization of
+<code>uddi:bindingTemplates</code>, It would be ambiguous if the
+conformance claim a <code>uddi:bindingTemplate</code> made were not
+consistent with the claim made by the <code>wsdl:port</code> it
+represents, when used in combination with a WSDL 1.1 description. Therefore,
+<code>uddi:bindingTemplates</code> must be constructed so that the
+conformance claims they make are consistent with any
+<code>wsdl:ports</code> that they refer to.</p>
+      <pre class="example">
+&lt;bindingTemplate bindingKey="..."&gt;
+   &lt;description xml:lang="EN"&gt;Bar's SOAP Service&lt;/description&gt;
+   &lt;accessPoint&gt;http://example.org/myservice/myport&lt;/overviewDoc&gt;
+   &lt;tModelInstanceDetails&gt;
+      &lt;tModelInstanceInfo tModelKey="uddi:example.org/myservice" /&gt;
+   &lt;/tModelInstanceDetails&gt;
+   &lt;categoryBag&gt;
+      &lt;keyedReference
+         tModelKey="uddi:65719168-72c6-3f29-8c20-62defb0961c0"
+         keyName="ws-i_conformance:BasicProfile1.0"
+         keyValue="http://ws-i.org/profiles/basic/1.0" /&gt;
+   &lt;/categoryBag&gt;
+&lt;/bindingTemplate&gt;
+</pre>
+      <h2 id="conformanceSchema">3. Conformance Claim XML Schema</h2>
+      <p>When possible (i.e., when a claim attachment is made in an 
+extensible XML document), conformance claims SHOULD be made with 
+an Element Information Item conformant to the following <a class="offsite" href="http://www.w3.org/TR/xmlschema-1">XML 
+Schema</a>:</p>
+      <pre class="specification">
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt; 
+&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  targetNamespace="http://ws-i.org/schemas/conformanceClaim/"
+  xmlns:tns="http://ws-i.org/schemas/conformanceClaim/" 
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" 
+  elementFormDefault="qualified" 
+  attributeFormDefault="unqualified" &gt; 
+
+  &lt;xsd:import namespace="http://schemas.xmlsoap.org/soap/envelope/" 
+    schemaLocation="http://schemas.xmlsoap.org/soap/envelope/" /&gt;
+
+  &lt;xsd:element name="Claim" &gt; 
+    &lt;xsd:complexType&gt; 
+      &lt;xsd:sequence&gt; 
+        &lt;xsd:any namespace="##any" processContents="lax" 
+         minOccurs="0" maxOccurs="unbounded" /&gt; 
+      &lt;/xsd:sequence&gt; 
+      &lt;xsd:attribute name="conformsTo" type="xsd:anyURI" use="required" /&gt; 
+      &lt;xsd:attribute ref="soap:mustUnderstand" use="prohibited" /&gt;
+      &lt;xsd:anyAttribute namespace="##any" processContents="lax" /&gt; 
+    &lt;/xsd:complexType&gt; 
+  &lt;/xsd:element&gt; 
+
+&lt;/xsd:schema&gt;
+</pre>
+      <p>The Claim element has a mandatory conformsTo attribute, whose value
+contains the actual conformance claim URI. The conformance claim schema
+explicitly allows for extensibility elements and attributes.</p>
+      <h2 id="conformanceTmodels">4. Conformance Claim tModels</h2>
+      <h3 id="uddi2Tmodel">4.1 UDDI Version 2</h3>
+      <p>The content for the <code>ws-i-org:conformsTo:2002_12</code>
+         <a class="offsite" href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm">UDDI Version 2</a> category
+system tModel is:</p>
+      <pre class="specification">
+&lt;tModel tModelKey="uuid:65719168-72c6-3f29-8c20-62defb0961c0"&gt; 
+  &lt;name&gt;ws-i-org:conformsTo:2002_12&lt;/name&gt; 
+  &lt;description xml:lang="EN"&gt;
+  Category system used for UDDI entities 
+  to point to the WS-I profile to which they conform
+  &lt;/description&gt; 
+  &lt;overviewDoc&gt; 
+    &lt;overviewURL&gt;http://ws-i.org/schemas/conformanceClaim/&lt;/overviewURL&gt; 
+  &lt;/overviewDoc&gt; 
+  &lt;categoryBag&gt; 
+    &lt;keyedReference 
+      keyName="uddi-org:types:categorization" 
+      keyValue="categorization"
+      tModelKey="uuid:c1acf26d-9672-4404-9d70-39b756e62ab4" /&gt; 
+  &lt;/categoryBag&gt; 
+&lt;/tModel&gt;
+</pre>
+      <h3 id="uddi3Tmodel">4.2 UDDI Version 3</h3>
+      <p>The following is the UDDI Version 3
+<code>ws-i-org:conformsTo:2002_12</code> category system tModel.</p>
+      <pre class="specification">
+&lt;tModel tModelKey="uddi:65719168-72c6-3f29-8c20-62defb0961c0"&gt;
+  &lt;name&gt;ws-i-org:conformsTo:2002_12&lt;/name&gt;
+  &lt;description xml:lang="EN"&gt;
+  Category system used for UDDI entities
+  to point to the WS-I concept to which they conform to
+  &lt;/description&gt;
+  &lt;overviewDoc&gt;
+    &lt;overviewURL&gt;
+      http://ws-i.org/schemas/conformanceClaim/
+    &lt;/overviewURL&gt;
+  &lt;/overviewDoc&gt;
+  &lt;categoryBag&gt;
+    &lt;keyedReference
+      keyName="uddi-org:types:categorization"
+      keyValue="categorization"
+      tModelKey="uddi:uddi.org:categorization:types"/&gt;
+  &lt;/categoryBag&gt;
+&lt;/tModel&gt;
+</pre>
+      <p>The Version 3 tModelKey for the
+<code>ws-i-org:conformsTo:2002_12</code> tModel is
+"uddi:65719168-72c6-3f29-8c20-62defb0961c0". In a multi-version registry this
+results in the correct Version 2 key allowing conformance claims work
+correctly across versions.</p>
+      <h2 id="acks">Appendix A: Acknowledgements</h2>
+      <p>This document is the work of the WS-I Basic Profile Working Group, whose members have included:</p>
+      <p>
+Mark Allerton (Crystal Decisions Corp), 
+Steve Anderson (OpenNetwork), 
+George Arriola (Talking Blocks, Inc.), 
+Siddharth Bajaj (Verisign), 
+Keith Ballinger (Microsoft Corp.), 
+David Baum (Kantega AS), 
+Ilya Beyer (KANA), 
+Rich Bonneau (IONA Technologies), 
+Don Box (Microsoft Corp.), 
+Andrew Brown (Verisign), 
+Heidi Buelow (Quovadx), 
+David Burdett (Commerce One, Inc.), 
+Luis Felipe Cabrera (Microsoft Corp.), 
+Maud Cahuzac (France Telecom), 
+Mike Chadwick (Kaiser Permanente), 
+Martin Chapman (Oracle Corporation), 
+Richard Chennault (Kaiser Permanente), 
+Roberto Chinnici (Sun Microsystems), 
+Dipak Chopra (SAP AG), 
+Jamie Clark (OASIS), 
+David Cohen (Merrill Lynch), 
+Ugo Corda (SeeBeyond Tech), 
+Paul Cotton (Microsoft Corp.), 
+Joseph Curran (Accenture), 
+Alex Deacon (Verisign), 
+Mike DeNicola (Fujitsu Limited), 
+Paul Downey (BT Group), 
+Jacques Durand (Fujitsu Limited), 
+Aladin Eajani (Hummingbird, Ltd.), 
+Michael Eder (Nokia), 
+Dave Ehnebuske (IBM), 
+Mark Ericson (Mindreef Inc), 
+Colleen Evans (Microsoft Corp.), 
+Tim Ewald (Microsoft Corp.), 
+Chuck Fay (FileNET Corp.), 
+Chris Ferris (IBM), 
+Daniel Foody (Actional Corporation), 
+Satoru Fujita (NEC Corporation), 
+Shishir Garg (France Telecom), 
+Yaron Goland (BEA Systems Inc), 
+Marc Goodner (SAP AG), 
+Pierre Goyette (Hummingbird, Ltd.), 
+Hans Granqvist (Verisign), 
+Martin Gudgin (Microsoft Corp.), 
+Marc Hadley (Sun Microsystems), 
+Norma Hale (Webify Solutions Inc), 
+Bob Hall (Unisys Corporation), 
+Scott Hanselman (Corillian), 
+Muir Harding (Autodesk Inc.), 
+Loren Hart (Verisign), 
+Andrew Hately (IBM), 
+Harry Holstrom (Accenture), 
+Lawrence Hsiung (Quovadx), 
+Hemant Jain (Tata Consultancy), 
+Steve Jenisch (SAS Institute), 
+Erik Johnson (Epicor Software), 
+Bill Jones (Oracle Corporation), 
+Anish Karmarkar (Oracle Corporation), 
+Dana Kaufman (Forum Systems), 
+Takahiro Kawamura (Toshiba), 
+Oldre Kepka (Systinet), 
+Bhushan Khanal (WRQ Inc.), 
+Sandy Khaund (Microsoft Corp.), 
+Jacek Kopecky (Systinet), 
+Sanjay Krishnamurthi (Informatica), 
+Sundar Krishnamurthy (Verisign), 
+Eva Kuiper (Hewlett-Packard), 
+Sunil Kunisetty (Oracle Corporation), 
+Christopher Kurt (Microsoft Corp.), 
+Lars Laakes (Microsoft Corp.), 
+Canyang Kevin Liu (SAP AG), 
+Ted Liu (webMethods Inc.), 
+Donna Locke (Oracle Corporation), 
+Brad Lund (Intel), 
+Michael Mahan (Nokia), 
+Ron Marchi (EDS), 
+Jonathan Marsh (Microsoft Corp.), 
+Eric Matland (Hummingbird, Ltd.), 
+Barbara McKee (IBM), 
+Derek Medland (Hummingbird, Ltd.), 
+David Meyer (Plumtree Software Inc.), 
+Jeff Mischkinsky (Oracle Corporation), 
+Ray Modeen (MITRE Corp.), 
+Tom Moog (Sarvega Inc.), 
+Gilles Mousseau (Hummingbird, Ltd.), 
+Greg Mumford (MCI), 
+Jim Murphy (Mindreef Inc), 
+Bryan Murray (Hewlett-Packard), 
+Richard Nikula (BMC Software, Inc.), 
+Eisaku Nishiyama (Hitachi, Ltd.), 
+Mark Nottingham (BEA Systems Inc), 
+David Orchard (BEA Systems Inc), 
+Vivek Pandey (Sun Microsystems), 
+Jesse Pangburn (Quovadx), 
+Eduardo Pelegri-Llopart (Sun Microsystems), 
+Mike Perham (Webify Solutions Inc), 
+Eric Rajkovic (Oracle Corporation), 
+Shaan Razvi (MITRE Corp.), 
+Rimas Rekasius (IBM), 
+Mark Richards (Fidelity), 
+Graeme Riddell (Bowstreet), 
+Sam Ruby (IBM), 
+Tom Rutt (Fujitsu Limited), 
+Saikat Saha (Commerce One, Inc.), 
+Roger Sanborn (Crystal Decisions Corp), 
+Matt Sanchez (Webify Solutions Inc), 
+Krishna Sankar (Cisco Systems Inc.), 
+Jeffrey Schlimmer (Microsoft Corp.), 
+Don Schricker (Micro Focus), 
+Dave Seidel (Mindreef Inc), 
+AKIRA SHIMAYA (NTT), 
+David Shoaf (Hewlett-Packard), 
+Yasser Shohoud (Microsoft Corp.), 
+David Smiley (Ascential Software), 
+Seumas Soltysik (IONA Technologies), 
+Joseph Stanko (Plumtree Software Inc.), 
+Andrew Stone (Accenture), 
+Julie Surer (MITRE Corp.), 
+YASUO TAKEMOTO (NTT), 
+Nobuyoshi Tanaka (NEC Corporation), 
+Jorgen Thelin (Microsoft Corp.), 
+Sameer Vaidya (Talking Blocks, Inc.), 
+William Vambenepe (Hewlett-Packard), 
+Claus von Riegen (SAP AG), 
+Rick Weil (Eastman Kodak Company), 
+Scott Werden (WRQ Inc.), 
+Ajamu Wesley (IBM), 
+Ian White (Micro Focus), 
+Dave Wilkinson (Vignette), 
+Mark Wood (Eastman Kodak Company), 
+Prasad Yendluri (webMethods Inc.), and
+Brandon Zhu (NetManage Inc).
+</p>
+   </body>
+</html>

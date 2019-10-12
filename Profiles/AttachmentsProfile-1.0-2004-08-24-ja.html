@@ -1,0 +1,2107 @@
+
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Attachments Profile -
+					Version 1.0
+					(Final) [Japanese translation]
+				</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+      <style type="text/css">
+		     body { color: black; background-color: white; font-family: "Times Roman", "times", "mincho", "MS Mincho", serif; margin: 16pt 24pt; } /* JP */
+		     h1, h2, h3, h4 { color: navy; font-family: "Arial", "gothic", "MS Gothic", sans-serif; } /* JP */
+		     h4 { font-weight: bold; font-size: 0.8em; margin-bottom: 0; } /* JP */
+		     code, pre { font-family: "Courier New", "courier", monospace; } /* JP */
+		     strong[xml\:lang=ja] { font-family: "Arial", "gothic", "MS Gothic", sans-serif; } /* JP */
+		     .translation-note { color: #FF0000; background-color: #C0F0C0 } /* JP */
+		     .translation-notice { margin: 0 2em; padding: 0 1.2em; border-width: 2px;
+			border-style: solid; border-color: black; } /* JP */
+                     dt[xml\:lang=ja] { font-style: normal; text-decoration: underline; padding-top: 0.5em; } /* JP */
+                     .statement[xml\:lang=ja] { font-weight: normal; font-style: normal; margin: 0.5em 5.5em; text-indent: -4em; } /* JP */
+                    .statement-id:lang(ja) { background-color: #ffa; font-style: bold; padding: 0em 0.3em; } /* JP */
+
+
+                     /* body { color: black; background: white; font-family: sans-serif; margin: 16pt 24pt; } */
+                     dt { font-style: italic; padding-top: 0.5em; }
+                     /* h4 { font-weight: normal; font-style: italic; font-size: 0.8em; margin-bottom: 0; } */
+                     .refinement { margin: 18pt 0em; }
+                    .statement { font-style: italic; margin: 0.5em 5.5em; text-indent: -4em; }
+                    .statement-id { background-color: #ffa; font-style: normal; padding: 0em 0.3em; }
+                    .statement-type { background-color: #ccf; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }
+                    .statement-origin { background-color: #fcc; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }
+                    .rationale { margin: 0.5em 0em;  }
+                    .explanation { margin: 0.5em 0em; }
+                    .definition { margin: 0.5em 5.5em;}
+                    .explanation p, .rationale p { margin: 0.25em 0; }
+                    .practice { background-color: green; }
+                    .example { background-color: #eee; margin: 0.5em 2em; padding: 0.5em; }
+                    .example-banner { margin: 0; }
+                    .example pre { margin: 0; }
+                    .correct, .incorrect { font-family: sans-serif; font-weight: bold; font-size: 0.9em; margin: 0; }
+                    .correct { color: #090; }
+                    .incorrect { color: #900; }
+                    .specification { padding: 0.5em; background-color: #ffa; margin: 0.5em 2em; }
+                    .ednote { margin: 1.2em; padding: 1.2em; background-color: #fcc; }
+                    .note { background-color: #fcc; margin-left: 1.5em; }
+                    .toc { margin-left: 2em; }
+                    .subtoc { margin-left: 3em; }
+                    .subsubtoc { margin-left: 4em; }
+                    .chg { background-color: orange; text-decoration: underline; }
+                    .add { background-color: green; text-decoration: underline; }
+                    .del { background-color: red; text-decoration: line-through; }
+                    @media print {
+                        a.offsite:after { content: " [" attr(href) "] "; font-size: 85%; font-weight: lighter; }
+                    }
+                    [id]:hover:after { content: " #" attr(id) " "; font-size: 50%; color: #ccc; text-decoration: none; }
+		        </style>
+   </head>
+   <body xml:lang="en">
+   <h1>Cover Page for the Japanese Translation</h1>
+      <div class="head">
+         <p>
+            <a href="http://www.ws-i.org/">
+               <img src="http://www.ws-i.org/images/WS-I-logo.gif" height="88" width="107" border="0" alt="WS-I"/>
+            </a>
+         </p>
+         <h1>Attachments Profile Version 1.0</h1>
+         <h2>Final Material</h2>
+         <h2>2004-08-24</h2>
+         <dl>
+            <dt>Editors:</dt>
+            <dd>Chris Ferris, IBM</dd>
+            <dd>Anish Karmarkar, Oracle Corp.</dd>
+            <dd>Canyang Kevin Liu, SAP AG</dd>
+            <dt>Administrative contact:</dt>
+            <dd>
+               <a href="mailto:secretary@ws-i.org">secretary@ws-i.org</a>
+            </dd>
+
+            <dt>Translators (日本語訳):</dt>
+            <dd>NUMATA Toshinori, Fujitsu Limited / 沼田　利典 (富士通株式会社)</dd>
+            <dd>FUJITA Satoru, NEC Corporation / 藤田　悟 (日本電気株式会社)</dd>
+
+            <dt>Translation Reviewers (日本語訳レビュー):</dt>
+            <dd>YAMAMOTO Yohei, Ricoh Company, Ltd. / 山本　陽平 (株式会社リコー)</dd>
+            <dd>IWAMOTO Yukio, Beacon IT Inc. / 岩本　幸男 (株式会社ビーコンIT)</dd>
+            <dd>TAKASE Toshiro, IBM Japan / 高瀬　俊郎 (日本アイ・ビー・エム株式会社)</dd>
+            <dd>SUZUKI Toshihiro, Oracle Corporation Japan / 鈴木　俊宏 (日本オラクル株式会社)</dd>
+
+         </dl>
+         <p class="copyright" id="copyright"> Copyright &#169;  2002-2004 by
+			<a href="http://www.ws-i.org/">The Web Services-Interoperability
+			Organization</a> (<abbr title="Web Services Interoperability    Organization">WS-I</abbr>) and Certain of its Members. All Rights
+			Reserved.</p>
+
+<div class="translation-notice">
+<p xml:lang="en">This document is a translation of a Web Services-Interoperability Organization document.  In the event of a disagreement between this translation and the English version, or an omission in this translation, the original English document should be considered the definitive source.</p>
+
+<p xml:lang="ja">この文書は Web Services-Interoperability Organization (WS-I) の文書の翻訳である。
+この翻訳と英語版との間に食い違いがあった場合，又は，翻訳に省略がある場合，原文の英語文書が決定版として扱われるべきである。</p>
+</div>
+
+      </div>
+      <hr/>
+
+
+      <div class="head">
+         <p>
+            <a href="http://www.ws-i.org/">
+               <img src="http://www.ws-i.org/images/WS-I-logo.gif" height="88" width="107" border="0" alt="WS-I"/>
+            </a>
+         </p>
+         <h1>Attachments Profile Version 1.0</h1>
+         <h2>Final Material</h2>
+         <h2>2004-08-24</h2>
+         <dl>
+            <dt>This version:</dt>
+            <dd>
+               <a href="http://www.ws-i.org/Profiles/AttachmentsProfile-1.0-2004-08-24.html">http://www.ws-i.org/Profiles/AttachmentsProfile-1.0-2004-08-24.html
+							</a>
+            </dd>
+            <dt>Latest version:</dt>
+            <dd>
+               <a href="http://www.ws-i.org/Profiles/AttachmentsProfile-1.0.html">http://www.ws-i.org/Profiles/AttachmentsProfile-1.0.html
+							</a>
+            </dd>
+            <dt>Errata for this Version:</dt>
+            <dd>
+               <a href="http://www.ws-i.org/Profiles/AttachmentsProfile-1.0-errata.html">http://www.ws-i.org/Profiles/AttachmentsProfile-1.0-errata.html</a>
+            </dd>
+            <dt>Editors:</dt>
+            <dd>Chris Ferris, IBM</dd>
+            <dd>Anish Karmarkar, Oracle Corp.</dd>
+            <dd>Canyang Kevin Liu, SAP AG</dd>
+            <dt>Administrative contact:</dt>
+            <dd>
+               <a href="mailto:secretary@ws-i.org">secretary@ws-i.org</a>
+            </dd>
+         </dl>
+         <p class="copyright" id="copyright"> Copyright &#169;  2002-2004 by
+			<a href="http://www.ws-i.org/">The Web Services-Interoperability
+			Organization</a> (<abbr title="Web Services Interoperability    Organization">WS-I</abbr>) and Certain of its Members. All Rights
+			Reserved.</p>
+      </div>
+      <hr/>
+      <h2 id="abstract">Abstract (概要)</h2>
+<p xml:lang="ja">この文書では WS-I Attachments Profile 1.0 を定義する。
+このプロファイルは非占有的 (non-proprietary) な Web サービス仕様の集合で構成され，相互運用性を向上する目的で仕様の明確化と修正を進めたものである。
+このプロファイルは，
+SOAP Messages with Attachments に基づいた Webサービスへのサポートを追加することで，
+WS-I Basic Profile 1.1 を補完している。
+</p>
+
+      <h2 id="status">Status of this Document (この文書の位置付け)</h2>
+
+<p xml:lang="ja">これは最終仕様 (final specification) である。
+<a href="http://www.ws-i.org/Profiles/AttachmentsProfile-1.0-errata.html">正誤表</a>に
+規定の修正を含むことがあるので，参照されたい。</p>
+
+      <h2 id="license">Notice (通告)</h2>
+<p xml:lang="ja">ここに含まれる内容は，この内容の著者若しくは開発者又は WS-I が所有又は管理する知的財産権に対するライセンスを，明示的にも暗示的にも示すものではない。
+ここに含まれる内容は<u>そのまま</u> (AS IS) の形式で提供され，適用可能な法律に許される最大限の範囲において，<u>そのままの形で欠陥を含んだまま</u> (AS IS AND WITH ALL FAULTS) 提供される。
+この内容の著者及び開発者並びに WS-I は，ここに，明示的，暗示的，又は法定による，
+市場性，特定目的への適用性，応答の精度若しくは完全性，結果，職人的努力，ウィルスがないこと，又は過失のないことについての，
+暗示的な保証，義務又は条件を含む (しかし，それに限定されない)，
+その他すべての保証及び条件を否認する。
+<u>さらに，
+この内容に関する権利，安全な居住，安全な所有，記述への対応又は侵害不在性について，いかなる保証又は条件も存在しない。</u></p>
+
+<p xml:lang="ja"><u>この内容の著者若しくは開発者又は WS-I のいずれも，
+他者に対して，
+損害の可能性の事前通告の有無にかかわらず，
+これ又はこの内容についてのその他のいかなる合意によって起こされる損害に対して，
+契約，不法行為，保証その他による，
+代替する物資若しくは服務の購入，逸失利益，用途損失，データ損害，又はいかなる偶発的，結果的，直接，間接，若しくは特別な損害を補償する責任を持たない。</u></p>
+
+      <h2 id="feedback">Feedback (フィードバック)</h2>
+
+<p xml:lang="ja">可能な限り最良の相互運用性ガイドを提供するため，
+この仕様に不明確な点がある場合や，誤り又は抜けが発見された場合，
+WS-I に連絡されたい。</p>
+
+<p xml:lang="ja">メールの送信又はその他の手段で WS-I に対して通信することによって，あなた (個人を代表する場合はあなた自身，会社を代表してフィードバックを送る場合はあなたの会社) は，WS-I, WS-I のメンバー及びその他あなたのフィードバックをアクセスできる者に対して，この文書についてあなたが提供するフィードバックに対する，使用，公開，複写，ライセンス，修正，サブライセンス，その他いかなる形式による配布及び活用に対しても，非制限的で，譲渡不可能な，国際的で，永続的で，取り消し不可能な，ロイヤリティなしのライセンスを許諾するものとみなされる。
+あなたは，あなたが提供するいかなるフィードバックに対しても，秘匿性についていかなる期待ももたないことに同意しなければならない。
+あなたは，あなたがフィードバックを送る権利をもつことを表明し，保証しなければならない。あなたが会社を代表してフィードバックを送る場合，あなたが会社を代表してフィードバックを送る権利をもつことを表明し，保証しなければならない。
+WS-I には，この文書の将来の版において，あなたのフィードバックの一部又は全部をレビューし，議論し，使用し，検討し，あるいはいかなる方法においても取り入れる義務はないということも，あなたは同意しなければならない。WS-I がこの文書の将来の版にあなたのフィードバックの一部又は全部を取り入れる場合，WS-I は，この文書の貢献者のリストにあなたの名前 (又は，あなたが会社を代表する場合には，会社の名前) を入れるかもしれないが，そうする義務はない。
+上記の内容があなた又はあなたが代表する会社にとって受け入れられない場合，いかなるフィードバックも送らないでほしい。</p>
+
+<p xml:lang="ja">この文書に対するフィードバックは wsbasic_comment&#64;ws-i.org に送ること。</p>
+
+      <hr/>
+      <h2 id="toc">Table of Contents (目次)</h2>
+      <p class="toc">1. <a href="#introduction">Introduction (序文)</a>
+         <br/>
+         <span class="subtoc">1.1. <a href="#relationship">Relationship to other Profiles (他のプロファイルとの関係)</a>
+         </span>
+         <br/>
+         <span class="subtoc">1.2. <a href="#conventions">Notational Conventions (表記)</a>
+         </span>
+         <br/>
+         <span class="subtoc">1.3. <a href="#versioning">Profile Identification and Versioning (プロファイルの識別と版数)</a>
+         </span>
+         <br/>2. <a href="#conformance">Profile Conformance (プロファイルに対する適合性)</a>
+         <br/>
+         <span class="subtoc">2.1. <a href="#conformance_requirements">Conformance Requirements (適合性の要件)</a>
+         </span>
+         <br/>
+         <span class="subtoc">2.2. <a href="#conformance_targets">Conformance Targets (適合性の対象)</a>
+         </span>
+         <br/>
+         <span class="subtoc">2.3. <a href="#conformance_scope">Conformance Scope (適合性の適用範囲)</a>
+         </span>
+         <br/>
+         <span class="subtoc">2.4. <a href="#conformance_claims">Claiming Conformance (適合性の表示)</a>
+         </span>
+         <br/>3. <a href="#SOAPPackage">Attachments Packaging (添付ファイルのパッケージング)</a>
+         <br/>
+         <span class="subsubtoc">3.1. <a href="#Root_Part">Root Part (ルートパート)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.2. <a href="#Encoding_of_Root_Part">Encoding of Root Part (ルートパートのエンコーディング)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.3. <a href="#Media_Type_of_Message">Media Type of Message (メッセージのメディア型)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.4. <a href="#Messages_with_No_Attachments">Messages with No Attachments (添付ファイルをもたないメッセージ)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.5. <a href="#Dereferencing_Attachments">Dereferencing Attachments (添付ファイルの参照値読出し)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.6. <a href="#Carrying_Additional_SOAP_Envelopes">Carrying Additional SOAP Envelopes (追加の SOAP エンベロープの添付)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.7. <a href="#Fault_Messages_with_Attachments">Fault Messages with Attachments (添付ファイルをもつフォルトメッセージ)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.8. <a href="#Value-space_of_Content-Id_Header">Value-space of Content-Id Header (Content-Id ヘッダーの値空間)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.9. <a href="#Ordering_of_MIME_Parts">Ordering of MIME Parts (MIME パートの順序)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.10. <a href="#Position_of_Root_Part">Position of Root Part (ルートパートの位置)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.11. <a href="#Content-Transfer-Encoding">Content-Transfer-Encoding (Content-Transfer-Encoding)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">3.12. <a href="#MIME_Boundary_String">MIME Boundary String (MIME 境界文字列)</a>
+         </span>
+         <br/>4. <a href="#WSDLMIMEBINDING">Attachments Description (添付ファイルの記述)</a>
+         <br/>
+         <span class="subsubtoc">4.1. <a href="#Use_of_MIME_Binding_Extension">Use of MIME Binding Extension (MIME バインディング拡張の使用)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.2. <a href="#Unbound_portType_Element_Contents">Unbound portType Element Contents (バインドされていない portType 要素の内容)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.3. <a href="#Referencing_Message_Parts">Referencing Message Parts (メッセージのパートの参照)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.4. <a href="#Referencing_Attachments_from_the_SOAP_Envelope">Referencing Attachments from the SOAP Envelope (SOAP エンベロープからの添付ファイルの参照)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.5. <a href="#Specifying_Root_Part">Specifying Root Part (ルートパートの指定)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.6. <a href="#Specifying_SOAP_Headers_in_Root_Part">Specifying SOAP Headers in Root Part (ルートパートにおける SOAP ヘッダーの指定)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.7. <a href="#MIME_Binding_Schema_Fixes">MIME Binding Schema Fixes (MIME バインディングスキーマの修正)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.8. <a href="#Specifying_Alternate_Media_Types">Specifying Alternate Media Types (代替メディア型の指定)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.9. <a href="#WSDL_Parts">WSDL Parts (WSDL の part)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.10. <a href="#Ordering_of_Parts">Ordering of Parts (パートの順序)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.11. <a href="#Sending_Fault_Messages">Sending Fault Messages (フォルトメッセージの送信)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.12. <a href="#Describing_Faults">Describing Faults (フォルトの記述)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.13. <a href="#Sending_Additional_Parts_Not_Described_in_WSDL">Sending Additional Parts Not Described in WSDL (WSDL で記述されていない追加のパートの送信)</a>
+         </span>
+         <br/>
+         <span class="subsubtoc">4.14. <a href="#Conformance_of_SOAP_Messages">Conformance of SOAP Messages (SOAP メッセージの適合性)</a>
+         </span>
+         <br/>
+                Appendix A: <a href="#references">Referenced Specifications (参照仕様)</a>
+         <br/>
+                Appendix B: <a href="#points">Extensibility Points (拡張点)</a>
+         <br/>
+                Appendix C: <a href="#defs">Defined Terms (定義された用語)</a>
+         <br/>
+            Appendix D: <a href="#acks">Acknowledgements (謝辞)</a>
+         <br/>
+      </p>
+      <h2 id="introduction">1. Introduction (序文)</h2>
+<p xml:lang="ja">この文書は WS-I Attachments Profile 1.0 (以下，「このプロファイル」と呼ぶ) を定義する。
+このプロファイルは非占有的 (non-proprietary) な Web サービス仕様で構成され，
+相互運用性を向上させる仕様の明確化及び拡充を含んでいる。このプロファイルは，
+SOAP Messages with Attachments に基づいた Webサービスへのサポートを追加することで，
+WS-I Basic Profile 1.1 を補完している。
+</p>
+
+<p xml:lang="ja">SOAP Messages with Attachments
+(SwA) は，SOAP メッセージに添付ファイルをパッケージングするための MIME
+multipart/related 構造を定義している。このプロファイルは，相互運用可能な
+SwAに基づくSOAP メッセージの添付ファイル(attachments)の運び方に対する
+サポートを追加することで，WS-I Basic Profile 1.1 を補完している。</p>
+
+<p xml:lang="ja">第1節は，このプロファイルを紹介し，他のプロファイルとの関係を説明する。</p>
+
+<p xml:lang="ja">第2節，
+"Profile Conformance" (プロファイルに対する適合性) は，このプロファイルに適合するとはどういう意味かを説明する。</p>
+
+<p xml:lang="ja">それに続く各節は，このプロファイルの構成要素となるそれぞれの仕様について述べるもので，次の2つの部分からなる。
+すなわち，構成要素となる仕様及び拡張点 (extensibility point) を列挙した概要説明と，
+それに続いて，構成要素となる仕様の個別の部分について述べた小節との二つの部分である。</p>
+
+      <h3 id="relationship">1.1 Relationship to other Profiles (他のプロファイルとの関係)</h3>
+<p xml:lang="ja">このプロファイルは，SOAP with Attachments と MIME バインディングに対するサポートを追加し，Basic Profile 1.1 と組み合わせて用いることを意図している。</p>
+
+      <h3 id="conventions">1.2
+            Notational Conventions (表記)
+        </h3>
+<p xml:lang="ja">この文書では，
+「…しなければならない (MUST, SHALL)」，「…してはならない (MUST NOT, SHALL NOT)」，
+「必須の… (REQUIRED)」，「…することが望ましい (SHOULD)」，「…すべきではない (SHOULD NOT)」，「推奨の… (RECOMMENDED)」，
+「…してもよい (MAY)」及び「省略可能の… (OPTIONAL)」の用語は，
+<a class="offsite" href="http://www.ietf.org/rfc/rfc2119.txt">RFC2119</a> に記述されているとおりに解釈する。</p>
+
+<p class="translation-note">[訳注: この訳文では，該当する用語の訳の直後に，括弧でくくって原文の用語を示している。
+また，キーワードの訳語はできる限り <strong>JIS Z 8301 規格票の様式</strong> に合わせた。]</p>
+
+<p xml:lang="ja">このプロファイルにおける要件 (すなわち，"<a href="#conformance_requirements">Conformance Requirements" [適合性の要件]</a> の節に説明されている，適合性に影響するもの) は，
+次の形式で提示される:</p>
+<div class="refinement">
+<p xml:lang="ja" class="statement"><span class="statement-id">R<i>nnnn</i></span> <u>要件の文章がここに入る。</u></p
+>
+</div>
+<p xml:lang="ja">ただし，ここで <i>"nnnn"</i> は，このプロファイル内で一意の要件番号で置き換えられ，
+一意の要件識別子 (unique requirement identifier) を構成する。</p>
+
+<p xml:lang="ja">要件識別子 (requirement identifier) は，
+<a class="offsite" href="http://www.w3.org/TR/REC-xml-names/">Namespaces in XML (XML 名前空間)</a> と互換性のあるような方法で，
+名前空間修飾されている (namespace qualified) とみなすことができる。
+ある要件の識別子に明示的な名前空間プレフィックスが存在しない場合
+(たとえば，"bp10:R9999" ではなく "R9999" のような場合)，
+その要件が存在する文書の節の適合性 URI (conformance URI) によって識別される
+名前空間に属すると解釈されるべきである。
+名前空間修飾されている場合，
+そのプレフィックスは，次に記述するとおり，
+そこで有効な名前空間の対応付けに則って解釈されるべきである。</p>
+
+<p xml:lang="ja">いくつかの要件は，参照される仕様を明確化するだけで，実装に対して追加の制約を課さないものである。
+便宜のため，仕様の明確化 (clarification) は次のように注記される: <span class="statement-type">C</span></p>
+
+<p xml:lang="ja">いくつかの要件は，参照される仕様の標準化されつつある内容を取り入れたものである。
+便宜上，そのような仕様の先取りは次のように注記される: <span class="statement-origin">xxxx</span>，
+ただし，ここで "xxxx" は仕様を示す識別子である (たとえば，"WSDL20" は WSDL 2.0 仕様を示す)。
+そういう仕様はこの文書の出版時点では完成しておらず，先取りした仕様が変更されることもありうることに注意が必要である。
+この情報は，実装者に対する便宜としてのみ含められている。</p>
+
+<p xml:lang="ja">もととなる仕様にある拡張点 (extensibility point)
+(<a href="#conformance_scope">"Conformance Scope" [適合性の適用範囲]</a> を参照) は，
+同様に表示される:</p>
+<div class="refinement">
+<p xml:lang="ja" class="statement"><span class="statement-id">E<i>nnnn</i></span> - <u>拡張点の名前</u> - <u>拡張点の記述</u></p>
+</div>
+<p xml:lang="ja">ただし，ここで <i>"nnnn"</i> は，このプロファイル内で一意の拡張点番号で置き換えられる。
+要件の記述と同様，拡張点の記述は名前空間修飾が可能と解釈される。</p>
+
+<p xml:lang="ja">この仕様では，全体を通して次に示すいくつかの名前空間プレフィックス (namespace prefix) を使用する。
+各プレフィックスに関連付けられた URI を次に示す。
+プレフィックスの選択は恣意的なものであり，どのような文字列を選択しても意味的に差異がないことに注意が必要である。</p>
+
+      <ul>
+         <li>
+            <strong>soap</strong> - "http://schemas.xmlsoap.org/soap/envelope/"</li>
+         <li>
+            <strong>xsi</strong> - "http://www.w3.org/2001/XMLSchema-instance"</li>
+         <li>
+            <strong>xsd</strong> - "http://www.w3.org/2001/XMLSchema"</li>
+         <li>
+            <strong>soapenc</strong> - "http://schemas.xmlsoap.org/soap/encoding/"</li>
+         <li>
+            <strong>wsdl</strong> - "http://schemas.xmlsoap.org/wsdl/"</li>
+         <li>
+            <strong>soapbind</strong> - "http://schemas.xmlsoap.org/wsdl/soap/"</li>
+         <li>
+            <strong>mime</strong> - "http://schemas.xmlsoap.org/wsdl/mime/"</li>
+         <li>
+            <strong>uddi</strong> - "urn:uddi-org:api_v2"</li>
+         <li>
+            <strong>wsi</strong> - "http://www.ws-i.org/schemas/conformanceClaim"</li>
+         <li>
+            <strong>ref</strong> - "http://ws-i.org/profiles/basic/1.1/xsd"</li>
+      </ul>
+      <h3 id="versioning">1.3
+        Profile Identification and Versioning (プロファイルの識別と版数)
+        </h3>
+<p xml:lang="ja">この文書は，名前 (この場合，Attachments Profile) 及び版数 (ここでは，1.0) で識別される。
+両方をあわせて，特定の<strong>プロファイルのインスタンス</strong> <em>(profile instance)</em> を識別する。</p>
+
+<p xml:lang="ja">版数の番号はメジャー番号及びマイナー番号で構成され，
+"メジャー.マイナー" の形式となる。
+これらは，プロファイルの優先度を決定するのに利用できる。
+版数の番号が高い (メジャー番号及びマイナー番号の両方を考慮して) 場合，
+そのインスタンスは新しく，それ以前のインスタンスを置き換える。</p>
+
+<p xml:lang="ja">同じ名前のプロファイルの複数のインスタンス
+(たとえば，"Example Profile 1.1" と "Example Profile 5.0") は，
+同じ一般的な適用範囲内にある相互運用性の問題に言及している
+(もっとも，状況の進展により，
+プロファイルの厳密な適用範囲がインスタンスの間で変わることがある)。</p>
+
+<p xml:lang="ja">
+この情報は，
+あるプロファイルの二つのインスタンスが後方互換 (backwards-compatible) であるかどうか
+(すなわち，前のプロファイルインスタンスへの適合が
+後のプロファイルインスタンスへの適合を暗示するものと想定できるかどうか)
+を判断するために使用できる。
+同じ名前とメジャー番号とをもつ複数のプロファイルインスタンス
+(たとえば，"Example Profile 1.0" と "Example Profile 1.1") は，互換性があると考えてもよい。
+これは，逆方向への互換性を暗示するものではないことに注意が必要である。
+すなわち，後のプロファイルインスタンスへの適合は，前のプロファイルインスタンスへの適合を暗示するものと想定することはできない。</p>
+
+      <h2 id="conformance">2
+            Profile Conformance (プロファイルに対する適合性)
+        </h2>
+<p xml:lang="ja">
+このプロファイルに対して適合しているということは，
+このプロファイルの<strong>適用範囲</strong> <em>(scope)</em> 内で，
+特定の<strong>対象</strong> <em>(target)</em> に対する<strong>要件</strong> <em>(requirements)</em> の集合を守ることであると定義されている。
+この節では，これらの用語について説明し，
+どのように適合性が定義され使用されるかを説明する。
+</p>
+
+      <h3 id="conformance_requirements">2.1
+
+            Conformance Requirements (適合性の要件)
+        </h3>
+<p xml:lang="ja">要件 (requirements) は，このプロファイルに対する適合性の基準を述べている。
+要件は典型的には既存の仕様を参照し，
+そこでの相互運用性を向上する洗練，拡充，解釈及び明確化を具体化したものである。
+このプロファイルの全ての要件は規定 (normative) と解釈され，
+参照される仕様のうちの適用範囲内の要件 ("Conformance Scope" [適合性の適用範囲] 参照) も
+同様に規定と解釈されるべきである。
+このプロファイルの要件と参照される仕様の要件とが互いに矛盾する場合，
+プロファイル適合性の観点からは，
+このプロファイルの要件が優先される。
+</p>
+
+<p xml:lang="ja">要件レベルは，<a class="offsite" href="http://www.ietf.org/rfc/rfc2119.txt">RFC2119</a> の用語 (たとえば，MUST, MAY, SHOULD) を使い，
+要件の性質と適合性に対する影響力とを示す。
+個々の要件記述は，便宜上，個別に (R9999 のような) 番号が振られている。</p>
+
+<p xml:lang="ja">次に例を示す:</p>
+      <p xml:lang="ja" class="statement">
+         <span class="statement-id">R9999</span> WIDGET は丸い形状であることが望ましい (SHOULD)。</p>
+
+<p xml:lang="ja">この要件は "R9999" という識別子で識別され，
+適合性対象 WIDGET に対して適用され (次を参照)，
+ウィジェットに対する条件付きの要件を課す。
+すなわち，大部分の場合には適合性を維持するためにこの要件は満足しなければならないが，
+それを満足しない正当な理由がある場合もある
+(それは，要件それ自体又は付随する文章で説明される)。</p>
+
+<p xml:lang="ja">それぞれの要件は，ちょうど一つの要件レベルキーワード (MUST のような) と適合性対象キーワード (MESSAGE のような) とをもつ。
+補足の文章 (根拠や例など) が要件を明確にするために付け加えられることもあるが，要件記述そのものだけが適合性を判定する際に考慮されるべきである。</p>
+
+<p xml:lang="ja">このプロファイルの用語定義は，
+適合性を決定するという用途において権威あるものとみなされる。</p>
+
+<p xml:lang="ja">このプロファイルの要件はいずれも，
+適合性レベルに関わらず，
+現実の又は想定される脅威 (たとえば，サービス妨害攻撃 [denial of service attack]) に対応して，
+それ以外の点では適合している実装が
+セキュリティ対策を講じる能力を制限するものと解釈してはならない。</p>
+
+      <h3 id="conformance_targets">2.2
+
+            Conformance Targets (適合性の対象)
+	    </h3>
+<p xml:lang="ja">適合性対象 (conformance target) は，
+どの対象物 (artifact) [たとえば，SOAP メッセージ，WSDL 記述，UDDI レジストリーデータ] 又は主体 (party) [たとえば，SOAP 処理系，エンドユーザー] に要件が適用されるかを識別する。</p>
+
+<p xml:lang="ja">これは，
+適合性の定義が，
+異なる文脈において，
+要件を適用可能であるかを曖昧性なく解釈することを保証し，
+対象物 (たとえば，SOAP メッセージや WSDL 記述) 及び
+各種の Web サービスの主体 (たとえば，クライアントやサービスのインスタンス) の動作に対する
+適合性試験を可能にするものである。</p>
+
+<p xml:lang="ja">試験を単純にし，曖昧性を排除するため，
+要件の適合性対象は可能な限り物理的な対象物である。</p>
+
+<p xml:lang="ja">このプロファイルでは次の適合性対象を使用する:</p>
+      <ul>
+         <li>
+            <strong>MESSAGE</strong>
+              - ENVELOPE を伝送する，プロトコルの構成要素 (たとえば，SOAP/HTTP メッセージ)
+                (<a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.1.html">Basic Profile 1.1</a>)
+              </li>
+         <li>
+            <strong>ENVELOPE</strong>
+              - soap:Envelope 要素をシリアライズしたもの及びその内容
+                (<a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.1.html">Basic Profile 1.1</a>)
+              </li>
+         <li>
+            <strong>DESCRIPTION</strong>
+              - データ型，メッセージ，インタフェース並びにその具体的なプロトコル及びデータ形式へのバインディング，並びに Web サービスに関連付けられたネットワーク上のアクセスポイントの記述 (たとえば，WSDL 記述)
+                (<a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+              </li>
+         <li>
+            <strong>INSTANCE</strong>
+              - <code>wsdl:port</code> 又は <code>uddi:bindingTemplate</code> を実装するソフトウェア
+                (<a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+              </li>
+         <li>
+            <strong>CONSUMER</strong>
+              - INSTANCE を起動 (invoke) するソフトウェア
+                (<a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+              </li>
+         <li>
+            <strong>SENDER</strong>
+              - 関連付けられたプロトコルに基づき，メッセージを生成 (generate) するソフトウェア
+                (<a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+              </li>
+         <li>
+            <strong>RECEIVER</strong>
+              - 関連付けされたプロトコルに基づき，メッセージを受信 (consume) するソフトウェア (たとえば SOAP 処理系)
+                (<a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+              </li>
+      </ul>
+
+      <h3 id="conformance_scope">2.3
+
+            Conformance Scope (適合性の適用範囲)
+        </h3>
+<p xml:lang="ja">このプロファイルの適用範囲 (scope) は，その対象とする技術を詳細化する。
+言い換えれば，このプロファイルは，その適用範囲の中での相互運用性を向上することだけを図っている。
+一般的には，このプロファイルの適用範囲は，それが参照する仕様によって限定される。
+</p>
+
+<p xml:lang="ja">このプロファイルの適用範囲は，拡張点 (extensibility points) によってさらに洗練される。
+参照される仕様はたいてい拡張メカニズム及び未規定の若しくは無制限のコンフィギュレーションパラメーターを提供している。
+このプロファイルで拡張点と認識された場合，
+そのようなメカニズム又はパラメーターはこのプロファイルの適用範囲外であり，
+その使用又は不使用はこのプロファイルに対する適合性において意味をもたない。</p>
+
+<p xml:lang="ja">このプロファイルは，それでも，拡張点の使用について，その範囲を制限することなく，要件を課すことがある。
+また，拡張点の特定の使用方法について，このプロファイルが他のプロファイルと組み合わせて使われた場合に，相互運用性を向上するために，他のプロファイルで制限されることがある。</p>
+
+<p xml:lang="ja">拡張点の使用は相互運用性を損なうことがあるので，
+その使用は Web サービスの関係者によって何らかの形で協議又は文書化されるべきである。
+たとえば，これは私的な合意 (out-of-band agreement) の形をとるかもしれない。</p>
+
+<p xml:lang="ja">このプロファイルの適用範囲は
+<a href="#references">Appendix A</a> の参照仕様によって定義され，
+<a href="#points">Appendix B</a> の拡張点によって洗練される。</p>
+
+      <h3 id="conformance_claims">2.4
+            Claiming Conformance (適合性の表示)
+        </h3>
+<p xml:lang="ja">このプロファイルに対する適合性の表示は，
+<a class="offsite" href="http://www.ws-i.org/Profiles/ConformanceClaims-1.0.html">Conformance Claim Attachment Mechanisms [適合性表示添付メカニズム]</a> に記述されているとおり，
+次に列挙する対象物に関連付けられた，適用可能なプロファイルの要件が満足された場合に，
+次のメカニズムを使って行うことができる:</p>
+<p class="ednote" xml:lang="ja">CCAM [適合性表示添付メカニズム] の URI は，最終版になる前に変更される可能性がある。</p>
+
+<ul>
+      <li>
+         <strong>Web サービスインスタンスに対する WSDL 1.1 適合性表示添付メカニズム</strong> - MESSAGE DESCRIPTION INSTANCE RECEIVER</li>
+      <li>
+         <strong>WSDL 記述の構造に対する WSDL 1.1 適合性表示添付メカニズム</strong> - DESCRIPTION</li>
+      <li>
+         <strong>Web サービスインスタンスに対する UDDI 適合性表示添付メカニズム</strong> - MESSAGE DESCRIPTION INSTANCE RECEIVER</li>
+</ul>
+
+<p xmlsoap:lang="ja">このプロファイルに対する適合性表示 URI は "http://ws-i.org/profiles/attachments/1.0" である。</p>
+
+      <h2 id="SOAPPackage">3. Attachments Packaging (添付ファイルのパッケージング)</h2>
+<p xml:lang="ja">このプロファイルのこの節では次の仕様を参照し，その仕様の範囲内における拡張点を定義する:</p>
+      <ul>
+         <li>
+            <a class="offsite" href="http://www.w3.org/TR/SOAP-attachments#SOAPMultipart">SOAP Messages with Attachments</a>
+            <br/>拡張点:
+			               <ul>
+               <li>
+                  <span class="statement-id" id="E0001">E0001</span> - MIME パート - SOAP Messages with Attachments は，multipart/related メッセージの非ルートパート(non-root part)の型には制限を置かない。</li>
+            </ul>
+         </li>
+         <li>
+            <a class="offsite" href="http://www.w3.org/TR/REC-xml">Extensible Markup Language (XML) 1.0 (Second Edition)</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://www.w3.org/TR/1999/REC-xml-names-19990114">Namespaces in XML 1.0</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://ietf.org/rfc/rfc2557">RFC2557 MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://ietf.org/rfc/rfc2045">RFC2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://ietf.org/rfc/rfc2046">RFC2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://ietf.org/rfc/rfc2392">RFC2392 Content-ID and Message-ID Uniform Resource Locators</a>
+         </li>
+      </ul>
+
+<p xml:lang="ja">SOAP Messages with Attachments
+は，SOAPエンベロープを添付ファイルと共にパッケージングするための
+MIME <code>multipart/related</code> 構造を定義する。
+このプロファイルは，この構造を利用することを必須とし，その利用方法について，
+次の制約を定める:</p>
+
+      <div class="refinement">
+         <h4 id="Root_Part">3.1 Root Part (ルートパート)</h4>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2931">R2931</a>
+            </span>
+<code>multipart/related</code> MESSAGE のルートパート(root part) の本体 (entity body) は，<code>soap:Envelope</code> でなければならない (MUST)。
+					</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2945">R2945</a>
+            </span>
+MESSAGE の中の Content-Type HTTP ヘッダーフィールドの値は，"multipart/related" 又は "text/xml" のいずれかでなければならない (MUST)。
+                                <span class="statement-type">C</span>
+         </p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2932">R2932</a>
+            </span>
+MESSAGE の中の Content-Type HTTP ヘッダーフィールドの値が "multipart/related" のメディア型の場合，そのメッセージの中の Content-Type HTTP ヘッダーフィールドの値は <code>type</code> パラメーターの値が "text/xml" でなければならない (MUST)。
+					<span class="statement-type">C</span>
+         </p>
+
+         <div class="explanation">
+<p xml:lang="ja">いずれの MIME パートも <code>soap:Envelope</code> を含んでよいが，MIME パッケージのルートパートの本体だけが，基本の SOAP エンベロープとして扱われる。非ルートパート (non-root parts)は，添付ファイルとして参照される。</p>
+
+         </div>
+         <p class="example-banner">次に例を示す:</p>
+
+         <div class="example">
+            <p class="correct">正しい例: </p>
+
+<p xml:lang="ja">次のメッセージでは，Content-Type HTTP ヘッダーフィールドの値は，
+メディア型が "Multipart/Related" で type パラメーターの値が "text/xml" となっている。</p>
+
+            <pre>MIME-Version: 1.0
+Content-Type: Multipart/Related; boundary=MIME_boundary; type=text/xml;
+Content-Description: This is the optional message description.
+
+--MIME_boundary
+Content-Type: text/xml; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Content-ID: &lt;rootpart@example.com&gt;
+
+&lt;?xml version='1.0' ?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+...
+&lt;/SOAP-ENV:Envelope&gt;
+
+--MIME_boundary
+
+...
+--MIME_boundary--</pre>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Encoding_of_Root_Part">3.2 Encoding of Root Part (ルートパートのエンコーディング)</h4>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2915">R2915</a>
+            </span>
+<code>multipart/related</code> の MESSAGE のルートパート (root part) の本体 (entity body) は，UTF-8 又は UTF-16 のいずれかの文字エンコーディングを用いてシリアライズされなければならない (MUST)。
+					</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2916">R2916</a>
+            </span>
+<code>multipart/related</code> の MESSAGE の非ルートパート (non-root parts) では，いかなる文字エンコーディングを用いてもよい (MAY)。
+					</p>
+
+      </div>
+      <div class="refinement">
+         <h4 id="Media_Type_of_Message">3.3 Media Type of Message (メッセージのメディア型)</h4>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2925">R2925</a>
+            </span>
+WSDL 記述が少なくとも 1個の非ルート MIME パートを列挙している場合，対応する MESSAGE は，"multipart/related" のメディア型である <code>Content-Type</code> HTTP ヘッダーフィールドをもたなければならない (MUST)。
+          </p>
+
+      </div>
+      <div class="refinement">
+         <h4 id="Messages_with_No_Attachments">3.4 Messages with No Attachments (添付ファイルをもたないメッセージ)</h4>
+         <div class="rationale">
+<p xml:lang="ja">受信側がメッセージに0個以上の添付ファイルを想定している場合，そのメッセージの送信側は，添付ファイルのないメッセージに text/xml メディア型を使うことができる。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2917">R2917</a>
+            </span>
+0個の添付ファイルのパートをもつ MESSAGE は，
+そのメッセージに対する WSDL 記述が <code>wsdl:binding</code> の中の対応する <code>wsdl:input</code> 又は <code>wsdl:output</code> に <code>mime:multipartRelated</code> 要素を指定している場合，
+"text/xml" (SOAP HTTP バインディングが使われたときと同様な方式) 又は "multipart/related" のいずれかの content-type を使って送られなければならない (MUST)。
+</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2902">R2902</a>
+            </span>
+SENDER は，
+WSDL 記述の <code>wsdl:binding</code> の中の対応する <code>wsdl:input</code> 又は <code>wsdl:output</code> に MIME バインディングを指定していない場合，
+SOAP with Attachments を使ってメッセージを送ってはならない (MUST NOT)。
+				 	</p>
+
+         <div class="explanation">
+<p xml:lang="ja">これは，WSDL 記述が <code>soapbind:body</code> を含む <code>mime:part</code> 子要素を一つだけもつ <code>mime:multipartRelated</code> を指定している場合にのみ起こる。</p>
+
+         </div>
+<p class="example-banner">次に例を示す:</p>
+
+         <div class="example">
+            <p class="correct">正しい例: </p>
+
+            <p xml:lang="ja">次のような WSDL 記述の場合:</p>
+
+            <pre>&lt;wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  targetNamespace="http://example.com/mimewsdl"
+                  xmlns:tns="http://example.com/mimewsdl"&gt;
+
+...
+
+    &lt;wsdl:binding name="aBinding" type="tns:aPortType"&gt;
+        &lt;soapbind:binding style="rpc"
+                          transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+        &lt;wsdl:operation name="anOperation"&gt;
+            &lt;soap:operation soapAction="http://example.com/soapaction"/&gt;
+            &lt;wsdl:input&gt;
+                &lt;mime:multipartRelated&gt;
+                    &lt;mime:part&gt;
+                        &lt;soapbind:body use="literal"
+                                       namespace="http://example.com/mimetypes"/&gt;
+                    &lt;/mime:part&gt;
+                &lt;/mime:multipartRelated&gt;
+            &lt;/wsdl:input&gt;
+            &lt;wsdl:output&gt;
+                &lt;soapbind:body use="literal"
+                               namespace="http://example.com/mimetypes"/&gt;
+            &lt;/wsdl:output&gt;
+        &lt;/wsdl:operation&gt;
+ &lt;/wsdl:binding&gt;
+&lt;/wsdl:definitions&gt;</pre>
+            <p xml:lang="ja">次のような SOAP HTTP バインディングの input メッセージを生成してもよい:</p>
+
+            <pre>&lt;?xml version='1.0' ?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+    &lt;SOAP-ENV:Body xmlns:types="http://example.com/mimetypes"&gt;
+        &lt;types:anOperation&gt;
+ ...
+         &lt;/types:anOperation&gt;
+    &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</pre>
+            <p xml:lang="ja">次のような MIME バインディングの output メッセージを生成してはならない:</p>
+
+            <pre>MIME-Version: 1.0
+Content-Type: Multipart/Related; boundary=MIME_boundary; type=text/xml;
+        start="&lt;rootpart@example.com&gt;"
+Content-Description: This is the optional message description.
+
+--MIME_boundary
+Content-Type: text/xml; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Content-ID: &lt;rootpart@example.com&gt;
+
+&lt;?xml version='1.0' ?&gt;
+&lt;SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+    &lt;SOAP-ENV:Body xmlns:types="http://example.com/mimetypes"&gt;
+        &lt;types:anOperationResponse&gt;
+...
+        &lt;/types:anOpertionResponse&gt;
+    &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+--MIME_boundary--</pre>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Dereferencing_Attachments">3.5 Dereferencing Attachments (添付ファイルの参照値読出し)</h4>
+         <div class="rationale">
+<p xml:lang="ja">Web サービスを使うアプリケーションは，ネットワークからコンテンツを取り出すことを含め，さまざまな方法で URI を使用できる。
+添付ファイルは，URI で認識されるコンテンツを送り届けるために使用できるが，
+実装は，
+添付ファイルのコンテンツを優先することや，
+添付ファイルのみを使用することや，
+添付ファイルをまったく使用しないこと
+のいずれも要求されない。
+同様に，アプリケーションは URI の参照値読出し機能 (たとえば，ネットワークからコンテンツを取ってくること) を無視し，添付されたコンテンツのみを使うことも選択できる。
+</p>
+
+<p xml:lang="ja">URI に CID スキームを使用する場合，
+RFC2392 で定義された構文と規則とが適用される。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2918">R2918</a>
+            </span>
+RECEIVER は，エンベロープ中にある添付ファイルへの URI 参照を無視してもよい (MAY)。
+					</p>
+
+      </div>
+      <div class="refinement">
+         <h4 id="Carrying_Additional_SOAP_Envelopes">3.6 Carrying Additional SOAP Envelopes (追加の SOAP エンベロープの添付)</h4>
+         <div class="rationale">
+<p xml:lang="ja">このプロファイルでは，添付ファイルパートの内容については何の制約も課さない。
+<code>soap:Envelope</code> を含んだ更なる XML 文書を添付ファイルとして送ってもよいが，MIME メッセージのルートパートだけが，
+MIME パッケージの中の SOAP エンベロープとして扱われるべきである。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2919">R2919</a>
+            </span>
+MESSAGE は，ルートパート以外のパート中に，添付ファイルとして運ばれる <code>soap:Envelope</code> をもっていてもよい (MAY)。
+					</p>
+
+      </div>
+      <div class="refinement">
+         <h4 id="Fault_Messages_with_Attachments">3.7 Fault Messages with Attachments (添付ファイルをもつフォルトメッセージ)</h4>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2920">R2920</a>
+            </span>
+WSDL 記述の <code>wsdl:output</code> 要素が MIME バインディングを使って記述されている場合だけに限り，
+INSTANCE は，添付ファイルのついたフォルトを送ってもよい (MAY)。
+					</p>
+
+      </div>
+      <div class="refinement">
+         <h4 id="Value-space_of_Content-Id_Header">3.8 Value-space of Content-Id Header (Content-Id ヘッダーの値空間)</h4>
+
+         <p>定義: content-id への part 名エンコーディング (content-id part encoding)</p>
+         <div class="definition">
+            <p>content-id への part 名エンコーディング (content-id part encoding) は，次の構成要素を連結したものである:</p>
+            <ul>
+               <li>
+               <code>mime:content</code> によって参照される
+               <code>wsdl:part</code> 要素の <code>name</code> 属性の値。
+               ただし，content-id ヘッダーで禁止された文字 (0x7F を超えるコードポイントで表現される非 ASCII 文字) は次の方式でエスケープする:
+                  <ul>
+                     <li>それぞれの禁止された文字を1バイト以上の UTF-8 に変換する。</li>
+                     <li>禁止された文字を構成する各バイトを URI エスケープ方式でエスケープする
+                     (すなわち，%HH の形式に変換する。ただし，ここで HH はバイト値の16進数表現である。)</li>
+                     <li>元の文字をエスケープ結果のバイト列で置き換える。</li>
+                  </ul>
+               </li>
+               <li>文字 '=' (0x3D)。</li>
+               <li>UUID のような，グローバルに一意な値。</li>
+               <li>文字 '@' (0x40)。</li>
+               <li>メッセージを生成する実体の管理下にある，有効なドメイン名。</li>
+            </ul>
+         </div>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2933">R2933</a>
+            </span>
+WSDL 記述が <code>wsdl:message</code> の <code>part</code> を <code>mime:content</code> 要素にバインドしている場合，
+MESSAGE の中の対応する MIME のパートの <code>Content-Id</code> フィールドの値は，
+content-id への part 名エンコーディング (content-id part encoding) に適合しなければならない (MUST)。
+				</p>
+
+         <p class="example-banner">次に例を示す:</p>
+
+         <div class="example">
+            <p class="correct">正しい例: </p>
+
+            <p xml:lang="ja">次の WSDL 断片のなかで，<code>mime:content</code> にバインドされた part の名前が content-id の値に追加される。</p>
+
+            <pre>
+&lt;wsdl:message name="fooMsg"&gt;
+  &lt;wsdl:part name="body" type="ns1:Claim"/&gt;
+  &lt;wsdl:part name="fooPart" type="xs:base64binary"/&gt;
+&lt;/wsdl:message&gt;
+...
+&lt;wsdl:binding
+    ...
+    &lt;mime:multipartRelated&gt;
+      &lt;mime:part&gt;
+        &lt;soapbind:body parts="body" use="literal"/&gt;
+      &lt;/mime:part&gt;
+      &lt;mime:part&gt;
+        &lt;mime:content part="fooPart" type="application/octet-stream"/&gt;
+      &lt;/mime:part&gt;
+    &lt;/mime:multipartRelated&gt;
+    ...
+&lt;/wsdl:binding&gt;
+</pre>
+            <p xml:lang="ja">次に示すマルチパートのパッケージの断片は <code>fooPart</code> のバイナリストリームを含み，<code>wsdl:part</code> の "name" 属性の値がどのように content-id の値に取り込まれるかを強調している。</p>
+
+            <pre>
+...
+--MIME_boundary
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: 8bit
+Content-ID: &lt;fooPart=somereallybignumberlikeauuid@example.com&gt;
+...
+</pre>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Ordering_of_MIME_Parts">3.9 Ordering of MIME Parts (MIME パートの順序)</h4>
+         <div class="rationale">
+<p xml:lang="ja">中継ノード (intermediaries) が <code>multipart/related</code> メッセージ中のパートの順序を入れ替える可能性がある。よって，メッセージ中のパートの順序に意味付けすることは，明示的にも暗黙的にも，行うべきではない。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2921">R2921</a>
+            </span>
+RECEIVER は，メッセージ中の非ルート MIME パートの順序から，いかなる意味も推定してはならない (MUST NOT)。
+					</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2929">R2929</a>
+            </span>
+MESSAGE は，ルートパートがどれであるかということを変えない限り，
+MIME パートをどのような順序で並べてもよい (MAY)。
+					</p>
+
+         <div class="explanation">
+<p xml:lang="ja">
+受信側は，WSDL 記述の <code>mime:part</code> 要素の指定された順序が，
+メッセージの中の MIME パートの順序と同じであると想定してはならない。
+WSDL 記述の中の MIME パートの順序は，メッセージの中の MIME パートの順序とは独立であると解釈されなければならない。
+</p>
+
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Position_of_Root_Part">3.10 Position of Root Part (ルートパートの位置)</h4>
+         <div class="rationale">
+<p xml:lang="ja"><code>start</code> パラメーターが存在する場合，<code>start</code> パラメーターの値がメッセージのルートパートの <code>content-ID</code> である。<code>start</code> パラメーターが存在しない場合， RFC2387 の 3.2 節に定義されている通り，ルートパートはパッケージの最初のボディパートである。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2922">R2922</a>
+            </span>
+メッセージ中の HTTP ヘッダーの <code>Content-Type</code> フィールドの値に <code>start</code> パラメーターが存在しない場合，
+RECEIVER は，MIMEパッケージの最初のボディパートをルートパートとして扱わなければならない(MUST)。
+          <span class="statement-type">C</span>
+         </p>
+
+         <p class="example-banner">次に例を示す:</p>
+
+         <div class="example">
+            <p class="correct">正しい例: </p>
+
+            <p xml:lang="ja">次のメッセージでは，先頭の MIME パート (Content-ID ヘッダーの値が "&lt;rootpart@example.com&gt;" になっている) がルートパートである。</p>
+
+            <pre>MIME-Version: 1.0
+Content-Type: Multipart/Related; boundary=MIME_boundary; type=text/xml;
+Content-Description: This is the optional message description.
+
+--MIME_boundary
+Content-Type: text/xml; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Content-ID: &lt;rootpart@example.com&gt;
+
+&lt;?xml version='1.0' ?&gt;
+&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+    &lt;SOAP-ENV:Body xmlns:types="http://example.com/mimetypes"&gt;
+        &lt;types:SendClaim&gt;
+            &lt;ClaimDetail&gt;.............................&lt;/ClaimDetail&gt;
+            &lt;photo&gt;
+              &lt;href&gt;cid:claimphoto@example.com&lt;/href&gt;
+            &lt;/photo&gt;
+        &lt;/types:SendClaim&gt;
+    &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+--MIME_boundary
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: binary
+Content-ID: &lt;claimphoto@example.com&gt;
+
+...binary photograph...
+--MIME_boundary--</pre>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Content-Transfer-Encoding">3.11 Content-Transfer-Encoding (Content-Transfer-Encoding)</h4>
+         <div class="rationale">
+<p xml:lang="ja">Content-Transfer-Encoding 機構は，
+バイナリーのコンテンツの転送をサポートしていないトランスポートを通してメッセージを送ることを可能にする。
+たとえば，いくつかの電子メールシステムでは文字ベースのメッセージ転送しかサポートしていない。
+Web サービスのメッセージはそのようなシステムを起点や終点としうるので，
+このプロファイルではこの機構の使用を許容している。</p>
+
+<p xml:lang="ja">MIME のマルチパートメッセージのあるパートに Content-Transfer-Encoding フィールドが存在しない場合，
+そのパートの本体は，RFC2045 に規定されている通り，7ビットの ASCII エンコーディングに適合しなければならない。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2934">R2934</a>
+            </span>
+multipart/related のメッセージの1つのパートにおける Content-Transfer-Encoding フィールドは，
+"7bit"，"8bit"，"binary"，"quoted-printable" 又は "base64" のいずれかの値をもたなければならない (MUST)。
+</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2935">R2935</a>
+            </span>
+multipart/related のメッセージの1つのパートの本体のエンコーディングは，
+RFC2045 に規定されている通り，
+Content-Transfer-Encoding フィールドの値で示されるエンコーディングに従わなければならない (MUST)。
+          <span class="statement-type">C</span></p>
+
+         <div class="explanation">
+<p xml:lang="ja">このプロファイルでは，相互運用性を向上するため，有効な値をよく知られているものに限定している。</p>
+
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="MIME_Boundary_String">3.12 MIME Boundary String (MIME 境界文字列)</h4>
+         <div class="rationale">
+<p xml:lang="ja">いくつかの実装は，
+MIME カプセル化の境界文字列の前に CRLF (carriage-return line-feed [復帰改行]) を置かないメッセージを生成することがある。
+これは，境界文字列の前に正しく CRLF が置かれることを想定している実装に対して問題となる。
+</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2936">R2936</a>
+            </span>
+MESSAGE の中では，すべての MIME カプセル化境界文字列の前に ASCII 文字の CR (13) と LF (10) とをこの順で置かなければならない (MUST)。
+				<span class="statement-type">C</span>
+         </p>
+
+         <div class="explanation">
+<p xml:lang="ja">RFC 2046 の5.5.1節は，すべてのカプセル化境界の前に CRLF (復帰改行) を置くことを明確に要求している。</p>
+
+         </div>
+      </div>
+      <h2 id="WSDLMIMEBINDING">4. Attachments Description (添付ファイルの記述)</h2>
+<p xml:lang="ja">このプロファイルのこの節では次の仕様を参照し，その仕様の範囲内における拡張点を定義する:</p>
+
+      <ul>
+         <li>
+            <a class="offsite" href="http://www.w3.org/TR/2001/NOTE-wsdl-20010315#_Toc492291084">WSDL 1.1, Section 5.0</a>
+         </li>
+      </ul>
+<p xml:lang="ja">WSDL 1.1 の第5節は，MIME バインディングを定義している。
+このプロファイルは WSDL MIME バインディングの使用を認めるが，
+それを SOAP Messages with Attachments プロトコルに限定する。
+このプロファイルは，
+その使用に関し次の制限を課す:</p>
+
+      <div class="refinement">
+         <h4 id="Use_of_MIME_Binding_Extension">4.1 Use of MIME Binding Extension (MIME バインディング拡張の使用)</h4>
+         <div class="rationale">
+<p xml:lang="ja">送信側が，SOAP with Attachments を使ってメッセージを送信することはできるが，
+そのようなメッセージを受信して処理することはできないというユースケースは存在しうる。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2901">R2901</a>
+            </span>
+DESCRIPTION は，WSDL 1.1 の第5節に記述されている WSDL MIME バインディングか，
+WSDL 1.1 の第3節に記述されている WSDL SOAP バインディングかのいずれかを，
+<code>wsdl:binding</code> の <code>wsdl:input</code> 又は <code>wsdl:outout</code> 要素のそれぞれに使用しなければならない (MUST)。
+				 	</p>
+
+      </div>
+      <div class="refinement">
+         <h4 id="Unbound_portType_Element_Contents">4.2 Unbound portType Element Contents (バインドされていない portType 要素の内容)</h4>
+         <div class="rationale">
+<p xml:lang="ja">WSDL 1.1 では，
+<code>wsdl:binding</code> が
+<code>wsdl:portType</code> で定義された内容の一部分に対するバインディングを指定しないことについて，
+許容されるかどうかが明記されていない。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2941">R2941</a>
+            </span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+それが参照している <code>wsdl:portType</code> の中の <code>wsdl:message</code> の各 <code>wsdl:part</code> について，
+<code>soapbind:body</code>，
+<code>soapbind:header</code>，
+<code>soapbind:fault</code>，
+<code>soapbind:headerfault</code> 又は
+<code>mime:content</code>
+のいずれかにバインドすることが望ましい (SHOULD)。
+         </p>
+
+         <div class="explanation">
+<p xml:lang="ja">portType は，名前を付けられた operation の組と，それに関連付けられた抽象的な message とをもつ抽象的な契約 (abstract contract) を定義する。
+禁止されているわけではないが，
+portType の中の抽象的な input，output 及び fault の message のそれぞれの part は，
+MIME バインディングを使う際は，WSDL 1.1 の第5節に定義されているように，
+<code>soapbind:body</code>，<code>soapbind:header</code> 等や <code>mime:content</code> に適切にバインドされることが想定されている。
+バインドされていない <code>wsdl:part</code> は利用者 (consumer) から無視されるべきである。</p>
+
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Referencing_Message_Parts">4.3 Referencing Message Parts (メッセージのパートの参照)</h4>
+         <div class="rationale">
+<p xml:lang="ja">WSDL 中の message の part は，(<code>mime:content</code>を使って) 特定の MIME パートにバインドできる。
+<code>soapbind:header</code> が <code>wsdl:portType</code>によって定義される契約 (contract) の一部
+ではない message に含まれる part を参照してもよいのとは異なり，<code>mime:content</code> は，<code>wsdl:operation</code>から参照される <code>wsdl:message</code> に定義されていない
+<code>wsdl:part</code> を参照してはならない。
+加えて，WSDLの中の message の part は，不可分の単位とみなされる。
+複雑な内容をもつ message の part の構成要素を，選択的に特定の MIME パートにバインドすることはできない。
+</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2903">R2903</a>
+            </span>
+DESCRIPTION 中の <code>mime:content</code> 要素は，
+対応する <code>wsdl:portType</code> の対応する <code>wsdl:operation</code> の
+対応する <code>wsdl:input</code> 又は <code>wsdl:output</code> の中に現れない
+<code>wsdl:part</code> を参照してはならない (MUST NOT)。
+					</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2904">R2904</a>
+            </span>
+DESCRIPTION 中の <code>mime:content</code> 要素は，
+<code>wsdl:part</code> から参照される要素 (element) 又は型 (type) の内部構成要素 (sub-component) にバインドされてはならない (MUST NOT)。
+					</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2946">R2946</a>
+            </span>
+DESCRIPTION の中では，<code>mime:content</code> 要素は <code>part</code> 属性を含まなければならない (MUST)。
+				</p>
+
+         <p class="example-banner">次に例を示す:</p>
+
+         <div class="example">
+            <p class="incorrect">間違っている例: </p>
+
+            <pre>
+&lt;definitions xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;
+  &lt;types ...&gt;
+    &lt;schema xmlns="http://www.w3.org/2001/XMLSchema/"
+            targetNamespace="http://example.org/foo"
+            xmlns:ns="http://example.org/foo"&gt;
+      &lt;element name='foo'&gt;
+        &lt;complextContent&gt;
+          &lt;sequence&gt;
+            &lt;element ref='bar1'/&gt;
+            &lt;element ref='bar2'/&gt;
+         &lt;/sequence&gt;
+      &lt;/complexContent&gt;
+    &lt;/element&gt;
+  &lt;/schema&gt;
+&lt;/types&gt;
+ ...
+&lt;message name='aMsg'&gt;
+  &lt;part name='apart' element='ns:foo' /&gt;
+  &lt;part name="body" element="ns:bar"/&gt;
+&lt;/message&gt;
+&lt;portType&gt;
+  &lt;operation&gt;
+    &lt;input&gt;
+      &lt;part name="apart"&gt;
+    &lt;/input&gt;
+...
+  &lt;/operation&gt;
+&lt;/portType&gt;
+&lt;binding&gt;
+  &lt;operation&gt;
+    &lt;input&gt;
+      &lt;mime:multipartRelated&gt;
+        &lt;mime:part&gt;
+          &lt;soapbind:body part="body" use="literal"/&gt;
+        &lt;/mime:part&gt;
+        &lt;mime:part&gt;
+          &lt;mime:content part="ns:bar1"/&gt;
+        &lt;/mime:part&gt;
+      &lt;/mime:multipartRelated&gt;
+    &lt;/input&gt;
+...
+  &lt;/operation&gt;
+&lt;/binding&gt;
+&lt;/definitions&gt;
+</pre>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Referencing_Attachments_from_the_SOAP_Envelope">4.4 Referencing Attachments from the SOAP Envelope (SOAP エンベロープからの添付ファイルの参照)</h4>
+         <div class="rationale">
+<p xml:lang="ja">添付ファイルを用いることのメリットの一つは，分離された MIME パートにデータを格納して，同じ MIME パッケージのルートパートに含まれる SOAP エンベロープからそれを参照できることである。</p>
+
+<p xml:lang="ja">このプロファイルは，
+WSDL 記述の中で message の part を定義するために使用できるスキーマ型 <code>ref:swaRef</code> を定義している。
+ある message の part が <code>ref:swaRef</code> 型を使って記述された場合，
+インスタンス文書では，
+その URI は同じ MIME パッケージ内の添付ファイルを指す。
+この型は，アプリケーションやツールやプラットフォームの開発者に対して，
+WSDL 記述の中に，添付ファイルへの参照であることを指定する相互運用可能な手段を提供する。
+かといって，他の手段を用いることが，WSDL を非適合 (non-conformant) にしてしまうということではない。</p>
+
+<p xml:lang="ja">次に，SOAP エンベロープから添付ファイルを参照することに使われる型の XML Schema を示す:</p>
+
+            <pre class="specification">
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;xsd:schema targetNamespace="http://ws-i.org/profiles/basic/1.1/xsd"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xsd:simpleType name="swaRef"&gt;
+    &lt;xsd:restriction base="xsd:anyURI" /&gt;
+  &lt;/xsd:simpleType&gt;
+&lt;/xsd:schema&gt;</pre>
+<p xml:lang="ja">利用の便宜を図るため，
+WS-I はこのスキーマ型のスキーマを次の場所で公開している:
+<a href="http://ws-i.org/profiles/basic/1.1/swaref.xsd">http://ws-i.org/profiles/basic/1.1/swaref.xsd</a>
+</p>
+<p xml:lang="ja">
+WSDL 1.1 の記述には，
+(swaRef を使って定義された) 添付ファイルの参照と，
+(mime:content にバインドされた wsdl:part を使って定義された) 添付ファイルとの間を関連付ける手段はないことに注意が必要である。
+このプロファイルでは，
+<code>ref:swaRef</code> が使われた場合，
+対応する添付ファイルを WSDL に記述しない，
+あるいは反対に，添付ファイルが WSDL に記述された場合，
+それに対して <code>ref:swaRef</code> を使わないことをベストプラクティスとして推奨している。
+</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2940">R2940</a>
+            </span>
+DESCRIPTION 中で，<code>ref:swaRef</code> のスキーマ型で定義された <code>wsdl:part</code> は，
+MIME バインディングの <code>soapbind:body</code> 又は <code>soapbind:header</code> だけにバインドされることが望ましい (SHOULD)。
+				</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2928">R2928</a>
+            </span>
+ENVELOPE の中において，
+<code>ref:swaRef</code> スキーマ型を使って型付けされた URI 参照は，エンベロープと同じメッセージ中の MIME パートへの参照として解決されなければならない (MUST)。
+			    </p>
+
+         <div class="explanation">
+<p xml:lang="ja">swaRef 型は，添付ファイルに対する参照を示すのに，
+(次の例に示すように) 要素として使っても，
+属性として使ってもよい。
+どちらの方法が望ましいというわけではない。</p>
+
+         </div>
+         <p class="example-banner">次に例を示す:</p>
+
+         <div class="example">
+            <p class="correct">正しい例: </p>
+
+            <p xml:lang="ja">rpc/literal バインディングに対する WSDL 記述:</p>
+
+            <pre>&lt;?xml version="1.0"?&gt;
+&lt;wsdl:definitions xmlns:types="http://example.com/mimetypes"
+                  xmlns:ref="http://ws-i.org/profiles/basic/1.1/xsd"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  targetNamespace="http://example.com/mimewsdl"
+                  xmlns:tns="http://example.com/mimewsdl"&gt;
+
+    &lt;wsdl:types&gt;
+        &lt;xsd:schema targetNamespace="http://example.com/mimetypes"
+                    xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+
+            &lt;xsd:import namespace="http://ws-i.org/profiles/basic/1.1/xsd" /&gt;
+            &lt;xsd:complexType name="ClaimDetailType"&gt;
+                &lt;xsd:sequence&gt;
+                    &lt;xsd:element name="Name" type="xsd:string"/&gt;
+                    &lt;xsd:element name="ClaimForm" type="ref:swaRef"/&gt;
+                &lt;/xsd:sequence&gt;
+            &lt;/xsd:complexType&gt;
+        &lt;/xsd:schema&gt;
+    &lt;/wsdl:types&gt;
+
+    &lt;wsdl:message name="ClaimIn"&gt;
+        &lt;wsdl:part name="ClaimDetail" type="types:ClaimDetailType"/&gt;
+        <strong>&lt;wsdl:part name="ClaimPhoto" type="xsd:base64Binary"/&gt;</strong>
+    &lt;/wsdl:message&gt;
+
+    &lt;wsdl:message name="ClaimOut"&gt;
+        &lt;wsdl:part name="ClaimRefNo" type="xsd:string"/&gt;
+    &lt;/wsdl:message&gt;
+
+    &lt;wsdl:portType name="ClaimPortType"&gt;
+        &lt;wsdl:operation name="SendClaim"&gt;
+            &lt;wsdl:input message="tns:ClaimIn"/&gt;
+            &lt;wsdl:output message="tns:ClaimOut"/&gt;
+        &lt;/wsdl:operation&gt;
+    &lt;/wsdl:portType&gt;
+
+    &lt;wsdl:binding name="ClaimBinding" type="tns:ClaimPortType"&gt;
+        &lt;soapbind:binding style="rpc"
+                          transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+        &lt;wsdl:operation name="SendClaim"&gt;
+            &lt;soapbind:operation soapAction="http://example.com/soapaction"/&gt;
+            &lt;wsdl:input&gt;
+                &lt;mime:multipartRelated&gt;
+                    &lt;mime:part&gt;
+                        &lt;soapbind:body use="literal"
+                                       parts="ClaimDetail"
+                                       namespace="http://example.com/mimetypes"/&gt;
+                    &lt;/mime:part&gt;
+                    &lt;mime:part&gt;
+                        <strong>&lt;mime:content part="ClaimPhoto"
+                                      type="image/jpeg"/&gt;</strong>
+                    &lt;/mime:part&gt;
+                &lt;/mime:multipartRelated&gt;
+            &lt;/wsdl:input&gt;
+            &lt;wsdl:output&gt;
+                &lt;soapbind:body use="literal"
+                               namespace="http://example.com/mimetypes"/&gt;
+            &lt;/wsdl:output&gt;
+        &lt;/wsdl:operation&gt;
+ &lt;/wsdl:binding&gt;
+&lt;/wsdl:definitions&gt;
+</pre>
+            <p xml:lang="ja">結果として生成される "SendClaim" の rpc/literal オペレーションに対する input メッセージ:</p>
+
+            <pre>MIME-Version: 1.0
+Content-Type: Multipart/Related; boundary=MIME_boundary; type=text/xml;
+        start="&lt;rootpart@example.com&gt;"
+Content-Description: This is the optional message description.
+
+--MIME_boundary
+Content-Type: text/xml; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Content-ID: &lt;rootpart@example.com&gt;
+
+&lt;?xml version='1.0' ?&gt;
+&lt;SOAP-ENV:Envelope
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+    &lt;SOAP-ENV:Body xmlns:types="http://example.com/mimetypes"&gt;
+        &lt;types:SendClaim&gt;
+            &lt;ClaimDetail&gt;
+                &lt;Name&gt;...&lt;/Name&gt;
+                &lt;ClaimForm&gt;cid:claimform@example.com&lt;/ClaimForm&gt;
+            &lt;/ClaimDetail&gt;
+        &lt;/types:SendClaim&gt;
+    &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+--MIME_boundary
+Content-Type: text/xml
+Content-Transfer-Encoding: 8bit
+Content-ID: &lt;claimform@example.com&gt;
+
+...claim form referenced by the swaRef...
+
+--MIME_boundary
+Content-Type: image/jpeg
+Content-Transfer-Encoding: binary
+<strong>Content-ID: &lt;ClaimPhoto=4d7a5fa2-14af-451c-961b-5c3abf786796@example.com&gt;</strong>
+
+...MIME attachment of binary photograph...
+--MIME_boundary--</pre>
+            <p xml:lang="ja">結果として生成される "SendClaim" の rpc/literal オペレーションに対する output メッセージ:</p>
+
+            <pre>MIME-Version: 1.0
+Content-Type: text/xml; charset=UTF-8
+
+&lt;?xml version='1.0' ?&gt;
+&lt;SOAP-ENV:Envelope
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+    &lt;SOAP-ENV:Body xmlns:types="http://example.com/mimetypes"&gt;
+        &lt;types:SendClaimResponse&gt;
+            &lt;ClaimRefNo&gt;.............................&lt;/ClaimRefNo&gt;
+        &lt;/types:SendClaimResponse&gt;
+    &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</pre>
+         </div>
+         <div class="example">
+            <p class="correct">正しい例: </p>
+
+            <p xml:lang="ja">document/literal バインディングに対する WSDL 記述:</p>
+
+            <pre>&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;wsdl:definitions xmlns:types="http://example.com/mimetypes"
+                  xmlns:ref="http://ws-i.org/profiles/basic/1.1/xsd"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  targetNamespace="http://example.com/mimewsdl"
+                  xmlns:tns="http://example.com/mimewsdl"&gt;
+
+    &lt;wsdl:types&gt;
+        &lt;xsd:schema targetNamespace="http://example.com/mimetypes"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+
+            &lt;xsd:import namespace="http://ws-i.org/profiles/basic/1.1/xsd" /&gt;
+            &lt;xsd:element name="ClaimDetail" type="types:ClaimDetailType"/&gt;
+            &lt;xsd:complexType name="ClaimDetailType"&gt;
+                &lt;xsd:sequence&gt;
+                    &lt;xsd:element name="Name" type="xsd:string"/&gt;
+                    &lt;xsd:element name="ClaimForm" type="ref:swaRef"/&gt;
+                &lt;/xsd:sequence&gt;
+            &lt;/xsd:complexType&gt;
+            &lt;xsd:element name="ClaimRefNo" type="xsd:string"/&gt;
+        &lt;/xsd:schema&gt;
+    &lt;/wsdl:types&gt;
+
+    &lt;wsdl:message name="ClaimIn"&gt;
+        &lt;wsdl:part name="body" element="types:ClaimDetail"/&gt;
+        <strong>&lt;wsdl:part name="ClaimPhoto" type="xsd:base64Binary"/&gt;</strong>
+    &lt;/wsdl:message&gt;
+
+    &lt;wsdl:message name="ClaimOut"&gt;
+        &lt;wsdl:part name="out" element="types:ClaimRefNo"/&gt;
+    &lt;/wsdl:message&gt;
+
+    &lt;wsdl:portType name="ClaimPortType"&gt;
+        &lt;wsdl:operation name="SendClaim"&gt;
+            &lt;wsdl:input message="tns:ClaimIn"/&gt;
+            &lt;wsdl:output message="tns:ClaimOut"/&gt;
+        &lt;/wsdl:operation&gt;
+    &lt;/wsdl:portType&gt;
+
+    &lt;wsdl:binding name="ClaimBinding" type="tns:ClaimPortType"&gt;
+        &lt;soapbind:binding style="document"
+                          transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+        &lt;wsdl:operation name="SendClaim"&gt;
+            &lt;soapbind:operation soapAction="http://example.com/soapaction"/&gt;
+            &lt;wsdl:input&gt;
+                &lt;mime:multipartRelated&gt;
+                    &lt;mime:part&gt;
+                        &lt;soapbind:body parts="body" use="literal"/&gt;
+                    &lt;/mime:part&gt;
+                    &lt;mime:part&gt;
+                        <strong>&lt;mime:content part="ClaimPhoto" type="image/jpeg"/&gt;</strong>
+                    &lt;/mime:part&gt;
+                &lt;/mime:multipartRelated&gt;
+            &lt;/wsdl:input&gt;
+            &lt;wsdl:output&gt;
+                &lt;soapbind:body use="literal" /&gt;
+            &lt;/wsdl:output&gt;
+        &lt;/wsdl:operation&gt;
+    &lt;/wsdl:binding&gt;
+&lt;/wsdl:definitions&gt;</pre>
+            <p xml:lang="ja">結果として生成される "SendClaim" の document/literal オペレーションに対する input メッセージ:</p>
+
+            <pre>MIME-Version: 1.0
+Content-Type: Multipart/Related; boundary=MIME_boundary; type=text/xml;
+        start="&lt;rootpart@example.com&gt;"
+Content-Description: This is the optional message description.
+
+--MIME_boundary
+Content-Type: text/xml; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+Content-ID: &lt;rootpart@example.com&gt;
+
+&lt;?xml version='1.0' ?&gt;
+&lt;SOAP-ENV:Envelope
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+    &lt;SOAP-ENV:Body xmlns:types="http://example.com/mimetypes"&gt;
+            &lt;types:ClaimDetail&gt;
+                &lt;Name&gt;...&lt;/Name&gt;
+                &lt;ClaimForm&gt;cid:claimform@example.com&lt;/ClaimForm&gt;
+            &lt;/types:ClaimDetail&gt;
+    &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;
+
+--MIME_boundary
+Content-Type: text/xml
+Content-Transfer-Encoding: 8bit
+Content-ID: &lt;claimform@example.com&gt;
+
+...claim form referenced by the swaRef...
+
+--MIME_boundary
+Content-Type: image/jpeg
+Content-Transfer-Encoding: binary
+<strong>Content-ID: &lt;ClaimPhoto=4d7a5fa2-14af-451c-961b-5c3abf786796@example.com&gt;</strong>
+
+...MIME attachment of binary photograph...
+--MIME_boundary--</pre>
+            <p xml:lang="ja">結果として生成される "SendClaim" の document/literal オペレーションに対する output メッセージ:</p>
+
+            <pre>MIME-Version: 1.0
+Content-Type: text/xml; charset=UTF-8
+
+&lt;?xml version='1.0' ?&gt;
+&lt;SOAP-ENV:Envelope
+xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+    &lt;SOAP-ENV:Body xmlns:types="http://example.com/mimetypes"&gt;
+        &lt;types:ClaimRefNo&gt;...............&lt;/types:ClaimRefNo&gt;
+    &lt;/SOAP-ENV:Body&gt;
+&lt;/SOAP-ENV:Envelope&gt;</pre>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Specifying_Root_Part">4.5 Specifying Root Part (ルートパートの指定)</h4>
+         <div class="rationale">
+<p xml:lang="ja">SOAP Messages with Attachments は multipart/related パッケージのルート
+パートが SOAP エンベロープを含まなければならないと要求している。しかし，
+WSDL の MIME バインディングはそれをどう記述するか明確ではない。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2911">R2911</a>
+            </span>
+DESCRIPTION 中の <code>mime:multipartRelated</code> 要素は，
+その子要素である <code>mime:part</code> 要素の中で，
+<code>soapbind:body</code> を子要素として含む <code>mime:part</code> を，
+厳密に 1個もたなければならない (MUST)。
+					<span class="statement-type">C</span>
+         </p>
+
+         <div class="explanation">
+<p xml:lang="ja">WSDL の MIME バインディングでは，
+<code>soapbind:body</code> を含む <code>mime:part</code> が，
+SOAP Messages with Attachments で要求されているルート MIME パートを記述する。</p>
+
+         </div>
+         <p class="example-banner">次に例を示す:</p>
+
+         <div class="example">
+            <p class="incorrect">間違っている例: </p>
+
+               <pre>&lt;wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  targetNamespace="http://example.com/mimewsdl"
+                  xmlns:tns="http://example.com/mimewsdl"&gt;
+
+...
+
+    &lt;wsdl:binding name="aBinding" type="tns:aPortType"&gt;
+        &lt;soapbind:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+        &lt;wsdl:operation name="anOperation"&gt;
+            &lt;soap:operation soapAction="http://example.com/soapaction"/&gt;
+            &lt;wsdl:input&gt;
+                &lt;mime:multipartRelated&gt;
+                    &lt;mime:part&gt;
+                        &lt;soapbind:body use="literal"
+                                       namespace="http://example.com/mimetypes"/&gt;
+                    &lt;/mime:part&gt;
+                    &lt;mime:part&gt;
+                        &lt;soapbind:body use="literal"
+                                       namespace="http://example.com/mimetypes"/&gt;
+                    &lt;/mime:part&gt;
+                &lt;/mime:multipartRelated&gt;
+            &lt;/wsdl:input&gt;
+            &lt;wsdl:output&gt;
+ ...
+             &lt;/wsdl:output&gt;
+        &lt;/wsdl:operation&gt;
+ &lt;/wsdl:binding&gt;
+&lt;/wsdl:definitions&gt;</pre>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Specifying_SOAP_Headers_in_Root_Part">4.6 Specifying SOAP Headers in Root Part (ルートパートにおける SOAP ヘッダーの指定)</h4>
+         <div class="rationale">
+<p xml:lang="ja">WSDL 1.1 仕様は，
+<code>soapbind:header</code> 要素が <code>soapbind:body</code> 要素と一緒に
+<code>mime:part</code> 要素の子要素として同居することが許されるかどうか規定していない。
+SOAP Messages with Attachments 仕様は
+マルチパートメッセージのルートパートが SOAP エンベロープを含むことを要求しているが，
+WSDL 1.1 仕様はこのパートをどのように記述するべきか明らかではない。
+WSDL 1.1 仕様は
+<code>mime:part</code> 要素が
+multipart/related メッセージの個々のパートを記述するのに使われることを規定しているので，
+マルチパートメッセージのルートパートを表す <code>mime:part</code> 要素の内容は，
+WSDL MIME バインディング拡張がなかった場合と同様，
+<code>soapbind:body</code> 及び <code>soapbind:header</code> を含めた
+SOAP エンベロープを完全に記述しなければならない。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2905">R2905</a>
+            </span>
+DESCRIPTION 中の <code>soapbind:header</code> 要素は，
+<code>mime:part</code> 要素の子要素として含まれてもよい (MAY)。
+					<span class="statement-type">C</span>
+         </p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2906">R2906</a>
+            </span>
+DESCRIPTION 中の <code>soapbind:header</code> 要素は，
+ルートパート (<code>soapbind:body</code> 要素をもつ) ではない
+<code>mime:part</code> に含まれてはならない (MUST NOT)。
+					<span class="statement-type">C</span>
+         </p>
+
+         <p class="example-banner">次に例を示す:</p>
+
+         <div class="example">
+            <p class="incorrect">間違っている例: </p>
+
+            <p>
+               <pre>&lt;wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+                  targetNamespace="http://example.com/mimewsdl"
+                  xmlns:tns="http://example.com/mimewsdl"&gt;
+
+...
+
+    &lt;wsdl:binding name="aBinding" type="tns:aPortType"&gt;
+        &lt;soapbind:binding style="rpc"
+                          transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+        &lt;wsdl:operation name="anOperation"&gt;
+            &lt;soap:operation soapAction="http://example.com/soapaction"/&gt;
+            &lt;wsdl:input&gt;
+                &lt;mime:multipartRelated&gt;
+                    &lt;mime:part&gt;
+                        &lt;soapbind:body use="literal"
+                                       namespace="http://example.com/mimetypes"/&gt;
+                    &lt;/mime:part&gt;
+                    &lt;mime:part&gt;
+                        &lt;soapbind:header message="tns:headerMessage"
+                                         part="aPart"
+                                         use="literal"/&gt;
+                    &lt;/mime:part&gt;
+                &lt;/mime:multipartRelated&gt;
+            &lt;/wsdl:input&gt;
+            &lt;wsdl:output&gt;
+ ...
+             &lt;/wsdl:output&gt;
+        &lt;/wsdl:operation&gt;
+ &lt;/wsdl:binding&gt;
+&lt;/wsdl:definitions&gt;</pre>
+            </p>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="MIME_Binding_Schema_Fixes">4.7 MIME Binding Schema Fixes (MIME バインディングスキーマの修正)</h4>
+         <div class="rationale">
+<p xml:lang="ja">
+WSDL 1.1 仕様と WSDL の MIME バインディングのスキーマとの間にはいくつかの不整合がある。
+<code>mime:part</code> 要素の場合，スキーマは間違ってローカル要素宣言と定義しており，
+また間違って WSDL 1.1 仕様には記述がない <code>name</code> 属性を追加している。
+</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2907">R2907</a>
+            </span>
+DESCRIPTION 中の MIME パートは，
+名前空間 (namespace) が WSDL MIME バインディング拡張で，
+ローカル名 (local name) が <code>part</code> である要素として定義されなければならない (MUST)。
+					<span class="statement-type">C</span>
+         </p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2908">R2908</a>
+            </span>
+DESCRIPTION 中の <code>mime:part</code> 要素は，
+<code>name</code> 属性をもってはならない (MUST NOT)。
+					</p>
+
+         <div class="explanation">
+<p xml:lang="ja">WSDL MIME バインディング拡張スキーマに対する，ここで示したものを含む修正は
+http://schemas.xmlsoap.org/wsdl/mime/xxx.xsd にある改訂版のスキーマに反映されている。</p>
+
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Specifying_Alternate_Media_Types">4.8 Specifying Alternate Media Types (代替メディア型の指定)</h4>
+         <div class="rationale">
+<p xml:lang="ja"><code>mime:part</code> の子要素として複数の <code>mime:content</code> があった場合，
+それは参照される <code>wsdl:part</code> の許容可能な代替シリアライゼーション形式とみなされる。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2909">R2909</a>
+            </span>
+DESCRIPTION 中の <code>mime:part</code> 要素の子要素となる複数の <code>mime:content</code> は，
+同一の <code>wsdl:part</code> を参照しなければならない (MUST)。
+					</p>
+
+         <p class="example-banner">次に例を示す:</p>
+
+         <div class="example">
+            <p class="incorrect">間違っている例: </p>
+
+            <pre>&lt;mime:part&gt;
+  &lt;mime:content part="ns:foo" type="image/jpeg"/&gt;
+  &lt;mime:content part="ns:bar" type="image/jpeg"/&gt;
+&lt;/mime:part&gt;</pre>
+         </div>
+         <div class="example">
+            <p class="correct">正しい例: </p>
+
+            <pre>&lt;mime:part&gt;
+  &lt;mime:content part="ns:foo" type="image/jpeg"/&gt;
+  &lt;mime:content part="ns:foo" type="image/gif"/&gt;
+&lt;/mime:part&gt;</pre>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="WSDL_Parts">4.9 WSDL Parts (WSDL の part)</h4>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2910">R2910</a>
+            </span>
+DESCRIPTION 中の <code>mime:content</code> は，
+<code>type</code> 属性又は <code>element</code> 属性のいずれかの属性を使って定義された
+<code>wsdl:part</code> を参照しなければならない (MUST)。
+					</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2942">R2942</a>
+            </span>
+MESSAGE 中で，
+<code>mime:content</code> にバインドされた message の part で
+(<code>wsdl:part</code> 要素の <code>element</code> 属性を使って) グローバル要素宣言を参照するものは，
+その MIME パートの中に，
+参照された要素に記述された内容をルート要素としてもつ
+XML 情報セット (infoset) のシリアライゼーションとして，
+シリアライズされなければならない (MUST)。
+                                </p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2943">R2943</a>
+            </span>
+DESCRIPTION 中で，
+<code>mime:content</code> にバインドされた message の part で
+(<code>wsdl:part</code> 要素の <code>type</code> 属性を使って) 型宣言を参照する場合，
+その <code>type</code> 属性の値を無視し，
+<code>mime:content</code> 要素の <code>type</code> 属性のメディア型を優先しなければならない (MUST)。
+                                </p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2944">R2944</a>
+            </span>
+DESCRIPTION 中で，
+<code>wsdl:part</code> 要素が
+(<code>wsdl:part</code> 要素の <code>element</code> 属性を使って) グローバル要素宣言を参照する場合，
+その part をバインドする <code>mime:content</code> 要素の <code>type</code> 属性の値は，
+XML 化したデータを入れるのに適したものでなければならない (MUST)。
+                                </p>
+
+      </div>
+      <div class="refinement">
+         <h4 id="Ordering_of_Parts">4.10 Ordering of Parts (パートの順序)</h4>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2912">R2912</a>
+            </span>
+RECEIVER は，
+WSDL 記述の中に指定された <code>mime:part</code> 要素の順序が
+メッセージの中の MIME パートの順序と同じであると仮定してはならない (MUST NOT)。
+					</p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2947">R2947</a>
+            </span>
+DESCRIPTION 中で，
+<code>soapbind:body</code> 子要素をもつ <code>mime:part</code> は，
+<code>mime:multipartRelated</code> 要素の他の子要素の間のどの位置に現れてもよい (MAY)。
+				</p>
+
+         <div class="explanation">
+<p xml:lang="ja">WSDL 記述に指定された MIME パートの順序は，
+メッセージの中の MIME パートの順序とは独立であるとみなさなければならない。
+</p>
+
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Sending_Fault_Messages">4.11 Sending Fault Messages (フォルトメッセージの送信)</h4>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2913">R2913</a>
+            </span>
+フォルトの MESSAGE は，
+WSDL 記述の対応する binding 内の operation の <code>wsdl:output</code> 子要素が
+<code>mime:multipartRelated</code> 要素を子要素としてもつ場合，
+<code>text/xml</code> 又は <code>multipart/related</code> のいずれの形式でシリアライズされてもよい (MAY)。
+				</p>
+
+      </div>
+      <div class="refinement">
+         <h4 id="Describing_Faults">4.12 Describing Faults (フォルトの記述)</h4>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2930">R2930</a>
+            </span>
+DESCRIPTION 中の <code>wsdl:fault</code> 要素は，
+その子要素として <code>mime:multipartRelated</code> 要素を持ってはいけない (MUST NOT)。
+					</p>
+
+      </div>
+      <div class="refinement">
+         <h4 id="Sending_Additional_Parts_Not_Described_in_WSDL">4.13 Sending Additional Parts Not Described in WSDL (WSDL で記述されていない追加のパートの送信)</h4>
+         <div class="rationale">
+<p xml:lang="ja">WSDL に記述されている範囲を超える追加の MIME パートがメッセージに含まれていてもよい。
+また，それらの MIME パッケージ内での位置や順序は重要ではない。</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2923">R2923</a>
+            </span>
+SENDER は，
+WSDL MIME バインディングで記述されていない非ルート MIME パートを送信してもよい (MAY)。
+          <span class="statement-type">C</span>
+         </p>
+
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2926">R2926</a>
+            </span>
+MESSAGE は，
+WSDL MIME バインディングで記述されたすべての MIME パートを含めなければならない(MUST)。
+            				</p>
+      </div>
+      <div class="refinement">
+         <h4 id="Conformance_of_SOAP_Messages">4.14 Conformance of SOAP Messages (SOAP メッセージの適合性)</h4>
+         <div class="rationale">
+<p xml:lang="ja">適合性対象を ENVELOPE とするこのプロファイルの適合性要件は，
+MIME パッケージのルートパートに含まれる SOAP エンベロープに対してのみ適用される。
+非ルートパートの SOAP エンベロープは，添付ファイルとして WSDL 記述に記述することができ，
+その場合，
+WSDL 記述に列挙された非ルートパートに対する適合性要件が適用される。
+</p>
+
+         </div>
+         <p xml:lang="ja" class="statement">
+            <span class="statement-id">
+               <a name="R2927">R2927</a>
+            </span>
+MESSAGE のルートパートは，Basic Profile の 1.1 版における，
+エンベロープに対するすべての要件に適合しなければならない (MUST)。
+          </p>
+
+      </div>
+      <h2 id="references">Appendix A: Referenced Specifications (参照仕様)</h2>
+<p xml:lang="ja">次の仕様の要件は，このプロファイルで置き換えられたものを除き，
+参照することでこのプロファイルに取り込まれている:</p>
+
+      <ul>
+         <li>
+            <a class="offsite" href="http://www.w3.org/TR/SOAP-attachments#SOAPMultipart">SOAP Messages with Attachments</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://www.w3.org/TR/REC-xml">Extensible Markup Language (XML) 1.0 (Second Edition)</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://www.w3.org/TR/1999/REC-xml-names-19990114">Namespaces in XML 1.0</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://ietf.org/rfc/rfc2557">RFC2557 MIME Encapsulation of Aggregate Documents, such as HTML (MHTML)</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://ietf.org/rfc/rfc2045">RFC2045 Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://ietf.org/rfc/rfc2046">RFC2046 Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://ietf.org/rfc/rfc2392">RFC2392 Content-ID and Message-ID Uniform Resource Locators</a>
+         </li>
+         <li>
+            <a class="offsite" href="http://www.w3.org/TR/2001/NOTE-wsdl-20010315#_Toc492291084">WSDL 1.1, Section 5.0</a>
+         </li>
+      </ul>
+      <h2 id="points">Appendix B: Extensibility Points (拡張点)</h2>
+<p xml:lang="ja">この節では，"Scope of the Profile" で定義されたとおり，
+このプロファイルの構成要素となる仕様の拡張点を列挙する。</p>
+
+<p xml:lang="ja">これらのメカニズムはこのプロファイルの適用範囲外である。
+これらを使うことが相互運用性に影響するかもしれないし，
+Web サービスの関係者間での私的な合意が必要かもしれない。</p>
+
+      <p xml:lang="ja"><a class="offsite" href="http://www.w3.org/TR/SOAP-attachments#SOAPMultipart">SOAP Messages with Attachments</a> の拡張点:
+      </p>
+      <ul>
+         <li>
+            <span class="statement-id">E0001</span> - <strong>MIME パート</strong> - SOAP Messages with Attachments は，multipart/related メッセージの非ルートパート(non-root part)の型には制限を置かない。</li>
+      </ul>
+
+      <h2 id="defs">Appendix C: Defined Terms (定義された用語)</h2>
+
+<p xml:lang="ja">次に示す用語は，このプロファイルで有効な定義をもつ:</p>
+
+      <dl>
+         <dt>content-id への part 名エンコーディング (content-id part encoding)</dt>
+         <dd>
+         <div class="definition">
+            <p>content-id への part 名エンコーディング (content-id part encoding) は，次の構成要素を連結したものである:</p>
+            <ul>
+               <li>
+               <code>mime:content</code> によって参照される
+               <code>wsdl:part</code> 要素の <code>name</code> 属性の値。
+               ただし，content-id ヘッダーで禁止された文字 (0x7F を超えるコードポイントで表現される非 ASCII 文字) は次の方式でエスケープする:
+                  <ul>
+                     <li>それぞれの禁止された文字を1バイト以上の UTF-8 に変換する。</li>
+                     <li>禁止された文字を構成する各バイトを URI エスケープ方式でエスケープする
+                     (すなわち，%HH の形式に変換する。ただし，ここで HH はバイト値の16進数表現である。)</li>
+                     <li>元の文字をエスケープ結果のバイト列で置き換える。</li>
+                  </ul>
+               </li>
+               <li>文字 '=' (0x3D)。</li>
+               <li>UUID のような，グローバルに一意な値。</li>
+               <li>文字 '@' (0x40)。</li>
+               <li>メッセージを生成する実体の管理下にある，有効なドメイン名。</li>
+            </ul>
+
+         </div>
+         </dd>
+      </dl>
+
+      <h2 id="acks">Appendix D: Acknowledgements (謝辞)</h2>
+<p xml:lang="ja">このプロファイルは WS-I Basic Profile Working Group の成果物であり，
+WG は次のメンバーを含む:</p>
+
+      <p>
+Mark Allerton (Crystal Decisions Corp),
+Steve Anderson (OpenNetwork),
+George Arriola (Talking Blocks, Inc.),
+Siddharth Bajaj (Verisign),
+Keith Ballinger (Microsoft Corp.),
+David Baum (Kantega AS),
+Ilya Beyer (KANA),
+Rich Bonneau (IONA Technologies),
+Don Box (Microsoft Corp.),
+Andrew Brown (Verisign),
+Heidi Buelow (Quovadx),
+David Burdett (Commerce One, Inc.),
+Luis Felipe Cabrera (Microsoft Corp.),
+Maud Cahuzac (France Telecom),
+Mike Chadwick (Kaiser Permanente),
+Martin Chapman (Oracle Corporation),
+Richard Chennault (Kaiser Permanente),
+Roberto Chinnici (Sun Microsystems),
+Dipak Chopra (SAP AG),
+Jamie Clark (OASIS),
+David Cohen (Merrill Lynch),
+Ugo Corda (SeeBeyond Tech),
+Paul Cotton (Microsoft Corp.),
+Joseph Curran (Accenture),
+Alex Deacon (Verisign),
+Mike DeNicola (Fujitsu Limited),
+Paul Downey (BT Group),
+Jacques Durand (Fujitsu Limited),
+Aladin Eajani (Hummingbird, Ltd.),
+Michael Eder (Nokia),
+Dave Ehnebuske (IBM),
+Mark Ericson (Mindreef Inc),
+Colleen Evans (Microsoft Corp.),
+Tim Ewald (Microsoft Corp.),
+Chuck Fay (FileNET Corp.),
+Chris Ferris (IBM),
+Daniel Foody (Actional Corporation),
+Satoru Fujita (NEC Corporation),
+Shishir Garg (France Telecom),
+Yaron Goland (BEA Systems Inc),
+Marc Goodner (SAP AG),
+Pierre Goyette (Hummingbird, Ltd.),
+Hans Granqvist (Verisign),
+Martin Gudgin (Microsoft Corp.),
+Marc Hadley (Sun Microsystems),
+Norma Hale (Webify Solutions Inc),
+Bob Hall (Unisys Corporation),
+Scott Hanselman (Corillian),
+Muir Harding (Autodesk Inc.),
+Loren Hart (Verisign),
+Andrew Hately (IBM),
+Harry Holstrom (Accenture),
+Lawrence Hsiung (Quovadx),
+Hemant Jain (Tata Consultancy),
+Steve Jenisch (SAS Institute),
+Erik Johnson (Epicor Software),
+Bill Jones (Oracle Corporation),
+Anish Karmarkar (Oracle Corporation),
+Dana Kaufman (Forum Systems),
+Takahiro Kawamura (Toshiba),
+Oldre Kepka (Systinet),
+Bhushan Khanal (WRQ Inc.),
+Sandy Khaund (Microsoft Corp.),
+Jacek Kopecky (Systinet),
+Sanjay Krishnamurthi (Informatica),
+Sundar Krishnamurthy (Verisign),
+Eva Kuiper (Hewlett-Packard),
+Sunil Kunisetty (Oracle Corporation),
+Christopher Kurt (Microsoft Corp.),
+Lars Laakes (Microsoft Corp.),
+Canyang Kevin Liu (SAP AG),
+Ted Liu (webMethods Inc.),
+Donna Locke (Oracle Corporation),
+Brad Lund (Intel),
+Michael Mahan (Nokia),
+Ron Marchi (EDS),
+Jonathan Marsh (Microsoft Corp.),
+Eric Matland (Hummingbird, Ltd.),
+Barbara McKee (IBM),
+Derek Medland (Hummingbird, Ltd.),
+David Meyer (Plumtree Software Inc.),
+Jeff Mischkinsky (Oracle Corporation),
+Ray Modeen (MITRE Corp.),
+Tom Moog (Sarvega Inc.),
+Gilles Mousseau (Hummingbird, Ltd.),
+Greg Mumford (MCI),
+Jim Murphy (Mindreef Inc),
+Bryan Murray (Hewlett-Packard),
+Richard Nikula (BMC Software, Inc.),
+Eisaku Nishiyama (Hitachi, Ltd.),
+Mark Nottingham (BEA Systems Inc),
+David Orchard (BEA Systems Inc),
+Vivek Pandey (Sun Microsystems),
+Jesse Pangburn (Quovadx),
+Eduardo Pelegri-Llopart (Sun Microsystems),
+Mike Perham (Webify Solutions Inc),
+Eric Rajkovic (Oracle Corporation),
+Shaan Razvi (MITRE Corp.),
+Rimas Rekasius (IBM),
+Mark Richards (Fidelity),
+Graeme Riddell (Bowstreet),
+Sam Ruby (IBM),
+Tom Rutt (Fujitsu Limited),
+Saikat Saha (Commerce One, Inc.),
+Roger Sanborn (Crystal Decisions Corp),
+Matt Sanchez (Webify Solutions Inc),
+Krishna Sankar (Cisco Systems Inc.),
+Jeffrey Schlimmer (Microsoft Corp.),
+Don Schricker (Micro Focus),
+Dave Seidel (Mindreef Inc),
+AKIRA SHIMAYA (NTT),
+David Shoaf (Hewlett-Packard),
+Yasser Shohoud (Microsoft Corp.),
+David Smiley (Ascential Software),
+Seumas Soltysik (IONA Technologies),
+Joseph Stanko (Plumtree Software Inc.),
+Andrew Stone (Accenture),
+Julie Surer (MITRE Corp.),
+YASUO TAKEMOTO (NTT),
+Nobuyoshi Tanaka (NEC Corporation),
+Jorgen Thelin (Microsoft Corp.),
+Sameer Vaidya (Talking Blocks, Inc.),
+William Vambenepe (Hewlett-Packard),
+Claus von Riegen (SAP AG),
+Rick Weil (Eastman Kodak Company),
+Scott Werden (WRQ Inc.),
+Ajamu Wesley (IBM),
+Ian White (Micro Focus),
+Dave Wilkinson (Vignette),
+Mark Wood (Eastman Kodak Company),
+Prasad Yendluri (webMethods Inc.), and
+Brandon Zhu (NetManage Inc).
+</p>
+   </body>
+</html>

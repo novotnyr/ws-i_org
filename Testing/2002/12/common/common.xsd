@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+   targetNamespace="http://www.ws-i.org/testing/2002/12/common/"
+   xmlns:wsi-common="http://www.ws-i.org/testing/2002/12/common/">
+
+  <xsd:complexType name="description">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+      <!--
+        <xsd:attribute ref="xml:lang"/>
+      -->
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>    
+
+</xsd:schema>

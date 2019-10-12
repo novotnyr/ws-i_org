@@ -1,0 +1,3591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+  <title>Basic Profile - Version 1.0 (Final) [Japanese translation]</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <style type="text/css">
+  body { color: black; background-color: white; font-family: "Times Roman", "times", "mincho", "MS Mincho", serif; margin: 16pt 24pt; }
+  h1, h2, h3, h4 { color: navy; font-family: "Arial", "gothic", "MS Gothic", sans-serif; }
+  h4 { /* font-weight: normal; font-style: italic; */ font-weight: bold; font-size: 0.8em; margin-bottom: 0; }
+  code, pre { font-family: "Courier New", "courier", monospace; }
+  ol { list-style-type: lower-latin }
+  li { text-indent: 0em; }
+  dt { /* font-style: italic; */ text-decoration: underline; padding-top: 0.5em; }
+  strong { font-family: "Arial", "gothic", "MS Gothic", sans-serif; }
+
+
+  .refinement { margin: 18pt 0em; }
+
+  .statement { margin: 0.5em 5.5em; text-indent: -4em; }
+
+  .statement-id { font-weight: bold; background-color: #ffa; padding: 0em 0.3em; }
+
+  .statement-type { background-color: #ccf; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }
+
+  .statement-origin { background-color: #fcc; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }
+
+  .rationale { margin: 0.5em 0; }
+
+  .explanation { margin: 0.5em 0; }
+
+  .explanation p, .rationale p { margin: 0.25em 0; }
+  .example { background-color: #eee; margin: 0.5em 2em; padding: 0.5em; }
+  .example-banner { margin: 0; }
+  .example pre { margin: 0; }
+
+  .specification { padding: 0.5em; background-color: #ffa; margin: 0.5em 2em; }
+
+  .ednote { margin: 1.2em; padding: 1.2em; background-color: #fee; }
+
+  .correct, .incorrect { font-family: sans-serif; font-weight: bold; font-size: 0.9em; margin: 0; }
+  .correct { color: #009900; }
+  .incorrect { color: #990000; }
+
+  .note { background-color: #fcc; margin-left: 1.5em; }
+
+  .translation-note { color: #FF0000; background-color: #C0F0C0 }
+  .translation-notice { margin: 0 2em; padding: 0 1.2em; border-width: 2px;
+       border-style: solid; border-color: black; }
+
+  .toc { margin-left: 2em; }
+  .subtoc {margin-left: 3em; }
+  .subsubtoc { margin-left: 4em; }
+  @media print {
+	a.offsite:after {
+		content: " &lt;" attr(href) "&gt; ";
+		font-size: 85%;
+		font-weight: lighter;
+	}
+  }
+
+  </style>
+</head>
+<body>
+
+<h1>Cover Page for the Japanese Translation</h1>
+
+<p><a href="http://www.ws-i.org/"><img src="http://www.ws-i.org/images/WS-I-logo.gif" height="88" width="107" border="0" alt="WS-I" /></a></p>
+
+<h1>Basic Profile Version 1.0a</h1>
+<h2>Final Specification</h2>
+<h2>Date: 2003/08/08 17:00:01 </h2>
+
+<dl>
+  <dt>Editors:</dt>
+  <dd>Keith Ballinger, Microsoft</dd>
+  <dd>David Ehnebuske, IBM</dd>
+  <dd>Martin Gudgin, Microsoft</dd>
+  <dd>Mark Nottingham, BEA Systems</dd>
+  <dd>Prasad Yendluri, webMethods</dd>
+
+  <dt>Administrative contact:</dt>
+  <dd>secretary&#64;ws-i.org</dd>
+
+  <dt>Translator (日本語訳):</dt>
+  <dd>NUMATA Toshinori, Fujitsu Limited / 沼田　利典 (富士通株式会社)</dd>
+
+  <dt>Translation Reviewers (日本語訳レビュー):</dt>
+  <dd>IWAMOTO Yukio, Beacon IT Inc. / 岩本　幸男 (株式会社ビーコンIT)</dd>
+  <dd>FUJITA Satoru, NEC Corporation / 藤田　悟 (日本電気株式会社)</dd>
+  <dd>SATO Yoshihiro, NEC Corporation / 佐藤　佳宏 (日本電気株式会社)</dd>
+  <dd>SUZUKI Toshihiro, Oracle Corporation Japan / 鈴木　俊宏 (日本オラクル株式会社)</dd>
+  <dd>TODA Ryuichiro, Nomura Research Institute / 戸田　隆一郎 (株式会社野村総合研究所)</dd>
+  <dd>YAMAMOTO Yohei, Ricoh Company, Ltd. / 山本　陽平 (株式会社リコー)</dd>
+</dl>
+
+<p lang="en">Copyright &copy; 2002-2003 by <a href="http://www.ws-i.org/">The Web Services-Interoperability Organization</a> (<abbr title="Web Services Interoperability Organization">WS-I</abbr>) and Certain of its Members.&#160; All Rights Reserved.</p>
+
+<div class="translation-notice">
+<p lang="en">This document is a translation of a Web Services-Interoperability Organization document.  In the event of a disagreement between this translation and the English version, or an omission in this translation, the original English document should be considered the definitive source.</p>
+
+<p>この文書は Web Services-Interoperability Organization (WS-I) の文書の翻訳である。
+この翻訳と英語版との間に食い違いがあった場合，又は，翻訳に省略がある場合，原文の英語文書が決定版として扱われるべきである。</p>
+
+</div>
+
+<br />
+
+<hr />
+
+<p><a href="http://www.ws-i.org/"><img src="http://www.ws-i.org/images/WS-I-logo.gif" height="88" width="107" border="0" alt="WS-I" /></a></p>
+
+<h1>Basic Profile Version 1.0a</h1>
+<h2>Final Specification</h2>
+<h2>Date: 2003/08/08 17:00:01 </h2>
+<dl>
+  <dt>This revision:</dt>
+  <dd><a href="http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html">http://www.ws-i.org/Profiles/Basic/2003-08/BasicProfile-1.0a.html</a></dd>
+
+  <dt>Editors:</dt>
+  <dd>Keith Ballinger, Microsoft</dd>
+  <dd>David Ehnebuske, IBM</dd>
+  <dd>Martin Gudgin, Microsoft</dd>
+  <dd>Mark Nottingham, BEA Systems</dd>
+  <dd>Prasad Yendluri, webMethods</dd>
+
+  <dt>Administrative contact:</dt>
+  <dd>secretary&#64;ws-i.org</dd>
+
+</dl>
+
+<p lang="en">Copyright &copy; 2002-2003 by <a href="http://www.ws-i.org/">The Web Services-Interoperability Organization</a> (<abbr title="Web Services Interoperability Organization">WS-I</abbr>) and Certain of its Members.&#160; All Rights Reserved.</p>
+
+<hr />
+
+<h2>Abstract (概要)</h2>
+<p>この文書は WS-I Basic Profile 1.0 を定義する。WS-I Basic Profile 1.0 は非占有的 (non-proprietary)
+な Web サービス仕様で構成され，相互運用性を向上させる仕様の明確化を含んでいる。</p>
+
+<h2>Status of this Document (この文書の位置付け)</h2>
+
+<p>これは最終仕様 (final specification) である。
+正誤表又は更新版については，<a href="http://www.ws-i.org/">WS-I.org</a> のサイトを参照のこと。</p>
+
+<h2>Notice (通告)</h2>
+
+<p>ここに含まれる内容は，この内容の著者若しくは開発者又は WS-I が所有又は管理する知的財産権に対するライセンスを，明示的にも暗示的にも示すものではない。
+ここに含まれる内容は<u>そのまま</u> (AS IS) の形式で提供され，適用可能な法律に許される最大限の範囲において，<u>そのままの形で欠陥を含んだまま</u> (AS IS AND WITH ALL FAULTS) 提供される。
+この内容の著者及び開発者並びに WS-I は，ここに，明示的，暗示的，又は法定による，
+市場性，特定目的への適用性，応答の精度若しくは完全性，結果，職人的努力，ウィルスがないこと，又は過失のないことについての，
+暗示的な保証，義務又は条件を含む (しかし，それに限定されない)，
+その他すべての保証及び条件を否認する。
+<u>さらに，
+この内容に関する権利，安全な居住，安全な所有，記述への対応又は侵害不在性について，いかなる保証又は条件も存在しない。</u></p>
+
+<p><u>この内容の著者若しくは開発者又は WS-I のいずれも，
+他者に対して，
+損害の可能性の事前通告の有無にかかわらず，
+これ又はこの内容についてのその他のいかなる合意によって起こされる損害に対して，
+契約，不法行為，保証その他による，
+代替する物資若しくは服務の購入，逸失利益，用途損失，データ損害，又はいかなる偶発的，結果的，直接，間接，若しくは特別な損害を補償する責任を持たない。</u></p>
+
+<h2>Feedback (フィードバック)</h2>
+
+<p>可能な限り最良の相互運用性ガイドを提供するため，
+この仕様に不明確な点がある場合や，誤り又は抜けが発見された場合，
+WS-I に連絡されたい。</p>
+
+<p>メールの送信又はその他の手段で WS-I に対して通信することによって，あなた (個人を代表する場合はあなた自身，会社を代表してフィードバックを送る場合はあなたの会社) は，WS-I, WS-I のメンバー及びその他あなたのフィードバックをアクセスできる者に対して，この文書についてあなたが提供するフィードバックに対する，使用，公開，複写，ライセンス，修正，サブライセンス，その他いかなる形式による配布及び活用に対しても，非制限的で，譲渡不可能な，国際的で，永続的で，取り消し不可能な，ロイヤリティなしのライセンスを許諾するものとみなされる。
+あなたは，あなたが提供するいかなるフィードバックに対しても，秘匿性についていかなる期待ももたないことに同意しなければならない。
+あなたは，あなたがフィードバックを送る権利をもつことを表明し，保証しなければならない。あなたが会社を代表してフィードバックを送る場合，あなたが会社を代表してフィードバックを送る権利をもつことを表明し，保証しなければならない。
+WS-I には，この文書の将来の版において，あなたのフィードバックの一部又は全部をレビューし，議論し，使用し，検討し，あるいはいかなる方法においても取り入れる義務はないということも，あなたは同意しなければならない。WS-I がこの文書の将来の版にあなたのフィードバックの一部又は全部を取り入れる場合，WS-I は，この文書の貢献者のリストにあなたの名前 (又は，あなたが会社を代表する場合には，会社の名前) を入れるかもしれないが，そうする義務はない。
+上記の内容があなた又はあなたが代表する会社にとって受け入れられない場合，いかなるフィードバックも送らないでほしい。</p>
+
+<p>この文書に対するフィードバックは wsbasic_comment&#64;ws-i.org に送ること。</p>
+
+<hr />
+
+<h2>Table of Contents (目次)</h2>
+
+<p>
+<span class="toc"><a href="#introduction">1. Introduction (序文)</a></span><br />
+ <span class="subtoc"><a href="#philosophy">1.1 Guiding Principles (基本理念)</a></span><br />
+ <span class="subtoc"><a href="#conventions">1.2 Notational Conventions (表記)</a></span><br />
+<span class="toc"><a href="#scope">2. Scope of the Profile (プロファイルの適用範囲)</a></span><br />
+<span class="toc"><a href="#conformance">3. Profile Conformance (プロファイルに対する適合性)</a></span><br />
+ <span class="subtoc"><a href="#artifacts">3.1 Conformance of Artifacts (対象物の適合性)</a></span><br />
+ <span class="subtoc"><a href="#services">3.2 Conformance of Services, Consumers and Registries (サービス，利用者及びレジストリーの適合性)</a></span><br />
+ <span class="subtoc"><a href="#annotation">3.3 Conformance Annotation in Descriptions (記述における適合性注記)</a></span><br />
+ <span class="subtoc"><a href="#msg-annotation">3.4 Conformance Annotation in Messages (メッセージにおける適合性注記)</a></span><br />
+ <span class="subtoc"><a href="#regdata-annotation">3.5 Conformance Annotation in Registry Data (レジストリーデータにおける適合性注記)</a></span><br />
+<span class="toc"><a href="#messaging">4. Messaging (メッセージング)</a></span><br />
+ <span class="subtoc"><a href="#SOAPXML">4.1 XML Representation of SOAP Messages (SOAP メッセージの XML 表現)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36953736">4.1.1 SOAP Messages and the Unicode BOM (SOAP メッセージと Unicode の BOM)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36954704">4.1.2 SOAP Fault Syntax (SOAP フォルトの構文)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36973144">4.1.3 SOAP Faults and Namespaces (SOAP フォルトと名前空間)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36959760">4.1.4 SOAP Fault Extensibility (SOAP フォルトの拡張性)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement28025968">4.1.5 SOAP Fault Language (SOAP フォルトの言語)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement28027464">4.1.6 SOAP Custom Fault Codes (SOAP の独自フォルトコード)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35501800">4.1.7 SOAP encodingStyle Attribute (SOAP の encodingStyle 属性)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement33993984">4.1.8 SOAP's use of XML (SOAP での XML の使用)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement33995568">4.1.9 SOAP and XML Declarations (SOAP と XML 宣言)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34138432">4.1.10 SOAP Trailers (SOAP 後続要素)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36956000">4.1.11 Acceptable SOAP Character Encodings (許容可能な SOAP 文字エンコーディング)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement28003632">4.1.12 SOAP mustUnderstand Attribute (SOAP mustUnderstand 属性)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement28005128">4.1.13 SOAP Body and Namespaces (SOAP Body と名前空間)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34258664">4.1.14 SOAP Envelope Namespace (SOAP Envelope の名前空間)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34259632">4.1.15 Use of xsi:type Attributes (xsi:type 属性の使用)</a></span><br />
+ <span class="subtoc"><a href="#SOAPMEM">4.2 SOAP Processing Model (SOAP 処理モデル)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35586552">4.2.1 Mandatory Headers (必須ヘッダー)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement33927848">4.2.2 Generating mustUnderstand Faults (MustUnderstand フォルトの生成)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34119240">4.2.3 SOAP Fault Processing (SOAP フォルトの処理)</a></span><br />
+ <span class="subtoc"><a href="#SOAPHTTP">4.3 Use of SOAP in HTTP (HTTP での SOAP の使用)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35631416">4.3.1 HTTP Versions (HTTP のバージョン)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35691800">4.3.2 Identifying SOAP Faults (SOAP フォルトの識別)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35693032">4.3.3 HTTP Methods and Extensions (HTTP のメソッドと拡張)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34343864">4.3.4 SOAPAction Header Syntax (SOAPAction ヘッダーの構文)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35425168">4.3.5 HTTP and TCP Ports (HTTP と TCP のポート番号)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35426312">4.3.6 HTTP Success Status Codes (HTTP の成功状態コード)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement28139376">4.3.7 HTTP Redirect Status Codes (HTTP の転送状態コード)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement27993232">4.3.8 HTTP Client Error Status Codes (HTTP のクライアントエラー状態コード)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34299384">4.3.9 HTTP Server Error Status Codes (HTTP のサーバーエラー状態コード)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34300352">4.3.10 HTTP Cookies (HTTP クッキー)</a></span><br />
+  <span class="toc"><a href="#description">5. Service Description (サービス記述)</a></span><br />
+ <span class="subtoc"><a href="#WSDLDOCSTRUCT">5.1 Document Structure (文書構造)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34116312">5.1.1 WSDL Schema Definitions (WSDL スキーマ定義)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34101304">5.1.2 WSDL and Schema Import (WSDL とスキーマの import)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35689424">5.1.3 WSDL Import location Attribute Syntax (WSDL import の location 属性の構文)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement33921032">5.1.4 WSDL Import location Attribute Semantics (WSDL import の location 属性の意味)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35096984">5.1.5 Placement of WSDL import Elements (WSDL import 要素の位置)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement28069264">5.1.6 XML Version Requirements (XML 版数の要件)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement28070144">5.1.7 WSDL and the Unicode BOM (WSDL と Unicode の BOM)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement28071112">5.1.8 Acceptable WSDL Character Encodings (許容可能な WSDL 文字エンコーディング)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement27985936">5.1.9 Namespace Coercion (名前空間の強制変更)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35235128">5.1.10 WSDL documentation Element (WSDL の documentation 要素)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35664624">5.1.11 WSDL Extensions (WSDL 拡張)</a></span><br />
+ <span class="subtoc"><a href="#WSDLTYPES">5.2 Types (型)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35377360">5.2.1 QName References (QName 参照)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement28035272">5.2.2 Schema targetNamespace Syntax (スキーマの targetNamespace 構文)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34108752">5.2.3 soapenc:Array (配列)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34094824">5.2.4 WSDL and Schema Definition Target Namespaces (WSDL とスキーマ定義の対象名前空間)</a></span><br />
+ <span class="subtoc"><a href="#WSDLMSGS">5.3 Messages (メッセージ)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35722968">5.3.1 Bindings and Parts (バインディングと part)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36996488">5.3.2 Bindings and Faults (バインディングとフォルト)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34940624">5.3.3 Unbound portType Element Contents (バインディングされていない portType 要素の内容)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34006736">5.3.4 Declaration of part Elements (part 要素の宣言)</a></span><br />
+ <span class="subtoc"><a href="#WSDLPORTTYPES">5.4 Port Types (ポート型)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36586960">5.4.1 Ordering of part Elements (part の並び順)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36590040">5.4.2 Allowed operations (許容されるオペレーション)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35612152">5.4.3 Distinctive operations (区別できるオペレーション)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35427752">5.4.4 parameterOrder Attribute Construction (parameterOrder 属性の構築)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35746416">5.4.5 Exclusivity of type and element Attributes (type 及び element 属性の排他性)</a></span><br />
+ <span class="subtoc"><a href="#WSDLBINDINGS">5.5 Bindings (バインディング)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35473288">5.5.1 Use of SOAP Binding (SOAP バインディングの使用)</a></span><br />
+ <span class="subtoc"><a href="#WSDLSOAPBINDING">5.6 SOAP Binding (SOAP バインディング)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35025608">5.6.1 Specifying the transport Attribute (transport 属性の指定)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35027632">5.6.2 HTTP Transport (HTTP トランスポート)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36172752">5.6.3 Consistency of style Attribute (style 属性の整合性)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36175304">5.6.4 Encodings and the use Attribute (エンコーディングと use 属性)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35158400">5.6.5 Default for use Attribute (use 属性のデフォルト)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35350200">5.6.6 Multiple bindings for portType Elements (portType 要素への複数のバインディング)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35727680">5.6.7 Wire Signatures for operations (オペレーションの伝送路シグネチャ)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35730408">5.6.8 Multiple ports on an Endpoint (一つのエンドポイントに対する複数の port)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35113376">5.6.9 Child Element for Document-Literal Bindings (document-literal バインディングの子要素)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35115136">5.6.10 One-Way Operations (one-way オペレーション)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement34313448">5.6.11 Namespaces for soapbind Elements (soapbind 要素の名前空間)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35244016">5.6.12 Consistency of portType and  binding Elements (portType 及び binding 要素の整合性)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35090792">5.6.13 Describing headerfault Elements (headerfault 要素の記述)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35093656">5.6.14 Enumeration of Faults (フォルトの列挙)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36162840">5.6.15 Type and Name of SOAP Binding Elements (SOAP バインディング要素の型と名前)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35709200">5.6.16 name Attribute on Faults (fault の name 属性)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35117072">5.6.17 Omission of the use Attribute (use 属性の省略)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36910288">5.6.18 Consistency of Messages with Descriptions (メッセージと記述との整合性)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36912872">5.6.19 Response Wrappers (レスポンスのラッパー)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35268960">5.6.20 Namespace for Part Accessors (part アクセサーの名前空間)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35270328">5.6.21 Namespaces for Children of Part Accessors (part アクセサーの子要素の名前空間)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35389576">5.6.22 Required Headers (必須のヘッダー)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35162912">5.6.23 Allowing Undescribed Headers (記述にないヘッダーの許容)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35165360">5.6.24 Ordering Headers (ヘッダーの並び順)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement36918592">5.6.25 Describing SOAPAction (SOAPAction の記述)</a></span><br />
+  <span class="subsubtoc"><a href="#refinement35582608">5.6.26 SOAP Binding Extensions (SOAP バインディング拡張)</a></span><br />
+ <span class="subtoc"><a href="#WSDLSCHEMA">5.7 Use of XML Schema (XML Schema の使用)</a></span><br />
+<span class="toc"><a href="#discovery">6. Service Publication and Discovery (サービスの公開と発見)</a></span><br />
+ <span class="subtoc"><a href="#UDDIBTS">6.1 bindingTemplates (bindingTemplate)</a></span><br />
+ <span class="subtoc"><a href="#UDDITMS">6.2 tModels (tModel)</a></span><br />
+<span class="toc"><a href="#security">7. Security (セキュリティ)</a></span><br />
+ <span class="subtoc"><a href="#HTTPSBase">7.1 Use of HTTPS (HTTPS の使用)</a></span><br />
+<span class="toc"><a href="#references">Appendix I: Referenced Specifications (参照仕様)</a></span><br />
+<span class="toc"><a href="#points">Appendix II: Extensibility Points (拡張点)</a></span><br />
+<span class="toc"><a href="#acks">Appendix III: Acknowledgements (謝辞)</a></span>
+
+</p>
+
+<h2><a name="introduction">1. Introduction (序文)</a></h2>
+<p>この文書は WS-I Basic Profile 1.0 (以下，「このプロファイル」と呼ぶ) を定義する。WS-I Basic Profile 1.0 は非占有的 (non-proprietary)
+な Web サービス仕様で構成され，相互運用性を向上させる仕様の明確化及び敷衍を含んでいる。</p>
+
+<p>第1節は，このプロファイルを紹介し，相互運用性に対してこのプロファイルがとった考え方を説明する。</p>
+
+<p>第2節，Scope of the Profile (プロファイルの適用範囲) は，このプロファイルが向上させる相互運用性の範囲を限定する。</p>
+
+<p>第3節，
+Profile Conformance (プロファイルに対する適合性) は，Basic Profile に適合するとはどういう意味かを説明する。</p>
+
+<p>それに続く各節は，このプロファイルの構成要素となるそれぞれの仕様について述べるもので，次の2つの部分からなる。
+すなわち，構成要素となる仕様及び拡張点 (extensibility point) を列挙した概要説明と，
+それに続いて，構成要素となる仕様の個別の部分について述べた小節との2つの部分である。
+この文書の節番号と，参照される仕様のそれとの間には何の関係もないことに注意が必要である。</p>
+
+<h3><a name="philosophy">1.1 Guiding Principles (基本理念)</a></h3>
+
+<p>このプロファイルは，相互運用性を実現することに関係する一連の原則に沿って開発され，
+それらの原則は，全体として，このプロファイルの原理を構成している。
+この節ではそれらのガイドラインを説明する。</p>
+
+<dl>
+ <dt>相互運用性に対する保証の限界 (No guarantee of interoperability)</dt>
+ <dd>特定のサービスの相互運用性を完全に保証するのは不可能である。
+ しかし，このプロファイルは，実装経験によって現在までに明らかになったもっとも一般的な問題について検討している。</dd>
+
+ <dt>アプリケーションのセマンティクス (Application semantics)</dt>
+ <dd>アプリケーションのセマンティクスの通信はこのプロファイルを構成する技術によって容易となることがあるが，
+ そのようなセマンティクスに対する共通理解を保証することは行われていない。</dd>
+
+ <dt>テスト可能性 (Testability)</dt>
+ <dd>可能な限り，このプロファイルでは要件をテストできるようにしている。
+ しかし，テストが可能であることは必須ではない。
+ また，テストはテスト対象に影響を与えない方式 (たとえば，伝送路上の対象物を調べるような) で達成できることが望ましい。
+ </dd>
+
+ <dt>要件の強さ (Strength of requirements)</dt>
+ <dd>このプロファイルでは，可能な場合にはいつでも，強い要件 (たとえば，MUST や MUST NOT) を課している。
+ そのような要件が満足できない正当な理由がある場合，条件付きの要件 (たとえば，SHOULD や SHOULD NOT) を使う。 オプションや条件付きの要件は，曖昧さや複数の実装の間での不整合を引き起こす。
+ </dd>
+
+ <dt>制限対緩和 (Restriction vs. relaxation)</dt>
+ <dd>参照される仕様の要件を敷衍する場合，このプロファイルは要件を制限することはあっても，緩和する (たとえば，MUST を MAY に変える) ことはない。
+</dd>
+
+ <dt>複数のメカニズム (Multiple mechanisms)</dt>
+ <dd>参照される仕様が複数のメカニズムの使用を交換可能な形で許している場合，
+ このプロファイルではよく理解され，広く実装され，有用なものの方を選ぶ。
+ 余計な，あるいは規定不足のメカニズムや拡張機能は物事を複雑にし，それによって相互運用性を低下させる。</dd>
+
+ <dt>将来の互換性 (Future compatibility)</dt>
+ <dd>このプロファイルでは，可能な場合には，要件を参照先仕様の改訂中の版 (たとえば SOAP 1.2 や WSDL 1.2) に合わせている。
+ これは実装者がスムーズに改訂版に移行する助けになるし，WS-I が基本仕様の検討内容と違う方向に進まないことを保証している。
+ このプロファイルが参照先の仕様の課題に言及できない場合，
+ その情報は基本仕様の検討グループに送って，確実に検討されるようにしている。</dd>
+
+ <dt>展開済みのサービスとの互換性 (Compatibility with deployed services)</dt>
+ <dd>展開 (deploy) 済みの Web サービスとの後方互換性はこのプロファイルの目標ではないが，考慮はする。
+ このプロファイルは，
+ 相互運用上の課題を解決するのでない限り，
+ 参照される仕様の要件を変更することはない。</dd>
+
+ <dt>相互運用性への焦点 (Focus on interoperability)</dt>
+ <dd>参照される仕様にはさまざまの潜在的な矛盾や設計上の欠陥がありうるが，このプロファイルは相互運用性に影響するものだけについて言及している。</dd>
+
+ <dt>適合性対象 (Conformance targets)</dt>
+ <dd>このプロファイルでは，可能な場合には，対象物を送信・受信するソフトウェアの動作や役割に対してではなく，対象物そのもの (たとえば，WSDL 記述や SOAP メッセージ) に対して要件を課している。
+ 対象物は具体的なものなので，検証することが容易で，その結果，適合性は理解することが簡単になり，間違いを起こしにくくなる。</dd>
+
+ <dt>下位層の相互運用性 (Lower-layer interoperability)</dt>
+ <dd>このプロファイルはアプリケーション層における相互運用性について言及している。下位層のプロトコル (たとえば，TCP, IP, Ethernet) の相互運用性は適切で，よく理解されていることが想定されている。
+ 同様に，アプリケーション層下位プロトコル (たとえば，SSL/TLS, HTTP) に対する要件は， Web サービス固有の課題がある場合にのみ課せられる。
+ WS-I は，それらのプロトコルの相互運用性を全体として保証しようとしているわけではない。
+ これは，WS-I の Web サービス標準に対する専門知識と焦点とが有効に活用されることを保証する。</dd>
+
+</dl>
+
+<h3><a name="conventions">1.2 Notational Conventions (表記)</a></h3>
+<p>この文書では，
+「～しなければならない (MUST, SHALL)」，「～してはならない (MUST NOT, SHALL NOT)」，
+「必須の～ (REQUIRED)」，「～することが望ましい (SHOULD)」，「～すべきではない (SHOULD NOT)」，「推奨の～ (RECOMMENDED)」，
+「～してもよい (MAY)」及び「省略可能の～ (OPTIONAL)」は，
+RFC2119 に記述されているとおりに解釈する。</p>
+
+<p class="translation-note">[訳注: この訳文では，該当する用語の訳の直後に，括弧でくくって原文の用語を示している。
+また，キーワードの訳語はできる限り <strong>JIS Z 8301 規格票の様式</strong> に合わせた。]</p>
+
+<p>このプロファイルにおける要件 (すなわち，Profile Conformance [プロファイルに対する適合性] の節に説明されている，適合性に影響するもの) は，
+次の形式で提示される:</p>
+
+<div class="refinement">
+<p class="statement"><span class="statement-id">R<i>nnnn</i></span> <u>要件の文章がここに入る。</u></p
+>
+</div>
+
+<p>ただし，ここで <i>nnnn</i> は要件番号で置き換えられる。
+それぞれの要件は，ちょうど一つの要件レベルキーワード (MUST のような) と適合性対象キーワード (MESSAGE のような) とをもつ。</p>
+
+<p>いくつかの要件記述は，参照される仕様を明確化するだけで，実装に対して追加の制約を課さないものである。
+便宜のため，仕様の明確化 (clarification) は次のように注記される: <span class="statement-type">C</span></p>
+
+<p>いくつかの要件記述は，参照される仕様の標準化途中の内容を取り入れたものである。
+便宜上，そのような仕様の先取りは次のように注記される: <span class="statement-origin">xxxx</span>，
+ただし，ここで xxxx は仕様を示す識別子である (たとえば，"SOAP12" は，現在検討中の SOAP 1.2 仕様を示す)。
+そういう仕様は完成しておらず，先取りした仕様が変更されることもありうることに注意が必要である。
+この情報は，実装者に対する便宜としてのみ含められている。</p>
+
+<p>この仕様では，全体を通して次に示すいくつかの名前空間プレフィックス (namespace prefix) を使用する。
+各プレフィックスに関連付けられた URI を次に示す。
+プレフィックスの選択は恣意的なものであり，どのような文字列を選択しても意味的に差異がないことに注意が必要である。</p>
+
+<ul>
+  <li><strong>soap</strong> &mdash; <code>"http://schemas.xmlsoap.org/soap/envelope/"</code></li>
+  <li><strong>xsi</strong> &mdash; <code>"http://www.w3.org/2001/XMLSchema-instance"</code></li>
+  <li><strong>xsd</strong> &mdash; <code>"http://www.w3.org/2001/XMLSchema"</code></li>
+  <li><strong>soapenc</strong> &mdash; <code>"http://schemas.xmlsoap.org/soap/encoding/"</code></li>
+  <li><strong>wsdl</strong> &mdash; <code>"http://schemas.xmlsoap.org/wsdl/"</code></li>
+  <li><strong>soapbind</strong> &mdash; <code>"http://schemas.xmlsoap.org/wsdl/soap/"</code></li>
+  <li><strong>wsi</strong> &mdash; <code>"http://ws-i.org/schemas/conformanceClaim/"</code></li>
+  <li><strong>uddi</strong> &mdash; <code>"urn:uddi-org:api_v2"</code></li>
+</ul>
+
+
+<h2><a name="scope">2. Scope of the Profile (プロファイルの適用範囲)</a></h2>
+
+<p>このプロファイルの<strong>適用範囲</strong> <em>(scope)</em> は，その検討する技術を詳細化する。
+言い換えれば，このプロファイルは，その適用範囲の中での相互運用性を向上することだけを図っている。
+最初は，このプロファイルの適用範囲は，それが参照する仕様によって限定される。
+このプロファイルが参照する仕様の完全なリストは，Appendix I を参照のこと。</p>
+
+<p>このプロファイルの適用範囲は，<strong>拡張点</strong> <em>(extensibility points)</em> によってさらに洗練される。
+参照される仕様はたいてい拡張メカニズム及び未規定の若しくは無制限のコンフィギュレーションパラメーターを提供している。
+拡張点と認識された場合，そのようなメカニズム又はパラメーターはこのプロファイルの適用範囲外であり，
+その使用はこのプロファイルに対する適合性表示 (conformance claim) の対象とはならない。</p>
+
+<p>拡張点の使用は相互運用性を損なうことがあるので，
+その使用は Web サービスの関係者によって何らかの形で協議又は文書化されるべきである。
+たとえば，これは私的な合意 (out-of-band agreement) の形をとるかもしれない。</p>
+
+<p>このプロファイルは，それでも，拡張点の使用について，その範囲を制限することなく，要件を課すことがある。
+また，拡張点の特定の使用方法について，このプロファイルが他のプロファイルと組み合わせて使われた場合に，相互運用性を向上するために，他のプロファイルで制限されることがある。</p>
+
+<p>このプロファイルの拡張点の完全なリストは，Appendix II を参照のこと。</p>
+
+
+<h2><a name="conformance">3. Profile Conformance (プロファイルに対する適合性)</a></h2>
+
+<p>このプロファイルに対して適合しているということは，
+このプロファイルの適用範囲内で，
+特定の対象に対する要件の集合を守ることであると定義されている。</p>
+
+<p>このプロファイルの適用範囲は前節 (Scope of the Profile) で定義されている。
+このプロファイルに対する適合性は，参照される適用範囲内の仕様に対する適合性に依存するが，
+参照される仕様がこのプロファイルの要件と対立する場合，このプロファイルの要件が優先される。</p>
+
+<p><strong>要件</strong> <em>(requirements)</em> は，適用範囲内での，このプロファイルに対する適合性の基準を述べている。
+要件は，そこでの相互運用性を向上する改良，解釈及び明確化を具体化したものである。
+要件レベルは，RFC2119 の用語 (たとえば，MUST, MAY, SHOULD) を使い，
+要件の性質と適合性に対する影響力とを示す。
+個々の要件記述は，便宜上，個別に (R9999 のような) 番号が振られている。</p>
+
+<p>補足の文章 (根拠や例など) が要件を明確にするために付け加えられることもあるが，要件記述そのものだけが適合性を判定する際に考慮されるべきである。</p>
+
+<p><strong>適合性対象</strong> <em>(targets)</em> は，適合性の記述をさまざまな文脈で記述することで，
+(たとえば SOAP メッセージや WSDL 記述のような) 対象物 (artifacts)，Web サービスのインスタンス，及び Web サービスの利用者 (consumer) に対する適合性試験 (conformance testing) と認定 (certification) とを可能にしている。
+次の節では，このプロファイルの適合性対象を説明する。</p>
+
+<p>サービスがこのプロファイルに対する適合性を示すために，メッセージ (message)，記述 (description)，及びレジストリーデータ (registry data) は<strong>適合性表示</strong> <em>(conformance claims)</em> で注記することができる。
+適合性表示は，特定のプロファイルに対する適合性を表明するためにある URI を使用する。</p>
+
+<p>このプロファイルの適合性表示 URI は "http://ws-i.org/profiles/basic/1.0" である。</p>
+
+<h3><a name="artifacts">3.1 Conformance of Artifacts (対象物の適合性)</a></h3>
+<p>最も基本的なレベルの適合性は，対象物 (artifact) に対するものである。このプロファイルでは，次の3種類の対象物に対して要件記述を行う:</p>
+
+<ul>
+  <li><strong>MESSAGE</strong> &mdash; 通常はネットワーク上で交換される，プロトコルの構成要素で， Web サービスを構成するもの
+(たとえば，SOAP/HTTP メッセージ)</li>
+  <li><strong>DESCRIPTION</strong> &mdash; データ型，メッセージ，インタフェース並びにその具体的なプロトコル及びデータ形式へのバインディング，並びに Web サービスに関連付けられたネットワーク上のアクセスポイントの記述
+(たとえば，WSDL 記述)</li>
+  <li><strong>REGDATA</strong> &mdash;  Web サービスの登録と発見に関連するレジストリーの要素 (たとえば，UDDI の tModel)</li>
+</ul>
+
+<p>上記の対象物のインスタンスは，それに対する要件のすべてを満足したときに，適合しているものと見なされる。</p>
+
+<h3><a name="services">3.2 Conformance of Services, Consumers and Registries (サービス，利用者及びレジストリーの適合性)</a></h3>
+<p>展開 (deploy) された Web サービスのインスタンス
+(<code>wsdl:port</code> 又は <code>uddi:bindingTemplate</code> で指定されるもの) は，
+適合する対象物 (artifact) のみを生成し，
+適合する対象物を (それが適切な場合には) 受け付ける場合に，適合しているものと見なされる。
+これは，複数の適合する対象物があり得る場合には，適合するサービスは，
+そのすべてを受け付けられなければならない
+(たとえば，送信側は XML をエンコードするのに UTF-8 又は UTF-16 のいずれかを選べるのに対して，受信側はどちらでも受け付けられなければならない)
+という意味である。</p>
+
+<p>同様に，サービスのインスタンスの利用者 (consumer) は，適合する対象物のみを生成 (produce) し，
+それが適切な場合には，適合する対象物を受容 (consume) する能力がある場合に，適合しているものとみなされる。</p>
+
+<p>最後に，レジストリーは，REGISTRY という対象物に対するこのプロファイルの要件を満足する場合に，適合しているものとみなされる。</p>
+
+<ul>
+  <li><strong>INSTANCE</strong> &mdash; <code>wsdl:port</code> 又は <code>uddi:bindingTemplate</code> を実装するソフトウェア</li>
+  <li><strong>CONSUMER</strong> &mdash; INSTANCE を起動 (invoke) するソフトウェア</li>
+  <li><strong>REGISTRY</strong> &mdash; REGDATA を管理する UDDI レジストリー</li>
+</ul>
+
+<p>適合する Web サービスのインスタンス (instance) は，INSTANCE に対するすべての要件記述を満足しなければならない。</p>
+
+<p>同様に，適合する利用者 (consumer) は，CONSUMER に対するすべての要件記述を満足しなければならない。</p>
+
+<p>適合する Web サービスのインスタンス (instance) 及び利用者 (consumer) は，いずれも，それが適切な場合には，次に示す適合性対象に対するすべての要件記述を満足しなければならない:</p>
+
+<ul>
+  <li><strong>SENDER</strong> &mdash; 関連付けられたプロトコルに基づき，メッセージを生成 (generate) するソフトウェア</li>
+  <li><strong>RECEIVER</strong> &mdash; 関連付けされたプロトコルに基づき，メッセージを受信 (consume) するソフトウェア (たとえば SOAP 処理系)</li>
+</ul>
+
+
+<p>インスタンスに対する適合性はサービス全体には適用されず，port にのみ適用されることに注意が必要である。
+したがって，このプロファイルでは <code>wsdl:service</code> の定義にはいかなる制約も課さない。
+特に，<code>wsdl:service</code> は複数の <code>wsdl:port</code> をもつことができ，それぞれの <code>wsdl:port</code> は適合してもよいし，しなくてもよい。</p>
+
+<p> Web サービスの型 (<code>wsdl:binding</code> 及び <code>wsdl:portType</code> で記述される)
+は，正しく実装され，動作することを意図された環境に展開された場合に，
+適合するインスタンスになるときに，適合していると見なされる。</p>
+
+<div class="refinement">
+<div class="rationale">
+<p>さらに，
+ Web サービスのインスタンスはサービスの運用に用いられる契約 (contract) を何らかの形で開示しなければならない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R0001">R0001</a></span> INSTANCE は WSDL 1.1 のサービス記述，UDDI のバインディングテンプレート，又はその両方で記述されなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>ここで「記述される」とは，
+アクセス権のある利用者 (authorized consumer) が適合するサービスインスタンスのサービス記述を WSDL 1.1 文書で欲しいと要求した場合，
+サービスインスタンスのプロバイダーは，
+WSDL 文書，UDDI のバインディングテンプレート，又はその両方をその利用者に開示しなければならないという意味である。
+サービスインスタンスはサーバーから実行時に WSDL 文書を提供してもよいが，これは適合のためには必須ではない。
+同様に，任意のサービスインスタンスのプロバイダーは UDDI レジストリーにそのインスタンスプロバイダーを登録してもよいが，
+それは適合のためには必須ではない。
+上記のすべてのシナリオにおいて，
+WSDL の契約は存在していなければならないが，状況によっては，別の形態で開示されるかもしれない。</p>
+</div>
+
+</div>
+
+
+<h3><a name="annotation">3.3 Conformance Annotation in Descriptions (記述における適合性注記)</a></h3>
+
+<div class="refinement">
+<div class="rationale">
+<p>適合性表示は特定の要素 (たとえば <code>wsdl:portType</code>) に関連付けて，適用範囲をその構造に限定することも可能である。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R0002">R0002</a></span> DESCRIPTION は，
+インスタンスに対する適合性の表示を，
+適合性表示スキーマ (conformance claim schema) に規定された通りの形で，
+含んでもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R0003">R0003</a></span> DESCRIPTION の適合性の表示は，
+<code>wsdl:port</code>, <code>wsdl:binding</code>, <code>wsdl:portType</code>,
+<code>wsdl:operation</code> (<code>wsdl:portType</code> の子要素の方で，<code>wsdl:binding</code> の子要素ではない) 及び <code>wsdl:message</code>
+要素の中の <code>wsdl:documentation</code> 要素の子要素でなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>ある要素における適合性の表示は，その要素 (及び <code>port</code> の場合，その要素が代表するインスタンス) が，それが遵守していると表示するプロファイルの要件に
+(当該要素に適用可能な範囲において)
+適合していることを意味する。</p>
+
+<p>ある要素における適合性の表示は，
+その要素が使用するすべての要素に対して同じ表示がなされていることを暗黙のうちに含み，
+次に示す継承規則に基づき，再帰的に適用される:</p>
+<ul>
+ <li><code>wsdl:port</code> に対する表示は，参照される <code>wsdl:binding</code> に引き継がれる</li>
+ <li><code>wsdl:binding</code> に対する表示は，参照される <code>wsdl:portType</code> に引き継がれる</li>
+ <li><code>wsdl:portType</code> に対する表示は，参照される <code>wsdl:operation</code> に引き継がれる</li>
+ <li><code>wsdl:operation</code> に対する表示は，その子要素である <code>wsdl:output</code>，<code>wsdl:input</code>，又はその両方から参照される <code>wsdl:message</code> に引き継がれる</li>
+</ul>
+
+<p>適合性表示スキーマ (conformance claim schema) は次の通り:</p>
+
+<pre class="specification">
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://ws-i.org/schemas/conformanceClaim/"
+  xmlns:tns="http://ws-i.org/schemas/conformanceClaim/"
+  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified" &gt;
+
+  &lt;xsd:import namespace="http://schemas.xmlsoap.org/soap/envelope/"
+    schemaLocation="http://schemas.xmlsoap.org/soap/envelope/" /&gt;
+
+  &lt;xsd:element name="Claim" &gt;
+    &lt;xsd:complexType&gt;
+      &lt;xsd:sequence&gt;
+        &lt;xsd:any namespace="##any" processContents="lax"
+         minOccurs="0" maxOccurs="unbounded" /&gt;
+      &lt;/xsd:sequence&gt;
+      &lt;xsd:attribute name="conformsTo" type="xsd:anyURI" use="required"/&gt;
+      &lt;xsd:attribute ref="soap:mustUnderstand" use="prohibited" /&gt;
+      &lt;xsd:anyAttribute namespace="##any" processContents="lax"/&gt;
+    &lt;/xsd:complexType&gt;
+  &lt;/xsd:element&gt;
+
+&lt;/xsd:schema&gt;
+</pre>
+</div>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl"
+  xmlns:tns="http://example.org/myservice"
+  xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap"
+  xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/"
+  targetNamespace="http://example.org/myservice"&gt;
+  &lt;wsdl:portType name="MyPortType"&gt;
+      ...
+  &lt;/wsdl:portType&gt;
+  &lt;wsdl:binding name="MyBinding" portType="MyPortType" &gt;
+      ...
+  &lt;/wsdl:binding&gt;
+  &lt;wsdl:service name="MyService" &gt;
+    &lt;wsdl:port name="MyPort" binding="tns:MyBinding" &gt;
+      &lt;wsdl:documentation&gt;
+        &lt;wsi:Claim conformsTo="http://ws-i.org/profiles/basic/1.0" /&gt;
+      &lt;/wsdl:documentation&gt;
+      &lt;soapbind:address location="http://example.org/myservice/myport" /&gt;
+    &lt;/wsdl:port&gt;
+  &lt;/wsdl:service&gt;
+&lt;/wsdl:definitions&gt; </pre>
+</div>
+
+</div>
+
+<h3><a name="msg-annotation">3.4 Conformance Annotation in Messages (メッセージにおける適合性注記)</a></h3>
+
+<div class="refinement">
+<div class="rationale">
+<p>このプロファイルの新しい版や，その他のプロファイルがリリースされるに従い，
+一つのサービスが複数のプロファイルをサポートする可能性がある。
+メッセージを受信する際に，メッセージがどのプロファイルに適合しているかを，サービスが識別できるようにしたいと思うかもしれない。
+SOAP メッセージがどのプロファイルに適合しているかを示せるようにするために，WS-I は SOAP ヘッダーとしての wsi:Claim 要素の使い方を規定する。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R0004">R0004</a></span>
+MESSAGE は，適合性表示を，
+適合性表示スキーマ (conformance claim schema) に規定された通りの形で，
+含んでもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R0005">R0005</a></span>
+MESSAGE の適合性表示は，SOAP ヘッダーブロックに格納しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R0006">R0006</a></span>
+MESSAGE は，一つ以上のプロファイルに対する適合性表示を含んでもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R0007">R0007</a></span>
+SENDER は，適合性表示を含む SOAP ヘッダーブロックを送る際に，
+<code>soap:mustUnderstand</code> 属性を使用してはならない (MUST NOT)。</p>
+
+<div class="explanation">
+<p>SOAP メッセージは，SOAP ヘッダーブロックとして適合性表示をもち，
+受信側に対して送信側がメッセージの一つ以上のプロファイルへの適合を表示することができる。
+メッセージに適合性表示のないことが，
+メッセージが一つ以上のプロファイルに対する適合の有無を示すものと解釈してはならない。
+また，適合性表示のヘッダーブロックは参考であるとみなされ，
+そのため必須ヘッダーブロックであってはならない。
+そこで，このプロファイルでは <code>soap:mustUnderstand</code> 属性の適合性表示ヘッダーブロックでの使用を禁止している。</p>
+</div>
+
+<p class="example-banner">次に例を示す:</p>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre> &lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" &gt;
+  &lt;soap:Header&gt;
+    &lt;!-- other headers --&gt;
+    &lt;wsi:Claim conformsTo="http://ws-i.org/profiles/basic/1.0"
+     xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" /&gt;
+    &lt;!-- other headers --&gt;
+  &lt;/soap:Header&gt;
+  &lt;soap:Body&gt;
+    &lt;!-- body content --&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</pre>
+</div>
+</div>
+
+
+<h3><a name="regdata-annotation">3.5 Conformance Annotation in Registry Data (レジストリーデータにおける適合性注記)</a></h3>
+
+<div class="refinement">
+<div class="rationale">
+<p>WSDL 記述のさまざまな要素に対してプロファイルの適合性表示を行うことが有用なのと同様に，
+<code>uddi:tModel</code> 要素にそれを行うことも有用である。
+
+UDDI で <code>uddi:tModel</code> に属性を追加する自然な方法は，カテゴリーシステムを定義して使うことである。
+このプロファイルは，<code>uddi:tModel</code> が WS-I プロファイルに対する適合性を示すためにこのメカニズムを採用し，
+特にこのプロファイルへの適合性を示す方法を指定している。</p>
+</div>
+
+
+<p class="statement"><span class="statement-id"><a name="R3020">R3020</a></span>
+プロファイルへの適合性を表示する <code>uddi:tModel</code> 型の REGDATA は，
+<code>ws-i-org:conformsTo:2002_12</code> のタキソノミーを使用してカテゴライズされなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R3030">R3030</a></span>
+プロファイルへの適合性を表示する <code>uddi:tModel</code> 型の REGDATA は，
+<code>ws-i-org:conformsTo:2002_12</code> のカテゴライゼーションに，
+そのプロファイルに対応する適合性表示 URI を使用しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R3021">R3021</a></span>
+REGISTRY は，
+<code>ws-i-org:conformsTo:2002_12</code> の tModel 定義をレジストリーの内容として追加することによって，
+WS-I 適合性カテゴリーシステムをサポートしなければならない (MUST)。</p>
+
+<div class="explanation">
+<p><code>ws-i-org:conformsTo:2002_12</code> の tModel の内容は次のとおりである:</p>
+
+<pre class="specification">
+&lt;tModel tModelKey="uuid:65719168-72c6-3f29-8c20-62defb0961c0"&gt;
+  &lt;name&gt;ws-i-org:conformsTo:2002_12&lt;/name&gt;
+  &lt;description xml:lang="EN"&gt;Category system used for UDDI entities
+  to point to the WS-I concept to which they conform to&lt;/description&gt;
+  &lt;overviewDoc&gt;
+    &lt;overviewURL&gt;http://ws-i.org/schemas/conformanceClaim/&lt;/overviewURL&gt;
+  &lt;/overviewDoc&gt;
+  &lt;categoryBag&gt;
+  &lt;keyedReference
+    keyName="uddi-org:types:categorization"
+    keyValue="categorization"
+    tModelKey="uuid:C1ACF26D-9672-4404-9D70-39B756E62AB4" /&gt;
+  &lt;/categoryBag&gt;
+&lt;/tModel&gt;
+</pre>
+</div>
+
+<p class="example-banner">次に例を示す:</p><div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;tModel tModelKey="..."&gt;
+   &lt;name&gt;BarSOAPService&lt;/name&gt;
+   &lt;description xml:lang="EN"&gt;Bar's SOAP Service&lt;/description&gt;
+   &lt;overviewDoc&gt;...&lt;/overviewDoc&gt;
+   &lt;categoryBag&gt;
+      &lt;keyedReference
+         tModelKey="uuid:65719168-72c6-3f29-8c20-62defb0961c0"
+         keyName="ws-I_conformance:BasicProfile1.0"
+         keyValue="http://ws-i.org/profiles/basic/1.0" /&gt;
+   &lt;/categoryBag&gt;</pre>
+</div>
+
+</div>
+
+<div class="refinement">
+<div class="rationale">
+<p><code>wsdl:service</code> 要素は必ずしも一つの <code>uddi:businessService</code> に対応付けられるわけではなく，
+また，適合性表示 (conformance claim) の対象になるわけではないので，
+<code>uddi:businessEntity</code> 又は <code>uddi:businessService</code> 要素がこのプロファイルに対する適合性を表示した場合，
+それがどういう意味になるかが不明確になるだろう。
+
+また，
+<code>uddi:bindingTemplate</code> 要素は，
+UDDI V2 の XML Schema がそれに対する <code>categoryBag</code> を提供していないので，
+カテゴライズすることができない。
+
+よって，
+<code>wsdl:port</code> 要素による適合性の表示は，対応する <code>uddi:bindingTemplate</code> には記述できない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R3005">R3005</a></span>
+適合する Web サービス型を表現する <code>uddi:tModel</code> 要素以外の REGDATA が
+<code>ws-i-org:conformsTo:2002_12</code> のタキソノミーと "http://ws-i.org/profiles/basic/1.0" のカテゴライゼーションを使用してカテゴライズされてはならない (MUST NOT)。</p>
+
+</div>
+
+<div class="refinement">
+<div class="rationale">
+<p><code>uddi:tModel</code> の適合性の表示が，それの使っている <code>wsdl:binding</code> の適合性の表示と矛盾していた場合，解釈に困るだろう。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R3004">R3004</a></span>
+<code>uddi:tModel</code> 型の REGDATA は，
+その <code>uddi:tModel</code> に示される適合性の表示が，
+それの参照する <code>wsdl:binding</code> に示される適合性の表示と整合するように構成されなければならない (MUST)。</p>
+
+</div>
+
+
+<h2><a name="messaging">4. Messaging (メッセージング)</a></h2>
+<p>プロファイルのこの節では，次の仕様を参照し，その中での拡張点を定義する:</p>
+<ul>
+  <li><a href="http://www.w3.org/TR/SOAP/">Simple Object Access Protocol (SOAP) 1.1</a><br />
+  拡張点:
+  <ul>
+   <li>ヘッダーブロック &mdash; ヘッダーブロックは SOAP の根本的な拡張メカニズムである。</li>
+   <li>処理順序 &mdash; SOAP メッセージの構成要素 (たとえば，ヘッダー) の処理順序は未規定であり，
+   別途調整 (out-of-band negotiation) が必要かもしれない。</li>
+   <li>中継ノード (intermediaries) の使用 &mdash; SOAP の中継ノードは SOAP 1.1 では規定が不十分であり，
+   その利用には別途調整 (out-of-band negotiation) が必要かもしれない。
+   また，その使用に際しては，どこでプロファイルの適合性を測定するかについて注意深い検討が必要になるかもしれない。</li>
+   <li>soap:actor の値 &mdash; <code>soap:actor</code> 属性の値は Web サービスの関係者の私的な合意による。</li>
+   <li>Fault の detail &mdash; <code>Fault</code> の <code>detail</code> 要素の内容は，
+   SOAP 1.1 では規定されていない。</li>
+  </ul>
+  </li>
+  <li><a href="http://www.w3.org/TR/REC-xml">Extensible Markup Language (XML) 1.0 (Second Edition)</a></li>
+  <li><a href="http://www.ietf.org/rfc/rfc2616">RFC2616: Hypertext Transfer Protocol -- HTTP/1.1</a><br />
+  拡張点:
+  <ul>
+   <li>HTTP 認証 &mdash; HTTP の認証は，拡張スキーム，任意のダイジェストハッシュアルゴリズム，及びパラメーターを許容している。</li>
+   <li>未規定のヘッダーフィールド &mdash; HTTP は任意のヘッダーがメッセージに現れることを許容している。</li>
+   <li>Expect 拡張 &mdash; HTTP の Expect/Continue メカニズムは Expect 拡張を許容している。</li>
+   <li>内容エンコーディング &mdash; HTTP で許容される内容エンコーディング (content-encoding) は無制限である。</li>
+   <li>伝送エンコーディング &mdash; HTTP で許容される伝送エンコーディング (transfer-encoding) は無制限である。</li>
+   <li>Upgrade &mdash; HTTP は，Upgrade ヘッダーを使うことで，接続を任意のプロトコルに切り替えることを許容している。</li>
+  </ul></li>
+  <li><a href="http://www.ietf.org/rfc/rfc2965">RFC2965: HTTP State Management Mechanism</a></li>
+</ul>
+<h3><a name="SOAPXML">4.1 XML Representation of SOAP Messages (SOAP メッセージの XML 表現)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+<ul>
+  <li><a href="http://www.w3.org/TR/SOAP/#_Toc478383494">SOAP 1.1, Section 4</a></li>
+</ul>
+<p>SOAP 1.1 ではメッセージ伝送のための XML ベースの構造を定義している。このプロファイルではそれを使用することを必須とし，その使用に際しては次の制約を課す:</p>
+
+
+<div class="refinement">
+<h4 id="refinement36953736">4.1.1 SOAP Messages and the Unicode BOM (SOAP メッセージと Unicode の BOM)</h4>
+<div class="rationale">
+<p>XML 1.0 では，UTF-8 エンコーディングにおいても BOM を含めてもよいことになっており，メッセージの受信側はそれを受け入れる用意がなければならない。
+BOM は，UTF-16 でエンコードされた XML では必須である。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R4001">R4001</a></span>
+RECEIVER は，Unicode の Byte Order Mark (BOM) を含むメッセージを受け付けなければならない (MUST)。
+<span class="statement-type">C</span></p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement36954704">4.1.2 SOAP Fault Syntax (SOAP フォルトの構文)</h4>
+<div class="rationale">
+<p>SOAP フォルトとは，<code>soap:Body</code> 要素に1つの子要素があり，それが <code>soap:Fault</code> 要素であるような SOAP メッセージのことである。
+このプロファイルは，<code>soap:Fault</code>要素の内容を SOAP 1.1 で明示的に記述された要素に制限する。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1000">R1000</a></span> MESSAGE が <code>soap:Fault</code> 要素を含む場合，その要素は <code>faultcode</code>,
+<code>faultstring</code>, <code>faultactor</code> 及び <code>detail</code>以外の子要素をもってはならない
+(MUST NOT)。</p>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;faultcode&gt;soap:Client&lt;/faultcode&gt;
+  &lt;faultstring&gt;Invalid message format&lt;/faultstring&gt;
+  &lt;faultactor&gt;http://example.org/someactor&lt;/faultactor&gt;
+  &lt;detail&gt;There were &lt;b&gt;lots&lt;/b&gt; of elements in the message
+  that I did not understand
+  &lt;/detail&gt;
+  &lt;m:Exception xmlns:m='http://example.org/faults/exceptions' &gt;
+    &lt;m:ExceptionType&gt;Severe&lt;/m:ExceptionType&gt;
+  &lt;/m:Exception&gt;
+&lt;/soap:Fault&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;faultcode&gt;soap:Client&lt;/faultcode&gt;
+  &lt;faultstring&gt;Invalid message format&lt;/faultstring&gt;
+  &lt;faultactor&gt;http://example.org/someactor&lt;/faultactor&gt;
+  &lt;detail&gt;
+     &lt;m:msg xmlns:m='http://example.org/faults/exceptions'&gt;
+         There were &lt;b&gt;lots&lt;/b&gt; of elements in the message that I did not understand
+     &lt;/m:msg&gt;
+     &lt;m:Exception xmlns:m='http://example.org/faults/exceptions'&gt;
+       &lt;m:ExceptionType&gt;Severe&lt;/m:ExceptionType&gt;
+     &lt;/m:Exception&gt;
+   &lt;/detail&gt;
+&lt;/soap:Fault&gt;</pre>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement36973144">4.1.3 SOAP Faults and Namespaces (SOAP フォルトと名前空間)</h4>
+<div class="rationale">
+<p><code>soap:Fault</code> 要素の子要素はローカルであり，名前空間修飾の必要はない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1001">R1001</a></span> MESSAGE が <code>soap:Fault</code> 要素を含む場合，その子要素は名前空間修飾なし (unqualified)
+でなければならない (MUST)。</p>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;soap:faultcode&gt;soap:Client&lt;/soap:faultcode&gt;
+  &lt;soap:faultstring&gt;Invalid message format&lt;/soap:faultstring&gt;
+  &lt;soap:faultactor&gt;http://example.org/someactor&lt;/soap:faultactor&gt;
+  &lt;soap:detail&gt;
+      &lt;m:msg xmlns:m='http://example.org/faults/exceptions'&gt;
+          There were &lt;b&gt;lots&lt;/b&gt; of elements in the message that
+          I did not understand
+      &lt;/m:msg&gt;
+  &lt;/soap:detail&gt;
+&lt;/soap:Fault&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'
+			xmlns='' &gt;
+  &lt;faultcode&gt;soap:Client&lt;/faultcode&gt;
+  &lt;faultstring&gt;Invalid message format&lt;/faultstring&gt;
+  &lt;faultactor&gt;http://example.org/someactor&lt;/faultactor&gt;
+  &lt;detail&gt;
+      &lt;m:msg xmlns:m='http://example.org/faults/exceptions'&gt;
+          There were &lt;b&gt;lots&lt;/b&gt; of elements in the message that
+          I did not understand
+      &lt;/m:msg&gt;
+  &lt;/detail&gt;
+&lt;/soap:Fault&gt;</pre>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement36959760">4.1.4 SOAP Fault Extensibility (SOAP フォルトの拡張性)</h4>
+<div class="rationale">
+<p>拡張性のために，
+<code>detail</code> 要素に追加の属性が現れること，
+及び，
+<code>detail</code> 要素に子要素として追加の要素が現れることが許されている。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1002">R1002</a></span>
+RECEIVER は，
+<code>detail</code> 要素の子要素として (0 個を含む) いかなる数の要素をもつフォルトメッセージも受け付けなければならない (MUST)。
+それらの子要素は名前空間修飾されていても，されていなくてもよい。
+</p>
+
+<p class="statement"><span class="statement-id"><a name="R1003">R1003</a></span>
+RECEIVER は，
+<code>detail</code> 要素の属性として (0 個を含む) いかなる数の名前空間修飾された又はされていない属性をもつフォルトメッセージも受け付けなければならない (MUST)。
+名前空間修飾されたそれらの属性の名前空間は，
+"http://schemas.xmlsoap.org/soap/envelope" でなければ何でもよい。
+</p>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement28025968">4.1.5 SOAP Fault Language (SOAP フォルトの言語)</h4>
+<div class="rationale">
+<p> <code>faultstring</code> は，<code>Fault</code> の性質について人間が読めるように示したものである。
+したがって，それが特定の言語で記述されているとは限らず，<code>xml:lang</code> 属性が <code>faultstring</code> の言語を示すために使用できる。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1016">R1016</a></span>
+RECEIVER は，
+<code>faultstring</code> 要素に
+<code>xml:lang</code> 属性をもつ
+フォルトメッセージを受け付けなければならない (MUST)。</p>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement28027464">4.1.6 SOAP Custom Fault Codes (SOAP の独自フォルトコード)</h4>
+<div class="rationale">
+<p>
+SOAP 1.1 は，ドット表記 ("dot" notation) を使って独自のフォルトコードが <code>faultcode</code> 要素の内容に現れることを許している。</p>
+
+<p>SOAP 1.1 で定義されたフォルトコードをこのメカニズムを使って拡張することは，名前空間の衝突を引き起こしうる。
+<code>"."</code> (ドット) の右側に同じ名前が違う意味で使われた場合に，
+相互運用上の問題を引き起こすことがあるので，その使用は避けるべきである。</p>
+
+<p>その代わりに，このプロファイルでは，
+SOAP 1.1 で定義されたフォルトコードを使い，
+フォルトの性質をあらわすために <code>detail</code> 要素の中に追加の情報を入れる方式を推奨している。</p>
+
+<p>別の方式として，
+独自のフォルトコードを規定する機関の管理下にある名前空間の中で定義することも許容している。</p>
+
+<p>いくつかの仕様では既にドット表記を使った独自のフォルトコードを定義している。
+それにもかかわらず，それらを将来の仕様で使うことは推奨しない。</p>
+
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1004">R1004</a></span> MESSAGE が SOAP の <code>faultcode</code> 要素を含む場合，
+要素の内容は SOAP 1.1 仕様で定義されているフォルトコードの一つであるか，又は名前空間修飾されたフォルトコードであることが望ましい (SHOULD)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1031">R1031</a></span> MESSAGE が SOAP の <code>faultcode</code> 要素を含む場合，
+フォルトの意味を詳細化するために SOAP 1.1 のドット表記を使うべきではない (SHOULD NOT)。</p>
+
+<div class="explanation">
+<p>独自のフォルトコードを必要とするアプリケーションは，
+SOAP 1.1 で定義されたフォルトコードを使い detail 要素に追加の情報を供給するか，
+それらのコードを規定する機関の管理下にある名前空間で定義するかの，
+いずれかを推奨する。</p>
+</div>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'
+            xmlns:c='http://example.org/faultcodes' &gt;
+  &lt;faultcode&gt;soap:Server.ProcessingError&lt;/faultcode&gt;
+  &lt;faultstring&gt;An error occurred while processing the message
+  &lt;/faultstring&gt;
+&lt;/soap:Fault&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'
+            xmlns:c='http://example.org/faultcodes' &gt;
+  &lt;faultcode&gt;c:ProcessingError&lt;/faultcode&gt;
+  &lt;faultstring&gt;An error occured while processing the message
+  &lt;/faultstring&gt;
+&lt;/soap:Fault&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;soap:Fault xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;faultcode&gt;soap:Server&lt;/faultcode&gt;
+  &lt;faultstring&gt;An error occured while processing the message
+  &lt;/faultstring&gt;
+&lt;/soap:Fault&gt;</pre>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35501800">4.1.7 SOAP encodingStyle Attribute (SOAP の encodingStyle 属性)</h4>
+<div class="rationale">
+
+<p><code>soap:encodingStyle</code> 属性は，
+データを XML にエンコーディングする際に特定のスキームを使うことを示すのに使われてきた。
+しかし，この機能は XML 名前空間を使っても実現できるので，複雑さを導入してしまう。
+そこで，このプロファイルは，literal の，エンコードされない XML のほうを優先している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1005">R1005</a></span> MESSAGE は，名前空間名 (namespace name) が "http://schemas.xmlsoap.org/soap/envelope/"
+である要素のいずれにも <code>soap:encodingStyle</code> 属性を含んではならない (MUST NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1006">R1006</a></span> MESSAGE は，<code>soap:Body</code> 要素の子要素のいずれにも <code>soap:encodingStyle</code>
+属性を含んではならない (MUST NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1007">R1007</a></span> rpc-literal バインディングで記述される MESSAGE は，<code>soap:Body</code> 要素の孫要素のいずれにも <code>soap:encodingStyle</code>
+属性を含んではならない (MUST NOT)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement33993984">4.1.8 SOAP's use of XML (SOAP での XML の使用)</h4>
+<div class="rationale">
+<p>XML の DTD 及び PI は，SOAP のメッセージに使用された場合，
+セキュリティ上の脆弱性，処理のオーバーヘッド及びメッセージのセマンティクスの曖昧さを導入するかもしれない。
+そのため，XML のこれらの機能の処理は SOAP 1.1 の 3. 節で禁止されている。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1008">R1008</a></span> MESSAGE は文書型宣言 (Document Type Declaration) を含んではならない (MUST NOT)。<span class="statement-type">C</span></p>
+
+<p class="statement"><span class="statement-id"><a name="R1009">R1009</a></span> MESSAGE は処理命令 (Processing Instructions) を含んではならない (MUST NOT)。<span class="statement-type">C</span></p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement33995568">4.1.9 SOAP and XML Declarations (SOAP と XML 宣言)</h4>
+<div class="rationale">
+<p>XML 宣言の有無は相互運用性に影響しない。処理系によっては必ず XML 宣言をつけるかもしれない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1010">R1010</a></span>
+RECEIVER は，XML 宣言 (XML Declaration) を含むメッセージを受け付けなければならない (MUST)。
+<span class="statement-type">C</span></p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement34138432">4.1.10 SOAP Trailers (SOAP 後続要素)</h4>
+<div class="rationale">
+<p><code>soap:Body</code> 要素の後ろに兄弟要素が現れた場合の解釈は明らかではない。
+よって，そのような要素は禁止する。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1011">R1011</a></span> MESSAGE は <code>soap:Envelope</code> 要素の子要素として，
+<code>soap:Body</code> 要素の後ろにいかなる要素も付加してはならない (MUST NOT)。</p>
+
+<div class="explanation">
+<p>この要件は，SOAP 1.1 の，仕様本文と XML Schema 文書との間の食い違いを明確化する。</p>
+</div>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<pre>&lt;soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;soap:Body&gt;
+    &lt;p:Process xmlns:p='http://example.org/Operations' /&gt;
+  &lt;/soap:Body&gt;
+  &lt;m:Data xmlns:m='http://example.org/information' &gt;
+  Here is some data with the message
+  &lt;/m:Data&gt;
+&lt;/soap:Envelope&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/' &gt;
+  &lt;soap:Body&gt;
+    &lt;p:Process xmlns:p='http://example.org/Operations' &gt;
+	  &lt;m:Data xmlns:m='http://example.org/information' &gt;
+  Here is some data with the message
+      &lt;/m:Data&gt;
+    &lt;/p:Process&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;</pre>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement36956000">4.1.11 Acceptable SOAP Character Encodings (許容可能な SOAP 文字エンコーディング)</h4>
+<div class="rationale">
+<p>このプロファイルでは，相互運用性の向上のため，
+すべての XML 処理系が "UTF-8" 及び "UTF-16" の文字エンコーディング
+をサポートすることを義務付けている。</p>
+
+<p>この結果として，
+SOAP 1.1 の text/xml メディア型 (デフォルトの文字エンコーディングは "us-ascii") を使うべきであるという要件と合わせると，
+SOAP エンベロープのメディア型に <code>charset</code> パラメーターが常に存在しなければならないことになる。
+さらなる結果として，
+XML 1.0 及び RFC3023 "XML Media Types" の要件との整合性をとると，
+メッセージの中の XML 宣言にある <code>encoding</code> 擬似属性は，
+常に無視されることになる。</p>
+
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1012">R1012</a></span> MESSAGE は UTF-8 又は UTF-16 のいずれかの文字エンコーディングでシリアライズされなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1018">R1018</a></span>
+MESSAGE のエンベロープのメディア型は，
+<code>charset</code> パラメーターを使って正しい文字エンコーディングを指定しなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>SOAP が HTTP バインディングで使われる場合，
+メディア型は HTTP の <code>Content-Type</code> ヘッダーフィールドに格納される。</p>
+</div>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement28003632">4.1.12 SOAP mustUnderstand Attribute (SOAP mustUnderstand 属性)</h4>
+<div class="rationale">
+<p><code>soap:mustUnderstand</code> 属性は "xsd:boolean"
+型を制限したものであり，"0" 又は "1" の値のみを取る。
+よって，この2つの値だけが許されている。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1013">R1013</a></span> MESSAGE が <code>soap:mustUnderstand</code> 属性を含む場合，属性の値として 2 種類の形式 "0" 及び "1" のみを使用しなければならない (MUST)。<span class="statement-type">C</span></p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement28005128">4.1.13 SOAP Body and Namespaces (SOAP Body と名前空間)</h4>
+<div class="rationale">
+<p>名前空間修飾のない要素名の使用は名前の衝突を起こすかもしれないので，<code>soap:Body</code> の子要素には修飾された名前を使わなければなければならない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1014">R1014</a></span>
+MESSAGE の <code>soap:Body</code> 要素の子要素は，
+名前空間修飾され (namespace qualified) なければならない (MUST)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement34258664">4.1.14 SOAP Envelope Namespace (SOAP Envelope の名前空間)</h4>
+<div class="rationale">
+<p>SOAP 1.1 は，
+Envelope 要素の名前空間名 (namespace name) が
+"http://schemas.xmlsoap.org/soap/envelope/"
+でない場合，メッセージを破棄することだけを規定している。
+このプロファイルは，曖昧でないオペレーションを保証するため，その代わりにフォルトが生成されることを要求している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1015">R1015</a></span> RECEIVER は，メッセージの <code>Envelope</code> 要素の名前空間 URI が "http://schemas.xmlsoap.org/soap/envelope/"
+でないものに遭遇した場合，フォルトを生成しなければならない (MUST)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement34259632">4.1.15 Use of xsi:type Attributes (xsi:type 属性の使用)</h4>
+<div class="rationale">
+<p>多くの場合，送信側と受信側とは，交換されるメッセージについて型情報を何らかの形で共有している。
+<code>xsi:type</code> 属性は，そのようなスキーマの存在しない場合にのみ必要であり，
+それは，両者がすべての交換される内容を "xsd:anyType" と想定している場合である。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1017">R1017</a></span> RECEIVER は，派生型を示すために必要な場合 (XML Schema Part 1: Structures, 2.6.1
+節を参照) を除き，メッセージに <code>xsi:type</code> 属性の使用を必須としてはならない (MUST NOT)。</p>
+</div>
+
+<h3><a name="SOAPMEM">4.2 SOAP Processing Model (SOAP 処理モデル)</a></h3>
+
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+<ul>
+  <li><a href="http://www.w3.org/TR/SOAP/#_Toc478383491">SOAP 1.1, Section 2</a></li>
+</ul>
+<p>SOAP 1.1 ではメッセージ処理のためのメッセージ交換モデルを定義している。
+特に，メッセージのヘッダーブロックとボディの処理についてのルールを定義している。
+また，フォルトの生成に関するルールも定義している。
+このプロファイルでは，その処理モデルに対して次の制約を課す:</p>
+
+
+<div class="refinement">
+<h4 id="refinement35586552">4.2.1 Mandatory Headers (必須ヘッダー)</h4>
+<div class="rationale">
+<p>SOAP 1.1 の処理モデルは，必須ヘッダーブロックの処理についての規定が不十分である。
+必須ヘッダーブロックとは，<code>soap:Header</code> 要素の子要素で，
+<code>soap:mustUnderstand</code> 属性に "1" の値を設定しているもののことである。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1025">R1025</a></span>
+RECEIVER は，すべての必須ヘッダーブロックに対するチェックが実際の処理の前に行われているように動作しなければならない (MUST)。
+<span class="statement-origin">SOAP12</span></p>
+
+<div class="explanation">
+<p>これによって，メッセージの一部分を処理した後で必須ヘッダーブロックを見つけることによる，予期せぬ副作用が発生しないことを保証する。</p>
+</div>
+</div>
+
+<div class="refinement">
+<h4 id="refinement33927848">4.2.2 Generating mustUnderstand Faults (MustUnderstand フォルトの生成)</h4>
+<div class="rationale">
+<p>このプロファイルは，受信側が自分宛のヘッダーブロックを理解できない場合，フォルトを生成することを要求している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1027">R1027</a></span>
+メッセージが (<code>soap:actor</code> によって) 宛先として指定された受信者 (receiver) に理解できない必須ヘッダーブロック (<code>soap:mustUnderstand</code> 属性の値が "1" であるもの) をもつ場合，
+RECEIVER は "soap:MustUnderstand" フォルトを生成しなければならない (MUST)。</p>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement34119240">4.2.3 SOAP Fault Processing (SOAP フォルトの処理)</h4>
+<div class="rationale">
+<p>フォルトが生成される場合，それ以降の処理は行われるべきではない。request-response
+のメッセージ交換では，
+リクエストメッセージの送信側にフォルトメッセージが伝送され，
+何らかのアプリケーションレベルのエラーがユーザーに通知される。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1028">R1028</a></span>
+RECEIVER でフォルトが生成される場合，
+フォルトが生成される前に行われた処理の影響を復元 (rollback) 又は補償 (compensate) するために必要なものを除き，
+SOAP メッセージに対するそれ以降の処理を行うべきではない (SHOULD NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1029">R1029</a></span> SOAP のメッセージの処理の正常な結果が SOAP レスポンスの伝送になる場合で，その代わりに SOAP フォルトが生成されるとき，
+RECEIVER はレスポンスの代わりに SOAP フォルトメッセージを伝送しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1030">R1030</a></span> SOAP フォルトを生成する RECEIVER は，
+実際に SOAP フォルトが生成されたことを，
+その状況に適切な手段をもってエンドユーザーに通知することが望ましい (SHOULD)。</p>
+</div>
+
+
+<h3><a name="SOAPHTTP">4.3 Use of SOAP in HTTP (HTTP での SOAP の使用)</a></h3>
+
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/SOAP/#_Toc478383526">SOAP 1.1, Section 6</a></li>
+  <li><a href="http://www.ietf.org/rfc/rfc2616">HTTP 1.1</a></li>
+  <li><a href="http://www.ietf.org/rfc/rfc2965">HTTP State Management Mechanism</a></li>
+</ul>
+<p>SOAP 1.1 では HTTP に対する一つのプロトコルバインディングを定義している。このプロファイルではそのバインディングの使用を必須とし，その使用に際しては次の制約を課している:</p>
+
+
+<div class="refinement">
+<h4 id="refinement35631416">4.3.1 HTTP Versions (HTTP の版数)</h4>
+<div class="rationale">
+<p>HTTP にはいくつかの版が定義されている。
+HTTP 1.0 と比較すると，HTTP 1.1 は性能的に有利であり，また，仕様もはっきりと規定されている。
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1140">R1140</a></span>
+MESSAGE は HTTP 1.1 を使って送られることが望ましい (SHOULD)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1141">R1141</a></span>
+MESSAGE は HTTP 1.1 又は HTTP 1.0 のいずれかを使って送られなければならない (MUST)。</p>
+
+<div class="explanation">
+HTTP 1.1 のサポートには HTTP 1.0 のサポートが含まれており，
+また中継ノード (intermediaries) がメッセージの版数を変更してしまう可能性があることに注意が必要である。
+HTTP の版数については RFC2145 "Use and Interpretation of HTTP Version Numbers" を参照。</p>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35691800">4.3.2 Identifying SOAP Faults (SOAP フォルトの識別)</h4>
+<div class="rationale">
+<p>いくつかの利用者 (consumer) の実装は，SOAP フォルトの存在を識別するのに HTTP の状態コードのみを使用する。Web のインフラストラクチャが状態コードを変更するような状況も考えられるし，また，一般的な信頼性のためにも，このプロファイルでは，実装がエンベロープも調べることを要求する。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1107">R1107</a></span> RECEIVER は <code>soap:Fault</code> 要素のみを含む SOAP メッセージをフォルトと解釈しなければならない
+(MUST)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35693032">4.3.3 HTTP Methods and Extensions (HTTP のメソッドと拡張)</h4>
+<div class="rationale">
+<p>SOAP 1.1 仕様は HTTP バインディングに，HTTP の POST メソッドと HTTP 拡張フレームワーク (HTTP Extension Framework) の M-POST メソッドとの，2種類のいずれかが使用可能となるよう規定している。
+このプロファイルでは HTTP の POST メソッドだけを使用することを要求し，HTTP 拡張フレームワークの使用を禁止している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1132">R1132</a></span>
+HTTP のリクエスト MESSAGE は，HTTP の POST メソッドを使用しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1108">R1108</a></span> MESSAGE は HTTP 拡張フレームワーク (HTTP Extension Framework) [RFC2774] を使用してはならない
+(MUST NOT)。</p>
+
+<div class="explanation">
+<p>HTTP 拡張フレームワークは HTTP をモジュラーな形で拡張するための実験的なメカニズムである。このメカニズムは広く採用されておらず，また，SOAP
+での使用による利点は疑問であることから，このプロファイルでは使用を許していない。</p>
+</div>
+</div>
+
+
+
+<div class="refinement">
+<h4 id="refinement34343864">4.3.4 SOAPAction Header Syntax (SOAPAction ヘッダーの構文)</h4>
+<div class="rationale">
+<p>テストによって明らかになっているように，
+HTTP の <code>SOAPAction</code> ヘッダーフィールドの値に引用符を必須とすることが実装の間の相互運用性を向上する。
+HTTP 仕様はヘッダーフィールドの値を引用符で囲まないことを許容しているが，
+いくつかの SOAP 実装は値が引用符で囲まれていることを必須としている。</p>
+
+<p><code>SOAPAction</code> ヘッダーフィールドは純粋に処理系に対するヒントである。
+メッセージの処理に本質的な情報はすべて <code>soap:Envelope</code> に含まれる。
+</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1109">R1109</a></span> HTTP のリクエスト MESSAGE の <code>SOAPAction</code> ヘッダーフィールドの値は，引用符で囲まれた文字列でなければならない (MUST)。<span class="statement-type">C</span></p>
+
+<p class="statement"><span class="statement-id"><a name="R1119">R1119</a></span>
+RECEIVER は，HTTP の <code>SOAPAction</code> ヘッダーフィールドの値が引用符で囲まれていない場合，フォルトを返してもよい (MAY)。<span class="statement-type">C</span></p>
+
+<p class="example-banner">次に例を示す:</p>
+<div class="example">
+<p class="correct">正しい例: </p>
+<p>WSDL 記述に次の要素:</p>
+<p>
+<code>&lt;soapbind:operation soapAction="foo" /&gt;</code>
+</p>
+<p>を含む場合，対応する SOAPAction HTTP ヘッダーは次のとおり:</p>
+<p>
+<code>SOAPAction: "foo"</code>
+</p>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<p>WSDL 記述に次の要素:</p>
+<p>
+<code>&lt;soapbind:operation /&gt;</code>
+</p>
+<p>又は</p>
+<p>
+<code>&lt;soapbind:operation soapAction="" /&gt;</code>
+</p>
+<p>を含む場合，対応する SOAPAction HTTP ヘッダーは次のとおり:</p>
+<p>
+<code>SOAPAction: ""</code>
+</p>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35425168">4.3.5 HTTP and TCP Ports (HTTP と TCP のポート番号)</h4>
+<div class="rationale">
+<p>SOAP は HTTP のインフラストラクチャを利用するように設計されている。しかし，有害な副作用をもたらす場合
+(たとえば，プロキシー，ファイアウォール，その他の中継ノードがからむ場合) がある。結果として，インスタンスは HTTP のデフォルト (80) とは別のポートを使った方がよい場合もある。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1110">R1110</a></span> INSTANCE は，TCP の 80 番ポート (HTTP) での接続を受け付けてもよい (MAY)。<span class="statement-type">C</span></p>
+
+<div class="explanation">
+<p>W3C 及び IETF において，
+HTTP にバインディングされた SOAP メッセージを 80 番ポートで使うことの妥当性について，
+相当な議論が続けられてきた。
+これは許容できるやり方だというのが，結論である。</p>
+</div>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35426312">4.3.6 HTTP Success Status Codes (HTTP の成功状態コード)</h4>
+<div class="rationale">
+<p>
+HTTP は 2xx の状態コードを成功を示すために使っている。
+特に 200 は成功メッセージのデフォルトであるが，
+202 もメッセージが処理に投入されたことを示すために使用可能である。
+付け加えて，その他の 2xx 状態コードも，HTTP 通信の性質によっては，適切となることもある。
+</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1124">R1124</a></span> INSTANCE は，リクエストの結果が成功であることを示すレスポンスの HTTP 状態コードとして 2xx を使用しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1111">R1111</a></span>
+  INSTANCE は，SOAP フォルトではない内容のレスポンスの HTTP 状態コードとして，
+  "200 OK" を使うことが望ましい (SHOULD)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1112">R1112</a></span>
+  INSTANCE は，
+   SOAP メッセージを内容として含まないが
+  HTTP リクエストの結果としては成功であるレスポンスの HTTP 状態コードとして，
+  "200 OK" 又は "202 Accepted" のいずれかを使うことが望ましい (SHOULD)。</p>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement28139376">4.3.7 HTTP Redirect Status Codes (HTTP の転送状態コード)</h4>
+<div class="rationale">
+<p>HTTP の転送 (redirect) の状態コードを使う場合，元と同じメソッドを使うか，それとも GET メソッドを使うかという点について相互運用上の問題がある。
+このプロファイルでは，正しい転送の状態コードとして "307 Temporary Redirect" (同じメソッドでの転送を意味する) を要求している。
+詳細については，RFC2616 の 3xx 状態コードに関する記述を参照。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1130">R1130</a></span> INSTANCE は，リクエストを別のエンドポイントに転送 (redirect) する場合，HTTP の状態コード "307 Temporary Redirect" を使用しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1131">R1131</a></span>
+CONSUMER は，レスポンスとして "307 Temporary Redirect" を受け取った場合，
+リクエストを自動的に転送 (redirect) してもよい (MAY)。</p>
+
+<div class="explanation">
+<p>RFC2616 は，ユーザーエージェントが自動的にリクエストを転送すべきではないとしている。
+しかし，この要件はブラウザーを想定したものであり，自動的な処理 (多くの Web サービスもこれにあたる) を想定したものではない。
+よって，このプロファイルでは，利用者 (consumer) が転送を自動的に行うことを許してはいるが，要求してはいない。</p>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement27993232">4.3.8 HTTP Client Error Status Codes (HTTP のクライアントエラー状態コード)</h4>
+<div class="rationale">
+<p>HTTP は 4xx の状態コードをクライアントのエラーによる失敗を示すために使っている。
+これらのうちのいずれかの結果を起こす状況はいろいろあるが，
+このプロファイルでは，HTTP リクエストのペイロードが正しいメディア型 (すなわち，SOAP/HTTP バインディングで要求されている "text/xml") でなかった場合と，
+期待されるメディア型 ("POST") が指定されなかった場合とを強調している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1125">R1125</a></span> INSTANCE は，リクエストの形式に問題があることを示すレスポンスの HTTP 状態コードとして 4xx を使用しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1113">R1113</a></span>
+  INSTANCE は，リクエストのメッセージが HTTP リクエストとして正しい形式ではない，又は XML が整形式 (well-formed) ではない場合，
+  HTTP 状態コードとして "400 Bad Request" を使うことが望ましい (SHOULD)。</li>
+
+<p class="statement"><span class="statement-id"><a name="R1114">R1114</a></span>
+  INSTANCE は，リクエストのメソッドが "POST" でない場合，
+  HTTP 状態コードとして "405 Method not Allowed" を使うことが望ましい (SHOULD)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1115">R1115</a></span>
+  INSTANCE は，HTTP リクエストの <code>Content-Type</code> ヘッダーの値が
+  <code>input</code> のメッセージに対応するバインディングで指定された値と整合していなかった場合，
+  HTTP 状態コードとして "415 Unsupported Media Type" を返すことが望ましい (SHOULD)。</p>
+
+<div class="explanation">
+<p>上記の要件が，インスタンスに対して，リクエストにレスポンスを返すことを強制していないことに注意。
+場合によっては，たとえばサービス妨害攻撃 (Denial of Service attacks) の場合など，
+インスタンスがリクエストを無視することを選択することもある。</p>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement34299384">4.3.9 HTTP Server Error Status Codes (HTTP のサーバーエラー状態コード)</h4>
+<div class="rationale">
+<p>HTTP は 5xx の状態コードをサーバーのエラーによる失敗を示すために使っている。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1126">R1126</a></span>
+  INSTANCE は，レスポンスのメッセージが SOAP フォルトである場合，
+  HTTP 状態コードとして "500 Internal Server Error" を使わなければならない (MUST)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement34300352">4.3.10 HTTP Cookies (HTTP クッキー)</h4>
+<div class="rationale">
+<p>HTTP 状態管理メカニズム (HTTP State Management Mechanism) は，「クッキー (Cookies)」とも呼ばれ，
+Web ブラウザーとサーバーとの間で状態をもったセッションを生成することを可能にしている。
+ハイパーテキストのブラウズを前提に設計されたため，クッキーの Web サービスでの動作の定義は曖昧であり，
+しかも，
+クッキーは SOAP エンベロープの外側にあるため，SOAP 1.1 又は WSDL 1.1 のいずれの仕様にも取り込まれていない。
+しかし，複数のサーバーの負荷分散やクッキーを使う既存のサーバーの統合など，クッキーを使うことが必要な状況もある。
+そこで，このプロファイルではクッキーを全面否定するのではなく，その用途を限定するにとどめている。
+</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R1120">R1120</a></span>
+INSTANCE は HTTP 状態メカニズム [HTTP state mechanism] (クッキー) を使ってもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1122">R1122</a></span>
+クッキーを使用する INSTANCE は RFC2965 に適合することが望ましい (SHOULD)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1121">R1121</a></span>
+INSTANCE は，正常動作のために利用者 (consumer) のクッキーのサポートを必須とすべきではない (SHOULD NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R1123">R1123</a></span>
+クッキーの値は CONSUMER にとって不透明 (opaque) なものとみなされなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>
+このプロファイルでは，クッキーはインスタンスの正常動作に必須とはしないことを推奨している。
+クッキーはヒントであり，最適化に使われるもので， Web サービスの実行に実質的に影響を与えないものであるべきだ。
+しかし，既存のサービスの統合などの例外的な用途でクッキーが必要になるかもしれないので，
+クッキーを要求することでインスタンスが不適合になるわけではない。
+よって，クッキーはインスタンスにとって意味があるかもしれないが，
+インスタンスと利用者 (consumer) との間でのデータ通信の抜け道 (out-of-bound data channel) として使われるべきではない。
+よって，利用者側でクッキーの内容を解釈することは許されていない。クッキーは不透明 (すなわち，利用者にとって意味のないもの) として扱われなければならない。
+</p>
+</div>
+
+</div>
+
+
+<h2><a name="description">5. Service Description (サービス記述)</a></h2>
+
+<p>このプロファイルでは，Web Services Description Language (WSDL) を使って，メッセージを操作するエンドポイントの集合として，サービスを記述する。</p>
+
+<p>プロファイルのこの節では，次の仕様を参照し，その中での拡張点を定義する:</p>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/wsdl.html">Web Services Description Language (WSDL) 1.1</a><br />
+  拡張点:
+  <ul>
+   <li>WSDL 拡張 &mdash; WSDL は特定の位置に拡張要素を入れることを許す。
+   そのような拡張の使用には別途調整 (out-of-band negotiation) が必要である。</li>
+   <li>相対 URI &mdash; WSDL は相対 URI の使い方について適切に規定していない。
+   その使用については，さらに調整が必要である。詳細については XML Base を参照のこと。</li>
+   <li>妥当性検証モード &mdash; WSDL 及び XML Schema 文書を読み込むパーサーが DTD の妥当性検証を行うかどうか。</li>
+   <li>外部資源の取り込み &mdash; WSDL 及び XML Schema 文書を読み込むパーサーが外部実体及び DTD を取り込むかどうか。</li>
+  </ul>
+  </li>
+  <li><a href="http://www.w3.org/TR/xmlschema-1">XML Schema Part 1: Structures</a><br />
+  拡張点:
+  <ul>
+   <li>スキーマの注記 &mdash; XML Schema は注記 (annotation) を許しており，
+   データ構造についての追加の情報を記述するために使われうる。</li>
+  </ul>
+  </li>
+  <li><a href="http://www.w3.org/TR/xmlschema-2">XML Schema Part 2: Datatypes</a></li>
+</ul>
+
+<h3><a name="WSDLDOCSTRUCT">5.1 Document Structure (文書構造)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/wsdl#_document-s">WSDL 1.1, Section 2.1</a></li>
+</ul>
+
+<p>WSDL 1.1 は， Web サービスを記述するための XML に基づいた構造を定義する。このプロファイルではこの構造の使用を必須とし，その使用においては次の制約を課す:</p>
+
+<div class="refinement">
+<h4 id="refinement34116312">5.1.1 WSDL Schema Definitions (WSDL スキーマ定義)</h4>
+<div class="rationale">
+<p>WSDL 1.1 仕様の Appendix 4 で規定されているスキーマは，仕様の本文の規定との間に不整合がある。
+このプロファイルは，既知の間違いに対する修正を取り入れた新しいスキーマ文書を参照する。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2028">R2028</a></span>
+WSDL の名前空間 (このプロファイルでは "wsdl" のプレフィックスを用いる) を使用する DESCRIPTION は，
+"http://schemas.xmlsoap.org/wsdl/2003-02-11.xsd" にある XML Schema に対して妥当 (valid) でなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2029">R2029</a></span>
+WSDL SOAP バインディングの名前空間 (このプロファイルでは "soapbind" のプレフィックスを用いる) を使用する DESCRIPTION は，
+"http://schemas.xmlsoap.org/wsdl/soap/2003-02-11.xsd" にある XML Schema に対して妥当 (valid) でなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>このプロファイルでは WSDL 記述がスキーマに対して妥当であることを要求しているが，
+利用者が WSDL 文書を妥当性検証することを要求しているわけではない。
+それを保証するのは WSDL 文書の作成者の責任である。</p>
+</div>
+</div>
+
+<div class="refinement">
+<h4 id="refinement34101304">5.1.2 WSDL and Schema Import (WSDL とスキーマの import)</h4>
+<div class="rationale">
+<p>WSDL 1.1 のいくつかの例では，
+XML Schema 定義の取り込むために用いる WSDL の <code>import</code> 文が間違っている。
+
+このプロファイルでは
+import メカニズムの使用を明確化し，それぞれに整合性をもたせ，守備範囲を限定している。
+
+取り込まれたスキーマ文書は，
+取り込む側の WSDL 文書に対する XML の版数とエンコーディングとに対する要件に整合するよう，
+制限されている。
+
+</p>
+
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2001">R2001</a></span> DESCRIPTION は，他の WSDL 記述を取り込むために WSDL の <code>import</code> 記述だけを使用しなければならない
+(MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2002">R2002</a></span>
+XML Schema のスキーマ定義を取り込むために，
+DESCRIPTION は XML Schema の <code>import</code> 記述を使用しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2003">R2003</a></span> DESCRIPTION は，
+XML Schema の <code>import</code> 記述を <code>types</code>
+要素の中の <code>xsd:schema</code> 要素の内部のみで使用しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2004">R2004</a></span> DESCRIPTION は，
+ルート要素が "http://www.w3.org/2001/XMLSchema" の名前空間にある <code>schema</code> 要素ではない任意の文書から
+スキーマ定義を取り込むために
+XML Schema の <code>import</code> 記述を使用してはならない (MUST NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2009">R2009</a></span>
+DESCRIPTION から直接的又は間接的に取り込まれる XML Schema は，
+Unicode の Byte Order Mark (BOM) を含んでもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2010">R2010</a></span>
+DESCRIPTION から直接的又は間接的に取り込まれる XML Schema は，
+UTF-8 又は UTF-16 のエンコーディングを使用しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2011">R2011</a></span>
+DESCRIPTION から直接的又は間接的に取り込まれる XML Schema は，
+Extensible Markup Language (XML) の 1.0 版 W3C 勧告を使用しなければならない (MUST)。</p>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<pre>&lt;definitions name="StockQuote"
+   targetNamespace="http://example.com/stockquote/definitions"
+   xmlns:xsd1="http://example.com/stockquote/schemas""
+           	 ...
+   xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;
+
+   &lt;import namespace="http://example.com/stockquote/schemas"
+         location="http://example.com/stockquote/stockquote.xsd"/&gt;
+
+   &lt;message name="GetLastTradePriceInput"&gt;
+        &lt;part name="body" element="xsd1:TradePriceRequest"/&gt;
+    &lt;/message&gt;
+               ...
+&lt;/definitions&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;definitions name="StockQuote"
+      targetNamespace="http://example.com/stockquote/definitions"&gt;
+      &lt;import namespace="http://example.com/stockquote/definitions"
+           location="http://example.com/stockquote/stockquote.wsdl"/&gt;
+      &lt;message name="GetLastTradePriceInput"&gt;
+         &lt;part name="body" element="..."/&gt;
+      &lt;/message&gt;
+                  ...
+   &lt;/definitions&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;definitions name="StockQuote"
+   targetNamespace="http://example.com/stockquote/"
+   xmlns:xsd1="http://example.com/stockquote/schemas"
+           	 ...
+   xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;
+
+   &lt;import namespace="http://example.com/stockquote/definitions"
+        location="http://example.com/stockquote/stockquote.wsdl"/&gt;
+
+   &lt;message name="GetLastTradePriceInput"&gt;
+      &lt;part name="body" element="xsd1:TradePriceRequest"/&gt;
+   &lt;/message&gt;
+               ...
+&lt;/definitions&gt;</pre>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35689424">5.1.3 WSDL Import location Attribute Syntax (WSDL import の location 属性の構文)</h4>
+<div class="rationale">
+<p>WSDL 1.1 は，<code>wsdl:import</code> 要素に <code>location</code> 属性が必須かどうか，
+あるいは，その内容がどうあるべきかについて，明確ではない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2007">R2007</a></span> DESCRIPTION は <code>wsdl:import</code> 要素の <code>location</code>
+属性に空ではない値を指定しなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>
+<code>wsdl:import</code> は <code>xsd:import</code> に倣ったものであるが，
+<code>wsdl:import</code> には <code>location</code> 属性が必須であるのに対して，
+<code>xsd:import</code> の対応する属性である <code>schemaLocation</code> は省略可能である。
+<code>location</code> が必須であることと整合性を取るために，その内容は空であってはならない。
+</p>
+</div>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement33921032">5.1.4 WSDL Import location Attribute Semantics (WSDL import の location 属性のセマンティクス)</h4>
+<div class="rationale">
+<p>WSDL 1.1 は，WSDL 処理系が <code>wsdl:import</code> を見つけた場合，その要素の <code>location</code> 属性に指定された URI から実際に WSDL 文書を取り出して処理しなければならないのかどうか，明確ではない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2008">R2008</a></span> DESCRIPTION の中では，
+<code>wsdl:import</code> 要素の <code>location</code> 属性の値はヒントとして扱うことが望ましい
+(SHOULD)。<span class="statement-type">C</span></p>
+
+<div class="explanation">
+<p>これは，WSDL 処理系が WSDL 記述を <code>wsdl:import</code> 要素の <code>location</code> 属性に指定された URI から取り出してもよいが，必ずしもそうする必要はないことを意味する。
+というのも，WSDL 処理系は与えられた名前空間の WSDL 記述の位置を特定する，別の手段をもっていてもよいからである。
+たとえば，WSDL 処理系は WSDL 記述を
+キャッシュ又は組み込みでもっていてもよいし，
+メタデータリポジトリー又は UDDI サーバーから取り出してもよい。</p>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35096984">5.1.5 Placement of WSDL import Elements (WSDL import 要素の位置)</h4>
+<div class="rationale">
+<p>WSDL 1.1 の 3.1 節の例 3 は，<code>wsdl:import</code> の位置についての混乱を引き起こす。</p>
+</div>
+
+
+<p class="statement"><span class="statement-id"><a name="R2022">R2022</a></span>
+DESCRIPTION の中に <code>wsdl:import</code> 要素が現れる場合，それは，
+<code>wsdl:documentation</code> を除く，
+WSDL 名前空間の他のすべての要素よりも前になければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2023">R2023</a></span>
+DESCRIPTION の中に <code>wsdl:types</code> 要素が現れる場合，それは，
+<code>wsdl:documentation</code> 及び <code>wsdl:import</code> を除く，
+WSDL 名前空間の他のすべての要素よりも前になければならない (MUST)。</p>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<pre>&lt;definitions name="StockQuote"
+           	 ...
+   xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;
+
+   &lt;import namespace="http://example.com/stockquote/definitions"
+         location="http://example.com/stockquote/stockquote.wsdl"/&gt;
+
+   &lt;message name="GetLastTradePriceInput"&gt;
+       &lt;part name="body" type="tns:TradePriceRequest"/&gt;
+   &lt;/message&gt;
+               ...
+   &lt;service name="StockQuoteService"&gt;
+      &lt;port name="StockQuotePort" binding="tns:StockQuoteSoap"&gt;
+           ....
+      &lt;/port&gt;
+   &lt;/service&gt;
+
+   &lt;types&gt;
+      &lt;schema targetNamespace="http://example.com/stockquote/schemas"
+               xmlns="http://www.w3.org/2001/XMLSchema"&gt;
+           .......
+      &lt;/schema&gt;
+   &lt;/types&gt;
+&lt;/definitions&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>   &lt;definitions name="StockQuote"
+      targetNamespace="http://example.com/stockquote/definitions"&gt;
+
+     &lt;import namespace="http://example.com/stockquote/base"
+       location="http://example.com/stockquote/stockquote.wsdl"/&gt;
+
+      &lt;message name="GetLastTradePriceInput"&gt;
+         &lt;part name="body" element="..."/&gt;
+      &lt;/message&gt;
+                  ...
+   &lt;/definitions&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;definitions name="StockQuote"
+           	 ...
+   xmlns="http://schemas.xmlsoap.org/wsdl/"&gt;
+
+  &lt;types&gt;
+     &lt;schema targetNamespace="http://example.com/stockquote/schemas"
+          xmlns="http://www.w3.org/2001/XMLSchema"&gt;
+           .......
+     &lt;/schema&gt;
+   &lt;/types&gt;
+
+   &lt;message name="GetLastTradePriceInput"&gt;
+        &lt;part name="body" element="tns:TradePriceRequest"/&gt;
+   &lt;/message&gt;
+               ...
+   &lt;service name="StockQuoteService"&gt;
+      &lt;port name="StockQuotePort" binding="tns:StockQuoteSoap"&gt;
+           ....
+      &lt;/port&gt;
+   &lt;/service&gt;
+&lt;/definitions&gt;</pre>
+</div>
+</div>
+
+<div class="refinement">
+<h4 id="refinement28069264">5.1.6 XML Version Requirements (XML 版数の要件)</h4>
+<div class="rationale">
+<p>WSDL 1.1 又は XML Schema 1.0 のどちらも，XML の特定の版数を要求してはいない。
+相互運用性のため，
+WSDL 文書及びそれらが取り込むスキーマは XML の 1.0 版を使わなければならない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R4004">R4004</a></span>
+DESCRIPTION は，
+Extensible Markup Language (XML) の 1.0 版 W3C 勧告を使用しなければならない (MUST)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement28070144">5.1.7 WSDL and the Unicode BOM (WSDL と Unicode の BOM)</h4>
+<div class="rationale">
+<p>XML 1.0 では，UTF-8 文字エンコーディングにおいても BOM を含めてもよいことになっており，WSDL
+処理系はそれを受け入れる用意がなければならない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R4002">R4002</a></span> DESCRIPTION には Unicode の Byte Order Mark (BOM) を含めてもよい (MAY)。<span class="statement-type">C</span></p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement28071112">5.1.8 Acceptable WSDL Character Encodings (許容可能な WSDL 文字エンコーディング)</h4>
+<div class="rationale">
+<p>このプロファイルでは SOAP と WSDL との両方に一貫して UTF-8 又は UTF-16 のいずれかを要求している
+(R1012 参照)。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R4003">R4003</a></span> DESCRIPTION は UTF-8 又は UTF-16 の
+いずれかの文字エンコーディングを使わなければならない (MUST)。</p>
+</div>
+
+
+
+<div class="refinement">
+<h4 id="refinement27985936">5.1.9 Namespace Coercion (名前空間の強制変更)</h4>
+<div class="rationale">
+<p><code>wsdl:import</code> における名前空間の強制変更 (namespace coercion) は，
+このプロファイルでは許されない。</p>
+</div>
+<p class="statement"><span class="statement-id"><a name="R2005">R2005</a></span>
+取り込まれる (imported) 側の記述 (description) の <code>wsdl:definitions</code> 要素の <code>targetNamespace</code> 属性の値は，
+取り込む (importing) 側の DESCRIPTION の <code>wsdl:import</code> 要素の <code>namespace</code> 属性の値と一致しなければならない (MUST)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35235128">5.1.10 WSDL documentation Element (WSDL の documentation 要素)</h4>
+<div class="rationale">
+<p>WSDL 1.1 仕様のスキーマと本文とは，<code>wsdl:documentation</code> 要素をどこに置くべきかについて整合性がとれていない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2020">R2020</a></span> <code>wsdl:documentation</code> 要素は，DESCRIPTION の <code>wsdl:import</code>
+要素の子要素として現れてもよい (MAY)。<span class="statement-origin">WSDL12</span></p>
+
+<p class="statement"><span class="statement-id"><a name="R2021">R2021</a></span> <code>wsdl:documentation</code> 要素は，DESCRIPTION の <code>wsdl:part</code>
+要素の子要素として現れてもよい (MAY)。<span class="statement-origin">WSDL12</span></p>
+
+<p class="statement"><span class="statement-id"><a name="R2024">R2024</a></span> <code>wsdl:documentation</code> 要素は，
+DESCRIPTION の <code>wsdl:definitions</code> 要素の最初の子要素として現れてもよい (MAY)。<span class="statement-origin">WSDL12</span></p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35664624">5.1.11 WSDL Extensions (WSDL 拡張)</h4>
+<div class="rationale">
+<p>この，又は他の WS-I プロファイルで明示的に規定されていない WSDL 拡張のサポートを要求することは，
+それらの拡張を理解するように作られていない開発ツールとの間の，相互運用性の問題に発展する。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2025">R2025</a></span>
+WSDL 拡張を含む DESCRIPTION は，
+このプロファイルの他の要件と矛盾する拡張を使用してはならない (MUST NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2026">R2026</a></span>
+DESCRIPTION は，
+このプロファイルへの適合性を表示するいかなる要素
+(<code>wsdl:binding</code>, <code>wsdl:portType</code>, <code>wsdl:message</code>, <code>wsdl:types</code> 又は <code>wsdl:import</code>) にも
+<code>wsdl:required</code> 属性の値が "true" である拡張要素を含むべきではない (SHOULD NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2027">R2027</a></span>
+記述 (description) の中の WSDL 名前空間の要素の処理の最中に，
+利用者 (consumer) がその子要素の中に WSDL 拡張要素を発見し，
+それが <code>wsdl:required</code> 属性に "true" の値を指定されており，
+かつそれが理解できない又は処理できない場合，
+CONSUMER は，その WSDL 名前空間内の要素の処理を失敗 (fail) しなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>WSDL 記述を読み込んで Web サービスのソフトウェアのインスタンスを生成する開発ツールは，
+未知の WSDL 拡張に対する解釈を組み込まれていないかもしれない。
+よって，必須の (required) WSDL 拡張は避けるべきである。
+利用方法及び意味について仕様が公開されていない必須の WSDL 拡張を使用することは，
+その拡張の作者を除く全員に対して，潜在的に克服不可能な相互運用上の問題を課してしまう。
+利用方法及び意味について仕様が公開されている必須の WSDL 拡張を使用することは，
+ここでの要件を規定するに至った相互運用上の問題を軽減するが，
+解消するものではない。</p>
+
+<p>次に示す要素は，属性による拡張だけが有効である:</p>
+<ul>
+ <li><code>wsdl:import</code></li>
+ <li><code>wsdl:part</code></li>
+ <li><code>wsdl:portType</code></li>
+ <li><code>wsdl:input</code> (portType の operation について)</li>
+ <li><code>wsdl:output</code> (portType の operation について)</li>
+ <li><code>wsdl:fault</code> (portType の operation について)</li>
+</ul>
+
+<p>次に示す要素は，属性のほかに，要素による拡張も有効である:</p>
+<ul>
+ <li><code>wsdl:definitions</code></li>
+ <li><code>wsdl:types</code></li>
+ <li><code>wsdl:message</code></li>
+ <li><code>wsdl:operation</code></li>
+ <li><code>wsdl:binding</code></li>
+ <li><code>wsdl:input</code> (binding の operation について)</li>
+ <li><code>wsdl:output</code> (binding の operation について)</li>
+ <li><code>wsdl:fault</code> (binding の operation について)</li>
+ <li><code>wsdl:service</code></li>
+ <li><code>wsdl:port</code></li>
+</ul>
+
+</div>
+</div>
+
+
+<h3><a name="WSDLTYPES">5.2 Types (型)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/wsdl#_types">WSDL 1.1, Section 2.2</a></li>
+</ul>
+<p>WSDL 1.1 の <code>wsdl:types</code> 要素は，記述される Web サービスに適用されるデータ型定義を記述する。
+このプロファイルでは，このプロファイルに対する適合性を表示する WSDL の要素に参照される <code>wsdl:types</code>
+要素の内容の，該当する部分に対して次の制約を課す:</p>
+
+
+<div class="refinement">
+<h4 id="refinement35377360">5.2.1 QName References (QName 参照)</h4>
+<div class="rationale">
+
+<p>XML Schema は，
+各 QName 参照が，
+対象名前空間 (target namespace) 又は取り込まれた名前空間 (imported namespace)
+[<code>xsd:import</code> 要素で明示的に指定されたもの] のいずれかを使うことを要求している。
+入れ子の取り込み (nested imports) のみによって表現された名前空間への QName 参照は許されていない。</p>
+
+<p>WSDL 1.1 は，WSDL 要素からの QName 参照にどのスキーマ対象名前空間が適しているかについて，明らかではない。
+
+このプロファイルでは，
+<code>xsd:schema</code> 要素で定義された対象名前空間と，
+取り込まれた名前空間との両方に対して，
+WSDL 要素からの QName 参照を許している。
+
+XML Schema と同様に，
+(<code>xsd:schema</code> の <code>targetNamespace</code> 属性を通して，
+又は，
+<code>xsd:import</code> の <code>namespace</code> 属性を通して)
+WSDL ファイルから直接に参照されていない名前空間も，QName 参照して使うことができる。
+
+入れ子の取り込みを通してのみ定義された名前空間を QName 参照することは，許されていない。</p>
+
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2101">R2101</a></span> DESCRIPTION は，
+取り込まれて (imported) もいなければ，参照する側の (referring) WSDL 文書に定義されてもいない
+名前空間に属する要素を QName で参照してはならない (MUST NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2102">R2102</a></span>
+DESCRIPTION の中でのスキーマの構成要素に対する QName 参照は，
+<code>xsd:schema</code> 要素の <code>targetNamespace</code> 属性に定義された名前空間か，
+<code>xsd:schema</code> 要素の中にある <code>xsd:import</code> 要素の <code>namespace</code> 属性で定義された名前空間かの，
+いずれかを使わなければならない (MUST)。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement28035272">5.2.2 Schema targetNamespace Syntax (スキーマの targetNamespace 構文)</h4>
+<div class="rationale">
+<p><code>wsdl:types</code> 要素の子供であるすべての <code>xsd:schema</code> 要素に <code>targetNamespace</code> を要求することはよい方法であり，
+WSDL 文書の作成者に対する負担も最小限で済み，明確に定義されていない状況に落ちることを避けられる。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2105">R2105</a></span> DESCRIPTION の <code>wsdl:types</code> 要素に含まれるすべての <code>xsd:schema</code> 要素は，
+<code>targetNamespace</code> 属性に有効な null でない値をもたなければならない (MUST)。
+ただし，<code>xsd:schema</code> 要素が，<code>xsd:import</code>, <code>xsd:annotation</code> 又はその両方だけを子要素としてもつ場合を除く。</p>
+
+</div>
+
+<div class="refinement">
+<h4 id="refinement34108752">5.2.3 soapenc:Array (配列)</h4>
+<div class="rationale">
+<p>WSDL 1.1 の 2.2 節にある，配列 (array) 型を宣言することについての推奨は，
+多様な解釈をされてきたため，相互運用性の問題となっている。
+さらに，配列を宣言するにはもっと明確な方法がある。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2110">R2110</a></span> DESCRIPTION の中では 配列 (array) 宣言は <code>soapenc:Array</code> 型を拡張又は制限してはならない (MUST NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2111">R2111</a></span> DESCRIPTION の中では 配列 (array) 宣言は型宣言に <code>wsdl:arrayType</code> 属性を使用してはならない (MUST NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2112">R2112</a></span> DESCRIPTION の中では 配列 (array) 宣言のラッパー要素の名前は <code>ArrayOfXXX</code> の形式で名前付けすべきではない (SHOULD NOT)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2113">R2113</a></span> シリアライズされた配列をもつ MESSAGE は <code>soapenc:arrayType</code> 属性を含んではならない (MUST NOT)。</p>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<p>次の WSDL 記述が与えられた場合:</p>
+<pre>&lt;xsd:element name="MyArray2" type="tns:MyArray2Type"/&gt;
+&lt;xsd:complexType name="MyArray2Type"
+ xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" &gt;
+  &lt;xsd:complexContent&gt;
+     &lt;xsd:restriction base="soapenc:Array"&gt;
+       &lt;xsd:sequence&gt;
+          &lt;xsd:element name="x" type="xsd:string"
+           minOccurs="0" maxOccurs="unbounded"/&gt;
+       &lt;/xsd:sequence&gt;
+       &lt;xsd:attribute ref="soapenc:arrayType"
+        wsdl:arrayType="tns:MyArray2Type[]"/&gt;
+   &lt;/xsd:restriction&gt;
+ &lt;/xsd:complexContent&gt;
+&lt;/xsd:complexType&gt;</pre>
+<p>SOAP メッセージは次のようにシリアライズされる (名前空間宣言は明確化のため省略):
+</p>
+<pre>&lt;MyArray2 soapenc:arrayType="tns:MyArray2Type[]" &gt;
+  &lt;x&gt;abcd&lt;/x&gt;
+  &lt;x&gt;efgh&lt;/x&gt;
+&lt;/MyArray2&gt;
+</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<p>次の WSDL 記述が与えられた場合:</p>
+<pre>
+&lt;xsd:element name="MyArray1" type="tns:MyArray1Type"/&gt;
+&lt;xsd:complexType name="MyArray1Type"&gt;
+  &lt;xsd:sequence&gt;
+   &lt;xsd:element name="x" type="xsd:string"
+    minOccurs="0" maxOccurs="unbounded"/&gt;
+  &lt;/xsd:sequence&gt;
+&lt;/xsd:complexType&gt;</pre>
+<p>SOAP メッセージは次のようにシリアライズされる (名前空間宣言は明確化のため省略):
+</p>
+<pre>&lt;MyArray1&gt;
+  &lt;x&gt;abcd&lt;/x&gt;
+  &lt;x&gt;efgh&lt;/x&gt;
+&lt;/MyArray1&gt;</pre>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement34094824">5.2.4 WSDL and Schema Definition Target Namespaces (WSDL とスキーマ定義の対象名前空間)</h4>
+<div class="rationale">
+<p>スキーマで定義された名前と，
+WSDL 定義で割り当てられた名前とは，
+別々のシンボル空間に属している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2114">R2114</a></span>
+DESCRIPTION の中で，
+WSDL 定義の対象名前空間 (target namespace) と，
+スキーマ定義の対象名前空間 (target namespace) とは，同じであってもよい (MAY)。
+<span class="statement-origin">WSDL12</span></p>
+</div>
+
+<h3><a name="WSDLMSGS">5.3 Messages (メッセージ)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/wsdl#_messages">WSDL 1.1, Section 2.3</a></li>
+</ul>
+
+<p>WSDL 1.1 では <code>wsdl:message</code> 要素が伝送されるデータの抽象的な定義を表現する。
+<code>wsdl:binding</code> 要素が抽象的な定義を特定の伝送路上の形式 (wire format) に結びつける。
+このプロファイルでは <code>wsdl:message</code> 要素の使用と，適合する <code>wsdl:binding</code> 要素が <code>wsdl:message</code> 要素を使用する方法とに関して次の制約を課す:</p>
+
+
+<p>この節では，要件を簡略化し分かりやすくするため，次の定義が使われる。</p>
+
+<p>「rpc-literal バインディング」とは，
+その子要素の <code>wsdl:operation</code> がすべて rpc-literal オペレーションである
+<code>wsdl:binding</code> 要素のことである。</p>
+
+<p>「rpc-literal オペレーション」とは，
+<code>wsdl:binding</code> の子要素である <code>wsdl:operation</code> で，
+その子孫である <code>soapbind:body</code> 要素のそれぞれが <code>use</code> 属性に "literal" の値を指定しており，
+そのそれぞれが次のいずれかであるもののことである:</p>
+
+<ol type="">
+ <li><code>style</code> 属性に "rpc" の値を指定している，又は，</li>
+ <li><code>style</code> 属性に "rpc" の値を指定している <code>soapbind:binding</code> の子要素であり，
+ かつ，それ自体には <code>style</code> 属性を指定していない。</li>
+</ol>
+
+<p>「document-literal バインディング」とは，
+その子要素の <code>wsdl:operation</code> がすべて document-literal オペレーションである
+<code>wsdl:binding</code> 要素のことである。</p>
+
+<p>「document-literal オペレーション」とは，
+<code>wsdl:binding</code> の子要素である <code>wsdl:operation</code> で，
+その子孫である <code>soapbind:body</code> 要素のそれぞれが <code>use</code> 属性に "literal" の値を指定しており，
+そのそれぞれが次のいずれかであるもののことである:</p>
+
+<ol type="">
+ <li><code>style</code> 属性に "document" の値を指定している，</li>
+ <li><code>style</code> 属性に "document" の値を指定している <code>soapbind:binding</code> の子要素であり，
+ かつ，それ自体には <code>style</code> 属性を指定していない，又は，</li>
+ <li><code>style</code> 属性を指定していない <code>soapbind:binding</code> の子要素であり，
+ かつ，それ自体には <code>style</code> 属性を指定していない。</li>
+</ol>
+
+
+<div class="refinement">
+<h4 id="refinement35722968">5.3.1 Bindings and Parts (バインディングと part)</h4>
+<div class="rationale">
+<p>何個の <code>wsdl:part</code> 要素が document-literal 及び rpc-literal バインディングに許容又は要求されているか，そして，それらはどのように定義されるべきかについて，多様な解釈が存在する。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2201">R2201</a></span>
+DESCRIPTION の中の document-literal バインディングは，それぞれの <code>soapbind:body</code> 要素に <code>parts</code> 属性が指定された場合，その値として，
+多くとも 1 個の <code>part</code> をもたなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2210">R2210</a></span>
+DESCRIPTION の中の document-literal バインディングが <code>soapbind:body</code> 要素に <code>parts</code> 属性を指定しない場合，
+対応する抽象的な <code>wsdl:message</code> は，0個又は1個の <code>wsdl:part</code> を定義しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2202">R2202</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，<code>soap:Body</code> を構成する0個の part を指定する <code>soapbind:body</code> 要素をもってもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2203">R2203</a></span>
+DESCRIPTION の中の rpc-literal バインディングは，その <code>soapbind:body</code> 要素の中で，
+<code>type</code> 属性を使って定義された <code>wsdl:part</code> だけを参照しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2211">R2211</a></span>
+rpc-literal バインディングで記述された MESSAGE は，
+part のアクセサー要素に対して
+<code>xsi:nil</code> 属性に "1" 又は "true" の値を指定したものをもってはならない (MUST NOT)。</p>
+
+
+<p class="statement"><span class="statement-id"><a name="R2207">R2207</a></span>
+DESCRIPTION の中の <code>wsdl:message</code> は，
+rpc-literal バインディングで
+<code>wsdl:part</code> が <code>soapbind:body</code> に参照されていない限りにおいて，
+<code>element</code> 属性を使う <code>wsdl:part</code> をもってもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2204">R2204</a></span>
+DESCRIPTION の中の document-literal バインディングは，
+その <code>soapbind:body</code> 要素のそれぞれにおいて，
+<code>element</code> 属性を使って定義された <code>wsdl:part</code> 要素だけを参照しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2208">R2208</a></span>
+DESCRIPTION の中のバインディングは，
+その <code>soapbind:body</code> 要素によって参照されるのと
+同じ <code>wsdl:message</code> の中の <code>wsdl:part</code> を参照する
+<code>soapbind:header</code> 要素をもってもよい (MAY)。
+</p>
+
+<div class="explanation">
+<p>
+Document スタイルでの <code>part</code> が 0 個の <code>wsdl:message</code> 要素の使用は，
+空の <code>soap:Body</code> を含むメッセージを送受信するオペレーションを許容するために，
+許されている。
+
+RPC スタイルでの <code>part</code> が 0 個の <code>wsdl:message</code> 要素の使用は，
+引数，返却値，又はその両方が存在しないオペレーションを許容するために，
+許されている。</p>
+
+<p>document-literal バインディングでは，このプロファイルは，多くとも1つの <code>part</code> が，
+抽象レベルにおいて <code>element</code> 形式を用いて定義され，
+<code>soap:Body</code> にシリアライズされることを要求している。</p>
+
+<p><code>wsdl:part</code> 要素が <code>type</code> 属性を使って定義された場合，
+その part の伝送路上の形式は，
+(XML Schema で) 暗黙的に，
+<code>minOccurs</code> 属性の値を "1" に，
+<code>maxOccurs</code> 属性の値を "1" に，そして
+<code>nillable</code> 属性の値を "false" に，
+それぞれ指定したものと同等である。</p>
+
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement36996488">5.3.2 Bindings and Faults (バインディングとフォルト)</h4>
+<div class="rationale">
+<p><code>soapbind:fault</code>, <code>soapbind:header</code> 及び <code>soapbind:headerfault</code> を記述する <code>wsdl:part</code> 要素をどう定義すべきかについて，いくつかの解釈がある。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2205">R2205</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+その <code>soapbind:header</code>, <code>soapbind:headerfault</code> 及び <code>soapbind:fault</code> 要素のそれぞれにおいて，
+<code>element</code> 属性を使って定義された <code>wsdl:part</code> 要素だけを参照しなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>
+フォルトやヘッダーにはパラメーターが含まれないため，
+<code>soapbind:fault</code>, <code>soapbind:header</code> 及び <code>soapbind:headerfault</code> は，
+WSDL 1.1 に従い，
+<code>style</code> 属性の値が "document" であることを想定している。
+
+R2204 は，
+<code>style</code> 属性の値が "document" である <code>wsdl:part</code> 要素で <code>soapbind:body</code> にバインドされたものはすべて <code>element</code> 属性で定義されることを要求している。
+この要件は，<code>soapbind:fault</code>, <code>soapbind:header</code> 及び <code>soapbind:headerfault</code> においても同様である。
+</p>
+</div>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement34940624">5.3.3 Unbound portType Element Contents (バインディングされていない portType 要素の内容)</h4>
+<div class="rationale">
+<p>WSDL 1.1 は，
+<code>wsdl:binding</code> が <code>wsdl:portType</code> で定義される内容のバインディングを指定しないままでおいておくことが許されるのかどうか，明らかではない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2209">R2209</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+そのバインディングが参照する先の <code>wsdl:portType</code> に属する
+<code>wsdl:message</code> の各 <code>part</code> を，
+
+<code>soapbind:body</code>,
+<code>soapbind:header</code>,
+<code>soapbind:fault</code> 又は
+<code>soapbind:headerfault</code>
+のいずれか一つにバインドすることが望ましい (SHOULD)。
+</p>
+
+<div class="explanation">
+<p><code>portType</code> は名前付けされたオペレーション一式とそれに関連付けられた抽象的なメッセージとをもつ抽象的な契約 (abstract contract) を定義する。
+禁止されているわけではないが，
+<code>portType</code> に指定される抽象的な <code>input</code>, <code>output</code> 及び <code>fault</code> メッセージの各 <code>part</code> は，
+WSDL 1.1 の 3 節で定義されている SOAP バインディングを使う場合，
+<code>soapbind:body</code>, <code>soapbind:header</code> 等の適切な部分にバインドされることが想定されている。
+</p>
+</div>
+</div>
+
+<div class="refinement">
+<h4 id="refinement34006736">5.3.4 Declaration of part Elements (part 要素の宣言)</h4>
+<div class="rationale">
+<p>WSDL 1.1 の 3.1 節の例 4 及び 5 は，間違って <code>wsdl:part</code>
+要素の <code>element</code> 属性の有効な値としてスキーマのデータ型 ("xsd:string" など)
+を示している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2206">R2206</a></span>
+DESCRIPTION の中の
+<code>wsdl:message</code> が
+<code>element</code> 属性を使う <code>wsdl:part</code> をもつ場合，
+その属性の中で，グローバル要素宣言を参照しなければならない (MUST)。
+</p>
+
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<pre>  &lt;message name="GetTradePriceInput"&gt;
+      &lt;part name="tickerSymbol" element="xsd:string"/&gt;
+      &lt;part name="time" element="xsd:timeInstant"/&gt;
+  &lt;/message&gt;</pre>
+</div>
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<pre>  &lt;message name="GetTradePriceInput"&gt;
+      &lt;part name="tickerSymbol" element="xsd:string"/&gt;
+  &lt;/message&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>  &lt;message name="GetTradePriceInput"&gt;
+      &lt;part name="body" element="tns:SubscribeToQuotes"/&gt;
+  &lt;/message&gt;</pre>
+</div>
+</div>
+
+<h3><a name="WSDLPORTTYPES">5.4 Port Types (ポート型)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/wsdl#_porttypes">WSDL 1.1, Section 2.4</a></li>
+</ul>
+
+<p>WSDL 1.1 では <code>wsdl:portType</code> 要素が抽象的なオペレーションの集合をグループ化するために使われる。このプロファイルでは
+<code>wsdl:portType</code> 要素の使用に関して次の制約を課す:</p>
+
+
+<div class="refinement">
+<h4 id="refinement36586960">5.4.1 Ordering of part Elements (part の並び順)</h4>
+<div class="rationale">
+<p><code>parameterOrder</code> 属性を許すことは，
+コードジェネレーターがメソッドシグネチャと伝送路上のメッセージのインスタンスとを対応づける助けになる。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2301">R2301</a></span>
+MESSAGE の <code>soap:Body</code> の中での要素の並び順は，
+それを記述した <code>wsdl:message</code> の中の <code>wsdl:part</code> の並び順と同じでなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2302">R2302</a></span> DESCRIPTION は <code>wsdl:operation</code> 要素の <code>parameterOrder</code>
+属性を，コードジェネレーターに対するヒントとして，返却値及びメソッドシグネチャを示すために使用してもよい (MAY)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement36590040">5.4.2 Allowed operations (許容されるオペレーション)</h4>
+<div class="rationale">
+<p>Solicit-Response 及び Notification は WSDL 1.1 では十分に規定されておらず，
+さらに，WSDL 1.1 はそれらに対するバインディングも定義していない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2303">R2303</a></span> DESCRIPTION は
+<code>wsdl:portType</code> の定義に
+Solicit-Response 及び Notification 型のオペレーションを使用してはならない
+(MUST NOT)。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35612152">5.4.3 Distinctive operations (区別できるオペレーション)</h4>
+<div class="rationale">
+<p>一つの <code>wsdl:portType</code> の中でのオペレーション名のオーバーロードは，
+このプロファイルでは禁止している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2304">R2304</a></span>
+DESCRIPTION の中の一つの <code>wsdl:portType</code> の定義を取り出したとき，
+その中に定義される <code>operation</code> の
+<code>name</code> 属性は，それぞれ別の値をもたなければならない (MUST)。</p>
+
+<div class="explanation">
+この要件は，一つの <code>wsdl:portType</code> の中の <code>wsdl:operation</code> に対してのみ適用されることに注意。
+
+<code>wsdl:portType</code> は他の <code>wsdl:portType</code> に属する <code>wsdl:operation</code> と同じオペレーション名を使ってもよい。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35427752">5.4.4 parameterOrder Attribute Construction (parameterOrder 属性の構築)</h4>
+<div class="rationale">
+<p>WSDL 1.1 は，<code>wsdl:portType</code> の <code>parameterOrder</code> 属性がどう構築されるべきか，明らかではない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2305">R2305</a></span>
+DESCRIPTION の中の <code>wsdl:portType</code> に
+<code>parameterOrder</code> 属性が存在する場合，
+この <code>parameterOrder</code> は，
+<code>output</code> の <code>message</code> 要素に定義される
+<code>wsdl:part</code> 要素の中から，最大1つの <code>wsdl:part</code> を取り除いたものとして
+構築されなければならない (MUST)。
+</p>
+
+<div class="explanation">
+<p>
+<code>parameterOrder</code> 属性の値にある <code>wsdl:part</code> のリストから <code>output</code> の <code>message</code> に属する <code>wsdl:part</code> が1つ省略された場合，
+その省略された <code>wsdl:part</code> が返却値 (return value) である。
+返却値の型に制約はない。
+<code>wsdl:part</code> が省略されない場合，返却値はない。
+</p>
+</div>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35746416">5.4.5 Exclusivity of type and element Attributes (type 及び element 属性の排他性)</h4>
+<div class="rationale">
+<p>
+WSDL 1.1 は，
+<code>wsdl:message</code> の <code>wsdl:part</code> を定義するのに
+<code>type</code> 及び <code>element</code> 属性の両方を指定できないことを
+明記していない。
+</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2306">R2306</a></span>
+DESCRIPTION の中の <code>wsdl:message</code> は，
+同じ <code>wsdl:part</code> に対して <code>type</code> 及び <code>element</code> 属性の両方を指定してはならない (MUST NOT)。
+</p>
+</div>
+
+
+<h3><a name="WSDLBINDINGS">5.5 Bindings (バインディング)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/wsdl#_bindings">WSDL 1.1, Section 2.5</a></li>
+</ul>
+
+<p>WSDL 1.1 では <code>wsdl:binding</code> 要素が，特定の <code>wsdl:portType</code> で定義された
+<code>operation</code> 及び <code>message</code> に対する具体的なプロトコル及びデータ形式を提供している。
+このプロファイルでは適合する <code>binding</code> の使用に次の制約を課す:</p>
+
+
+<div class="refinement">
+<h4 id="refinement35473288">5.5.1 Use of SOAP Binding (SOAP バインディングの使用)</h4>
+<div class="rationale">
+<p>このプロファイルは，バインディングの選択肢を，十分に定義され，最も一般的に利用されている
+SOAP バインディングに限定している。
+MIME 及び HTTP GET/POST バインディングは，このプロファイルでは許されていない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2401">R2401</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> 要素は，
+WSDL 1.1 の第 3 節で定義された WSDL の SOAP
+バインディングを使用しなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>ここでは，適合する <code>wsdl:binding</code> 要素の構築についての要件を課していることに注意。
+これは，記述 (description) 全体に対する要件を課しているわけではない。
+特に，WSDL 文書が，適合しない <code>wsdl:binding</code> 要素をもつことを禁止しているわけではない。</p>
+</div>
+</div>
+
+
+<h3><a name="WSDLSOAPBINDING">5.6 SOAP Binding (SOAP バインディング)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/wsdl#_soap-b">WSDL 1.1, Section 3.0</a></li>
+</ul>
+
+<p>WSDL 1.1 は SOAP 1.1 のエンドポイントに対するバインディングを定義する。
+このプロファイルでは WSDL 1.1 で定義されている SOAP バインディングの使用を必須とし，
+その使用に関して次の制約を課す:</p>
+
+<div class="refinement">
+<h4 id="refinement35025608">5.6.1 Specifying the transport Attribute (transport 属性の指定)</h4>
+<div class="rationale">
+<p><code>transport</code> 属性について，WSDL 1.1 仕様の本文とスキーマとの間の矛盾がある。
+WSDL 1.1 仕様ではそれを必須とし，スキーマはそれを省略可能としている。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2701">R2701</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> 要素は，
+その <code>soapbind:binding</code> 子要素が <code>transport</code> 属性を指定するよう構築されなければならない (MUST)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35027632">5.6.2 HTTP Transport (HTTP トランスポート)</h4>
+<div class="rationale">
+<p>このプロファイルでは，トランスポートのプロトコルを HTTP に制限している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2702">R2702</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+SOAP の HTTP プロトコルバインディングを指定しなければならない (MUST)。
+具体的には，その <code>soapbind:binding</code> 子要素の <code>transport</code> 属性の値は，
+"http://schemas.xmlsoap.org/soap/http" でなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>この要件は HTTPS の使用を制限しているわけではないことに注意。R5000 参照。</p>
+</div>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement36172752">5.6.3 Consistency of style Attribute (style 属性の整合性)</h4>
+<div class="rationale">
+<p><code>style</code> が "document" か "rpc" かは <code>wsdl:operation</code> のレベルで指定されるので，
+個々の <code>wsdl:operation</code> に相異なる <code>style</code> をもつ <code>wsdl:binding</code> を許してしまう。これは，相互運用上の問題となる。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2705">R2705</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+rpc-literal バインディング又は document-literal バインディングのいずれかを使用しなければならない
+(MUST)。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement36175304">5.6.4 Encodings and the use Attribute (エンコーディングと use 属性)</h4>
+<div class="rationale">
+<p>このプロファイルでは相異なるエンコーディングを (SOAP エンコーディングを含め) 禁止している。
+</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2706">R2706</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+すべての <code>soapbind:body</code>, <code>soapbind:fault</code>, <code>soapbind:header</code> 及び <code>soapbind:headerfault</code> 要素に対して，
+<code>use</code> 属性の値を "literal" としなければならない (MUST)。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35158400">5.6.5 Default for use Attribute (use 属性のデフォルト)</h4>
+<div class="rationale">
+<p>WSDL 1.1 仕様に，
+
+<code>soapbind:body</code>, <code>soapbind:header</code> 及び <code>soapbind:headerfault</code>
+要素において，
+<code>use</code> 属性は省略可能かどうか，そして省略可能な場合，省略したときの意味はどうなるか
+
+という点について，本文とスキーマとの間に不整合がある。
+</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2707">R2707</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> が
+<code>soapbind:body</code>, <code>soapbind:fault</code>, <code>soapbind:header</code> 又は <code>soapbind:headerfault</code> 要素に
+<code>use</code> 属性を指定しなかった場合，
+<code>use</code> 属性は "literal" の値をもつものとみなさなければならない (MUST)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35350200">5.6.6 Multiple bindings for portType Elements (portType 要素への複数のバインディング)</h4>
+<div class="rationale">
+<p>このプロファイルでは同じ <code>portType</code> に対する複数のバインディングを明示的に許容する。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2709">R2709</a></span>
+DESCRIPTION の中の <code>wsdl:portType</code> は，
+同一又は別の WSDL 文書の中に，
+それを参照する <code>wsdl:binding</code> を0個以上もってよい (MAY)。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35727680">5.6.7 Wire Signatures for operations (オペレーションの伝送路シグネチャ)</h4>
+<div class="rationale">
+<p>
+複数のオペレーションをサポートするエンドポイントは，
+受信する入力メッセージを元に，
+どのオペレーションが起動されたかを曖昧性なしに識別する必要がある。
+これは，
+一つのエンドポイントに対して <code>wsdl:binding</code> に指定されたすべてのオペレーションが，
+一意の伝送路シグネチャ (wire signature) をもつ場合にのみ可能である。
+</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2710">R2710</a></span>
+DESCRIPTION の中の1つの <code>wsdl:binding</code> に属する <code>operation</code> は，
+それぞれ相異なる伝送路シグネチャをもたなければならない (MUST)。</p>
+
+<div class="explanation">
+
+<p>このプロファイルでは，<code>wsdl:binding</code> の中にある <code>operation</code>
+の伝送路シグネチャ (wire signature) を，
+それが記述する SOAP 入力 (input) メッセージの <code>soap:Body</code> の子要素の完全修飾名
+(fully qualified name) であると定義している。
+
+<code>soap:Body</code> の内容が空の場合，伝送路シグネチャは空文字列である。</p>
+
+<p>rpc-literal バインディングの場合，operation の名前は part のアクセサーに対するラッパーとして使用される。
+document-literal バインディングの場合は operation の名前をもつラッパーが存在しないので，
+メッセージのシグネチャがこの要件を満足するよう，正しく設計されなければならない。
+</p>
+</div>
+
+</div>
+
+<div class="refinement">
+<h4 id="refinement35730408">5.6.8 Multiple ports on an Endpoint (一つのエンドポイントに対する複数の port)</h4>
+<div class="rationale">
+
+<p>1つのネットワーク上のエンドポイントにある，2つの異なる <code>wsdl:port</code> に宛てられた input のメッセージが伝送路上で区別できない場合，
+それによって起動される <code>wsdl:port</code> を決定できなくなる可能性がある。
+これは相互運用上の問題になるかもしれない。
+しかし，(たとえば，SOAP のバージョンの違い，アプリケーションのバージョンの違い，異なるプロファイルへの適合など) 1つ以上の port を1つのエンドポイントに置いた方がいい場合もありうる。
+ゆえに，このプロファイルではそれを許している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2711">R2711</a></span> DESCRIPTION は，<code>soapbind:address</code> 要素の <code>location</code>
+属性の値が同じ <code>wsdl:port</code> を複数もつべきではない (SHOULD NOT)。</p>
+
+</div>
+
+<div class="refinement">
+<h4 id="refinement35113376">5.6.9 Child Element for Document-Literal Bindings (document-literal バインディングの子要素)</h4>
+<div class="rationale">
+<p>WSDL 1.1 は，
+document-literal バインディングにおいて <code>soap:Body</code> の子要素が何であるかについて，
+完全に明確ではない。
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2712">R2712</a></span>
+document-literal バインディングは，
+伝送路上において，
+<code>soap:Body</code> の子要素が
+対応する <code>wsdl:message</code> の一つの
+<code>part</code> で参照されるグローバル要素宣言のインスタンスである
+MESSAGE として表現されなければならない (MUST)。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35115136">5.6.10 One-Way Operations (one-way オペレーション)</h4>
+<div class="rationale">
+<p>one-way のオペレーションを行う場合，どのように HTTP を使うべきかについていくつかの解釈がある。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2714">R2714</a></span> One-way オペレーションの場合，INSTANCE は SOAP エンベロープを含む HTTP レスポンスを返してはならない (MUST NOT)。
+具体的には，レスポンスの HTTP entity-body は空でなければならない (MUST)。</p>
+
+
+<p class="statement"><span class="statement-id"><a name="R2750">R2750</a></span>
+CONSUMER は，one-way オペレーションからのレスポンスとして返される SOAP レスポンスを無視しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2727">R2727</a></span> One-way オペレーションの場合，CONSUMER は
+HTTP の正常終了レスポンスの状態コード (すなわち，2xx) が，
+メッセージが正当であるとか，受信側がそれを処理することの印であると解釈してはならない
+(MUST NOT)。</p>
+
+<div class="explanation">
+<p>one-way オペレーションは SOAP レスポンスを生成しない。
+よって，このプロファイルは，one-way オペレーションのレスポンスとして SOAP エンベロープを送ることを禁止している。
+これは，one-way オペレーションの伝送が，処理レベルのレスポンス又はエラーになってはならないことを意味する。
+たとえば，SOAP の Fault 要素を含む HTTP の "500 Internal Server Error" レスポンスは返されてはならない。</p>
+
+<p>one-way オペレーションにおける HTTP レスポンスは，メッセージの伝送の成功又は失敗を示す。
+
+HTTP プロトコルでサポートされているレスポンスコードの意味から，
+このプロファイルは，
+"200" 及び "202" が，
+one-way メッセージが受信されたことを示すものと送信者が期待すべきレスポンス状態コードであると規定している。
+
+伝送が成功したことは，SOAP 処理層及びアプリケーションロジックがメッセージを正しいと確認したとか，
+それを処理することが確定したとかを示すものではない。</p>
+
+<p>HTTP 1.1 がレスポンス状態コードの "200" と "202" とに違う意味を割り当てているのにもかかわらず，
+このプロファイルでは，リクエストの発信者がそれらを同じとみなさなければならない。
+このプロファイルが両方の状態コードを受け付けるのは，SOAP の実装によっては下位にある HTTP 層をほとんど制御できず，どちらの状態コードを送るか制御できないからである。
+</p>
+</div>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement34313448">5.6.11 Namespaces for soapbind Elements (soapbind 要素の名前空間)</h4>
+<div class="rationale">
+<p>どの名前空間が <code>soap:Envelope</code> の多様な子供の子要素と関連付けられているかについて混乱があり，
+相互運用を困難にしている。
+このプロファイルではそれらを規定している。
+</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2716">R2716</a></span>
+DESCRIPTION の中の document-literal バインディングは，
+それが含む
+<code>soapbind:body</code>, <code>soapbind:header</code>,
+<code>soapbind:headerfault</code> 及び <code>soapbind:fault</code> 要素に
+<code>namespace</code> 属性を指定してはならない (MUST NOT)。
+</p>
+
+<p class="statement"><span class="statement-id"><a name="R2717">R2717</a></span>
+DESCRIPTION の中の rpc-literal バインディングは，それが含む
+<code>soapbind:body</code> 要素に <code>namespace</code> 属性が指定されなければならず (MUST)，
+その値は絶対 URI でなければならない (MUST)。</p>
+
+
+<p class="statement"><span class="statement-id"><a name="R2726">R2726</a></span>
+DESCRIPTION の中の rpc-literal バインディングは，それが含む
+<code>soapbind:header</code>,
+<code>soapbind:headerfault</code> 及び <code>soapbind:fault</code>
+要素に <code>namespace</code> 属性を指定してはならない (MUST NOT)。</p>
+
+<div class="explanation">
+<p>
+document-literal の SOAP バインディングでは，
+<code>soap:Body</code> のシリアライズされた子要素は，
+その要素を定義したスキーマの <code>targetNamespace</code> から名前空間を得る。
+<code>soapbind:body</code> 要素の <code>namespace</code> 属性の指定はその要素の名前空間をオーバーライドするかもしれない。
+それはこのプロファイルでは許されていない。</p>
+
+<p>それとは反対に，
+rpc-literal の SOAP バインディングでは，
+<code>soap:Body</code> のシリアライズされた子要素はラッパー要素であり，
+その名前空間は <code>soapbind:body</code> 要素の <code>namespace</code> 属性の値であり，
+そのローカル名 (local name) はオペレーションの名前か，
+あるいはオペレーションの名前の最後に "Response" をつけたものである。
+
+<code>namespace</code> 属性は，<code>soap:Body</code> 要素の子要素を名前空間修飾することを保証するため，省略可能ではなく必須である。</p>
+</div>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35244016">5.6.12 Consistency of portType and  binding Elements (portType 及び binding 要素の整合性)</h4>
+<div class="rationale">
+<p>WSDL の記述 (description) は，<code>wsdl:portType</code> と <code>wsdl:binding</code> との両方のレベルで整合していなければならない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2718">R2718</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+<code>wsdl:operation</code> の集合が，それが参照する先の <code>wsdl:portType</code> と同一でなければならない (MUST)。<span class="statement-type">C</span></p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35090792">5.6.13 Describing headerfault Elements (headerfault 要素の記述)</h4>
+<div class="rationale">
+<p><code>soapbind:headerfault</code> について，WSDL の仕様本文とスキーマとの間の矛盾がある。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2719">R2719</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+
+既知のヘッダーフォルトが存在しない場合，
+<code>soapbind:headerfault</code> 要素を指定しなくてもよい (MAY)。</p>
+
+<div class="explanation">
+<p>WSDL 1.1 のスキーマは，オペレーションの <code>wsdl:input</code> 及び <code>wsdl:output</code> 要素に <code>soapbind:headerfault</code> を指定することを必須としているが，
+WSDL 1.1 の仕様本文では省略可能になっている。本文が正しい。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35093656">5.6.14 Enumeration of Faults (フォルトの列挙)</h4>
+<div class="rationale">
+<p>
+ Web サービスの記述は，サービスの定義時に知られているすべてのフォルトを含むべきである。
+また， Web サービスが定義されたときには認識されていなかった，新しいフォルトの生成も許容する必要がある。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2740">R2740</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，既知の各フォルトを記述する <code>soapbind:fault</code> を含むべきである (SHOULD)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2741">R2741</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，既知の各ヘッダーフォルトを記述する <code>soapbind:headerfault</code> を含むべきである (SHOULD)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2742">R2742</a></span>
+MESSAGE は SOAP フォルトに，
+対応する WSDL 記述の中の <code>wsdl:fault</code> 要素に記述されていない
+フォルトの detail エントリーを含んでもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2743">R2743</a></span>
+MESSAGE は SOAP ヘッダーブロックに，
+対応する WSDL 記述の中の <code>wsdl:headerfault</code> 要素に記述されていない
+ヘッダー処理関連のフォルトの詳細記述を含んでもよい (MAY)。</p>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement36162840">5.6.15 Type and Name of SOAP Binding Elements (SOAP バインディング要素の型と名前)</h4>
+<div class="rationale">
+<p>WSDL 1.1 のスキーマは WSDL 1.1 の仕様本文との間に，
+<code>soapbind:header</code> 及び <code>soapbind:headerfault</code> 要素の属性の名前と型とについて
+食い違いがある。
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2720">R2720</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+それが含むすべての
+<code>soapbind:header</code> 要素及び <code>soapbind:headerfault</code> 要素に対して，
+属性名 <code>part</code> をスキーマ型 "NMTOKEN" として使用しなければならない (MUST)。
+
+<p class="statement"><span class="statement-id"><a name="R2749">R2749</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+<code>soapbind:header</code> 及び <code>soapbind:headerfault</code> 要素に対して <code>parts</code> という名前の属性を指定してはならない (MUST)。</p>
+
+<div class="explanation">
+<p>WSDL のスキーマは属性名 "parts" でスキーマ型 "NMTOKENS" としている。
+<code>soapbind:header</code> 及び <code>soapbind:headerfault</code>
+要素は一つの <code>wsdl:part</code>を参照するので，スキーマが間違っている。</p>
+</div>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;binding name="StockQuoteSoap" type="tns:StockQuotePortType"&gt;
+  &lt;soapbind:binding style="document"
+                transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+    &lt;operation name="SubscribeToQuotes"&gt;
+      &lt;input message="tns:SubscribeToQuotes"&gt;
+        &lt;soapbind:body parts="body" use="literal"/&gt;
+        &lt;soapbind:header message="tns:SubscribeToQuotes"
+             		part="subscribeheader" use="literal"/&gt;
+     &lt;/input&gt;
+   &lt;/operation&gt;
+&lt;/binding&gt;</pre>
+</div>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35709200">5.6.16 name Attribute on Faults (fault の name 属性)</h4>
+<div class="rationale">
+<p>WSDL 1.1 の仕様本文とスキーマとの間に不整合がある。WSDL 1.1 のスキーマには <code>name</code> 属性はない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2721">R2721</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+それが含むすべての <code>soapbind:fault</code> 要素に対して
+<code>name</code> 属性を指定しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2754">R2754</a></span>
+DESCRIPTION の中で，
+<code>soapbind:fault</code> 要素の <code>name</code> 属性の値は，
+その親の <code>wsdl:fault</code> 要素の <code>name</code> 属性の値と一致しなければならない (MUST)。</p>
+
+</div>
+
+<div class="refinement">
+<h4 id="refinement35117072">5.6.17 Omission of the use Attribute (use 属性の省略)</h4>
+<div class="rationale">
+<p>WSDL 1.1 の仕様本文とスキーマとの間に，<code>use</code> 属性に関する不整合がある。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2722">R2722</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> は，
+それが含む <code>soapbind:fault</code> 要素に <code>use</code> 属性を指定してもよい (MAY)。
+<span class="statement-type">C</span></p>
+
+<p class="statement"><span class="statement-id"><a name="R2723">R2723</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> の中で，
+それが含む <code>soapbind:fault</code> 要素に<code>use</code> 属性が存在する場合，
+その値は "literal" でなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2728">R2728</a></span>
+DESCRIPTION の中の <code>wsdl:binding</code> が，
+それが含む <code>soapbind:fault</code> 要素に <code>use</code> 属性を定義しない場合，
+その値は "literal" と等しいと考えなければならない (MUST)。
+<span class="statement-type">C</span></p>
+
+<div class="explanation">
+<p>WSDL 1.1 の 3.6 節は
+<code>soapbind:fault</code> 要素に <code>use</code> 属性が必須としているが，
+スキーマでは <code>use</code> 属性が省略可能になっている。
+このプロファイルでは，<code>soapbind:body</code> と整合性を取るため，この属性を省略可能としている。</p>
+
+<p><code>use</code> 属性が省略可能なので，このプロファイルでは省略されたときのデフォルト値を決めている。
+</p>
+
+<p>最後に，
+プロファイル自身が整合していることを確かにするため，
+<code>use</code> 属性の許される値を "literal" だけにしている。</p>
+</div>
+</div>
+
+<div class="refinement">
+<h4 id="refinement36910288">5.6.18 Consistency of Messages with Descriptions (メッセージと記述との整合性)</h4>
+<div class="rationale">
+
+<p>次の要件は，
+インスタンスが WSDL 記述に合わないメッセージを受け取った場合，
+インスタンスがそれにも関わらずそのメッセージを処理する責任を負う場合を除いて，
+フォルトが生成されるべきであるということを規定している。</p>
+<p>SOAP 処理モデルに規定されている通り，
+(a) <code>Envelope</code> 要素の名前空間が正しくない場合，"VersionMismatch" フォルトが生成されなければならない
+(b) インスタンスが，<code>soap:mustUnderstand</code> 属性の値が "1" になっている SOAP ヘッダーを理解できない場合，"MustUnderstand" フォルトが生成されなければならない。
+それ以外で，メッセージが WSDL 記述と矛盾している場合，"Client" フォルトが生成されるべきである。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2724">R2724</a></span>
+INSTANCE が WSDL 記述と矛盾するメッセージを受け取った場合，
+"MustUnderstand" 又は "VersionMismatch" のフォルトが生成されるのでなければ，
+<code>faultcode</code> が "Client" の
+<code>soap:Fault</code> を生成することが望ましい (SHOULD)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2725">R2725</a></span>
+INSTANCE が WSDL 記述と矛盾するメッセージを受け取った場合，
+"VersionMismatch", "MustUnderstand" 及び "Client" の
+フォルトの条件を，この順に調べなければならない (MUST)。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement36912872">5.6.19 Response Wrappers (レスポンスのラッパー)</h4>
+<div class="rationale">
+<p>WSDL 1.1 の 3.5 節は，
+RPC レスポンスのラッパー要素が <code>wsdl:operation</code> の名前と同じでなければならないと解釈することも可能である。
+</p>
+</div>
+<p class="statement"><span class="statement-id"><a name="R2729">R2729</a></span>
+rpc-literal バインディングで記述されたレスポンスの MESSAGE は，
+ラッパー要素の名前を，
+対応する <code>wsdl:operation</code> の名前の後ろに "Response" という文字列を付けたものとしなければならない (MUST)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35268960">5.6.20 Namespace for Part Accessors (part アクセサーの名前空間)</h4>
+<div class="rationale">
+<p>rpc-literal の SOAP メッセージにおいて，WSDL 1.1 は，パラメーター及び返却値のアクセサー要素がどの名前空間に属するのか (もし何かの名前空間に属するとして) という点が不明確である。
+処理系によってこの解釈が異なり，相互運用の問題となる。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2735">R2735</a></span>
+rpc-literal バインディングに記述された MESSAGE は，
+引数及び返却値に使用される part のアクセサー要素が，
+いかなる名前空間にも属さないものとして取り扱わなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>いずれかの選択肢の一つに絞ることが，相互運用を達成するためには不可欠である。
+このプロファイルは，単純で，すべての場合をカバーし，論理的に矛盾しないことから，アクセサー要素がどの名前空間にも属させないことにした。</p>
+</div>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35270328">5.6.21 Namespaces for Children of Part Accessors (part アクセサーの子要素の名前空間)</h4>
+<div class="rationale">
+<p>rpc-literal の SOAP メッセージにおいて，
+WSDL 1.1 は，
+
+対応する抽象的な part が WSDL 記述の <code>targetNamespace</code> とは違う名前空間に属する型であると定義される場合に，
+
+part のアクセサー要素の子要素の正しい名前空間修飾は何なのか，
+明確ではない。</p>
+
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2737">R2737</a></span>
+rpc-literal バインディングに記述された MESSAGE は，
+パラメーター及び返却値に使用される part アクセサー要素の子要素を，
+それらの型が定義された <code>targetNamespace</code> に属するものとして名前空間修飾しなければならない (MUST)。</p>
+
+<div class="explanation">
+<p>WSDL 1.1 の 3.5 節は次のように規定している:</p>
+
+<blockquote>
+<p>パートの name、type、および namespace 属性の値は、すべてエンコードに対する入力ですが、namespace 属性は、抽象型によって明示的に定義されなかった内容に適用されるだけです。
+<br />
+<span class="translation-note">[訳注: <a href="http://www.microsoft.com/japan/developer/workshop/xml/general/wsdl.asp">http://www.microsoft.com/japan/developer/workshop/xml/general/wsdl.asp</a>
+で公開されている参考訳より引用。]</span>
+</p>
+</blockquote>
+
+<p>しかし，
+抽象型 (complexType) の要素及び属性の内容は，それらの定義された <code>targetNamespace</code> で修飾されると明示的に規定していない。
+WSDL 1.1 は XML Schema とかなりの部分で同様に機能することを意図して規定されている。
+よって，実装は XML Schema と同じルールに従わなければならない。
+<code>targetNamespace</code> "A" で定義された complexType が <code>targetNamespace</code> "B" のスキーマに取り込まれ，その中の要素宣言で参照された場合，
+その complexType の子要素の要素及び属性の内容は名前空間 "A" で修飾され，
+その要素自体は名前空間 "B" で修飾されるだろう。</p>
+</div>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="correct">正しい例: </p>
+<p>次の WSDL では，<code>wsdl:types</code> で "http://example.org/foo/" の名前空間のスキーマを定義しているが，
+その定義は <code>targetNamespace</code> 属性の値が "http://example.org/bar/" になっている <code>wsdl:definitions</code> に含まれる。
+(よって，ここではある名前空間で定義された型が，別の名前空間で定義された要素に含まれていることになる。):
+</p>
+<pre>&lt;definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:bar="http://example.org/bar/"
+targetNamespace="http://example.org/bar/"
+xmlns:foo="http://example.org/foo/"&gt;
+&lt;types&gt;
+   &lt;xsd:schema targetNamespace="http://example.org/foo/"
+       xmlns:tns="http://example.org/foo/"
+       xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+       elementFormDefault="qualified"
+       attributeFormDefault="unqualified"&gt;
+       &lt;xsd:complexType name="fooType"&gt;
+          &lt;xsd:sequence&gt;
+             &lt;xsd:element ref="tns:bar"/&gt;
+             &lt;xsd:element ref="tns:baf"/&gt;
+          &lt;/xsd:sequence&gt;
+       &lt;/xsd:complexType&gt;
+       &lt;xsd:element name="bar" type="xsd:string"/&gt;
+       &lt;xsd:element name="baf" type="xsd:integer"/&gt;
+   &lt;/xsd:schema&gt;
+&lt;/types&gt;
+&lt;message name="BarMsg"&gt;
+   &lt;part name="BarAccessor" type="foo:fooType"/&gt;
+&lt;/message&gt;
+&lt;portType name="BarPortType"&gt;
+   &lt;operation name="BarOperation"&gt;
+     &lt;input message="bar:BarMsg"/&gt;
+   &lt;/operation&gt;
+&lt;/portType&gt;
+&lt;binding name="BarSOAPBinding" type="bar:BarPortType"&gt;
+   &lt;soapbind:binding
+    transport="http://schemas.xmlsoap.org/soap/http/"
+    style="rpc"/&gt;
+   &lt;operation name="BarOperation"&gt;
+     &lt;input message="bar:BarMsg"&gt;
+       &lt;soapbind:body use="literal" namespace="http://example.org/bar/"/&gt;
+     &lt;/input&gt;
+   &lt;/operation&gt;
+&lt;/binding&gt;
+&lt;service name="serviceName"&gt;
+  &lt;port name="BarSOAPPort" binding="bar:BarSOAPBinding"&gt;
+    &lt;soapbind:address location="http://example.org/myBarSOAPPort"/&gt;
+  &lt;/port&gt;
+&lt;/service&gt;
+&lt;/definitions&gt;</pre>
+<p>結果として生成される BarOperation の SOAP メッセージを次に示す:</p>
+<pre>&lt;s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:foo="http://example.org/foo/"&gt;
+  &lt;s:Header/&gt;
+    &lt;s:Body&gt;
+      &lt;m:BarOperation xmlns:m="http://example.org/bar/"&gt;
+         &lt;BarAccessor&gt;
+            &lt;foo:bar&gt;String&lt;/foo:bar&gt;
+            &lt;foo:baf&gt;0&lt;/foo:baf&gt;
+         &lt;/BarAccessor&gt;
+      &lt;/m:BarOperation&gt;
+    &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</pre>
+</div>
+
+
+</div>
+
+<div class="refinement">
+<h4 id="refinement35389576">5.6.22 Required Headers (必須のヘッダー)</h4>
+<div class="rationale">
+<p>WSDL 1.1 の仕様は，
+WSDL 文書の SOAP バインディングの部分にある <code>wsdl:operation</code> 要素の <code>wsdl:input</code> 又は <code>wsdl:output</code> 要素に指定されたすべての <code>soapbind:header</code> が，
+伝送される際に SOAP メッセージの中に含まれなければならないのかどうか，
+明確に規定していない。
+WSDL 1.1 ではヘッダーが省略可能であることを指定する方法がないので，
+このプロファイルではすべてのヘッダーを必須とした。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2738">R2738</a></span>
+MESSAGE は，
+<code>wsdl:binding</code> の <code>wsdl:operation</code> に記述された
+<code>wsdl:input</code> 又は <code>wsdl:output</code> に指定されたすべての <code>soapbind:header</code> を
+含まなければならない (MUST)。</p>
+</div>
+
+<div class="refinement">
+<h4 id="refinement35162912">5.6.23 Allowing Undescribed Headers (記述にないヘッダーの許容)</h4>
+<div class="rationale">
+<p>ヘッダーは SOAP の拡張メカニズムである。
+さまざまな理由により，
+WSDL 文書に定義されていないヘッダーが SOAP メッセージに含まれる必要があるかもしれない。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2739">R2739</a></span>
+MESSAGE は対応する WSDL 記述の <code>wsdl:binding</code> の部分に記述されていない SOAP ヘッダーブロックを含んでもよい (MAY)。
+
+<p class="statement"><span class="statement-id"><a name="R2753">R2753</a></span>
+適切な <code>wsdl:binding</code> に記述されていない SOAP ヘッダーブロックをもつ MESSAGE は，
+それらの SOAP ヘッダーブロックの
+<code>mustUnderstand</code> 属性を '1' に設定してもよい (MAY)。</p>
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35165360">5.6.24 Ordering Headers (ヘッダーの並び順)</h4>
+<div class="rationale">
+<p>記述 (description) の中の <code>soapbind:header</code> の並び順と，
+メッセージの SOAP ヘッダーブロックの並び順との間には何の関係もない。
+同様に，指定されたそれぞれの SOAP ヘッダーブロックがメッセージに1つ以上現れてもよい。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2751">R2751</a></span>
+DESCRIPTION の <code>soapbind:binding</code> 部にある <code>soapbind:header</code> 要素の並び順は，
+メッセージの中の SOAP ヘッダーブロックの並び順とは独立しているものとみなさなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2752">R2752</a></span>
+MESSAGE は，対応する記述 (description) の中の
+<code>soapbind:binding</code> 要素の適切な子要素の中の各 <code>soapbind:header</code> 要素について，
+一つ以上の SOAP ヘッダーブロックをもってよい (MAY)。</p>
+
+</div>
+
+<div class="refinement">
+<h4 id="refinement36918592">5.6.25 Describing SOAPAction (SOAPAction の記述)</h4>
+<div class="rationale">
+<p>相互運用性テストによって明らかになっているように，
+HTTP の <code>SOAPAction</code> ヘッダーフィールドの値に引用符を必須とすることが実装の間の相互運用性を向上する。
+HTTP 仕様はヘッダーフィールドの値を引用符で囲まないことを許容しているが，
+いくつかの実装は値が引用符で囲まれていることを必須としている。</p>
+
+<p><code>SOAPAction</code> ヘッダーフィールドは純粋に処理系に対するヒントである。
+メッセージの処理に本質的な情報はすべてエンベロープに含まれる。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2744">R2744</a></span>
+HTTP のリクエスト MESSAGE は，HTTP の <code>SOAPAction</code> ヘッダーフィールドの値として
+<code>soapbind:operation</code> の <code>soapAction</code> 属性 (DESCRIPTION に存在する場合) の値と同じ値を引用符で囲ったものを指定しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2745">R2745</a></span>
+HTTP のリクエスト MESSAGE は，<code>soapbind:operation</code> の <code>soapAction</code> 属性が DESCRIPTION に存在しないか，又は存在するがその値として空文字列を指定された場合，
+HTTP の <code>SOAPAction</code> ヘッダーフィールドの値として引用符で囲まれた空文字列を指定しなければならない (MUST)。</p>
+
+<div class="rationale">
+<p>SOAPAction についての更なる議論は，R1119 及び関連する要件を参照のこと。</p>
+</div>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="correct">正しい例: </p>
+<p>WSDL 記述に次の要素:</p>
+<p>
+<code>&lt;soapbind:operation soapAction="foo" /&gt;</code>
+</p>
+<p>を含む場合，対応する SOAPAction HTTP ヘッダーは次のとおり:</p>
+<p>
+<code>SOAPAction: "foo"</code>
+</p>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<p>WSDL 記述に次の要素:</p>
+<p>
+<code>&lt;soapbind:operation /&gt;</code>
+</p>
+<p>又は</p>
+<p>
+<code>&lt;soapbind:operation soapAction="" /&gt;</code>
+</p>
+<p>を含む場合，対応する SOAPAction HTTP ヘッダーは次のとおり:</p>
+<p>
+<code>SOAPAction: ""</code>
+</p>
+</div>
+
+</div>
+
+
+<div class="refinement">
+<h4 id="refinement35582608">5.6.26 SOAP Binding Extensions (SOAP バインディング拡張)</h4>
+<div class="rationale">
+<p>
+<code>wsdl:required</code> 属性は広く誤解されており，
+WSDL 記述者に間違って <code>soapbind:header</code> が省略可能であることを示すものとして使われることもある。
+
+<code>wsdl:required</code> は，WSDL 1.1 の規定によれば，
+WSDL 処理系に対する拡張メカニズムである。
+
+この属性は，新しい WSDL 拡張要素をスムーズに導入するためのものである。
+
+<code>wsdl:required</code> の意図は，
+WSDL 処理系に対して，その WSDL 記述を正常に処理するために
+その拡張要素が WSDL 処理系によって認識され理解される必要があるかどうかを知らせることである。
+
+ある構文がメッセージに含まれることが条件付きであるとか省略可能であるとかを知らせるためのものではない。
+
+たとえば，<code>soapbind:header</code> 要素に <code>wsdl:required</code> 属性の値として "false" が指定された場合，
+それは WSDL 処理系に対して WSDL 記述から生成されるメッセージにそのヘッダーが条件付きあるいは省略可能であることを知らせるものとして解釈してはならない。
+
+それは，
+「この記述を <code>soapbind:header</code> 要素に含むエンドポイントにメッセージを送るためには，
+WSDL 処理系は，その <code>soapbind:header</code> 要素によって暗示される意味 (semantic) を理解しなければならない (MUST)」
+と解釈すべきものである。
+</p>
+
+<p>
+WSDL 1.1 の SOAP バインディング拡張要素に対する <code>wsdl:required</code> 属性のデフォルトの値は "false" である。
+現実の大部分の WSDL 記述は SOAP バインディング拡張要素に対して <code>wsdl:required</code> 属性を指定しておらず，
+それは，WSDL 処理系によって，それらの拡張属性は無視してもよいと解釈されるかもしれない。
+このプロファイルは，
+拡張要素における <code>wsdl:required</code> 属性の有無や値の如何に関わらず，
+WSDL の SOAP 1.1 拡張のすべてが利用者 (consumer) に理解され処理されることを必須としている。
+</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R2747">R2747</a></span>
+CONSUMER は，
+拡張要素における <code>wsdl:required</code> 属性の有無や，存在する場合その値の如何に関わらず，
+WSDL 1.1 の SOAP バインディング拡張要素のすべてを理解し処理しなければならない (MUST)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2748">R2748</a></span>
+CONSUMER は，
+<code>soapbind</code> 拡張要素に <code>wsdl:required</code> 属性が "false" の値をもって存在した場合，
+それを，その拡張要素が WSDL 記述に基づき生成されるメッセージにおいて省略可能であるという意味に解釈してはならない (MUST NOT)。</p>
+</div>
+
+
+<h3><a name="WSDLSCHEMA">5.7 Use of XML Schema (XML Schema の使用)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/xmlschema-1">XML Schema Part 1: Structures</a></li>
+  <li><a href="http://www.w3.org/TR/xmlschema-2">XML Schema Part 2: Datatypes</a></li>
+</ul>
+<p>WSDL 1.1 は XML Schema を型付けシステムの一つとして使用する。このプロファイルでは WSDL による Web サービスの記述に対する型付けシステムとして
+XML Schema を使用することを必須とする。</p>
+
+
+<p class="statement"><span class="statement-id"><a name="R2800">R2800</a></span> DESCRIPTION は XML Schema 1.0 の任意の構文を使用してもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R2801">R2801</a></span>
+DESCRIPTION は，
+XML Schema 1.0 勧告を利用者定義のデータ型及び構造の基盤として使用しなければならない (MUST)。</p>
+
+
+<h2><a name="discovery">6. Service Publication and Discovery (サービスの公開と発見)</a></h2>
+<p>UDDI は，公開 (publication) 及び発見 (discovery) が必要な場合のためにこのプロファイルが採用した， Web サービスプロバイダーとその提供する Web サービスとを記述するためのメカニズムである。
+ビジネス，想定される用途，及び Web サービス型の記述は UDDI の用語で行われ，詳細な技術的記述は WSDL の用語で行われる。
+これら2つの仕様は重なり合うデータの記述を定義しており，両方の形式の記述が使われるが，
+このプロファイルは，これらの記述が衝突しないよう規定している。</p>
+
+<p> Web サービスインスタンスを UDDI レジストリーに登録することは必須ではない。
+すべての利用シナリオが UDDI の提供する種類のメタデータと発見とを必要とするわけでは全くないが，
+そういう機能が必要な場合は，UDDI はそのために使用すべきメカニズムである。</p>
+
+<p>
+UDDI V2 を構成する Web サービスは Basic Profile 1.0 に完全に適合するとはいえないことに注意が必要である。なぜならば，プロファイルに要求されているように，UTF-8 及び UTF-16 の両方の文字エンコーディングのメッセージを受け付けないからだ。(UTF-8 だけを受け付ける。)
+UDDI V2 がこのプロファイル以前に設計され，多くの場合実装されていることを考えれば，そのような食い違いがあることは別に不思議ではない。
+UDDI の設計者は UDDI V2 の不適合を意識しており，将来考慮に入れるだろう。</p>
+
+<p>プロファイルのこの節では，次の仕様を参照し，その中での拡張点を定義する:</p>
+
+<ul>
+  <li><a href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm">UDDI Version 2.04 API Specification, Dated 19 July 2002</a></li>
+  <li><a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm">UDDI Version 2.03 Data Structure Reference, Dated 19 July 2002</a></li>
+  <li><a href="http://uddi.org/schema/uddi_v2.xsd">UDDI 2 XML Schema</a></li>
+</ul>
+
+
+
+<h3><a name="UDDIBTS">6.1 bindingTemplates (bindingTemplate)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm#_Toc25130769">UDDI Version 2.03 Data Structure Reference, Section 7</a></li>
+</ul>
+<p>UDDI は Web サービスの INSTANCE を <code>uddi:bindingTemplate</code> 要素として表現する。
+<code>uddi:bindingTemplate</code> は <code>wsdl:port</code> にほぼ相当する役割を果たすが，
+WSDL では表現できないオプションを提供する。
+INSTANCE の WSDL 記述と UDDI 記述との間の整合性を保つために，
+このプロファイルは <code>uddi:bindingTemplate</code> 要素の構成方法に対して次の制約を課す:</p>
+
+<div class="refinement">
+<div class="rationale">
+<p>WSDL の <code>soapbind:address</code> 要素はインスタンスのネットワークアドレスが直接指定されている必要がある。
+それに対して，UDDI V2 では，インスタンスのネットワークアドレスを指定するのに2つの選択肢がある。
+一つは <code>uddi:accessPoint</code> で，WSDL 同様に直接アドレスを指定する。
+もう一つは <code>uddi:hostingRedirector</code> で，アドレスを解決するために Web サービスを使った間接的なメカニズムを提供するが，これは WSDL のメカニズムと不整合である。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R3100">R3100</a></span>
+適合する INSTANCE を表現する <code>uddi:bindingTemplate</code> 型の REGDATA は，
+<code>uddi:accessPoint</code> 要素を含まなければならない (MUST)。</p>
+
+<p class="example-banner">次に例を示す:</p>
+
+<div class="example">
+<p class="incorrect">間違っている例: </p>
+<pre>&lt;bindingTemplate bindingKey="..."&gt;
+   &lt;description xml:lang="EN"&gt;BarSOAPPort&lt;/description&gt;
+   &lt;hostingRedirector bindingKey="..."/&gt;
+   &lt;tModelInstanceDetails&gt;
+      ...
+   &lt;/tModelInstanceDetails&gt;
+&lt;/bindingTemplate&gt;</pre>
+</div>
+<div class="example">
+<p class="correct">正しい例: </p>
+<pre>&lt;bindingTemplate bindingKey="..."&gt;
+   &lt;description xml:lang="EN"&gt;BarSOAPPort&lt;/description&gt;
+   &lt;accessPoint&gt;http://example.org/myBarSOAPPort&lt;/accessPoint&gt;
+   &lt;tModelInstanceDetails&gt;
+      ...
+   &lt;/tModelInstanceDetails&gt;
+&lt;/bindingTemplate&gt;</pre>
+</div>
+</div>
+
+
+<h3><a name="UDDITMS">6.2 tModels (tModel)</a></h3>
+<p>プロファイルのこの節では，次の仕様 (又はその節) を参照する:</p>
+
+<ul>
+  <li><a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm#_Toc25130775">UDDI Version 2.03 Data Structure Reference, Section 8</a></li>
+</ul>
+
+<p>UDDI は Web サービスの型を <code>uddi:tModel</code> 要素で表現する。
+(<a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm#_Toc25130777">UDDI Data Structures 8.1.1 節</a>参照。)
+
+それらは (URI を使って) 実際の記述を含む文書を指し示すことができるが，そうしなくてもよい。
+
+さらに，UDDI は Web サービスの型を記述するのに使われるメカニズムには何も規定していない。
+しかし， Web サービスの記述がなかったり，記述形式がバラバラだったりすると相互運用が複雑になるので，プロファイルで何も規定しないわけには行かない。</p>
+
+<p><a href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm#_Toc25137792">UDDI Specification, Appendix I.1.2.1.1</a> では <code>uddi:tModel</code> が Web サービスの記述に
+WSDL を使用することを許しているが，それを要求しているわけではない。しかし，それを要求しないことは，どの記述言語が使われるか分からないことになるので，相互運用上問題になる。</p>
+
+
+<p>そこでこのプロファイルでは， Web サービスを記述する <code>uddi:tModel</code> 要素の書き方に次の制約を課している:</p>
+
+
+<div class="refinement">
+<div class="rationale">
+<p>このプロファイルは，類似言語の中で最も普及しているので，
+WSDL を記述言語として選ぶ。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R3002">R3002</a></span> 適合する Web サービス型を表現する <code>uddi:tModel</code> の REGDATA は，
+記述言語として WSDL を使用しなければならない (MUST)。</p>
+</div>
+
+<div class="refinement">
+<div class="rationale">
+<p>適合する Web サービスの型が WSDL を使用することを指定するために，このプロファイルではそれを主張する UDDI のカテゴライゼーションを採用している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R3003">R3003</a></span>
+適合する Web サービス型を表現する <code>uddi:tModel</code> 型の REGDATA は，
+<code>uddi-org:types</code> のタキソノミーと
+<code>"wsdlSpec"</code> カテゴライゼーションとを使用して
+カテゴライズされなければならない (MUST)。</p>
+</div>
+
+<div class="refinement">
+<div class="rationale">
+<p>
+<code>uddi:tModel</code> に含まれる <code>uddi:overviewURL</code> から <code>wsdl:binding</code> を導き出すためには，
+プロファイルは一つの WSDL 文書に含まれる複数の <code>wsdl:binding</code> からそれを区別する何らかの方式を採用する必要がある。
+UDDI Best Practice for Using WSDL in a UDDI Registry はもっとも広く受け入れられている方式を規定している。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R3010">R3010</a></span>
+適合する Web サービス型を示す <code>uddi:tModel</code> 型の REGDATA は，
+WSDL を UDDI と合わせて使うために
+<a href="http://www.oasis-open.org/committees/uddi-spec/doc/bp/uddi-spec-tc-bp-using-wsdl-v108-20021110.htm">UDDI Best Practice for Using WSDL in a UDDI Registy の 1.08 版</a>に従わなければならない (MUST)。</p>
+
+</div>
+
+<div class="refinement">
+<div class="rationale">
+<p><code>uddi:tModel</code> から参照される <code>wsdl:binding</code> がこのプロファイルに適合していない場合，不整合になるだろう。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R3011">R3011</a></span>
+<code>uddi:tModel</code> 型の REGDATA から参照される <code>wsdl:binding</code> は，
+それ自体がこのプロファイルに適合していなければならない (MUST)。</p>
+
+</div>
+
+<h2><a name="security">7. Security (セキュリティ)</a></h2>
+
+<p>ネットワーク指向のすべての情報技術にいえることだが，セキュリティの問題は Web サービスにおいても重大である。 Web サービスでは，セキュリティは，他の情報技術と同様，攻撃者がとりうる潜在的な脅威を理解することと，攻撃が成功するリスクを許容可能なレベルまで下げるために，作業的，物理的及び技術的な対抗手段をとることとから成り立っている。「リスクの許容可能なレベル」がアプリケーションによって大きく変わることと，対抗手段を実現するためのコストも同様に大きく変わることから， Web サービスをセキュアにするための，どこにでも適用できる「正解」などというものはあり得ない。対抗手段と許容可能なリスクとの間の完全なバランスを取ることは，個別の場合ごとにしかできないだろう。</p>
+
+<p>それでも，多くの Web サービスにおいてリスクを許容可能なレベルに下げる経験的な対抗手段の共通パターンというものは存在する。Basic Profile
+は，それらのうち最も広く使われているものを，使用を強制はしないが，採用している。それは TLS 1.0 又は SSL 3.0 のいずれかで暗号化された
+HTTP (HTTPS) である。すなわち，適合する Web サービスは HTTPS を使用してもよい。他の対抗手段と併用してもよいし，何も使わなくてもよい。</p>
+
+<p>HTTPS は，基本的なレベルの秘匿性を実現する，暗号化トランスポート接続の枯れた標準であると，広く認められている。HTTPS は，よって，多くの現実世界の Web サービスアプリケーションが必要とする基本的なセキュリティ機能を実現する，最も単純な手段となっている。
+HTTPS は，クライアント証明書を使うことにより，クライアント認証に使用してもよい。</p>
+
+<p>プロファイルのこの節では，次の仕様を参照し，その中での拡張点を定義する:</p>
+
+<ul>
+  <li><a href="http://www.ietf.org/rfc/rfc2818">RFC2818: HTTP over TLS</a></li>
+  <li><a href="http://www.ietf.org/rfc/rfc2246">RFC2246: The TLS Protocol Version 1.0</a><br />
+  拡張点:
+  <ul>
+   <li>TLS 暗号化スイート &mdash; TLS は任意の暗号化アルゴリズムの使用を許している。</li>
+   <li>TLS 拡張 &mdash; TLS はハンドシェイク段階で拡張を許している。</li>
+  </ul>
+  </li>
+  <li><a href="http://wp.netscape.com/eng/ssl3/draft302.txt">The SSL Protocol Version 3.0</a><br />
+  拡張点:
+  <ul>
+   <li>SSL 暗号化スイート &mdash; SSL は任意の暗号化アルゴリズムの使用を許している。</li>
+  </ul>
+  </li>
+  <li><a href="http://www.ietf.org/rfc/rfc2459">RFC2459: Internet X.509 Public Key Infrastructure Certificate and CRL Profile</a><br />
+  拡張点:
+  <ul>
+   <li>認証局 &mdash; 認証局の選択は通信当事者間の私的な合意による。</li>
+   <li>証明書拡張 &mdash; X509 は任意の証明書拡張を許している。</li>
+  </ul>
+  </li>
+</ul>
+
+<h3><a name="HTTPSBase">7.1 Use of HTTPS (HTTPS の使用)</a></h3>
+
+<div class="refinement">
+<div class="rationale">
+<p>HTTPS は，とても有用かつ広く理解されている基本的なセキュリティ機構なので，
+プロファイルで使用を許す必要がある。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R5000">R5000</a></span> INSTANCE は HTTPS の使用を必須としてもよい (MAY)。</p>
+
+<p class="statement"><span class="statement-id"><a name="R5001">R5001</a></span> INSTANCE が HTTPS の使用を必須とする場合，
+<code>wsdl:port</code> 定義にある <code>soapbind:address</code> 要素の <code>location</code> 属性は，
+<code>"https"</code> スキームの URI でなければならない (MUST)。
+そうでない場合，それは <code>"http"</code> スキームの URI でなければならない (MUST)。</p>
+</div>
+
+<div class="refinement">
+<div class="rationale">
+<p>単純な HTTPS は，利用者 (consumer) による Web サービスインスタンスの認証機能を提供するが，インスタンスによる利用者の認証機能は提供しない。多くの場合，これは相互運用のリスクを高すぎるレベルにしてしまう。HTTPS
+の相互認証機能をこのプロファイルに含めることで，インスタンスが利用者を認証するという対抗手段を許容する。利用者によるインスタンスの認証では不十分な場合，これは相互運用のリスクを十分に引き下げることになる。</p>
+</div>
+
+<p class="statement"><span class="statement-id"><a name="R5010">R5010</a></span> INSTANCE は，相互認証 (mutual authentication) の HTTPS の使用を必須としてもよい (MAY)。</p>
+</div>
+
+<h2><a name="references">Appendix I: Referenced Specifications (参照仕様)</a></h2>
+
+<p>次の仕様の要件は，このプロファイルで置き換えられたものを除き，参照することでこのプロファイルに取り込まれている。</p>
+
+
+<ul>
+<li><a href="http://www.w3.org/TR/SOAP/">Simple Object Access Protocol (SOAP) 1.1</a>
+</li>
+<li><a href="http://www.w3.org/TR/REC-xml">Extensible Markup Language (XML) 1.0 (Second Edition)</a>
+</li>
+<li><a href="http://www.ietf.org/rfc/rfc2616">RFC2616: Hypertext Transfer Protocol -- HTTP/1.1</a>
+</li>
+<li><a href="http://www.ietf.org/rfc/rfc2965">RFC2965: HTTP State Management Mechanism</a>
+</li>
+<li><a href="http://www.w3.org/TR/wsdl.html">Web Services Description Language (WSDL) 1.1</a>
+</li>
+<li><a href="http://www.w3.org/TR/xmlschema-1">XML Schema Part 1: Structures</a>
+</li>
+<li><a href="http://www.w3.org/TR/xmlschema-2">XML Schema Part 2: Datatypes</a>
+</li>
+<li><a href="http://uddi.org/pubs/ProgrammersAPI-V2.04-Published-20020719.htm">UDDI Version 2.04 API Specification, Dated 19 July 2002</a>
+</li>
+<li><a href="http://uddi.org/pubs/DataStructure-V2.03-Published-20020719.htm">UDDI Version 2.03 Data Structure Reference, Dated 19 July 2002</a>
+</li>
+<li><a href="http://uddi.org/schema/uddi_v2.xsd">UDDI Version 2 XML Schema</a>
+</li>
+<li><a href="http://www.ietf.org/rfc/rfc2818">RFC2818: HTTP Over TLS</a>
+</li>
+<li><a href="http://www.ietf.org/rfc/rfc2246">RFC2246: The TLS Protocol Version 1.0</a>
+</li>
+<li><a href="http://wp.netscape.com/eng/ssl3/draft302.txt">The SSL Protocol Version 3.0</a>
+</li>
+<li><a href="http://www.ietf.org/rfc/rfc2459">RFC2459: Internet X.509 Public Key Infrastructure Certificate and CRL Profile</a>
+</li>
+</ul>
+
+<h2><a name="points">Appendix II: Extensibility Points (拡張点)</a></h2>
+
+<p>この節では，Scope of the Profile で定義されたとおり，
+このプロファイルの構成要素となる仕様の拡張点を列挙する。</p>
+
+<p>これらのメカニズムはこのプロファイルの適用範囲外である。
+これらを使うことが相互運用性に影響するかもしれないし，
+Web サービスの関係者での私的な合意が必要かもしれない。</p>
+
+<p><a href="http://www.w3.org/TR/SOAP/">Simple Object Access Protocol (SOAP) 1.1</a>:</p>
+  <ul>
+   <li><strong>ヘッダーブロック</strong> &mdash; ヘッダーブロックは SOAP の根本的な拡張メカニズムである。</li>
+   <li><strong>処理順序</strong> &mdash; SOAP メッセージの構成要素 (たとえば，ヘッダー) の処理順序は未規定であり，
+   別途調整 (out-of-band negotiation) が必要かもしれない。</li>
+   <li><strong>中継ノード (intermediaries) の使用</strong> &mdash; SOAP の中継ノードは SOAP 1.1 では規定が不十分であり，
+   その利用には別途調整 (out-of-band negotiation) が必要かもしれない。
+   また，その使用に際しては，どこでプロファイルの適合性を測定するかについて注意深い検討が必要になるかもしれない。</li>
+   <li><strong>soap:actor の値</strong> &mdash; <code>soap:actor</code> 属性の値は Web サービスの関係者の私的な合意による。</li>
+   <li><strong>Fault の detail</strong> &mdash; <code>Fault</code> の <code>detail</code> 要素の内容は規定されていない。</li>
+  </ul>
+<p><a href="http://www.ietf.org/rfc/rfc2616">RFC2616: Hypertext Transfer Protocol -- HTTP/1.1</a>:</p>
+  <ul>
+   <li><strong>HTTP 認証</strong> &mdash; HTTP の認証は，拡張スキーム，任意のダイジェストハッシュアルゴリズム，及びパラメーターを許容している。</li>
+   <li><strong>未規定のヘッダーフィールド</strong> &mdash; HTTP は任意のヘッダーがメッセージに現れることを許容している。</li>
+   <li><strong>Expect 拡張</strong> &mdash; HTTP の Expect/Continue メカニズムは Expect 拡張を許容している。</li>
+   <li><strong>内容エンコーディング</strong> &mdash; HTTP で許容される内容エンコーディング (content-encoding) は無制限である。</li>
+   <li><strong>伝送エンコーディング</strong> &mdash; HTTP で許容される伝送エンコーディング (transfer-encoding) は無制限である。</li>
+   <li><strong>Upgrade</strong> &mdash; HTTP は，Upgrade ヘッダーを使うことで，接続を任意のプロトコルに切り替えることを許容している。</li>
+  </ul>
+<p><a href="http://www.w3.org/TR/wsdl.html">Web Services Description Language (WSDL) 1.1</a>:</p>
+  <ul>
+   <li><strong>WSDL 拡張</strong> &mdash; WSDL は特定の位置に拡張要素を入れることを許す。
+   そのような拡張の使用には別途調整 (out-of-band negotiation) が必要である。</li>
+   <li><strong>相対 URI</strong> &mdash; WSDL は相対 URI の使い方について適切に規定していない。
+   その使用については，さらに調整が必要である。詳細については XML Base を参照のこと。</li>
+   <li><strong>妥当性検証モード</strong> &mdash; WSDL 及び XML Schema 文書を読み込むパーサーが DTD の妥当性検証を行うかどうか。</li>
+   <li><strong>外部資源の取り込み</strong> &mdash; WSDL 及び XML Schema 文書を読み込むパーサーが外部実体及び DTD を取り込むかどうか。</li>
+  </ul>
+<p><a href="http://www.w3.org/TR/xmlschema-1">XML Schema Part 1: Structures</a>:</p>
+  <ul>
+   <li><strong>スキーマの注記</strong> &mdash; XML Schema は注記 (annotation) を許しており，
+   データ構造についての追加の情報を記述するために使われうる。</li>
+  </ul>
+<p><a href="http://www.ietf.org/rfc/rfc2246">RFC2246: The TLS Protocol Version 1.0</a>:</p>
+  <ul>
+   <li><strong>TLS 暗号化スイート</strong> &mdash; TLS は任意の暗号化アルゴリズムの使用を許している。</li>
+   <li><strong>TLS 拡張</strong> &mdash; TLS はハンドシェイク段階で拡張を許している。</li>
+  </ul>
+<p><a href="http://wp.netscape.com/eng/ssl3/draft302.txt">The SSL Protocol Version 3.0</a>:</p>
+  <ul>
+   <li><strong>SSL 暗号化スイート</strong> &mdash; SSL は任意の暗号化アルゴリズムの使用を許している。</li>
+  </ul>
+<p><a href="http://www.ietf.org/rfc/rfc2459">RFC2459: Internet X.509 Public Key Infrastructure Certificate and CRL Profile</a>:</p>
+  <ul>
+   <li><strong>認証局</strong> &mdash; 認証局の選択は通信当事者間の私的な合意による。</li>
+   <li><strong>証明書拡張</strong> &mdash; X509 は任意の証明書拡張を許している。</li>
+  </ul>
+
+<h2><a name="acks">Appendix III: Acknowledgements (謝辞)</a></h2>
+<p>このプロファイルは WS-I Basic Profile Working Group の成果物であり，WG は次のメンバーを含む:</p>
+<p>
+Mark Allerton (Crystal Decisions Corporation),
+George Arriola (Talking Blocks, Inc.),
+Keith Ballinger (Microsoft Corporation),
+Ilya Beyer (KANA),
+Rich Bonneau (IONA Technologies),
+Don Box (Microsoft Corporation),
+Andrew Brown (Verisign),
+Heidi Buelow (Quovadx),
+David Burdett (Commerce One, Inc.),
+Luis Felipe Cabrera (Microsoft Corporation),
+Maud Cahuzac (France Telecom),
+Bhaskar Chakrabarti (United Airlines),
+Chia Chao (IONA Technologies),
+Martin Chapman (Oracle Corporation),
+Richard Chin (Avinon),
+Roberto Chinnici (Sun Microsystems),
+Sergio Compean (Avanade, Inc.),
+Tim Cooke (Onyx Software),
+Ugo Corda (SeeBeyond Tech),
+Paul Cotton (Microsoft Corporation),
+Joseph Curran (Accenture),
+Ayse Dilber (AT&amp;T),
+Dave Ehnebuske (IBM),
+Mark Ericson (Mindreef Inc.),
+Colleen Evans (Sonic Software),
+Tim Ewald (Microsoft Corporation),
+Chuck Fay (FileNet Corporation),
+Chris Ferris (IBM),
+Daniel Foody (Actional Corporation),
+Toru Fujii (NTT),
+Satoru Fujita (NEC Corporation),
+Shishir Garg (France Telecom),
+Yaron Goland (BEA Systems),
+Hans Granqvist (Verisign),
+Martin Gudgin (Microsoft Corporation),
+Marc Hadley (Sun Microsystems),
+Bob Hall (Unisys Corporation),
+Scott Hanselman (Corillian),
+Muir Harding (Autodesk, Inc.),
+Loren Hart (Verisign),
+Harry Holstrom (Accenture),
+Larry Hsiung (Quovadx),
+Hemant Jain (Tata Consultancy),
+Steve Jenisch (SAS Institute),
+Erik Johnson (Epicor Software Corporation),
+Bill Jones (Oracle Corporation),
+Menno Jonkers (Tryllian BV),
+Anish Karmarkar (Oracle Corporation),
+Takahiro Kawamura (Toshiba),
+Bhushan Khanal (WRQ, Inc.),
+Sunil Kunisetty (Oracle Corporation),
+Canyang Kevin Liu (SAP AG),
+Jonathan Marsh (Microsoft Corporation),
+David Meyer (Plumtree Software, Inc.),
+Jeff Mischkinsky (Oracle Corporation),
+Tom Moog (Sarvega Inc.),
+Gilles Mousseau (Hummingbird Ltd.),
+Richard Nikula (BMC Software, Inc.),
+Eisaku Nishiyama (Hitachi, Ltd.),
+Mark Nottingham (BEA Systems),
+David Orchard (BEA Systems),
+Jesse Pangburn (Quovadx),
+TJ Pannu (ContentGuard, Inc.),
+Eduardo Pelegri-Llopart (Sun Microsystems),
+Vijay Rajan (Novell),
+Eric Rajkovic (Oracle Corporation),
+Graeme Riddell (Bowstreet),
+Claus von Riegen (SAP AG),
+Tom Rutt (Fujitsu Limited),
+Roger Sanborn (Crystal Decisions Corporation),
+Krishna Sankar (Cisco Systems, Inc.),
+Don Schricker (Micro Focus),
+Dave Seidel (Mindreef Inc.),
+Akira Shimaya (NTT),
+Yasser Shohoud (Microsoft Corporation),
+David Smiley (Mercator Software, Inc.),
+Seumas Soltysik (IONA Technologies),
+Joseph Stanko (Plumtree Software, Inc.),
+Keith Stobie (Microsoft Corporation),
+Yasuo Takemoto (NTT),
+Nobuyoshi Tanaka (NEC Corporation),
+Jorgen Thelin (Cape Clear Software),
+Sameer Vaidya (Talking Blocks, Inc.),
+William Vambenepe (Hewlett-Packard),
+Rick Weil (Eastman Kodak Company),
+Scott Werden (WRQ, Inc.),
+Ajamu Wesley (IBM),
+Shannon Wheatley (Kinzan, Inc.),
+Ian White (Micro Focus),
+Sue Worthman (Tryllian BV),
+Prasad Yendluri (webMethods Inc.).
+</p>
+
+<p>以上</p>
+</body>
+</html>

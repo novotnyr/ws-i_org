@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.ws-i.org/testing/2002/12/assertions/"
+    xmlns:tns="http://www.ws-i.org/testing/2002/12/assertions/"
+    xmlns:wsi-common="http://www.ws-i.org/testing/2002/12/common/"
+    elementFormDefault="qualified">
+  
+  <xsd:import namespace="http://www.ws-i.org/testing/2002/12/common/" 
+      schemaLocation="common.xsd"/>
+  
+  <xsd:element name="profileAssertions" type="tns:profileAssertions"/>
+  
+  <xsd:complexType name="profileAssertions">
+    <xsd:sequence>
+      <xsd:element name="description" type="wsi-common:description"/>
+      <xsd:element name="profileList" type="tns:profileList"/>
+      <xsd:element name="artifact" type="tns:artifact" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="version" type="xsd:string" use="required"/>
+  </xsd:complexType>
+  
+  <xsd:complexType name="profileList">
+    <xsd:sequence>
+      <xsd:element name="profile" type="tns:profile" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="profile">
+    <xsd:attribute name="id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="version" type="xsd:string" use="required"/>
+    <xsd:attribute name="revision" type="xsd:string" use="required"/>
+    <xsd:attribute name="location" type="xsd:anyURI" use="required"/>
+  </xsd:complexType>
+  
+  <xsd:complexType name="artifact">
+    <xsd:sequence>
+      <xsd:element name="specificationReferenceList" type="tns:specificationReferenceList"/>
+      <xsd:element name="description" type="wsi-common:description"/>
+      <xsd:element name="testAssertion" type="tns:testAssertion" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="type" type="tns:artifactTypes" use="required"/>
+  </xsd:complexType>
+        
+  <xsd:complexType name="specificationReferenceList">
+    <xsd:sequence>
+      <xsd:element name="specification" type="tns:specification" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="specification">
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="location" type="xsd:anyURI" use="required"/>
+  </xsd:complexType>
+  
+  <xsd:complexType name="testAssertion">
+    <xsd:sequence>
+      <xsd:element name="context" type="xsd:string"/>
+      <xsd:element name="assertionDescription" type="xsd:string"/>
+      <xsd:element name="failureMessage" type="xsd:string"/>
+      <xsd:element name="failureDetailDescription" type="xsd:string"/>
+      <xsd:element name="additionalEntryTypeList" type="tns:additionalEntryTypeList"/>
+      <xsd:element name="prereqList" type="tns:prereqList"/>
+      <xsd:element name="referenceList" type="tns:referenceList"/>
+      <xsd:element name="comments" type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:ID" use="required"/>
+    <xsd:attribute name="entryType" type="tns:entryTypes" use="required"/>
+    <xsd:attribute name="type" type="tns:testAssertionTypes" use="required"/>
+    <xsd:attribute name="enabled" type="xsd:boolean" use="optional" default="true"/>
+  </xsd:complexType>
+      
+  <xsd:complexType name="additionalEntryTypeList">
+    <xsd:sequence>
+      <xsd:element name="logInput" type="tns:logInput" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="wsdlInput" type="tns:wsdlInput" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="uddiInput" type="tns:uddiInput" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+        
+  <xsd:complexType name="prereqList">
+    <xsd:sequence>
+      <xsd:element name="testAssertionID" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="referenceList">
+    <xsd:sequence>
+      <xsd:element name="reference" type="tns:reference" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+    
+  <xsd:complexType name="reference">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="profileID" type="xsd:IDREF" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+      
+  <xsd:simpleType name="artifactTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="message"/>
+      <xsd:enumeration value="description"/>
+      <xsd:enumeration value="discovery"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="testAssertionTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="required"/>
+      <xsd:enumeration value="recommended"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="logEntryTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="request"/>
+      <xsd:enumeration value="response"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="wsdlEntryTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="definitions"/>
+      <xsd:enumeration value="import"/>
+      <xsd:enumeration value="types"/>
+      <xsd:enumeration value="message"/>
+      <xsd:enumeration value="portType"/>
+      <xsd:enumeration value="binding"/>
+      <xsd:enumeration value="port"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="uddiEntryTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="bindingTemplate"/>
+      <xsd:enumeration value="tModel"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="additionalEntryTypes">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="anyEntry"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="entryTypes">
+    <xsd:union memberTypes="tns:logEntryTypes tns:wsdlEntryTypes tns:uddiEntryTypes tns:additionalEntryTypes"/>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="baseInput">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="none"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="logInput">
+    <xsd:union memberTypes="tns:logEntryTypes tns:baseInput"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="wsdlInput">
+    <xsd:union memberTypes="tns:wsdlEntryTypes tns:baseInput"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="uddiInput">
+    <xsd:union memberTypes="tns:uddiEntryTypes tns:baseInput"/>
+  </xsd:simpleType>
+
+</xsd:schema>
+

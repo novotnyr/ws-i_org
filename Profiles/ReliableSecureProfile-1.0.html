@@ -1,0 +1,1263 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Reliable Secure Profile - 
+         					Version 1.0 
+         					(WGD)
+         				
+      </title><style type="text/css">
+                     body { color: black; background: white; font-family: sans-serif; margin: 16pt 24pt; }
+                     dt { font-style: italic; padding-top: 0.5em; }
+                     h4 { font-weight: normal; font-style: italic; font-size: 0.8em; margin-bottom: 0; }
+                     .refinement { margin: 18pt 0em; }
+                    .statement { font-style: italic; margin: 0.5em 5.5em; text-indent: -4em; }
+                    .statement-id { background-color: #ffa; font-style: normal; padding: 0em 0.3em; }
+					.statement-target { font-weight: bold; font-style: normal;  }
+                    .statement-type { background-color: #ccf; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }
+                    .compat-type { background-color: #cff; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }
+                    .diff-type { background-color: red; font-style: bold; padding: 0em 0.3em; font-size: 1em; vertical-align: text-top; }
+                    .statement-origin { background-color: #fcc; font-style: normal; padding: 0em 0.3em; font-size: 0.7em; vertical-align: text-top; }
+                    .rationale { margin: 0.5em 0em;  }
+                    .explanation { margin: 0.5em 0em; }
+                    .definition { margin: 0.5em 5.5em;}
+                    .explanation p, .rationale p { margin: 0.25em 0; }
+                    .practice { background-color: green; }
+                    .example { background-color: #eee; margin: 0.5em 2em; padding: 0.5em; }
+                    .example-banner { margin: 0; }
+                    .example pre { margin: 0; }
+                    .correct, .incorrect { font-family: sans-serif; font-weight: bold; font-size: 0.9em; margin: 0; }
+                    .correct { color: #090; }
+                    .incorrect { color: #900; }
+                    .specification { padding: 0.5em; background-color: #ffa; margin: 0.5em 2em; }
+                    .ednote { margin: 1.2em; padding: 1.2em; background-color: #fcc; }
+                    .note { background-color: #fcc; margin-left: 1.5em; }
+                    .toc { margin-left: 2em; }
+                    .subtoc { margin-left: 3em; }
+                    .subsubtoc { margin-left: 4em; }
+                    .chg { background-color: orange; text-decoration: underline; }
+                    .add { background-color: green; text-decoration: underline; }
+                    .del { background-color: red; text-decoration: line-through; }
+                    @media print {
+                        a.offsite:after { content: " [" attr(href) "] "; font-size: 85%; font-weight: lighter; }
+                    } 
+                    [id]:hover:after { content: " #" attr(id) " "; font-size: 50%; color: #ccc; text-decoration: none; }
+		        </style></head>
+   <body>
+      <div class="head">
+         <p><a href="http://www.ws-i.org/"><img src="http://www.ws-i.org/images/WS-I-logo.gif" height="88" width="107" border="0" alt="WS-I"></img></a></p>
+         <h1>Reliable Secure Profile Version 1.0</h1>
+         <h2>Working Group Draft - revision 16</h2>
+         <h2>2008-05-09</h2>
+         <dl>
+            <dt>This revision:</dt>
+            <dd><a href="http://members.ws-i.org/dman/Folder.phx/Private+Folders/Community+Folder/Working+Groups/Reliable+Secure+Profile/Profile/1.0/ReliableSecureProfile-1.0-WGD.html?versionId=16">http://members.ws-i.org/dman/Folder.phx/Private+Folders/Community+Folder/Working+Groups/Reliable+Secure+Profile/Profile/1.0/ReliableSecureProfile-1.0-WGD.html?versionID=16</a></dd>
+            <dt>Latest revision:</dt>
+            <dd><a href="http://members.ws-i.org/dman/Folder.phx/Private+Folders/Community+Folder/Working+Groups/Reliable+Secure+Profile/Profile/1.0/ReliableSecureProfile-1.0-WGD.html">http://members.ws-i.org/dman/Folder.phx/Private+Folders/Community+Folder/Working+Groups/Reliable+Secure+Profile/Profile/1.0/ReliableSecureProfile-1.0-WGD.html
+                  		                        </a></dd>
+            <dt>Editors:</dt>
+            <dd>Jacques Durand, Fujitsu</dd>
+            <dd>Anish Karmarkar, Oracle</dd>
+            <dd>Gilbert Pilz, BEA</dd>
+            <dt>Administrative contact:</dt>
+            <dd><a href="mailto:secretary@ws-i.org">secretary@ws-i.org</a></dd>
+         </dl>
+         <p class="copyright" id="copyright"> Copyright &#169;  2002-2008 by
+            			<a href="http://www.ws-i.org/">The Web Services-Interoperability
+               			Organization</a> (<abbr title="Web Services Interoperability    Organization">WS-I</abbr>) and Certain of its Members. All Rights
+            			Reserved.
+         </p>
+      </div>
+      <hr></hr>
+      <h2 id="abstract">Abstract</h2>
+      <p>This document defines the WS-I Reliable Secure Profile 1.0, consisting of a set of non-proprietary Web services specifications,
+         along with clarifications, refinements, interpretations and amplifications of those specifications which promote interoperability
+      </p>
+      <h2 id="status">Status of this Document</h2>
+      <p> This document is a Working
+         				Group Draft; it has been accepted by the Working Group as
+         				reflecting the current state of discussions. It is a work in
+         				progress, and should not be considered authoritative or final;
+         				other documents may supersede this document. 
+      </p>
+      <h2 id="license">Notice</h2>
+      <p>The material contained herein is not a license, either expressly or
+         		impliedly, to any intellectual property owned or controlled by any of
+         		the authors or developers of this material or WS-I. The material
+         		contained herein is provided on an "AS IS" basis and to the maximum
+         		extent permitted by applicable law, this material is provided AS IS
+         		AND WITH ALL FAULTS, and the authors and developers of this material
+         		and WS-I hereby disclaim all other warranties and conditions, either
+         		express, implied or statutory, including, but not limited to, any (if
+         		any) implied warranties, duties or conditions of merchantability, of
+         		fitness for a particular purpose, of accuracy or completeness of
+         		responses, of results, of workmanlike effort, of lack of viruses, and
+         		of lack of negligence. ALSO, THERE IS NO WARRANTY OR CONDITION OF
+         		TITLE, QUIET ENJOYMENT, QUIET POSSESSION, CORRESPONDENCE TO
+         		DESCRIPTION OR NON-INFRINGEMENT WITH REGARD TO THIS MATERIAL. 
+      </p>
+      <p>IN NO EVENT WILL ANY AUTHOR OR DEVELOPER OF THIS MATERIAL OR WS-I
+         		BE LIABLE TO ANY OTHER PARTY FOR THE COST OF PROCURING SUBSTITUTE
+         		GOODS OR SERVICES, LOST PROFITS, LOSS OF USE, LOSS OF DATA, OR ANY
+         		INCIDENTAL, CONSEQUENTIAL, DIRECT, INDIRECT, OR SPECIAL DAMAGES
+         		WHETHER UNDER CONTRACT, TORT, WARRANTY, OR OTHERWISE, ARISING IN ANY
+         		WAY OUT OF THIS OR ANY OTHER AGREEMENT RELATING TO THIS MATERIAL,
+         		WHETHER OR NOT SUCH PARTY HAD ADVANCE NOTICE OF THE POSSIBILITY OF
+         		SUCH DAMAGES.
+      </p>
+      <h2 id="feedback">Feedback</h2>
+      <p>The Web Services-Interoperability Organization (WS-I)
+         					would like to receive input, suggestions and other
+         					feedback ("Feedback") on this work from a wide variety of
+         					industry participants to improve its quality over time.
+         					
+      </p>
+      <p>By sending email, or otherwise communicating with WS-I, you (on
+         			behalf of yourself if you are an individual, and your company if
+         			you are providing Feedback on behalf of the company) will be
+         			deemed to have granted to WS-I, the members of WS-I, and other
+         			parties that have access to your Feedback, a non-exclusive,
+         			non-transferable, worldwide, perpetual, irrevocable, royalty-free
+         			license to use, disclose, copy, license, modify, sublicense or
+         			otherwise distribute and exploit in any manner whatsoever the
+         			Feedback you provide regarding the work. You acknowledge that you
+         			have no expectation of confidentiality with respect to any
+         			Feedback you provide. You represent and warrant that you have
+         			rights to provide this Feedback, and if you are providing Feedback
+         			on behalf of a company, you represent and warrant that you have
+         			the rights to provide Feedback on behalf of your company. You also
+         			acknowledge that WS-I is not required to review, discuss, use,
+         			consider or in any way incorporate your Feedback into future
+         			versions of its work. If WS-I does incorporate some or all of your
+         			Feedback in a future version of the work, it may, but is not
+         			obligated to include your name (or, if you are identified as
+         			acting on behalf of your company, the name of your company) on a
+         			list of contributors to the work. If the foregoing is not
+         			acceptable to you and any company on whose behalf you are acting,
+         			please do not provide any Feedback.
+      </p>
+      <p>Feedback on this document should be directed to <a href="mailto:wsi_rsp_comment@lists.ws-i.org">wsi_rsp_comment@lists.ws-i.org</a>.
+      </p>
+      <hr></hr>
+      <h2 id="toc">Table of Contents</h2>
+      <p class="toc">1. <a href="#introduction">Introduction</a><br></br><span class="subtoc">1.1. <a href="#relationships">Relationships to Other Profiles</a></span><br></br><span class="subtoc">1.2. <a href="#philosophy">Guiding Principles</a></span><br></br><span class="subtoc">1.3. <a href="#conventions">Notational Conventions</a></span><br></br><span class="subtoc">1.4. <a href="#versioning">Profile Identification and Versioning</a></span><br></br>2. <a href="#conformance">Profile Conformance</a><br></br><span class="subtoc">2.1. <a href="#conformance_requirements">Conformance Requirements</a></span><br></br><span class="subtoc">2.2. <a href="#conformance_targets">Conformance Targets</a></span><br></br><span class="subtoc">2.3. <a href="#conformance_scope">Conformance Scope</a></span><br></br><span class="subtoc">2.4. <a href="#conformance_claims">Claiming Conformance</a></span><br></br>3. <a href="#reliablemessaging">Reliable Messaging</a><br></br><span class="subtoc">3.1. <a href="#extensibility_points">Use of Extensiblity Points</a></span><br></br><span class="subsubtoc">3.1.1. <a href="#Ignore_Unknown_Extension_Elements">Ignore Unknown Extension Elements</a></span><br></br><span class="subsubtoc">3.1.2. <a href="#Use_of_the_Offer_Element">Use of the Offer Element</a></span><br></br><span class="subtoc">3.2. <a href="#retransmission">Retransmission of Messages</a></span><br></br><span class="subsubtoc">3.2.1. <a href="#Retransmission_of_Unacknowledged_Messages">Retransmission of Unacknowledged Messages</a></span><br></br><span class="subsubtoc">3.2.2. <a href="#Retransmission_of_Sequence_Lifecycle_Messages">Retransmission of Sequence Lifecycle Messages</a></span><br></br><span class="subsubtoc">3.2.3. <a href="#Message_Identity">Message Identity</a></span><br></br><span class="subtoc">3.3. <a href="#termination">Sequence Termination</a></span><br></br><span class="subsubtoc">3.3.1. <a href="#Sequence_Termination_from_the_Destination">Sequence Termination from the Destination</a></span><br></br><span class="subsubtoc">3.3.2. <a href="#Synchronizing_Sequence_Status">Synchronizing Sequence Status</a></span><br></br><span class="subsubtoc">3.3.3. <a href="#Sequence_Lifecycle_Independence">Sequence Lifecycle Independence</a></span><br></br><span class="subtoc">3.4. <a href="#xmit_seq_faults">Sequence Faults</a></span><br></br><span class="subsubtoc">3.4.1. <a href="#Transmission_of_Sequence_Faults">Transmission of Sequence Faults</a></span><br></br><span class="subtoc">3.5. <a href="#piggyback_acks">Piggybacked Acknowledgements</a></span><br></br><span class="subsubtoc">3.5.1. <a href="#Endpoint_Comparison">Endpoint Comparison</a></span><br></br><span class="subsubtoc">3.5.2. <a href="#Treatment_of_ReferenceParameters_in_AcksTo_EPRs">Treatment of ReferenceParameters in AcksTo EPRs</a></span><br></br><span class="subsubtoc">3.5.3. <a href="#Preventing_Piggybacked_Acknowledgements">Preventing Piggybacked Acknowledgements</a></span><br></br><span class="subtoc">3.6. <a href="#sequence_assignment">Sequence Assignment</a></span><br></br><span class="subsubtoc">3.6.1. <a href="#Sequence_Assignment_for_Reliable_Response_Messages">Sequence Assignment for Reliable Response Messages</a></span><br></br><span class="subsubtoc">3.6.2. <a href="#Scope_of_an_RM_Node">Scope of an RM Node</a></span><br></br><span class="subsubtoc">3.6.3. <a href="#WS-ReliableMessaging_Faults">WS-ReliableMessaging Faults</a></span><br></br><span class="subtoc">3.7. <a href="#sequence_IDs">Sequence Identifiers</a></span><br></br><span class="subsubtoc">3.7.1. <a href="#Duplicate_Identifier_in_CreateSequenceResponse">Duplicate Identifier in CreateSequenceResponse</a></span><br></br><span class="subtoc">3.8. <a href="#targetCreateSequence">Targeting Sequence Lifecycle Messages</a></span><br></br><span class="subsubtoc">3.8.1. <a href="#CreateSequence_Target">CreateSequence Target</a></span><br></br>4. <a href="#wssc">Secure Conversation</a><br></br><span class="subtoc">4.1. <a href="#unsupported_token_faults">Fault Codes for Unsupported Context Tokens</a></span><br></br><span class="subsubtoc">4.1.1. <a href="#Unsupported_Key_Sizes">Unsupported Key Sizes</a></span><br></br><span class="subtoc">4.2. <a href="#proof_of_possession">Demonstrating Proof of Possession</a></span><br></br><span class="subsubtoc">4.2.1. <a href="#Amending_Contexts">Amending Contexts</a></span><br></br><span class="subsubtoc">4.2.2. <a href="#Renewing_Contexts">Renewing Contexts</a></span><br></br><span class="subsubtoc">4.2.3. <a href="#Cancelling_Contexts">Cancelling Contexts</a></span><br></br><span class="subtoc">4.3. <a href="#claims_reauthentication">Claims Re-Authentication</a></span><br></br><span class="subsubtoc">4.3.1. <a href="#Re-Authenticating_Claims">Re-Authenticating Claims</a></span><br></br><span class="subtoc">4.4. <a href="#ref_sct">Referencing Security Context Tokens</a></span><br></br><span class="subsubtoc">4.4.1. <a href="#Associating_a_Security_Context">Associating a Security Context</a></span><br></br><span class="subsubtoc">4.4.2. <a href="#Derived_Token_References_to_Security_Contexts">Derived Token References to Security Contexts</a></span><br></br><span class="subtoc">4.5. <a href="#wsa_headers">Addressing Headers</a></span><br></br><span class="subsubtoc">4.5.1. <a href="#Protecting_Addressing_Headers">Protecting Addressing Headers</a></span><br></br>5. <a href="#makeconnection">MakeConnection</a><br></br><span class="subtoc">5.1. <a href="#use_makeconnection">Using MakeConnection</a></span><br></br><span class="subsubtoc">5.1.1. <a href="#Addressing_Variants">Addressing Variants</a></span><br></br><span class="subsubtoc">5.1.2. <a href="#MakeConnection_Anonymous_URI">MakeConnection Anonymous URI</a></span><br></br>6. <a href="#sec_reliable_msg">Secure Reliable Messaging</a><br></br><span class="subtoc">6.1. <a href="#secure-sequence-creation">Initiating a Secure Sequence</a></span><br></br><span class="subsubtoc">6.1.1. <a href="#Secure_Context_Identification">Secure Context Identification</a></span><br></br><span class="subsubtoc">6.1.2. <a href="#Security_Token_References">Security Token References</a></span><br></br><span class="subtoc">6.2. <a href="#signature_coverage">Signature Coverage</a></span><br></br><span class="subsubtoc">6.2.1. <a href="#Single_Signature_for_Sequence_Header_and_SOAP_Body">Single Signature for Sequence Header and SOAP Body</a></span><br></br><span class="subsubtoc">6.2.2. <a href="#Signed_Elements">Signed Elements</a></span><br></br><span class="subsubtoc">6.2.3. <a href="#Single_Signature_for_SOAP_1.1_Fault_and_SequenceFault_Header">Single Signature for SOAP 1.1 Fault and SequenceFault Header</a></span><br></br><span class="subtoc">6.3. <a href="#sec_mc">Secure Use of MakeConnection</a></span><br></br><span class="subsubtoc">6.3.1. <a href="#Security_Context_for_MakeConnection">Security Context for MakeConnection</a></span><br></br><span class="subsubtoc">6.3.2. <a href="#Signing_the_MessagePending_header">Signing the MessagePending header</a></span><br></br><span class="subtoc">6.4. <a href="#replay">Replay Detection</a></span><br></br><span class="subsubtoc">6.4.1. <a href="#Unique_Timestamp_Values">Unique Timestamp Values</a></span><br></br>
+         Appendix A: <a href="#references">Referenced Specifications</a><br></br>
+         Appendix B: <a href="#points">Extensibility Points</a><br></br> 
+         Appendix C: <a href="#acks">Acknowledgements</a><br></br></p>
+      <h2 id="introduction">1. Introduction</h2>
+      <p><span class="statement-target"></span>This document defines the WS-I Reliable Secure Profile 1.0 (hereafter, "Profile"), consisting of a set of non-proprietary
+         Web services specifications, along with clarifications, refinements, interpretations and amplifications of those specifications
+         which promote interoperability.
+      </p>
+      <p><span class="statement-target"></span>Section 1 introduces the Profile, and explains its relationships to other profiles.
+      </p>
+      <p><span class="statement-target"></span>Section 2, "Profile Conformance," explains what it means to be conformant to the Profile. 
+      </p>
+      <p><span class="statement-target"></span>Each subsequent section addresses a component of the Profile, and consists of two parts; an overview detailing the component
+         specifications and their extensibility points, followed by subsections that address individual parts of the component specifications.
+         Note that there is no relationship between the section numbers in this document and those in the referenced specifications.
+      </p>
+      <h3 id="relationships">1.1 Relationships to Other Profiles</h3>
+      <p><span class="statement-target"></span>This Profile is intended to be composed with the WS-I Basic Profile 1.2, WS-I Basic Profile 2.0, WS-I Basic Security Profile
+         1.0 and WS-I Basic Security Profile 1.1. Composability of RSP with the previously mentioned profiles offers the following
+         guarantee to users: conformance of an artifact to RSP does not prevent conformance of this artifact to these other profiles,
+         and vice-versa.
+      </p>
+      <p><span class="statement-target"></span>Because the conformance targets defined for RSP may not match exactly the conformance targets for another profile, the following
+         more precise definition of composability is assumed in this profile:
+      </p>
+      <dl>
+         <dd><em><span class="statement-target"></span>A profile P2 is said to be composable with a profile P1 if, for any respective pair of conformance targets (T2, T1) where
+               T1  depends on T2  (see definition below), conformance of an instance of  T2 to P2 does not prevent conformance of the related
+               T1 instance(s) to P1,  and  vice-versa in case T2 depends on T1.</em></dd>
+      </dl>
+      <p><span class="statement-target"></span>A target T1  is said to  depend on a target T2  if either:
+      </p>
+      <ul>
+         <li><span class="statement-target"></span>T2 and T1 are just different names for the same type of artifact (e.g. ENVELOPE in RSP and SOAP_ENVELOPE in BSP)
+         </li>
+         <li><span class="statement-target"></span>or T2 is a specialization (or particular instance) of T1 (e.g. SECURE_ENVELOPE in BSP is a specialization of ENVELOPE in RSP)
+         </li>
+         <li><span class="statement-target"></span>T2 is contained in T1 (e.g. SECURITY_HEADER in BSP is contained in ENVELOPE in RSP)
+         </li>
+         <li><span class="statement-target"></span>more generally,  an instance of T2 will restrict in some way the possible values - or behaviors - of T1 instances associated
+            with it.
+         </li>
+      </ul>
+      <p><span class="statement-target"></span>In order to conform to this profile (RSP):
+      </p>
+      <ul>
+         <li><span class="statement-target"></span>If SOAP 1.1 is being used, all requirements defined in BP 1.2 must be complied with.
+         </li>
+         <li><span class="statement-target"></span>If SOAP 1.2 is being used, all requirements defined in BP 2.0 must be complied with.
+         </li>
+      </ul>
+      <h3 id="philosophy">1.2 Guiding Principles</h3>
+      <p><span class="statement-target"></span>The Profile was developed according to a set of principles that, together, form the philosophy of the Profile, as it relates
+         to bringing about interoperability. This section documents these guidelines.
+      </p>
+      <dl>
+         <dt><span class="statement-target"></span>No guarantee of interoperability
+         </dt>
+         <dd><span class="statement-target"></span>It is impossible to completely guarantee the interoperability of a particular service. However, the Profile does address the
+            most common problems that implementation experience has revealed to date.
+         </dd>
+         <dt><span class="statement-target"></span>Application semantics
+         </dt>
+         <dd><span class="statement-target"></span>Although communication of application semantics can be facilitated by the technologies that comprise the Profile, assuring
+            the common understanding of those semantics is not addressed by it.
+         </dd>
+         <dt><span class="statement-target"></span>Testability
+         </dt>
+         <dd><span class="statement-target"></span>When possible, the Profile makes statements that are testable. However, such testability is not required. Preferably, testing
+            is achieved in a non-intrusive manner (e.g., examining artifacts "on the wire").                  
+         </dd>
+         <dt><span class="statement-target"></span>Strength of requirements
+         </dt>
+         <dd><span class="statement-target"></span>The Profile makes strong requirements (e.g., MUST, MUST NOT) wherever feasible; if there are legitimate cases where such a
+            requirement cannot be met, conditional requirements (e.g., SHOULD, SHOULD NOT) are used. Optional and conditional requirements
+            introduce ambiguity and mismatches between implementations.
+         </dd>
+         <dt><span class="statement-target"></span>Restriction vs. relaxation
+         </dt>
+         <dd><span class="statement-target"></span>When amplifying the requirements of referenced specifications, the Profile may restrict them, but does not relax them (e.g.,
+            change a MUST to a MAY).
+         </dd>
+         <dt><span class="statement-target"></span>Multiple mechanisms
+         </dt>
+         <dd><span class="statement-target"></span>If a referenced specification allows multiple mechanisms to be used interchangeably, the Profile selects those that are well-understood,
+            widely implemented and useful. Extraneous or underspecified mechanisms and extensions introduce complexity and therefore reduce
+            interoperability.
+         </dd>
+         <dt><span class="statement-target"></span>Future compatibility
+         </dt>
+         <dd><span class="statement-target"></span>When possible, the Profile aligns its requirements with in-progress revisions to the specifications it references. This aids
+            implementers by enabling a graceful transition, and assures that WS-I does not 'fork' from these efforts. When the Profile
+            cannot address an issue in a specification it references, this information is communicated to the appropriate body to assure
+            its consideration.
+         </dd>
+         <dt><span class="statement-target"></span>Compatibility with deployed services
+         </dt>
+         <dd><span class="statement-target"></span>Backwards compatibility with deployed Web services is not a goal for the Profile, but due consideration is given to it; the
+            Profile does not introduce a change to the requirements of a referenced specification unless doing so addresses specific interoperability
+            issues.
+         </dd>
+         <dt><span class="statement-target"></span>Focus on interoperability
+         </dt>
+         <dd><span class="statement-target"></span>Although there are potentially a number of inconsistencies and design flaws in the referenced specifications, the Profile
+            only addresses those that affect interoperability.
+         </dd>
+         <dt><span class="statement-target"></span>Conformance targets
+         </dt>
+         <dd><span class="statement-target"></span>Where possible, the Profile places requirements on artifacts (e.g., WSDL descriptions, SOAP messages) rather than the producing
+            or consuming software's behaviors or roles. Artifacts are concrete, making them easier to verify and therefore making conformance
+            easier to understand and less error-prone.
+         </dd>
+         <dt><span class="statement-target"></span>Lower-layer interoperability
+         </dt>
+         <dd><span class="statement-target"></span>The Profile speaks to interoperability at the application layer; it assumes that interoperability of lower-layer protocols
+            (e.g., TCP, IP, Ethernet) is adequate and well-understood. Similarly, statements about application-layer substrate protocols
+            (e.g., SSL/TLS, HTTP) are only made when there is an issue affecting Web services specifically; WS-I does not attempt to assure
+            the interoperability of these protocols as a whole. This assures that WS-I's expertise in and focus on Web services standards
+            is used effectively.
+         </dd>
+      </dl>
+      <h3 id="conventions">1.3 
+         Notational Conventions
+         
+      </h3>
+      <p>The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+         "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+         document are to be interpreted as described in <a class="offsite" href="http://www.ietf.org/rfc/rfc2119.txt">RFC2119</a>.
+      </p>
+      <p>Normative statements of requirements in the Profile (i.e., those
+         impacting conformance, as outlined in "<a href="#conformance_requirements">Conformance Requirements</a>") are
+         presented in the following manner:
+      </p>
+      <p class="statement"><span class="statement-id">Rnnnn</span>Statement
+         text here.
+      </p>
+      <p>where "nnnn" is replaced by a number that is unique among the
+         requirements in the Profile, thereby forming a unique requirement
+         identifier.
+      </p>
+      <p>Requirement identifiers can be considered to be namespace
+         qualified, in such a way as to be compatible with QNames from <a class="offsite" href="http://www.w3.org/TR/REC-xml-names/">Namespaces in XML</a>. If
+         there is no explicit namespace prefix on a requirement's identifier
+         (e.g., "R9999" as opposed to "bp10:R9999"), it should be interpreted
+         as being in the namespace identified by the conformance URI of the
+         document section it occurs in. If it is qualified, the prefix should
+         be interpreted according to the namespace mappings in effect, as
+         documented below.
+      </p>
+      <p>Some requirements clarify the referenced specification(s), but do not
+         place additional constraints upon implementations. For convenience,
+         clarifications are annotated in the following manner: <span class="statement-type">C</span></p>
+      <p>Some requirements are derived from ongoing standardization work on
+         the referenced specification(s). For convenience, such forward-derived
+         statements are annotated in the following manner: <span class="statement-origin">xxxx</span>, where "xxxx" is an identifier
+         for the specification (e.g., "WSDL20" for WSDL Version 2.0). Note that
+         because such work was not complete when this document was published,
+         the specification that the requirement is derived from may change;
+         this information is included only as a convenience to
+         implementers.
+      </p>
+      <p>As noted above, some requirements may present compatibility issues 
+         		(whether forwards or backwards) with previously published versions of the 
+         		profile.  For convenience, such requirements are annotated in the following 
+         		manner: <span class="compat-type">Compat</span></p>
+      <p>This specification uses a number of namespace prefixes throughout;
+         their associated URIs are listed below. Note that the choice of any
+         namespace prefix is arbitrary and not semantically significant.
+      </p>
+      <ul>
+         <li><strong>soap11</strong> - "http://schemas.xmlsoap.org/soap/envelope/"
+         </li>
+         <li><strong>soap12</strong> - "http://www.w3.org/2003/05/soap-envelope"
+         </li>
+         <li><strong>xsi</strong> - "http://www.w3.org/2001/XMLSchema-instance"
+         </li>
+         <li><strong>xsd</strong> - "http://www.w3.org/2001/XMLSchema"
+         </li>
+         <li><strong>wsdl</strong> - "http://schemas.xmlsoap.org/wsdl/"
+         </li>
+         <li><strong>soapbind</strong> - "http://schemas.xmlsoap.org/wsdl/soap/"
+         </li>
+         <li><strong>wsa</strong> - "http://www.w3.org/2005/08/addressing"
+         </li>
+         <li><strong>wsrm</strong> - "http://docs.oasis-open.org/ws-rx/wsrm/200702"
+         </li>
+         <li><strong>wsmc</strong> - "http://docs.oasis-open.org/ws-rx/wsmc/200702"
+         </li>
+         <li><strong>wssc</strong> - "http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512"
+         </li>
+         <li><strong>wst</strong> - "http://docs.oasis-open.org/ws-sx/ws-trust/200512"
+         </li>
+         <li><strong>wsse</strong> - "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+         </li>
+         <li><strong>wsu</strong> - "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+         </li>
+      </ul>
+      <h3 id="versioning">1.4       
+         Profile Identification and Versioning
+         
+      </h3>
+      <p>This document is identified by a name (in this case, Reliable Secure Profile) and 
+         a version number (here, 1.0). Together, they identify a 
+         particular <em>profile instance</em>.
+      </p>
+      <p>Version numbers are composed of a major and minor portion, in the form 
+         "major.minor". They can be used to determine the precedence of a 
+         profile instance; a higher version number (considering both the major 
+         and minor components) indicates that an instance is more recent, and 
+         therefore supersedes earlier instances.
+      </p>
+      <p>Instances of profiles with the same name (e.g., "Example 
+         Profile 1.1" and "Example Profile 5.0") address interoperability 
+         problems in the same general scope (although some developments may 
+         require the exact scope of a profile to change between instances).
+      </p>
+      <p>One can also use this information to determine whether two instances of 
+         a profile are backwards-compatible; that is, whether one can assume 
+         that conformance to an earlier profile instance implies conformance to a later 
+         one. Profile instances with the same name and major version number (e.g., 
+         "Example Profile 1.0" and "Example Profile 1.1") MAY be considered 
+         compatible. Note that this does not imply anything about compatibility 
+         in the other direction; that is, one cannot assume that conformance 
+         with a later profile instance implies conformance to an earlier one.
+      </p>
+      <h2 id="conformance">2 
+         Profile Conformance
+         
+      </h2>
+      <p>Conformance to the Profile is defined by adherence to the
+         set of <em>requirements</em> defined for a specific
+         <em>target</em>, within the <em>scope</em> of the
+         Profile. This section explains these terms and describes how
+         conformance is defined and used.
+      </p>
+      <h3 id="conformance_requirements">2.1
+          
+         Conformance Requirements
+         
+      </h3>
+      <p>Requirements state the criteria for conformance to the
+         Profile. They typically refer to an existing specification and
+         embody refinements, amplifications, interpretations and
+         clarifications to it in order to improve interoperability. All
+         requirements in the Profile are considered normative, and those
+         in the specifications it references that are in-scope (see
+         "Conformance Scope") should likewise be considered normative.
+         When requirements in the Profile and its referenced
+         specifications contradict each other, the Profile's
+         requirements take precedence for purposes of Profile
+         conformance.
+      </p>
+      <p>Requirement levels, using <a class="offsite" href="http://www.ietf.org/rfc/rfc2119.txt">RFC2119</a> language (e.g.,
+         MUST, MAY, SHOULD) indicate the nature of the requirement and its
+         impact on conformance. Each requirement is individually identified
+         (e.g., R9999) for convenience.
+      </p>
+      <p>For example;</p>
+      <p class="statement"><span class="statement-id">R9999</span> Any <strong>WIDGET</strong> SHOULD be round in shape.
+      </p>
+      <p>This requirement is identified by "R9999", applies to the
+         target WIDGET (see below), and places a conditional
+         requirement upon widgets; i.e., although this requirement must
+         be met to maintain conformance in most cases, there are some
+         situations where there may be valid reasons for it not being
+         met (which are explained in the requirement itself, or in its
+         accompanying text).
+      </p>
+      <p>Each requirement statement contains exactly one requirement level
+         keyword (e.g., "MUST") and one conformance target keyword (e.g.,
+         "MESSAGE"). The conformance target keyword appears in bold text (e.g. "<b>MESSAGE</b>"). Other conformance targets appearing in non-bold text are being used strictly for their definition and NOT as a conformance
+         target. Additional text may
+         be included to illuminate a requirement or group of
+         requirements (e.g., rationale and examples); however, prose
+         surrounding requirement statements must not be considered in
+         determining conformance.
+      </p>
+      <p>Definitions of terms in the Profile are considered
+         authoritative for the purposes of determining
+         conformance.
+      </p>
+      <p>None of the requirements in the Profile, regardless of
+         their conformance level, should be interpreted as limiting the
+         ability of an otherwise conforming implementation to apply
+         security countermeasures in response to a real or perceived
+         threat (e.g., a denial of service attack).
+      </p>
+      <h3 id="conformance_targets">2.2
+          
+         Conformance Targets
+         	    
+      </h3>
+      <p>Conformance targets identify what artifacts (e.g.,
+         SOAP message, WSDL description, UDDI registry data) or
+         parties (e.g., SOAP processor, end user) requirements
+         apply to. 
+      </p>
+      <p>This allows for the definition of conformance in
+         different contexts, to assure unambiguous interpretation
+         of the applicability of requirements, and to allow
+         conformance testing of artifacts (e.g., SOAP messages and
+         WSDL descriptions) and the behavior of various parties to
+         a Web service (e.g., clients and service instances).
+      </p>
+      <p>Requirements' conformance targets are physical
+         artifacts wherever possible, to simplify testing and avoid
+         ambiguity.
+      </p>
+      <p>The following conformance targets are used in the Profile:</p>
+      <ul>
+         <li><strong>MESSAGE</strong> 
+            - 
+            	      protocol elements that transport the ENVELOPE (e.g., SOAP/HTTP messages)
+            (from 
+            <a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.1.html">Basic Profile 1.1</a>)
+            
+         </li>
+         <li><strong>ENVELOPE</strong> 
+            - 
+            	      the serialization of the soap:Envelope element and its content
+            (from 
+            <a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.1.html">Basic Profile 1.1</a>)
+            
+         </li>
+         <li><strong>DESCRIPTION</strong> 
+            - 
+            	      descriptions of types, messages, interfaces and their concrete protocol and data format bindings, and the network access points
+            associated with Web services (e.g., WSDL descriptions)
+            (from 
+            <a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+            
+         </li>
+         <li><strong>INSTANCE</strong> 
+            - 
+            	      software that implements a wsdl:port or a uddi:bindingTemplate
+            (from 
+            <a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+            
+         </li>
+         <li><strong>CONSUMER</strong> 
+            - 
+            	      software that invokes an INSTANCE
+            (from 
+            <a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+            
+         </li>
+         <li><strong>SENDER</strong> 
+            - 
+            	      software that generates a message according to the protocol(s) associated with it
+            (from 
+            <a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+            
+         </li>
+         <li><strong>RECEIVER</strong> 
+            - 
+            	      software that consumes a message according to the protocol(s) associated with it (e.g., SOAP processors)
+            (from 
+            <a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">Basic Profile 1.0</a>)
+            
+         </li>
+         <li><strong>MC-SENDER</strong> 
+            - 
+            	      software that generates a message containing an EPR that uses the wsmc:MakeConnection Anonymous URI, and generates a MakeConnection
+            message as defined by WS-MakeConnection 1.0
+            (from 
+            <a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">WS-MakeConnection 1.0</a>)
+            
+         </li>
+         <li><strong>MC-RECEIVER</strong> 
+            - 
+            	      software that consumes a MakeConnection message as defined by WS-MakeConnection 1.0
+            (from 
+            <a class="offsite" href="http://www.ws-i.org/Profiles/BasicProfile-1.0.html">WS-MakeConnection 1.0</a>)
+            
+         </li>
+         <li><strong>RMS</strong> 
+            - 
+            	      RM Source as defined by WS-ReliableMessaging 1.1
+         </li>
+         <li><strong>RMD</strong> 
+            - 
+            	      RM Destination as defined by WS-ReliableMessaging 1.1
+         </li>
+         <li><strong>RM-NODE</strong> 
+            - 
+            	      an instance of either an RM Source or an RM Destination (as defined above)
+         </li>
+      </ul>
+      <h3 id="conformance_scope">2.3
+          
+         Conformance Scope
+         
+      </h3>
+      <p>The scope of the Profile delineates the technologies
+         that it addresses; in other words, the Profile only attempts
+         to improve interoperability within its own scope.
+         Generally, the Profile's scope is bounded by the
+         specifications referenced by it.
+      </p>
+      <p>The Profile's scope is further refined by extensibility
+         points. Referenced specifications often provide extension
+         mechanisms and unspecified or open-ended configuration
+         parameters; when identified in the Profile as an
+         extensibility point, such a mechanism or parameter is
+         outside the scope of the Profile, and its use or non-use
+         is not relevant to conformance.
+      </p>
+      <p>Note that the Profile may still place requirements on
+         the use of an extensibility point. Also, specific uses of
+         extensibility points may be further restricted by other
+         profiles, to improve interoperability when used in
+         conjunction with the Profile.
+      </p>
+      <p>Because the use of extensibility points may impair
+         interoperability, their use should be negotiated or
+         documented in some fashion by the parties to a Web
+         service; for example, this could take the form of an
+         out-of-band agreement.
+      </p>
+      <p>The Profile's scope is defined by the referenced
+         specifications in <a href="#references">Appendix A</a>,  as refined by the
+         extensibility points in <a href="#points">Appendix B</a>.
+      </p>
+      <h3 id="conformance_claims">2.4
+          
+         Claiming Conformance
+         
+      </h3>
+      <p>Claims of conformance to the Profile can be made using the following 
+         mechanisms, as described in <a class="offsite" href="http://www.ws-i.org/Profiles/ConformanceClaims-1.0.html">Conformance Claim Attachment Mechanisms</a>, 
+         when the applicable Profile requirements associated 
+         with the listed targets have been met:
+      </p>
+      <ul>
+         <li><strong>WSDL 1.1 Claim Attachment Mechanism for Web Services Instances</strong> - MESSAGE DESCRIPTION INSTANCE RECEIVER RMS RMD
+         </li>
+         <li><strong>WSDL 1.1 Claim Attachment Mechanism for Description Constructs</strong> - DESCRIPTION
+         </li>
+         <li><strong>UDDI Claim Attachment Mechanism for Web Services Instances</strong> - MESSAGE DESCRIPTION INSTANCE RECEIVER
+         </li>
+         <li><strong>UDDI Claim Attachment Mechanism for Web Services Registrations</strong> - REGDATA
+         </li>
+      </ul>
+      <p>The conformance claim URI for this Profile is "http://ws-i.org/profiles/rsp/1.0".</p>
+      <h2 id="reliablemessaging">3. Reliable Messaging</h2>
+      <p>This section of the Profile incorporates the following
+         		specifications by reference:
+         		
+      </p>
+      <ul>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-rx/wsrm/200702/wsrm-1.1-spec-cs-01.pdf">Web Services Reliable Messaging (WS-ReliableMessaging) 1.1</a></li>
+         <li><a class="offsite" href="http://www.ietf.org/rfc/rfc3987.txt">Internationalized Resource Identifiers (IRIs)</a></li>
+         <li><a class="offsite" href="http://www.w3.org/TR/2006/REC-ws-addr-soap-20060509">Web Services Addressing 1.0 - SOAP Binding</a></li>
+      </ul>
+      <h3 id="extensibility_points">3.1 Use of Extensiblity Points</h3>
+      <p><span class="statement-target"></span>The protocol elements defined by WS-ReliableMessaging contain extension points wherein implementations MAY add child elements
+         and/or attributes.
+      </p>
+      <div class="refinement">
+         <h4 id="Ignore_Unknown_Extension_Elements">3.1.1 Ignore Unknown Extension Elements</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>To ensure the ability to safely extend the protocol, it is necessary that adding an extension does not create the risk of
+               impacting interoperability with non-extended implementations.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0001">R0001</a></span> A <span class="statement-target">RECEIVER</span> MUST NOT generate a fault as a consequence of receiving a message (e.g. wsrm:CreateSequence) that contains extension elements
+            and/or attributes that it does not recognize. Any exceptions to this rule are clearly identified in requirements below or
+            the specifications underlying the profile
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>While the extensibility points of the profiled specifications can be used, per R0001 they MUST be ignored if they are not
+               understood. However if a SENDER wishes to ensure that the RECEIVER understands and will comply with any such extensions, they
+               need to include a SOAP header, marked with <code><span class="statement-target"></span>mustUnderstand="1"</code><span class="statement-target"></span>, in the request message that requires adherence to the semantics of those extensions.
+            </p>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Use_of_the_Offer_Element">3.1.2 Use of the Offer Element</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>The use of the Offer element within a CreateSequence message is an optional feature of WS-ReliableMessaging 1.1, however,
+               WS-RM does not define a mechanism by which an RMS can determine if an Offer is desired by the RMD. This creates a potential
+               interoperability issue in cases where an RMS that either doesn't prefer to use or cannot support the use of Offer attempts
+               to create a Sequence with an RMD that requires the use of Offer.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0010">R0010</a></span> An <span class="statement-target">RMD</span> MUST NOT fault a CreateSequence due to the absence of the Offer element.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>To ensure interoperability, the Offer feature must be optional for both the initiator of the Sequence (the RMS) as well as
+               the RMD.
+            </p>
+         </div>
+      </div>
+      <h3 id="retransmission">3.2 Retransmission of Messages</h3>
+      <p><span class="statement-target"></span>WS-ReliableMessaging protocol requires retransmission of messages. The Profile places the following restrictions and refinements
+         on such retransmissions:
+      </p>
+      <div class="refinement">
+         <h4 id="Retransmission_of_Unacknowledged_Messages">3.2.1 Retransmission of Unacknowledged Messages</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>To ensure reliable delivery of messages within a Sequence, it is necessary for the RMS to retransmit unacknowledged messages
+               and for the RMD to accept them.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0101">R0101</a></span> An <span class="statement-target">RMS</span> MUST continue to retransmit unacknowledged messages until the Sequence is closed or terminated.
+         </p>
+         <p class="statement"><span class="statement-id"><a name="R0102">R0102</a></span> An <span class="statement-target">RMD</span> MUST accept unacknowledged message until the Sequence is closed or terminated.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>Note: there are cases where it may be obvious that retransmitting a message is unlikey to result in an outcome that is any
+               different from the previous, failed transmission(s). For example, in the case of HTTP, a 401 status code may indicate that
+               access to an endpoint has been refused for the credentials that accompanied the request. Unless some action is taken to grant
+               access to those credentials, retransmitting the request is likely to result in the same error and may cause negative side-effects
+               such as the locking of an account due to "excessive failed login attempts".
+            </p>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Retransmission_of_Sequence_Lifecycle_Messages">3.2.2 Retransmission of Sequence Lifecycle Messages</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>WS-ReliableMessaging 1.1 Section 2.1 defines the messages that affect the created/closing/closed/terminating state of a Sequence
+               as "Sequence Lifecycle Messages". WS-RM 1.1 is silent on what a SENDER (RMS or RMD) is expected to do when it either fails
+               to send one of the messages or does not receive the corresponding response message (e.g. an RMS sends a CreateSequence message
+               but does not receive a CreateSequenceResponse message).
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0110">R0110</a></span> When a <span class="statement-target">SENDER</span> fails to successfully send a Sequence Lifecycle Message or it does not receive the corresponding response message (if one
+            exists), it is RECOMMENDED that the SENDER attempt to resend the message. The frequency and number of these retries are implementation
+            dependent.
+         </p>
+      </div>
+      <div class="refinement">
+         <h4 id="Message_Identity">3.2.3 Message Identity</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>In cases where <code><span class="statement-target"></span>wsa:MessageID</code><span class="statement-target"></span> is being used, retransmission must not alter its value, because other headers (possibly occuring in other messages - such
+               as <code><span class="statement-target"></span>wsa:RelatesTo</code><span class="statement-target"></span>) may rely on it for message correlation.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0120">R0120</a></span> For any two <span class="statement-target">ENVELOPE</span>S that contain WS-RM Sequence headers in which the value of their wsrm:Identifier and wsrm:MessageNumber elements are equal,
+            it MUST be true that neither of the envelopes contains a wsa:MessageID or that both messages contain a wsa:MessageID and the
+            value of the wsa:MessageID elements are equal.
+         </p>
+      </div>
+      <h3 id="termination">3.3 Sequence Termination</h3>
+      <p><span class="statement-target"></span>Termination of sequences must be done in a way to ensure that both the RMS and RMD share a common understanding of the final
+         status of the sequence. The Profile places the following requirements on termination procedures:
+      </p>
+      <div class="refinement">
+         <h4 id="Sequence_Termination_from_the_Destination">3.3.1 Sequence Termination from the Destination</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>An RMS may need to get a final sequence acknowledgment, for supporting a particular delivery assurance. This is only possible
+               after the sequence  is closed and before it is terminated. When the termination is decided by the RMD, the RMS must also be
+               made aware of this closure so that it can request a final acknowledgement.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0200">R0200</a></span> In the case where an <span class="statement-target">RMD</span> decides to discontinue a sequence, it MUST close the Sequence and MUST attempt to send a wsrm:CloseSequence message to the
+            AcksTo EPR.
+         </p>
+      </div>
+      <div class="refinement">
+         <h4 id="Synchronizing_Sequence_Status">3.3.2 Synchronizing Sequence Status</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>Among other benefits, the use of Sequence Message Numbers makes an RMD aware of gaps - messages it has not received - in a
+               sequence. For this awareness to apply to messages missing from the end of a sequence the RMD must be aware of the highest
+               message number sent.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0210">R0210</a></span> Any <span class="statement-target">ENVELOPE</span> containing either a wsrm:CloseSequence or a wsrm:TerminateSequence element MUST also contain a wsrm:LastMsgNumber element.
+         </p>
+      </div>
+      <div class="refinement">
+         <h4 id="Sequence_Lifecycle_Independence">3.3.3 Sequence Lifecycle Independence</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>WS-ReliableMessaging is unclear about the relationship, if any, between the lifecycles of a Sequence and its corresponding
+               offered Sequence. Considering that such a relationship is not necessary for the proper functioning of the WS-RM protocol and
+               that the existence of a such a relationship would create unnecessary and undesirable interdependencies between the RMS and
+               the RMD, this profile makes the clarifying requirement that no such relationship exists.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0220">R0220</a></span> An <span class="statement-target">RM-NODE</span> (RMD or RMS) MUST NOT assume that the termination (or closure) of a Sequence implicitly terminates (or closes) any other
+            Sequence.
+         </p>
+      </div>
+      <h3 id="xmit_seq_faults">3.4 Sequence Faults</h3>
+      <p><span class="statement-target"></span>This Profile adds the following requirement to the handling of faults that are generated as the result of processing WS-RM
+         Sequence Lifecycle messages.
+      </p>
+      <div class="refinement">
+         <h4 id="Transmission_of_Sequence_Faults">3.4.1 Transmission of Sequence Faults</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>In Section 4, "Faults" WS-ReliableMessaging 1.1 states that a receiver that generates a fault related to a known sequence
+               SHOULD transmit that fault. However, the WS-I Basic Profile 1.2 states, in requirement R1029, that, under certain circumstances,
+               the receiver must transmit the fault. Mapping the specifics of the BP 1.2 requirement onto the details of the WS-RM 1.1 specification
+               results in the following requirement:
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0400">R0400</a></span> If a fault is generated while processing a wsrm:CreateSequence, wsrm:CloseSequence, or wsrm:TerminateSequence message, or
+            a message containing a wsrm:AckRequested header, the <span class="statement-target">RECEIVER</span> MUST transmit the fault.
+         </p>
+      </div>
+      <h3 id="piggyback_acks">3.5 Piggybacked Acknowledgements</h3>
+      <p><span class="statement-target"></span>WS-ReliableMessaging 1.1 allows for the addition of some WS-RM-defined headers to messages that are targeted to the same endpoint
+         to which those headers are to be sent; a concept it refers to as "piggybacking". There are a number of interoperability issues
+         with the practice of piggybacking SequenceAcknowledgment headers.
+      </p>
+      <div class="refinement">
+         <h4 id="Endpoint_Comparison">3.5.1 Endpoint Comparison</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>Because there is no standard mechanism for comparing EPRs, it is possible for different implementations to have dissimilar
+               assumptions about which messages are and are not valid carriers for piggybacked SequenceAcknowledgement headers. For example,
+               an implementation of the RMS may assume that the ReferenceParameters (if any) of the EPRs will be compared as part of the
+               determination of whether a message is targeted to "the same" endpoint as the AcksTo endpoint. Meanwhile an implementation
+               of the RMD may assume that a simple comparison of the Address IRIs is sufficient for making this determination. This creates
+               the possibility for misdirected, dropped, and otherwise lost acknowledgements to the detriment and possible malfunctioning
+               of the WS-RM protocol.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0500">R0500</a></span> An <span class="statement-target">RMD</span> MUST, at a minimum, perform a simple string comparison algorithm, as indicated in the <a class="offsite" href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a> section 5.3.1, of the respective wsa:Address IRIs before piggybacking a SequenceAcknowledgement Header onto another message.
+         </p>
+         <p class="statement"><span class="statement-id"><a name="R0501">R0501</a></span> In cases where the AcksTo EPR of a Sequence has an Address value equal to the WS-Addressing 1.0 Anonymous URI, the <span class="statement-target">RMD</span> MUST also limit piggybacking as described in section 3.9 of the WS-ReliableMessaging 1.1 specification.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>These requirements establish a minimum baseline for an RMD to correctly piggyback SequenceAcknowledgement headers. Individual
+               RMD implementations may choose to consider and/or compare additional elements of the EndpointReference (e.g. the value of
+               any ReferenceParameters elements).
+            </p>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Treatment_of_ReferenceParameters_in_AcksTo_EPRs">3.5.2 Treatment of ReferenceParameters in AcksTo EPRs</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>There exists an interoperability problem for Sequences in which the AcksTo EPR contains ReferenceParameters. According to
+               the processing rules defined by <a class="offsite" href="http://www.w3.org/TR/2006/REC-ws-addr-soap-20060509"><span class="statement-target"></span>Web Services Addressing 1.0 - SOAP Binding</a><span class="statement-target"></span>, the RMS should expect that any acknowledgements for the Sequence will be accompanied by the contents of the wsrm:AcksTo/wsa:ReferenceParameters
+               promoted as headers in the message carrying that acknowledgement. However, in the case of piggybacked acknowledgments, the
+               carrier message's [destination] EPR may contain Reference Parameters that conflict in some way with the wsrm:AcksTo/ReferenceParameters.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0502">R0502</a></span> If the algorithm used by the <span class="statement-target">RMD</span> to determine if a SequenceAcknowledgment can be piggybacked onto another message does not include a comparison of the value
+            of the ReferenceParameters element (when present), then the RMD MUST NOT piggyback SequenceAcknowledgement headers for Sequences
+            in which the AcksTo EPR contains ReferenceParameters.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>This requirement ensures any RMS implementation that includes ReferenceParameters in its AckTo EPRs of the following invariant:
+               regardless of whether or not the acknowledgments for such Sequences are piggybacked, any message containing the SequenceAcknowledgement
+               header(s) for such Sequences will also contain the AcksTo/wsa:ReferenceParameters in its SOAP headers. Note, this requirement
+               applies equally to Sequences for which AcksTo/wsa:Address is anonymous and Sequence for which AcksTo/wsa:Address is not anonymous.
+            </p>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Preventing_Piggybacked_Acknowledgements">3.5.3 Preventing Piggybacked Acknowledgements</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>In situations where an RMD exercises the opportunity to piggyback most or all of the wsrm:SequenceAcknowledgement headers
+               for a particular Sequence to an RMS which does not support the processing of piggybacked acknowledgments, it is likely that
+               the operation of the WS-RM protocol will be severely impacted. This situation can be avoided if the RMS takes steps to ensure
+               that the AcksTo EPRs for any Sequence's it creates are sufficiently unique as to cause the RMD to rule out the possibility
+               of piggybacking acknowledgments for these Sequences.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0503">R0503</a></span> An <span class="statement-target">RMS</span> that does not support the processing of piggybacked SequenceAcknowledgement headers MUST differentiate the AcksTo EPRs for
+            any Sequence's it creates from other EPRs.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>The term "differentiate" in the above requirement refers to the process of altering the information in the EPR in such a way
+               as to cause the RMD to rule out the possibility of piggybacking acknowledgments for these Sequences while preserving the RMDs
+               ability to connect to the proper transport endpoint. For example, suppose a particular instance of a web services stack maintains
+               a generic, asynchronous callback facility at http://b2b.foo.com/async/AsyncResponseService. In general, all the EPRs minted
+               by this instance for the purpose of servicing callbacks will have this URI as the value of their wsa:Address element. However,
+               if this web services stack does not support the processing piggybacked acknowledgements, the use this value in the AcksTo
+               EPR creates the potential for the problem described above. The RMS implementation of this web services stack could fulfill
+               this requirement by specifying http://b2b.foo.com/async/AsyncResponseService?p={<em><span class="statement-target"></span>unique value</em><span class="statement-target"></span>} as the address of the AcksTo EPR for any sequences it creates. Since each sequence has a "different" AcksTo EPR (as defined
+               by R0500) from all the other services listening for callbacks, no RSP 1.0 compliant RMD will piggyback acknowledgements for
+               these sequences, though each RMD (in the case of SOAP/HTTP) will correctly connect to http://b2b.foo.com and POST to /async/AsyncResponseService.
+            </p>
+         </div>
+      </div>
+      <h3 id="sequence_assignment">3.6 Sequence Assignment</h3>
+      <p><span class="statement-target"></span>WS-ReliableMessaging 1.1 is silent on the mechanism for assigning messages (either request messages or response messages)
+         to a particular Sequence. While this flexibility is beneficial from a general web services specification perspective, it creates
+         some interoperability issues.
+      </p>
+      <div class="refinement">
+         <h4 id="Sequence_Assignment_for_Reliable_Response_Messages">3.6.1 Sequence Assignment for Reliable Response Messages</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>Given a scenario in which a consumer and a provider engage in a series of reliable request/response exchanges, it is important
+               for the consumer and provider to have a common understanding of the Sequence assignment mechanism for reliable response messages.
+               Without such an understanding it is impossible, for example, to implement in-order delivery for response messages.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0600">R0600</a></span> Any two <span class="statement-target">ENVELOPE</span>s sent by an RMS in response - either as a replies or as faults - to two request messages that were sent within the same Sequence,
+            SHOULD contain the same wsrm:Identifier (that is, share the same Sequence).
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>Note that the RMS referred to above is a "server-side RMS" (i.e. the RMS responsible for transmitting response messages from
+               the producer to the consumer in a reliable fashion).
+            </p>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Scope_of_an_RM_Node">3.6.2 Scope of an RM Node</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>WS-ReliableMessaging 1.1 does not define the scope of an RM node other that to say that the scope is not restricted. For example,
+               with respect to R0600 above, an Offered Sequence should be used to carry the response to any message sent over the Sequence
+               corresponding to the CreateSequence request that included the Offer. However, it should not be assumed that the Sequence Traffic
+               Messages carried over the Offered Sequence must be addressed to a particular response endpoint.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0610">R0610</a></span> The scope of an RM Node is an implementation choice that MUST NOT be constrained by the remote <span class="statement-target">RM-NODE</span>. For example, the RMD MUST NOT constrain the values used by the RMS in the wsa:ReplyTo EPRs used by the RMS to be the same
+            for all request messages (Sequence and Lifecycle messages).
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>Within this context the phrase "scope of an RM node" is defined as "the set of all EPRs that address a given RM node".
+            </p>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="WS-ReliableMessaging_Faults">3.6.3 WS-ReliableMessaging Faults</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>The use of WS-ReliableMessaging for faults that are themselves related to the WS-RM protocol is undefined and unlikely to
+               be interoperable. Accordingly this profile prohibits the assignment of WS-RM fault messages to a WS-RM Sequence.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0620">R0620</a></span> An <span class="statement-target">ENVELOPE</span> that has wsrm:SequenceTerminated, wsrm:UnknownSequence, wsrm:InvalidAcknowledgement, wsrm:MessageNumberRollover, wsrm:CreateSequenceRefused,
+            wsrm:SequenceClosed, or wsrm:WSRMRequired as the value of either the SOAP 1.2 /S:Fault/S:Code/S:Subcode/S:Value element or
+            the /wsrm:SequenceFault/wsrm:FaultCode element MUST NOT contain a wsrm:Sequence header block.
+         </p>
+      </div>
+      <h3 id="sequence_IDs">3.7 Sequence Identifiers</h3>
+      <p><span class="statement-target"></span>Under certain conditions it is possible for the <code><span class="statement-target"></span>CreateSequence</code><span class="statement-target"></span> or <code><span class="statement-target"></span>CreateSequenceResponse</code><span class="statement-target"></span> messages to be lost or delayed. Depending upon the timing of the attempts to resend such messages, it is possible to receive
+         duplicate <code><span class="statement-target"></span>CreateSequence</code><span class="statement-target"></span> or <code><span class="statement-target"></span>CreateSequenceResponse</code><span class="statement-target"></span> messages (in fact, it is possible to receive duplicate messages even without retries). This creates the potential for <code><span class="statement-target"></span>CreateSequence</code><span class="statement-target"></span> and <code><span class="statement-target"></span>CreateSequenceResponse</code><span class="statement-target"></span> messages that contain duplicate Sequence Identifiers. Furthermore there are situations in which one party (RMS or RMD) may
+         erroneously send a <code><span class="statement-target"></span>CreateSequence</code><span class="statement-target"></span> or <code><span class="statement-target"></span>CreateSequenceResponse</code><span class="statement-target"></span> message with a duplicate Sequence Identifier. Due to the crucial role of Sequence Identifiers in the WS-RM protocol, the
+         handling of duplicate Sequence Identifiers needs to be further refined to prevent interoperability problems.
+      </p>
+      <div class="refinement">
+         <h4 id="Duplicate_Identifier_in_CreateSequenceResponse">3.7.1 Duplicate Identifier in CreateSequenceResponse</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>Regardless of the causative circumstances, the existence of two, non-terminated Sequences with the same Identifier makes it
+               difficult for the RMS to correctly function, therefore the RMS should take steps to prevent this condition.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0700">R0700</a></span> The <span class="statement-target">RMS</span> MUST generate a fault when it receives a <code>CreateSequenceResponse</code> that contains a Sequence Identifier that is the same as the Identifier of a non-terminated Sequence.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>Note that this requirement does not differentiate between duplicate Identifiers created by "the same" RMD or "different" RMDs;
+               the simple fact that the RMS already has an active Sequence with the same Identifier is enough to trigger this requirement.
+            </p>
+         </div>
+      </div>
+      <h3 id="targetCreateSequence">3.8 Targeting Sequence Lifecycle Messages</h3>
+      <p><span class="statement-target"></span>WS-ReliableMessaging 1.1 is silent on where certain Sequence Lifecycle Messages (such as CreateSequence) should be sent.
+      </p>
+      <div class="refinement">
+         <h4 id="CreateSequence_Target">3.8.1 CreateSequence Target</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>The WS-RM specification is silent on exactly where an RMS should send a CreateSequence message to establish a Sequence. This
+               is true for the case of a client-side RMS creating a Sequence to carry request messages as well as the case of a server-side
+               RMS creating a Sequence to carry response messages. This is an interoperability issue because, unless the respective RMS and
+               RMD implementations agree on the expected target for CreateSequence messages, the intended recipient may not configure the
+               necessary infrastructure (WS-RM message handlers, etc.) and the CreateSequence message may either cause a fault or be ignored.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R0800">R0800</a></span> An <span class="statement-target">ENVELOPE</span> carrying a CreateSequence message MUST be addressed to the same destination as the first Sequence Traffic Message for that
+            Sequence.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>This requirement applies equally to cases in which the first Sequence Traffic Message is addressed to a URI (as may happen
+               when the target endpoint is retrieved from a WSDL document) or to an EPR (as may happen when the target endpoint is the wsa:ReplyTo
+               address of the corresponding request message).
+            </p>
+         </div>
+      </div>
+      <h2 id="wssc">4. Secure Conversation</h2>
+      <p><span class="statement-target"></span>The Profile includes the use of WS-SecureConversation 1.3 to request and issue security tokens and to broker trust relationship.
+      </p>
+      <p>This section of the Profile incorporates the following
+         		specifications by reference:
+         		
+      </p>
+      <ul>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.doc">WS-SecureConversation 1.3</a></li>
+      </ul>
+      <h3 id="unsupported_token_faults">4.1 Fault Codes for Unsupported Context Tokens</h3>
+      <div class="refinement">
+         <h4 id="Unsupported_Key_Sizes">4.1.1 Unsupported Key Sizes</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>During the establishment of a security context, it is possible for a participant to obtain an SCT that, for some reason (key
+               sizes, etc.), it cannot support. To promote interoperability, the parties involved in the establishment of a security context
+               should share a common understanding of such a situation. WS-SC's references to other "more specific fault codes" opens the
+               possibility for one participant to use fault codes that are not recognized by the other participants.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R1000">R1000</a></span> If a <span class="statement-target">RECEIVER</span> obtains an SCT that it cannot, for whatever reason, support, the RECEIVER MUST generate a fault using the wssc:UnsupportedContextToken
+            fault code. A RECIEVER MUST NOT accept an SCT with unrecognized extensions in exception to R0001.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>This requirement is a specific exception to the general guidelines outlined by R0001.
+            </p>
+         </div>
+      </div>
+      <h3 id="proof_of_possession">4.2 Demonstrating Proof of Possession</h3>
+      <p><span class="statement-target"></span>When attempting to amend, renew or cancel a security context, it is necessary for the requester to prove that they possess
+         the key associated with the security context. WS-SecureConversation recommends, but does not require, that this be done in
+         a specific fashion. This creates the potential for implementations to demonstrate proof of possession in ways that are not
+         mutually understood, to the obvious detriment of both interoperability and security.
+      </p>
+      <div class="refinement">
+         <h4 id="Amending_Contexts">4.2.1 Amending Contexts</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>When attempting to amend an existing security context, the use of a single mechanism to demonstrate proof of possession of
+               the key associated with the security context improves interoperability.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R1100">R1100</a></span> An  <span class="statement-target">ENVELOPE</span> containing a wst:RequestSecurityToken in the SOAP Body and an action URI of http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/SCT/Amend,
+            MUST also contain a wsse:Security header with a ds:Signature child element that covers the SOAP Body and crucial Headers.
+         </p>
+         <p class="statement"><span class="statement-id"><a name="R1101">R1101</a></span> The signature in the <span class="statement-target">ENVELOPE</span> referred to in R1100 MUST be created using the key associated with the security context that is being ammended.
+         </p>
+      </div>
+      <div class="refinement">
+         <h4 id="Renewing_Contexts">4.2.2 Renewing Contexts</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>When attempting to renew a security context, the use of a single mechanism to demonstrate proof of possession of the key associated
+               with the security context improves interoperability.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R1110">R1110</a></span> An <span class="statement-target">ENVELOPE</span> containing a wst:RequestSecurityToken in the SOAP Body and an action URI of http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/SCT/Renew,
+            MUST also contain a wsse:Security header with a ds:Signature child element that covers the SOAP Body and crucial Headers.
+         </p>
+         <p class="statement"><span class="statement-id"><a name="R1111">R1111</a></span> The signature in the <span class="statement-target">ENVELOPE</span> referred to in R1110 MUST be created using the key associated with the security context that is being renewed.
+         </p>
+      </div>
+      <div class="refinement">
+         <h4 id="Cancelling_Contexts">4.2.3 Cancelling Contexts</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>When attempting to cancel a security context, the use of a single mechanism to demonstrate proof of possession of the key
+               associated with the security context improves interoperability.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R1120">R1120</a></span> An <span class="statement-target">ENVELOPE</span> containing a wst:RequestSecurityToken in the SOAP Body and an action URI of http://docs.oasis-open.org/ws-sx/ws-trust/200512/RST/SCT/Cancel,
+            MUST also contain a wsse:Security header with a ds:Signature child element that covers the SOAP Body and crucial Headers.
+         </p>
+         <p class="statement"><span class="statement-id"><a name="R1121">R1121</a></span> The signature in the <span class="statement-target">ENVELOPE</span> referred to in R1120 MUST be created using the key associated with the security context that is being canceled.
+         </p>
+      </div>
+      <h3 id="claims_reauthentication">4.3 Claims Re-Authentication</h3>
+      <div class="refinement">
+         <h4 id="Re-Authenticating_Claims">4.3.1 Re-Authenticating Claims</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>As per section 5 of the WS-SecureConversation specification, the request to renew a security context must include the re-authentication
+               of the context's original claims. It is recommended, but not required, that the claims re-authentication be done in the same
+               manner as the original token issuance request. This creates the potential for some implementations of WS-SecureConversation
+               to attempt claims re-authentication in a manner different than the original token issuance request, to the obvious detriment
+               of both interoperability and security.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R1200">R1200</a></span> When a <span class="statement-target">SENDER</span> makes a request to renew a security context, it MUST re-authenticate the original claims in the same way as in the original
+            token issuance request.
+            
+         </p>
+      </div>
+      <h3 id="ref_sct">4.4 Referencing Security Context Tokens</h3>
+      <div class="refinement">
+         <h4 id="Associating_a_Security_Context">4.4.1 Associating a Security Context</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>Section 8 of WS-SecureConversation states that references to an SCT from within a <code><span class="statement-target"></span>wsse:Security</code><span class="statement-target"></span> header, a <code><span class="statement-target"></span>wst:RequestSecurityToken</code><span class="statement-target"></span> element, or a <code><span class="statement-target"></span>wst:RequestSecurityTokenReponse</code><span class="statement-target"></span> element may be either message dependent or message independent. However, references to SCTs from outside a <code><span class="statement-target"></span>wsse:Security</code><span class="statement-target"></span> header (or an RST, or an RSTR) must be message independent. Since message independent references provide a superset of the
+               functionality of message dependent references, and it is simpler to support one mechanism for referencing SCTs than two, this
+               profile includes the following requirement:
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R1300">R1300</a></span> In an <span class="statement-target">ENVELOPE</span> that contains either a wsse:Security header, a wst:RequestSecurityToken element, or a wst:RequestSecurityTokenReponse element
+            in which there are references to wssc:SecurityContextToken elements, such references MUST be message independent (i.e. MUST
+            use a wsse:Reference to the wssc:Identifier element).
+         </p>
+      </div>
+      <div class="refinement">
+         <h4 id="Derived_Token_References_to_Security_Contexts">4.4.2 Derived Token References to Security Contexts</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>Section 7 of the WS-SecureConversation specification describes a mechanism for using keys derived from a shared secret for
+               signing and encrypting the messages associated with a security context. The <code><span class="statement-target"></span>wssc:DerivedKeyToken</code><span class="statement-target"></span> element is used to express these derived keys. WS-SC states that the <code><span class="statement-target"></span>/wssc:DerivedKeyToken/wsse:SecurityTokenReference</code><span class="statement-target"></span> element SHOULD be used to reference the <code><span class="statement-target"></span>wssc:SecurityContextToken</code><span class="statement-target"></span> of the security context who's shared secret was used to derive the key. This creates an interoperability issue because it
+               leaves open the possibility for a derived key to either lack any relationship between the shared secret or for this relationship
+               to be expressed by some mechanism other than a wsse:SecurityTokenReference.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R1310">R1310</a></span> When an <span class="statement-target">ENVELOPE</span> contains a wssc:DerivedKeyToken, the wsse:SecurityTokenReference element MUST be used to reference the wssc:SecurityContextToken
+            of the security context from which they key is derived.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>To properly and interoperably process derived keys it is necessary to relate the key to the shared secret from which it is
+               derived. There are no alternatives to using wsse:SecurityTokenReference's that are consistent with WS-Security.
+            </p>
+         </div>
+      </div>
+      <h3 id="wsa_headers">4.5 Addressing Headers</h3>
+      <div class="refinement">
+         <h4 id="Protecting_Addressing_Headers">4.5.1 Protecting Addressing Headers</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>Since the semantics of the WS-SecureConversation protocol are dependent upon the value of various WS-Addressing headers, ensuring
+               the proper functioning of WS-SecureConversation requires protecting the integrity of these headers.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R1400">R1400</a></span> When present in an <span class="statement-target">ENVELOPE</span>, each of the following SOAP header blocks MUST be included in the signature whenever the SOAP Body in that ENVELOPE is signed:
+            <code>wsa:To</code>, <code>wsa:From</code>, <code>wsa:ReplyTo</code>, <code>wsa:Action</code>, <code>wsa:FaultTo</code>, <code>wsa:MessageId</code>, <code>wsa:RelatesTo</code>.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>This requirement is not specific to the use of WS-SecureConversation. It applies whenever WS-Security is being used in conjunction
+               with WS-Addressing.
+            </p>
+         </div>
+      </div>
+      <h2 id="makeconnection">5. MakeConnection</h2>
+      <p><span class="statement-target"></span>The Profile includes the use of WS-MakeConnection 1.0 to transfer messages using a transport-specific back-channel.
+      </p>
+      <p>This section of the Profile incorporates the following
+         		specifications by reference:
+         		
+      </p>
+      <ul>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf">Web Services Make Connection 1.0</a></li>
+      </ul>
+      <h3 id="use_makeconnection">5.1 Using MakeConnection</h3>
+      <p><span class="statement-target"></span>The use of MakeConnection is subject to the following requirements:
+      </p>
+      <div class="refinement">
+         <h4 id="Addressing_Variants">5.1.1 Addressing Variants</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>The WS-MakeConnection specification defines two distinct ways for the MC-Sender to indicate its messages of interest. One
+               of these mechanisms uses the wsmc:MakeConnection Anonymous URI, the other uses a WS-RM Sequence ID. However, the WS-MakeConnection
+               specification doesn't define any way of advertising or agreeing upon which variant of the MakeConnection protocol is supported
+               or required by an endpoint. This creates the potential for different, incompatible implementations of WS-MakeConnection. To
+               promote interoperability this Profile refines the WS-MakeConnection specification with additional requirements to mandate
+               the use of a single, consistent addressing variant. Since the URI variant of WS-MakeConnection is a superset of the functionality
+               of the Sequence-ID variant, use of the URI variant is mandated by this Profile.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R2000">R2000</a></span> If an <span class="statement-target">ENVELOPE</span> contains a wsmc:MakeConnection element as a child of the SOAP Body, the wsmc:MakeConnection element MUST contain a wsmc:Address
+            child element.
+         </p>
+         <p class="statement"><span class="statement-id"><a name="R2001">R2001</a></span> If an <span class="statement-target">ENVELOPE</span> contains a wsmc:MakeConnection element as a child of the SOAP Body, the wsmc:MakeConnection element MUST NOT contain a wsrm:Identifier
+            child element.
+         </p>
+      </div>
+      <div class="refinement">
+         <h4 id="MakeConnection_Anonymous_URI">5.1.2 MakeConnection Anonymous URI</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>In section 3.1 of the WS-MakeConnection specification the WS-MC Anonymous URI is defined to uniquely identity anonymous endpoints
+               and to signal the intention to use the MakeConnection protocol to transfer messages between the endpoints. The WS-MakeConnection
+               protocol uses the receipt of the MakeConnection message at an endpoint as the mechanism by which the back-channel of that
+               connection can be uniquely identified. Once identified, the MC Receiver is then free to use that back-channel to send any
+               pending message targeted to the URI specified within the MakeConnection message.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R2011">R2011</a></span> Once the MakeConnection protocol is established through the exchange of an EPR that contains the wsmc:MakeConnection Anonymous
+            URI as its [address] property, the <span class="statement-target">MC-RECEIVER</span> MUST make use of the MakeConnection response channel to transfer messages targeted to that EPR.
+         </p>
+      </div>
+      <h2 id="sec_reliable_msg">6. Secure Reliable Messaging</h2>
+      <p><span class="statement-target"></span>This section of the Profile contains requirements that address the composition of reliable and secure messaging.
+      </p>
+      <p>This section of the Profile incorporates the following
+         		specifications by reference:
+         		
+      </p>
+      <ul>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-rx/wsrm/200702/wsrm-1.1-spec-cs-01.pdf">Web Services Reliable Messaging (WS-ReliableMessaging) 1.1</a></li>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf">Web Services Make Connection 1.0</a></li>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.doc">WS-SecureConversation 1.3</a></li>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/ws-securitypolicy-1.2-spec-cs.doc">WS-SecurityPolicy 1.2</a></li>
+      </ul>
+      <h3 id="secure-sequence-creation">6.1 Initiating a Secure Sequence</h3>
+      <div class="refinement">
+         <h4 id="Secure_Context_Identification">6.1.1 Secure Context Identification</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>Section 5.2.2.1 of the WS-ReliableMessaging specification states that "During the CreateSequence exchange, the RM Source SHOULD
+               explicitly identify the security context that will be used to protect the Sequence". This leaves open the possibility for
+               RMS implementations that, for some reason, attempt to use WS-SC to secure their Sequences in some manner that does not explicitly
+               identify the security context that will be used to protect the Sequence (e.g. by some out of band understanding of an inferred
+               security context). This possibility creates an obvious operational and interoperability issues since (a) point-to-point, out-of-band
+               configuration creates unscalable operational overhead and (b) not all WS-RM implementations may be capable of supporting such
+               understandings.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R3000">R3000</a></span> During the wsrm:CreateSequence exchange, the <span class="statement-target">RMS</span> MUST explicitly identify the security context that will be used to protect the Sequence.
+         </p>
+         <div class="explanation">
+            <p><span class="statement-target"></span>This requirement only applies to those scenarios in which WS-SC is being used to protect a WS-RM Sequence.
+            </p>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Security_Token_References">6.1.2 Security Token References</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>In order to transmit a wsrm:CreateSequence that has been extended to include a wsse:SecurityTokenReference, an RMS must ensure
+               that the RMD both understands and will conform with the requirements listed above.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R3010">R3010</a></span> If an <span class="statement-target">ENVELOPE</span> contains a wsrm:CreateSequence element as a child of the SOAP Body and that wsrm:CreateSequence element has been extended
+            with a wsse:SecurityTokenReference element, the ENVELOPE MUST also include the UsesSequenceSTR element as a SOAP header block.
+         </p>
+      </div>
+      <h3 id="signature_coverage">6.2 Signature Coverage</h3>
+      <p><span class="statement-target"></span>When using WS-SecureConversation to secure a WS-ReliableMessaging Sequence there exists both security and interoperability
+         issues around the inclusion of SOAP message elements within signatures.
+      </p>
+      <div class="refinement">
+         <h4 id="Single_Signature_for_Sequence_Header_and_SOAP_Body">6.2.1 Single Signature for Sequence Header and SOAP Body</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>As discussed in Section 5.1.1 of WS-ReliableMessaging, any mechanism which allows an attacker to alter the information in
+               a Sequence Traffic Message or break the linkage between a wsrm:Sequence header block and its assigned message, represents
+               a threat to the WS-RM protocol.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R3100">R3100</a></span> When present in an <span class="statement-target">ENVELOPE</span>, the wsrm:Sequence header block and the SOAP Body MUST be signed with a common signature that uses the key(s) associated
+            with security context, if any, that protects the applicable sequence.
+         </p>
+      </div>
+      <div class="refinement">
+         <h4 id="Signed_Elements">6.2.2 Signed Elements</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>As discussed in Section 5.1.1 of WS-ReliableMessaging, any mechanism which allows an attacker to alter the information in
+               a Sequence Lifecycle Message, Acknowledgement Messages, Acknowledgement Request, or Sequence-related fault represents a threat
+               to the WS-RM protocol.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R3110">R3110</a></span> If a wsrm:CreateSequence, wsrm:CreateSequenceResponse, wsrm:CloseSequence, wsrm:CloseSequenceResponse, wsrm:TerminateSequence,
+            or wsrm:TerminateSequenceResponse element appears in the body of an <span class="statement-target">ENVELOPE</span>, that body must be signed using the key(s) associated with security context, if any, that protects the applicable sequence.
+         </p>
+         <p class="statement"><span class="statement-id"><a name="R3111">R3111</a></span> If a wsrm:AckRequested, or wsrm:SequenceAcknowledgement element appears in the header of an <span class="statement-target">ENVELOPE</span>, that element must be signed using the key(s) associated with security context, if any, that protects the applicable sequence.
+         </p>
+         <p class="statement"><span class="statement-id"><a name="R3112">R3112</a></span> When using SOAP 1.2, if a soap12:Fault element appears as the body of an <span class="statement-target">ENVELOPE</span> and the fault relates to a known sequence, the soap12:Body must be signed using the key(s) associated with security context,
+            if any, that protects the applicable sequence.
+         </p>
+      </div>
+      <div class="refinement">
+         <h4 id="Single_Signature_for_SOAP_1.1_Fault_and_SequenceFault_Header">6.2.3 Single Signature for SOAP 1.1 Fault and SequenceFault Header</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>As described in Section 4.1 of WS-ReliableMessaging, the wsrm:SequenceFault element is used to carry the specific details
+               any SOAP 1.1 faults generated during the WS-RM-specific processing of a message. As with SOAP 1.2, the integrity of fault
+               information needs to be protected. In addition to this, it is necessary to ensure that the linkage between a wsrm:SequenceFault
+               header and the soap11:Fault body is preserved.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R3120">R3120</a></span> When using SOAP 1.1, if a wsrm:SequenceFault appears in the header of an <span class="statement-target">ENVELOPE</span>, the soap11:Body and the wsrm:SequenceFault header MUST be signed with a common signature that uses the key(s) associated
+            with security context, if any, that protects the applicable sequence.
+         </p>
+      </div>
+      <h3 id="sec_mc">6.3 Secure Use of MakeConnection</h3>
+      <p><span class="statement-target"></span>This Profile places additional requirements on the composition of MakeConnection, WS-SecureConversation, and WS-ReliableMessaging.
+      </p>
+      <div class="refinement">
+         <h4 id="Security_Context_for_MakeConnection">6.3.1 Security Context for MakeConnection</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>From a security standpoint, it will be commonly desired that the security context of the message sent on the backchannel established
+               by a MakeConnection and that of the MakeConnection message itself be the same. However, it is important to keep in mind that
+               the WS-MakeConnection protocol is independent of the application protocol(s) flowing over it, thus there will be cases in
+               which the MC-SENDER has no knowledge of the security context (if any) of the backchannel messages. For example, the WS-MakeConnection
+               specification details a scenario in which MakeConnection is used to deliver Notifications from an Event Source. The Event
+               Source may have a variety of different security contexts that it uses depending on the type of Notification being delivered.
+               In this case the MC-SENDER has no way of knowing which security context, if any, should to be used. In such situations, the
+               MC-RECEIVER needs to simply ensure that the MC-SENDER is authenticated. It would still be the MC-SENDER's responsibility to
+               ensure that any message sent on the backchannel has the correct security context - just as would any endpoint receiving a
+               message over a new connection.
+            </p>
+         </div>
+      </div>
+      <div class="refinement">
+         <h4 id="Signing_the_MessagePending_header">6.3.2 Signing the MessagePending header</h4>
+         <div class="rationale">
+            <p><span class="statement-target"></span>Since the value of the wsmc:MessagePending header effects the operation of the MakeConnection protocol, it must be protected
+               to ensure the proper functioning of that protocol.
+            </p>
+         </div>
+         <p class="statement"><span class="statement-id"><a name="R3201">R3201</a></span> If a wsmc:MessagePending element appears as a header block in an <span class="statement-target">ENVELOPE</span>, that element MUST be signed using the key(s) associated with security context, if any, that protects the SOAP Body of the
+            ENVELOPE.
+         </p>
+      </div>
+      <h3 id="replay">6.4 Replay Detection</h3>
+      <p><span class="statement-target"></span>As mentioned in Section 5 of WS-ReliableMessaging, there is a potential tension between certain aspects of security and reliable
+         messaging; a security implementation may attempt to detect and prevent message replay attacks, but one of the invariants of
+         the WS-RM  protocol is to resend messages until they are acknowledged. Implementations must have the information necessary
+         to distinguish between a valid retransmission of an unacknowledged message and a replayed message.
+      </p>
+      <div class="refinement">
+         <h4 id="Unique_Timestamp_Values">6.4.1 Unique Timestamp Values</h4>
+         <p class="statement"><span class="statement-id"><a name="R3300">R3300</a></span> In the absence of WS-SecurityPolicy assertions that indicate otherwise, an <span class="statement-target">ENVELOPE</span> that contains a wsrm:Sequence header MUST contain a wsu:Timestamp as a sub-element of the wsse:Security header.
+         </p>
+         <p class="statement"><span class="statement-id"><a name="R3301">R3301</a></span> For any two <span class="statement-target">ENVELOPE</span>s that contain WS-RM Sequence headers in which the value of their wsrm:Identifier and wsrm:MessageNumber elements are equal,
+            it MUST be true that neither of the envelopes contains a wsu:Timestamp as a child element of wsse:Security header, OR that
+            both messages contain a wsu:Timestamp as child elements of their wsse:Security headers and the value of these wsu:Timestamp
+            elements are NOT equal.
+         </p>
+      </div>
+      <h2 id="references">Appendix A: Referenced Specifications</h2>
+      <p>The following specifications' requirements are incorporated
+         				into the Profile by reference, except where superseded by the
+         				Profile:
+      </p>
+      <ul>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-rx/wsrm/200702/wsrm-1.1-spec-cs-01.pdf">Web Services Reliable Messaging (WS-ReliableMessaging) 1.1</a></li>
+         <li><a class="offsite" href="http://www.ietf.org/rfc/rfc3987.txt">Internationalized Resource Identifiers (IRIs)</a></li>
+         <li><a class="offsite" href="http://www.w3.org/TR/2006/REC-ws-addr-soap-20060509">Web Services Addressing 1.0 - SOAP Binding</a></li>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.doc">WS-SecureConversation 1.3</a></li>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf">Web Services Make Connection 1.0</a></li>
+         <li><a class="offsite" href="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/ws-securitypolicy-1.2-spec-cs.doc">WS-SecurityPolicy 1.2</a></li>
+      </ul>
+      <h2 id="points">Appendix B: Extensibility Points</h2>
+      <p>This section identifies extensibility points, as defined in
+         				"Scope of the Profile," for the Profile's component
+         				specifications.
+      </p>
+      <p>These mechanisms are out of the scope
+         				of the Profile; their use may affect interoperability, and may
+         				require private agreement between the parties to a Web
+         				service.
+      </p>
+      <p>There are no extensibility points defined for this profile.</p>
+      <h2 id="acks">Appendix C: Acknowledgements</h2>
+      <p>This document is the work of the WS-I Reliable Secure Profile Working Group, whose members have included:</p>
+      <p></p>
+   </body>
+</html>
